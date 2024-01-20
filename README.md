@@ -4,7 +4,7 @@
 
 - [X] *Sam Zilli 
     - **(TODO: Change this heading to your name, because your github name is often not your real name)**
-- [X] *Sa-am Zee-lee    [Phonetic spelling](https://dictionary.cambridge.org/us/help/phonetics.html) **
+- [X] *First: Sa-am     Last: Zee-lee    [Phonetic spelling](https://dictionary.cambridge.org/us/help/phonetics.html) **
 
 ## Important Documents 
 
