@@ -5,6 +5,8 @@
 * Name: 
 * How many hours did it take you to complete this assignment?
   	 Part 0: 2 hours
+  	 Part 1: 1 hour
+  	 Part 2: 
 * Did you collaborate or share ideas with any other students/TAs/Professors? 
 * Did you use any external resources? 
   * (tbd if any)
