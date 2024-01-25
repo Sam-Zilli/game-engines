@@ -1,6 +1,29 @@
 // main.cpp
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+
+void readfile(std::string filename) {
+	std::cout << "In main.cpp => readFile\n";
+	std::ifstream inputFile;
+	inputFile.open(filename);
+	if(inputFile.is_open()) {
+		std::cout << "File opened!\n";
+		std::string line;
+			
+		while(std::getline(inputFile, line)) {
+			std::cout << line << std::endl;
+
+		}
+	}
+	inputFile.close();
+	std::cout << "File closed!\n";
+}
+
+
 typedef void(*void_void)(void);
+
 
 void input() {
 	std::cout << "Input" << std::endl;	
@@ -13,6 +36,13 @@ void update() {
 void render() {
 	std::cout << "Render" << std::endl;
 }
+
+
+
+
+
+
+
 
 struct Application {
 	// Constructor
@@ -58,8 +88,9 @@ int main() {
 	gameApp.SetUpdateFunction(&update);
 	gameApp.SetRenderFunction(&render);
 
+	readfile("../story.txt");
 	// Starting the game loop
-	gameApp.loop();
+	//gameApp.loop();
 
 	return 0;
 }
