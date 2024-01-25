@@ -8,15 +8,24 @@ void readfile(std::string filename) {
 	std::cout << "In main.cpp => readFile\n";
 	std::ifstream inputFile;
 	inputFile.open(filename);
+	
 	if(inputFile.is_open()) {
 		std::cout << "File opened!\n";
 		std::string line;
-			
+		int numTextLines = 0;
+		int totalLines = 0;		
 		while(std::getline(inputFile, line)) {
 			std::cout << line << std::endl;
-
+			totalLines = totalLines + 1;
+			// if line contains text, increase count
+			if(!line.empty()) {
+				numTextLines = numTextLines + 1;
+			}
 		}
+		std::cout << "numTextLines: " << numTextLines << std::endl;
+		std::cout << "total lines: " << totalLines << std::endl;
 	}
+
 	inputFile.close();
 	std::cout << "File closed!\n";
 }
