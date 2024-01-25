@@ -2,16 +2,16 @@
 
 *TODO*: Please edit the following information in your assignment
 
-* Name: 
+* Name: Sam Zilli
 * How many hours did it take you to complete this assignment?
-  	 Part 0: 2 hours
-  	 Part 1: 1 hour
-  	 Part 2: 
-* Did you collaborate or share ideas with any other students/TAs/Professors? 
+  	 * Part 0: 2 hours
+  	 * Part 1: 1 hour
+  	 * Part 2: 3 hours
+* Did you collaborate or share ideas with any other students/TAs/Professors? No
+   
 * Did you use any external resources? 
-  * (tbd if any)
-  * (tbd if any)
-  * (tbd if any)
+  * ChatGPT wrote the story.txt file
+  
 * (Optional) What was the most interesting part of the assignment? How would you improve this assignment?
 
 # Assignment
