@@ -1,8 +1,10 @@
 # Your Information
-
-*TODO*: Please edit the following information in your assignment
-
 * Name: Sam Zilli
+* To Compile Part2:
+	* Navigate to part2 folder
+   	* g++ -g -Wall -Werror -std=c++20 src/*.cpp -I include/ -o prog
+   	* ./prog "story.txt"
+   	* 
 * How many hours did it take you to complete this assignment?
   	 * Part 0: 2 hours
   	 * Part 1: 1 hour
