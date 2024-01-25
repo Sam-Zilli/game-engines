@@ -6,9 +6,12 @@ GameState::GameState(std::string file) {
 	std::ifstream myFile(file.c_str());
 	std::string line;
 
+
 	if(myFile.is_open()) {
 		while(getline(myFile, line)) {
-			mStory.push_back(line);
+			if(!line.empty()) {
+					mStory.push_back(line);
+			}
 		}
 	} else {
 		std::cout<<"unable to open file\n";
