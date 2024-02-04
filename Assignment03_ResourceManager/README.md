@@ -2,13 +2,13 @@
 
 *TODO*: Please edit the following information in your assignment
 
-* Name: 
-* How many hours did it take you to complete this assignment? 
-* Did you collaborate or share ideas with any other students/TAs/Professors? 
+* Name: Sam Zilli
+* How many hours did it take you to complete this assignment? 14 (I had many tech problems + a few silly bugs)
+* Did you collaborate or share ideas with any other students/TAs/Professors?  No
 * Did you use any external resources? 
-  * (tbd if any)
-  * (tbd if any)
-  * (tbd if any)
+  * I watched a few videos on tools for finding memory leaks (couldn't get valgrind to work on my mac)
+  * I asked chat gpt to decode some error messages I got
+    
 * (Optional) What was the most interesting part of the assignment? How would you improve this assignment?
 
 # Assignment
