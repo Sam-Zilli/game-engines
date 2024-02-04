@@ -4,16 +4,16 @@ Read [Horde3D Usage Guide](http://www.horde3d.org/docs/html/_usageguide.html)'s 
 
 1. What are some pros and cons to having a single resource manager for all of your resources (i.e. game assets)?
 
-**Pro**: *Edit your answer here*
+**Pro**: Helps avoid the cost of remaking a resource every time when it could be reused
 
-**Con**: *Edit your answer here*
+**Con**: Can cause a bottleneck if multiple things are waiting on one shared resource
 
 
 2. What are some advantages of having a 'virtualized resource' in Horde3D?
 
-**Advantage 1**: *Edit your answer here*
+**Advantage 1**: Can be shared over network
 
-**Advantage 2**: *Edit your answer here*
+**Advantage 2**: Doesn't force user to have speciifc archive format 
 
 
 -------------------------------------------------------
