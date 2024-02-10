@@ -2,10 +2,12 @@
 
 PlayerGameEntity::PlayerGameEntity(SDL_Renderer* renderer) {
 
-    SpriteComponent sp;
-    sp.CreateSpriteComponent(renderer,"./assets/rocket.bmp");
-    sp.SetW(24.0f);
-    mProjectile = std::make_shared<Projectile>(sp);
+    std::shared_ptr<SpriteComponent> sp = std::make_shared<SpriteComponent>();
+    sp->CreateSpriteComponent(renderer,"./assets/rocket.bmp");
+    sp->SetW(24.0f);
+
+    mProjectile = std::make_shared<Projectile>();
+    mProjectile->AddComponent(sp);
 }
 
 PlayerGameEntity::~PlayerGameEntity(){
@@ -38,7 +40,7 @@ void PlayerGameEntity::Update(float deltaTime) {
 
 void PlayerGameEntity::Render(SDL_Renderer* renderer){
     mProjectile->Render(renderer);
-    mSprite.Render(renderer);
+    // mSprite.Render(renderer);
     for(auto& c : mComponents) {
         c->Render(renderer);
     }

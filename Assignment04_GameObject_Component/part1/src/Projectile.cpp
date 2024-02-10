@@ -1,6 +1,6 @@
 #include "Projectile.hpp"
 
-Projectile::Projectile(SpriteComponent sprite){
+Projectile::Projectile() {
     timeSinceLastLaunch = SDL_GetTicks();
     mRenderable=false;
 }
@@ -13,6 +13,15 @@ void Projectile::Launch(float x, float y, bool yDirectionIsUp, int minlaunchtime
         mSprite.Move(x,y);
     }
 }
+
+void Projectile::Input(float deltaTime){
+    for(auto& c : mComponents) {
+        c->Input(deltaTime);
+    }
+}
+
+
+
 
 void Projectile::Update(float deltaTime) {
     if(mIsFiring){
@@ -29,6 +38,9 @@ void Projectile::Update(float deltaTime) {
     if(mSprite.GetY() < 0.0f || mSpeed > 480.0f){
         mIsFiring=false;
     }
+    for(auto& c : mComponents) {
+        c->Update(deltaTime);
+    }
 }
 
 void Projectile::Render(SDL_Renderer* renderer) {
@@ -36,5 +48,8 @@ void Projectile::Render(SDL_Renderer* renderer) {
         mSprite.Render(renderer);
     }else{
         // Do nothing;
+    }
+    for(auto& c : mComponents) {
+        c->Render(renderer);
     }
 }

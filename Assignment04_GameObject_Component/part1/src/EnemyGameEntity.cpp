@@ -1,10 +1,12 @@
 #include "EnemyGameEntity.hpp"
 
 EnemyGameEntity::EnemyGameEntity(SDL_Renderer* renderer){
-    SpriteComponent sp;
-    sp.CreateSpriteComponent(renderer,"./assets/rocket.bmp");
-    sp.SetW(24.0f);
-    mProjectile = std::make_shared<Projectile>(sp);
+    std::shared_ptr<SpriteComponent> sp = std::make_shared<SpriteComponent>();
+    sp->CreateSpriteComponent(renderer,"./assets/rocket.bmp");
+    sp->SetW(24.0f);
+
+    mProjectile = std::make_shared<Projectile>();
+    mProjectile->AddComponent(sp);
 
     // Set a random launch time for the enemies
     mMinLaunchTime += std::rand() % 10000;
@@ -28,16 +30,18 @@ void EnemyGameEntity::Update(float deltaTime) {
         xPositiveDirection=true;
     }
 
+    auto ref = dynamic_pointer_cast<SpriteComponent>(mComponents[0]);
+
     if(xPositiveDirection){
-        mSprite.SetX(mSprite.GetX() + mSpeed*deltaTime);
+        ref->SetX(ref->GetX() + mSpeed*deltaTime);
         offset += mSpeed * deltaTime;
     }else{
-        mSprite.SetX(mSprite.GetX() - mSpeed*deltaTime);
+        ref->SetX(ref->GetX() - mSpeed*deltaTime);
         offset -= mSpeed * deltaTime;
     }
 
     if(mRenderable){
-        mProjectile->Launch(mSprite.GetX(),mSprite.GetY(),false,mMinLaunchTime);
+        mProjectile->Launch(ref->GetX(),ref->GetY(),false,mMinLaunchTime);
     }
     for(auto& c: mComponents){
         c->Update(deltaTime);
@@ -47,7 +51,7 @@ void EnemyGameEntity::Update(float deltaTime) {
 void EnemyGameEntity::Render(SDL_Renderer* renderer){
     if(mRenderable){
         mProjectile->Render(renderer);
-        mSprite.Render(renderer);
+        // mSprite.Render(renderer);
     }else{
         // Do nothing;
     }

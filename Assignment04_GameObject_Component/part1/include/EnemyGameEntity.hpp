@@ -22,7 +22,7 @@ struct EnemyGameEntity : public GameEntity{
     virtual std::shared_ptr<Projectile> GetProjectile() const;
 
     private:
-        SpriteComponent mSprite;
+        // SpriteComponent mSprite;
         std::shared_ptr<Projectile> mProjectile;
 		bool xPositiveDirection{true};
         float offset{0.0f};

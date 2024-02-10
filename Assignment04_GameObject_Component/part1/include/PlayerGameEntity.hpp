@@ -22,7 +22,7 @@ struct PlayerGameEntity : public GameEntity{
     virtual std::shared_ptr<Projectile> GetProjectile() const;
 
     private:
-        SpriteComponent mSprite;
+        // SpriteComponent mSprite;
         float mSpeed{150.0f};
         std::shared_ptr<Projectile> mProjectile;
 };
