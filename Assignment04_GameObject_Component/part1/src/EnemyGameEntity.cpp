@@ -55,7 +55,7 @@ void EnemyGameEntity::Render(SDL_Renderer* renderer){
     }else{
         // Do nothing;
     }
-    for(auto&c : mComponents) {
+    for(auto& c : mComponents) {
         c->Render(renderer);
     }
 }

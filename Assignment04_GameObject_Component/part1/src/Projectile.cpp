@@ -42,9 +42,9 @@ void Projectile::Update(float deltaTime) {
     if(ref->GetY() < 0.0f || ref->GetY() > 480.0f){
         mIsFiring=false;
     }
-    for(auto& c : mComponents) {
-        c->Update(deltaTime);
-    }
+    // for(auto& c : mComponents) {
+    //     c->Update(deltaTime);
+    // }
 }
 
 void Projectile::Render(SDL_Renderer* renderer) {

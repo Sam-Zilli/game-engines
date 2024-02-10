@@ -22,7 +22,4 @@ struct Component {
     virtual void Render(SDL_Renderer* renderer) {
 
     }
-
-
-
 };

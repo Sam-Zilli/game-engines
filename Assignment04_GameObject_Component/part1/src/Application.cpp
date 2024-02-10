@@ -38,11 +38,10 @@ void Application::StartUp(){
         e->AddComponent(sp);
         enemies.push_back(std::move(e));
     }
-
+    mainCharacter = std::make_unique<PlayerGameEntity>(mRenderer);
     std::shared_ptr<SpriteComponent> characterSprite = std::make_shared<SpriteComponent>();
     characterSprite->CreateSpriteComponent(mRenderer,"./assets/hero.bmp");
     characterSprite->Move(640/2 - (32/2),440);
-    mainCharacter = std::make_unique<PlayerGameEntity>(mRenderer);
     mainCharacter->AddComponent(characterSprite);
 }
 void Application::Shutdown(){

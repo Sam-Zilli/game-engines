@@ -38,11 +38,13 @@ bool GameEntity::IsRenderable() const{
 }
 
 bool GameEntity::Intersects(std::shared_ptr<GameEntity> e){
-    /*
-    SDL_FRect source = e->mSprite.GetRectangle();
-    SDL_FRect us     = mSprite.GetRectangle();
+    auto source = dynamic_pointer_cast<SpriteComponent>(e->mComponents[0])->GetRectangle();
+    auto us = dynamic_pointer_cast<SpriteComponent>(mComponents[0])->GetRectangle();
+
+    // SDL_FRect source = e->mSprite.GetRectangle();
+    // SDL_FRect us     = mSprite.GetRectangle();
     SDL_FRect result;
     return SDL_GetRectIntersectionFloat(&source,&us,&result);
-    */
-   return false;
+
+//    return false;
 }
