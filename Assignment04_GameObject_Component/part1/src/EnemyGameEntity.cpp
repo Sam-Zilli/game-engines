@@ -14,6 +14,9 @@ EnemyGameEntity::~EnemyGameEntity(){
 }
 
 void EnemyGameEntity::Input(float deltaTime) {
+    for(auto& c : mComponents) {
+        c->Input(deltaTime);
+    }
 }
 
 void EnemyGameEntity::Update(float deltaTime) {
@@ -36,6 +39,9 @@ void EnemyGameEntity::Update(float deltaTime) {
     if(mRenderable){
         mProjectile->Launch(mSprite.GetX(),mSprite.GetY(),false,mMinLaunchTime);
     }
+    for(auto& c: mComponents){
+        c->Update(deltaTime);
+    }
 }
 
 void EnemyGameEntity::Render(SDL_Renderer* renderer){
@@ -44,6 +50,9 @@ void EnemyGameEntity::Render(SDL_Renderer* renderer){
         mSprite.Render(renderer);
     }else{
         // Do nothing;
+    }
+    for(auto&c : mComponents) {
+        c->Render(renderer);
     }
 }
 
