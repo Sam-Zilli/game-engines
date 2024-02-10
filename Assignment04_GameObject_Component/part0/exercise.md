@@ -8,8 +8,8 @@
   - For reference, you may look at other Game Engines like Unity3D for inspiration: https://docs.unity3d.com/Manual/Components.html
 
 
-1. *edit your response*
-2. *edit your response*
-3. *edit your response*
-4. *edit your response*
-5. *edit your response*
+1. *Physics/Collision Ex: The thing Mario is stomping on has broken/flown*
+2. *Rendering*
+3. *Input class Ex: Taking input from the user that they want mario to stomp*
+4. *Transform Ex: x/y/scale position changes*
+5. *Audio for the Mario theme song playing in the background*
