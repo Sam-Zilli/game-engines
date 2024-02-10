@@ -1,6 +1,6 @@
 #include "PlayerGameEntity.hpp"
 
-PlayerGameEntity::PlayerGameEntity(SDL_Renderer* renderer, SpriteComponent sprite) : GameEntity(sprite){
+PlayerGameEntity::PlayerGameEntity(SDL_Renderer* renderer) {
 
     SpriteComponent sp;
     sp.CreateSpriteComponent(renderer,"./assets/rocket.bmp");

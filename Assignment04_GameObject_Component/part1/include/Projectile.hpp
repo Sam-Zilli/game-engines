@@ -15,6 +15,7 @@ struct Projectile : public GameEntity{
     void Render(SDL_Renderer* renderer) override;
 
     private:
+        SpriteComponent mSprite;
         float mSpeed{200.0f};
         bool mIsFiring{false};
         bool mYDirectionUp{true};

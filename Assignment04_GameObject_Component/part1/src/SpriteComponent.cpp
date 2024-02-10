@@ -12,6 +12,10 @@ void SpriteComponent::CreateSpriteComponent(SDL_Renderer* renderer, std::string 
 SpriteComponent::~SpriteComponent(){
 }
 
+void SpriteComponent::Input(float deltaTime) {
+    
+}
+
 void SpriteComponent::Update(float deltaTime){
 }
 void SpriteComponent::Render(SDL_Renderer* renderer){

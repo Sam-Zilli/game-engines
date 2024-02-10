@@ -1,7 +1,7 @@
 #include "GameEntity.hpp"
+#include <vector>
 
-GameEntity::GameEntity(SpriteComponent sprite){
-    mSprite = sprite;
+GameEntity::GameEntity() {
 }
 
 GameEntity::~GameEntity(){
@@ -9,19 +9,19 @@ GameEntity::~GameEntity(){
 
 void GameEntity::Input(float deltaTime){
     for(auto& c : mComponents) {
-        c.Input(deltaTime);
+        c->Input(deltaTime);
     }
 }
 
 void GameEntity::Update(float deltaTime){
     for(auto& c : mComponents) {
-        c.Update(deltaTime);
+        c->Update(deltaTime);
     }
 }
 
 void GameEntity::Render(SDL_Renderer* renderer){
     for(auto& c : mComponents) {
-        c.Render(deltaTime);
+        c->Render(renderer);
     }
 }
 
@@ -38,8 +38,11 @@ bool GameEntity::IsRenderable() const{
 }
 
 bool GameEntity::Intersects(std::shared_ptr<GameEntity> e){
+    /*
     SDL_FRect source = e->mSprite.GetRectangle();
     SDL_FRect us     = mSprite.GetRectangle();
     SDL_FRect result;
     return SDL_GetRectIntersectionFloat(&source,&us,&result);
+    */
+   return false;
 }

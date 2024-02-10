@@ -1,6 +1,6 @@
 #include "EnemyGameEntity.hpp"
 
-EnemyGameEntity::EnemyGameEntity(SDL_Renderer* renderer, SpriteComponent sprite) : GameEntity(sprite){
+EnemyGameEntity::EnemyGameEntity(SDL_Renderer* renderer){
     SpriteComponent sp;
     sp.CreateSpriteComponent(renderer,"./assets/rocket.bmp");
     sp.SetW(24.0f);

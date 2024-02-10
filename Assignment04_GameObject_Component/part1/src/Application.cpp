@@ -24,24 +24,26 @@ void Application::StartUp(){
     int row=1;
     int column=1;
     for(int i=0; i<36; i++){
-        SpriteComponent sp;
-        sp.CreateSpriteComponent(mRenderer,"./assets/enemy.bmp");
+        std::shared_ptr<SpriteComponent> sp = std::make_shared<SpriteComponent>();
+        sp->CreateSpriteComponent(mRenderer,"./assets/enemy.bmp");
 
 
         if(i%12==0){
             ++row;
             column=0;
         }
-        sp.Move(column*40+80,row*40);
+        sp->Move(column*40+80,row*40);
         column++;
-        std::unique_ptr<EnemyGameEntity> e = std::make_unique<EnemyGameEntity>(mRenderer,sp);
+        std::unique_ptr<EnemyGameEntity> e = std::make_unique<EnemyGameEntity>(mRenderer);
+        e->AddComponent(sp);
         enemies.push_back(std::move(e));
     }
 
-    SpriteComponent characterSprite;
-    characterSprite.CreateSpriteComponent(mRenderer,"./assets/hero.bmp");
-    characterSprite.Move(640/2 - (32/2),440);
-    mainCharacter = std::make_unique<PlayerGameEntity>(mRenderer,characterSprite);
+    std::shared_ptr<SpriteComponent> characterSprite = std::make_shared<SpriteComponent>();
+    characterSprite->CreateSpriteComponent(mRenderer,"./assets/hero.bmp");
+    characterSprite->Move(640/2 - (32/2),440);
+    mainCharacter = std::make_unique<PlayerGameEntity>(mRenderer);
+    mainCharacter->AddComponent(characterSprite);
 }
 void Application::Shutdown(){
     SDL_DestroyWindow(mWindow);

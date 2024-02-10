@@ -5,10 +5,11 @@
 
 #include "GameEntity.hpp"
 #include "Projectile.hpp"
+#include "SpriteComponent.hpp"
 
 struct PlayerGameEntity : public GameEntity{
 
-    PlayerGameEntity(SDL_Renderer* renderer, SpriteComponent sprite);
+    PlayerGameEntity(SDL_Renderer* renderer);
 
     virtual ~PlayerGameEntity();
 
@@ -21,6 +22,7 @@ struct PlayerGameEntity : public GameEntity{
     virtual std::shared_ptr<Projectile> GetProjectile() const;
 
     private:
+        SpriteComponent mSprite;
         float mSpeed{150.0f};
         std::shared_ptr<Projectile> mProjectile;
 };

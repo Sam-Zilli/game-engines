@@ -2,12 +2,13 @@
 
 #include <SDL3/SDL.h>
 #include <memory>
-
+#include <vector>
 #include "SpriteComponent.hpp"
 
 struct GameEntity{
 
-    GameEntity(SpriteComponent sprite);
+    // GameEntity(SpriteComponent sprite);
+    GameEntity();
 
     virtual ~GameEntity();
 
@@ -27,6 +28,7 @@ struct GameEntity{
 
     protected:
         std::vector<std::shared_ptr<Component>> mComponents;
+        SpriteComponent mSprite;
         bool mRenderable{true};
 };
 

@@ -5,10 +5,11 @@
 
 #include "GameEntity.hpp"
 #include "Projectile.hpp"
+#include "SpriteComponent.hpp"
 
 struct EnemyGameEntity : public GameEntity{
 
-    EnemyGameEntity(SDL_Renderer* renderer, SpriteComponent sprite);
+    EnemyGameEntity(SDL_Renderer* renderer);
 
     virtual ~EnemyGameEntity();
 
@@ -21,6 +22,7 @@ struct EnemyGameEntity : public GameEntity{
     virtual std::shared_ptr<Projectile> GetProjectile() const;
 
     private:
+        SpriteComponent mSprite;
         std::shared_ptr<Projectile> mProjectile;
 		bool xPositiveDirection{true};
         float offset{0.0f};

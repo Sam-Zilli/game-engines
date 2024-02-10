@@ -1,6 +1,6 @@
 #include "Projectile.hpp"
 
-Projectile::Projectile(SpriteComponent sprite) : GameEntity(sprite){
+Projectile::Projectile(SpriteComponent sprite){
     timeSinceLastLaunch = SDL_GetTicks();
     mRenderable=false;
 }

@@ -11,8 +11,9 @@ struct SpriteComponent : public Component {
 
     ~SpriteComponent();
 
+    void Input(float deltaTime) override;
 	void Update(float deltaTime) override; // needs override bc inherited from Component
-	void Render(SDL_Renderer* renderer);
+	void Render(SDL_Renderer* renderer) override;
 
     void SetW(float w);
 
