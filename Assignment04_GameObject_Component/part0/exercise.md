@@ -12,4 +12,3 @@
 2. *Rendering*
 3. *Input class Ex: Taking input from the user that they want mario to stomp*
 4. *Transform Ex: x/y/scale position changes*
-5. *Audio for the Mario theme song playing in the background*
