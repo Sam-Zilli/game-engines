@@ -50,15 +50,16 @@ void EnemyGameEntity::Update(float deltaTime) {
 
 void EnemyGameEntity::Render(SDL_Renderer* renderer){
     if(mRenderable){
+        for(auto& c : mComponents) {
+            c->Render(renderer);
+        }
         mProjectile->Render(renderer);
         // mSprite.Render(renderer);
     }else{
         // Do nothing;
     }
-    for(auto& c : mComponents) {
-        c->Render(renderer);
-    }
 }
+
 
 std::shared_ptr<Projectile> EnemyGameEntity::GetProjectile() const{
     return mProjectile;
