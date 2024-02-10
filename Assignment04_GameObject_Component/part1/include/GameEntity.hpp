@@ -28,7 +28,7 @@ struct GameEntity{
 
     protected:
         std::vector<std::shared_ptr<Component>> mComponents;
-        SpriteComponent mSprite;
+        // SpriteComponent mSprite;
         bool mRenderable{true};
 };
 
