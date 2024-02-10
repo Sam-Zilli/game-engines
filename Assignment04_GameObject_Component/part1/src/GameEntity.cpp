@@ -8,12 +8,25 @@ GameEntity::~GameEntity(){
 }
 
 void GameEntity::Input(float deltaTime){
+    for(auto& c : mComponents) {
+        c.Input(deltaTime);
+    }
 }
 
 void GameEntity::Update(float deltaTime){
+    for(auto& c : mComponents) {
+        c.Update(deltaTime);
+    }
 }
 
 void GameEntity::Render(SDL_Renderer* renderer){
+    for(auto& c : mComponents) {
+        c.Render(deltaTime);
+    }
+}
+
+void GameEntity::AddComponent(std::shared_ptr<Component> c) {
+    mComponents.push_back(c);
 }
 
 void GameEntity::SetRenderable(bool value){

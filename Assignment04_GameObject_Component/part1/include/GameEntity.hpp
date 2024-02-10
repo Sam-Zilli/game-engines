@@ -17,6 +17,8 @@ struct GameEntity{
 
     virtual void Render(SDL_Renderer* renderer);
 
+    void AddComponent(std::shared_ptr<Component> c);
+
     void SetRenderable(bool value);
 
     bool IsRenderable() const;
@@ -24,7 +26,7 @@ struct GameEntity{
     bool Intersects(std::shared_ptr<GameEntity> e);
 
     protected:
-        SpriteComponent mSprite;
+        std::vector<std::shared_ptr<Component>> mComponents;
         bool mRenderable{true};
 };
 
