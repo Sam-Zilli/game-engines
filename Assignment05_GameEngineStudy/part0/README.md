@@ -55,23 +55,41 @@ Pick one game engine that is listed here: https://gist.github.com/raysan5/909dc6
 Answer the following to the best of your ability (There may be 1 or 2 that you cannot answer -- if you cannot answer too many questions, choose a different engine to receive full credit.):
 
 - Question: Which engine did you choose?
-  - Answer: *TODO Put your answer here*
+  - Answer: Unreal Engine
+ 
+    
 - Question: Is the engine implemented primarily in C++
-  - Answer: *TODO Put your answer here*
+  - Answer: Yes
+ 
+    
 - Question: Is there a scripting languages available with the engine?
-  - Answer: *TODO Put your answer here*
+  - Answer: Yes, UnrealScript and Verse
+    
 - Question: Were there any commercial/indie games made in this engine?
-  - Answer: *TODO Put your answer here*
+  - Answer: Yes, tons. Gears of War, Fortnite, and more.
+
+    
 - Question: What platforms does the engine support?
-  - Answer: *TODO Put your answer here*
+  - Answer: "Unreal Engine 4 officially supports the following platforms as of 4.27 (August 2021):[97] Windows,[98] macOS,[98] Linux,[98] iOS,[98] Android,[98] Nintendo Switch,[99] PlayStation 4,[100] Xbox One,[100] PlayStation 5,[101] Xbox Series X/S,[101] Stadia,[102] Magic Leap,[103] HTC Vive,[104] Oculus,[105] PlayStation VR,[106] OSVR,[107] Samsung Gear VR,[108] and HoloLens 2.[109] It formerly supported Google Daydream[110] and HTML5.[111][112]" - Unreal Engine Wikepedia page
+
+
+    
 - Question: Were there any Game Developer Conference or other interesting talks? (May need to search YouTube, try to find at least one presentation video or slideshow talking about the technical parts of the engine, code, or a game made with the engine and link it here.)
-  - Answer: *TODO Put your answer here*
+  - Answer: https://www.youtube.com/watch?v=Dj60HHy-Kqk explains some really amazing features, for example there are 71 million polygons being rendered using nanite.
+ 
+  
 - Question: What is the engines 'best' feature (i.e. why do people tend to use it? You may need to visit the website to get an idea.)
-  - Answer: *TODO Put your answer here*
+  - Answer: High end graphics 
+ 
+    
 - Question: Is the code available?
-  - Answer: *TODO Put your answer here*
+  - Answer: Yes
+ 
+    
 - Question: What is one interesting thing you learned looking at the engine or the code, that you think you can implement in your codebase?
-  - Answer: *TODO Put your answer here*
+  - Answer: Skipping this one because I don't think any of the features mentioned in the videos I watched are things I will be able to implement at my current experience level.
+ 
+    
 
 ## Deliverable
 
