@@ -46,7 +46,7 @@ The Godot game engine(https://godotengine.org/) is a free and open-source engine
 Please read the following article and answer.
 
 - Question: Read the following article (https://godotengine.org/article/why-isnt-godot-ecs-based-game-engine/) and answer in your own words -- how is the GoDot engine organized at a high-level?
-  - Answer: *TODO Put your answer here*
+  - Answer: Basically an inheritance tree that's very OOP where everything is an object, and there are child classes that contain more classes or components.
 
 ## Your Choice Engine/Framework
 
