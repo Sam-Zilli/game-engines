@@ -20,13 +20,21 @@ Horde3D is a small and simple graphics engine. It was designed primarily to be i
 Review the Horde3D reference manual here: http://horde3d.org/docs/manual.html You should read the manual in its entirety such that you can answer the following questions:
 
 - Question: What might be the advantage of a handle-based system?
-  - Answer: *TODO Put your answer here*
+  - Answer: You get the benefits of a pointer, but with more safety. For example, returns a NULL-Handle in case of failure when constructing object.
+    
 - Question: What is one pro and one con of creating a C-based API with your engine?
-  - Answer: *TODO Put your answer here*
+  - Answer:
+  - Pro: High portability, fast
+  - Con: Tedious / less abstraction and built in functionality than C++ for example
+    
 - Question: What is a scene graph?
-  - Answer: *TODO Put your answer here*
+  - Answer: "A scene graph is used to represent the logical or spatial structure of the scene to be rendered. Usually it also serves for accelerating scene-based search and query operations like frustum culling or collision queries." -The Horde3D Documentation
+ 
+    
 - Question: What is a Pipeline in Horde3D? In your answer, discuss the purpose of having a 'pipeline XML document' in the context of an engine.
-  - Answer: *TODO Put your answer here*
+  - Answer:
+  - "A pipeline is an XML document that defines the steps to be performed for rendering the scene." -The Horde3D Documentation.
+  - The purpose of having the 'pipeline XML document' is to be like a config file.
 
 ## GoDot Game Engine
 
