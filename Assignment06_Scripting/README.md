@@ -3,12 +3,12 @@
 *TODO*: Please edit the following information in your assignment
 
 * Name: Sam Zilli
-* How many hours did it take you to complete this assignment? 
+* How many hours did it take you to complete this assignment? 4
 * Did you collaborate or share ideas with any other students/TAs/Professors?  No
 * Did you use any external resources? 
-  * (tbd if any)
-  * (tbd if any)
-  * (tbd if any)
+  * I referenced a previous version of pong I had made in python
+  * stack Overflow
+  * Chatgpt found a few syntax errors for me
 * (Optional) What was the most interesting part of the assignment? How would you improve this assignment?
 
 # Assignment
