@@ -50,6 +50,8 @@ public:
     // Draw a simple rectangle
     void DrawRectangle(int x, int y, int w, int h);
 
+    void pingPong();
+
 private:
     // Screen dimension constants
     int screenHeight;
@@ -195,6 +197,20 @@ void SDLGraphicsProgram::DrawRectangle(int x, int y, int w, int h){
     SDL_SetRenderDrawColor(gRenderer, 0xFF, 0x00, 0x00, 0xFF);
     SDL_RenderDrawRect(gRenderer, &fillRect); 
 }
+
+// python3.11 test.py -m ./mygameengine.so
+// Assignment 6 functions
+void SDLGraphicsProgram::runPongGame(){
+    // game logic
+}
+
+
+
+
+
+
+
+
 
 // Include the pybindings
 #include <pybind11/pybind11.h>
