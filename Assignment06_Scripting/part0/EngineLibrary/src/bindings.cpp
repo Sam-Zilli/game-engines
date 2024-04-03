@@ -70,9 +70,9 @@ private:
     float ballVY;
 
     // move LEFT paddle
-    void setLeftPaddleCoordinates();
+    void setLeftPaddleCoordinates(int x, int y);
     // move RIGHT paddle
-    void setRightPaddleCoordinates();
+    void setRightPaddleCoordinates(int x, int y);
     // move BALL location
     void setBallCoordinates();
 
@@ -207,7 +207,9 @@ bool SDLGraphicsProgram::getQuit() {
     return quit;
 }
 
+void setPaddleCoordinates(int x, int y) {
 
+}
 
 
 
@@ -225,6 +227,7 @@ bool SDLGraphicsProgram::getQuit() {
 
 
 // START PONG LOGIC 
+// python3.11 macbuild.py
 // python3.11 test.py -m ./mygameengine.so OR
 // python3.11 pong.py -m ./mygameengine.so
 // Assignment 6 functions

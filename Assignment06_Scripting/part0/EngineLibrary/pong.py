@@ -36,7 +36,7 @@ while not quit:
     gameEngine.DrawRectangle(WINDOW_HEIGHT-PADDLE_WIDTH, int((WINDOW_HEIGHT/2)-PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT)
 
     # ball
-    gameEngine.DrawRectangle(int(int((WINDOW_HEIGHT/2)-BALL_HEIGHT)), int(int((WINDOW_HEIGHT/2)-BALL_HEIGHT)), BALL_WIDTH, BALL_HEIGHT)
+    gameEngine.DrawRectangle(int(int((WINDOW_HEIGHT/2)-BALL_HEIGHT)), (int((WINDOW_HEIGHT/2)-BALL_HEIGHT)), BALL_WIDTH, BALL_HEIGHT)
 
     # Delay for a short time
     gameEngine.delay(100)
