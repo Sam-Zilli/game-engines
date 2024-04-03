@@ -1,6 +1,6 @@
 import mygameengine
 
-# Initialize SDL
+# Initialize SDL / window
 gameEngine = mygameengine.SDLGraphicsProgram(400, 400)
 
 # Main game loop
@@ -13,8 +13,14 @@ while not quit:
 
     gameEngine.clear()
 
-    # Draw a rectangle
-    gameEngine.DrawRectangle(100, 100, 100, 100)
+    # left paddle
+    gameEngine.DrawRectangle(0, 200-40, 10, 40)
+
+    # right paddle
+    gameEngine.DrawRectangle(400-10, 200-40, 10, 40)
+
+    # ball?
+    gameEngine.DrawRectangle(200-10,200-10,10,10)
 
     # Delay for a short time
     gameEngine.delay(100)

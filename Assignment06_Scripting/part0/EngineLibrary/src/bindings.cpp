@@ -153,7 +153,7 @@ void SDLGraphicsProgram::poll() {
                 SDL_Log("Key released: %s", SDL_GetKeyName(event.key.keysym.sym));
                 break;
             default:
-                SDL_Log("Unknown event type: %d", event.type);
+                // SDL_Log("Unknown event type: %d", event.type);
                 break;
         }
     }

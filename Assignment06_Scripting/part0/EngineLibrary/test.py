@@ -36,4 +36,5 @@ for i in range(0,20):
     test.flip();
 
 test.loop();
+# test.runPongGame();
 
