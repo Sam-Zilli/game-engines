@@ -60,6 +60,7 @@ private:
     SDL_Window* gWindow ;
     // Our renderer
     SDL_Renderer* gRenderer;
+    
     // LEFT player travels on left y axis
     float leftPaddle;
     // RIGHT player travels on right y axis
@@ -67,6 +68,13 @@ private:
     // ball location
     float ballx;
     float bally;
+
+    // move LEFT paddle
+    void setLeftPaddleCoordinates();
+    // move RIGHT paddle
+    void setRightPaddleCoordinates();
+    // move BALL location
+    void setBallCoordinates();
 };
 
 
