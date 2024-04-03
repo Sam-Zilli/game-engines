@@ -9,7 +9,7 @@
 #
 # You will see `python3.5-config --includes` for example which corresponds
 # to which version of python you are building.
-# (In fact, run `python3.5-config --includes` in the terminal to see what it does!)
+# (In fact, run `python3.5-config --includesl` in the terminal to see what it does!)
 import mygameengine
 
 # Now use some python libraries for random numbers!
@@ -34,4 +34,6 @@ for i in range(0,20):
     test.delay(100);
     # Refresh the screen
     test.flip();
+
+test.loop();
 
