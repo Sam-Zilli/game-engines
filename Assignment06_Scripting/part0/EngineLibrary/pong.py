@@ -7,6 +7,7 @@ PADDLE_WIDTH = 10
 PADDLE_HEIGHT = 40
 BALL_WIDTH = 5
 BALL_HEIGHT = 5
+
 # the increments in which movement occurs
 MOVEMENT = 10
 
@@ -159,6 +160,7 @@ while not quit:
         leftPaddle.moveUp()
     if(gameEngine.getLeftPaddleDown()):
         leftPaddle.moveDown()
+
     # drawing left paddle
     drawLeftPaddle()
 
