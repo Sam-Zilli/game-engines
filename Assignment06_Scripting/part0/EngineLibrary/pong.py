@@ -1,22 +1,32 @@
 import mygameengine
 
 # Initialize SDL
-test = mygameengine.SDLGraphicsProgram(400, 400)
+gameEngine = mygameengine.SDLGraphicsProgram(400, 400)
 
-# Clear the screen
-test.clear()
+# Main game loop
+quit = False
 
-test.DrawRectangle(100, 100, 100, 100)
+# While running 
+while not quit:
 
-test.delay(100)
+    gameEngine.poll()
 
-# Refresh the screen
-test.flip()
+    gameEngine.clear()
 
-test.poll()
+    # Draw a rectangle
+    gameEngine.DrawRectangle(100, 100, 100, 100)
 
+    # Delay for a short time
+    gameEngine.delay(100)
 
-test.runPongGame();
+    # Refresh the screen
+    gameEngine.flip()
+
+    # Check if game should quit
+    quit = gameEngine.getQuit()
+
+    # Run the Pong game
+
 
 # End of program
 

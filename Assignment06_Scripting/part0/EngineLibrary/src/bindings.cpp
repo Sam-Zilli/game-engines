@@ -1,13 +1,6 @@
 #ifndef SDLGRAPHICSPROGRAM
 #define SDLGRAPHICSPROGRAM
 
-// ==================== Libraries ==================
-// Depending on the operating system we use
-// The paths to SDL are actually different.
-// The #define statement should be passed in
-// when compiling using the -D argument.
-// This gives an example of how a programmer
-// may support multiple platforms with different
 // dependencies.
 #if defined(LINUX) || defined(MINGW)
     #include <SDL2/SDL.h>
@@ -23,14 +16,9 @@
 #include <sstream>
 #include <fstream>
 #include <vector>
-// Purpose:
-// This class sets up a full graphics program using SDL
-//
-//
-//
+
 class SDLGraphicsProgram{
 public:
-
     // Constructor
     SDLGraphicsProgram(int w, int h);
     // Destructor
@@ -44,13 +32,17 @@ public:
     // Delay rendering
     void delay(int milliseconds);
     // loop that runs forever
-    void loop();
+    // void loop();
     // Get Pointer to Window
     SDL_Window* getSDLWindow();
     // Draw a simple rectangle
     void DrawRectangle(int x, int y, int w, int h);
     // starts the ping pong game
-    void pingPong();
+    // void runPongGame();
+    // loop poll
+    void poll();
+
+    bool getQuit();
 
 private:
     // Screen dimension constants
@@ -60,14 +52,22 @@ private:
     SDL_Window* gWindow ;
     // Our renderer
     SDL_Renderer* gRenderer;
-    
+
     // LEFT player travels on left y axis
-    float leftPaddle;
+    float leftPaddleY;
+    float leftPaddleX;
+
+
     // RIGHT player travels on right y axis
-    float rightPaddle;
+    float rightPaddleY;
+    float rightPaddleX;
+
     // ball location
     float ballx;
     float bally;
+    // ball movement
+    float ballVX;
+    float ballVY;
 
     // move LEFT paddle
     void setLeftPaddleCoordinates();
@@ -75,6 +75,8 @@ private:
     void setRightPaddleCoordinates();
     // move BALL location
     void setBallCoordinates();
+
+    bool quit = false;
 };
 
 
@@ -114,8 +116,6 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h):screenWidth(w),screenHeight
         }
   	}
 
-    
-    
     // If initialization did not work, then print out a list of errors in the constructor.
     if(!success){
         errorStream << "SDLGraphicsProgram::SDLGraphicsProgram - Failed to initialize!\n";
@@ -127,7 +127,6 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h):screenWidth(w),screenHeight
 
 }
 
-
 // Proper shutdown of SDL and destroy initialized objects
 SDLGraphicsProgram::~SDLGraphicsProgram(){
     //Destroy window
@@ -138,6 +137,27 @@ SDLGraphicsProgram::~SDLGraphicsProgram(){
 	SDL_Quit();
 }
 
+// Logs keyboard presses and keeps loop 
+void SDLGraphicsProgram::poll() {
+    SDL_Event event;
+    while (SDL_PollEvent(&event) != 0) {
+        switch (event.type) {
+            case SDL_QUIT:
+                SDL_Log("Quit event detected");
+                quit = true;
+                break;
+            case SDL_KEYDOWN:
+                SDL_Log("Key pressed: %s", SDL_GetKeyName(event.key.keysym.sym));
+                break;
+            case SDL_KEYUP:
+                SDL_Log("Key released: %s", SDL_GetKeyName(event.key.keysym.sym));
+                break;
+            default:
+                SDL_Log("Unknown event type: %d", event.type);
+                break;
+        }
+    }
+}
 
 // Initialize OpenGL
 // Setup any of our shaders here.
@@ -149,7 +169,7 @@ bool SDLGraphicsProgram::initGL(){
 }
 
 
-// clear
+// Clear
 // Clears the screen
 void SDLGraphicsProgram::clear(){
 	// Nothing yet!
@@ -160,7 +180,7 @@ void SDLGraphicsProgram::clear(){
 // The flip function gets called once per loop
 // It swaps out the previvous frame in a double-buffering system
 void SDLGraphicsProgram::flip(){
-	// Nothing yet!
+	// Nothing yet! fst
     SDL_RenderPresent(gRenderer);
 }
 
@@ -168,37 +188,6 @@ void SDLGraphicsProgram::flip(){
 void SDLGraphicsProgram::delay(int milliseconds){
     SDL_Delay(milliseconds); 
 }
-
-
-//Loops forever!
-void SDLGraphicsProgram::loop(){
-    // Main loop flag
-    // If this is quit = 'true' then the program terminates.
-    bool quit = false;
-    // Event handler that handles various events in SDL
-    // that are related to input and output
-    SDL_Event e;
-    // Enable text input
-    SDL_StartTextInput();
-    // While application is running
-    while(!quit){
-     	 //Handle events on queue
-		while(SDL_PollEvent( &e ) != 0){
-        	// User posts an event to quit
-	        // An example is hitting the "x" in the corner of the window.
-    	    if(e.type == SDL_QUIT){
-        		quit = true;
-	        }
-      	} // End SDL_PollEvent loop.
-
-      	//Update screen of our specified window
-      	SDL_GL_SwapWindow(getSDLWindow());
-    }
-
-    //Disable text input
-    SDL_StopTextInput();
-}
-
 
 // Get Pointer to Window
 SDL_Window* SDLGraphicsProgram::getSDLWindow(){
@@ -213,11 +202,161 @@ void SDLGraphicsProgram::DrawRectangle(int x, int y, int w, int h){
     SDL_RenderDrawRect(gRenderer, &fillRect); 
 }
 
-// python3.11 test.py -m ./mygameengine.so
-// Assignment 6 functions
-void SDLGraphicsProgram::runPongGame(){
-    // game logic
+
+bool SDLGraphicsProgram::getQuit() {
+    return quit;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// START PONG LOGIC 
+// python3.11 test.py -m ./mygameengine.so OR
+// python3.11 pong.py -m ./mygameengine.so
+// Assignment 6 functions
+// void SDLGraphicsProgram::runPongGame() {
+//     // keeps inner pong game loop running
+//     bool quit = false;
+
+//     leftPaddleY = 80.0f;
+//     rightPaddleY = 80.0f;
+
+
+//     while (!quit) {
+//         // Handle events
+//         SDL_Event e;
+//         while (SDL_PollEvent(&e) != 0) {
+//             if (e.type == SDL_QUIT) {
+//                 quit = true;
+//             }
+//         }
+
+//         // Clear the screen - use outer function later
+//         clear();
+
+//         setLeftPaddleCoordinates();
+//         setRightPaddleCoordinates();
+        
+//         setBallCoordinates();
+
+//         // Draw paddles
+//         DrawRectangle(10, static_cast<int>(leftPaddleY), 20, 20);
+//         DrawRectangle(780, static_cast<int>(rightPaddleY), 20, 20);
+
+//         // Draw ball
+//         DrawRectangle(static_cast<int>(ballx), static_cast<int>(bally), 20, 20);
+
+//         flip();
+//     }
+// }
+
+// // Move LEFT paddle along y axis
+// void SDLGraphicsProgram::setLeftPaddleCoordinates() {
+//     // Example: Move paddle based on keyboard input
+//     const Uint8* currentKeyStates = SDL_GetKeyboardState(NULL);
+//     if (currentKeyStates[SDL_SCANCODE_W]) {
+//         leftPaddleY -= 0.1f;
+//     }
+//     if (currentKeyStates[SDL_SCANCODE_S]) {
+//         leftPaddleY += 0.1f;
+//     }
+// }
+
+// // Move RIGHT paddle along y axis 
+// void SDLGraphicsProgram::setRightPaddleCoordinates() {
+//     // Example: Move paddle based on keyboard input
+//     const Uint8* currentKeyStates = SDL_GetKeyboardState(NULL);
+//     if (currentKeyStates[SDL_SCANCODE_UP]) {
+//         rightPaddleY -= 0.1f;
+//     }
+//     if (currentKeyStates[SDL_SCANCODE_DOWN]) {
+//         rightPaddleY += 0.1f;
+//     }
+// }
+
+
+// // Move BALL location (x and y values)
+// void SDLGraphicsProgram::setBallCoordinates() {
+
+//     if (ballx <= 0 || ballx >= 800) {
+//         ballVX *= -1;
+//     }
+//     if (bally <= 0 || bally >= 600) {
+//         ballVY *= -1;
+//     }
+// }
+
+// // END PONG LOGIC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Loops
+// void SDLGraphicsProgram::loop(){
+//     // Main loop flag
+//     // If this is quit = 'true' then the program terminates.
+//     bool quit = false;
+//     // Event handler that handles various events in SDL
+//     // that are related to input and output
+//     SDL_Event e;
+//     // Enable text input
+//     SDL_StartTextInput();
+
+//     // Run the Pong game inside the loop
+//     runPongGame();
+
+//     // While application is running
+//     while(!quit){
+//      	 //Handle events on queue
+// 		while(SDL_PollEvent( &e ) != 0){
+//         	// User posts an event to quit
+// 	        // An example is hitting the "x" in the corner of the window.
+//     	    if(e.type == SDL_QUIT){
+//         		quit = true;
+// 	        }
+//       	} // End SDL_PollEvent loop.
+
+//       	//Update screen of our specified window
+//       	SDL_GL_SwapWindow(getSDLWindow());
+//     }
+
+//     //Disable text input
+//     SDL_StopTextInput();
+// }
+
+
+
+
+
 
 
 
@@ -231,7 +370,6 @@ void SDLGraphicsProgram::runPongGame(){
 #include <pybind11/pybind11.h>
 
 namespace py = pybind11;
-
 
 // Creates a macro function that will be called
 // whenever the module is imported into python
@@ -247,20 +385,13 @@ PYBIND11_MODULE(mygameengine, m){
             .def("clear", &SDLGraphicsProgram::clear) // Expose member methods
             .def("delay", &SDLGraphicsProgram::delay) 
             .def("flip", &SDLGraphicsProgram::flip) 
-            .def("loop", &SDLGraphicsProgram::loop) 
-            .def("DrawRectangle", &SDLGraphicsProgram::DrawRectangle) ;
+            // .def("loop", &SDLGraphicsProgram::loop) 
+            .def("DrawRectangle", &SDLGraphicsProgram::DrawRectangle)
+            // .def("runPongGame", &SDLGraphicsProgram::runPongGame)
+            .def("poll", &SDLGraphicsProgram::poll)
+            .def("getQuit", &SDLGraphicsProgram::getQuit) ;
 // We do not need to expose everything to our users!
 //            .def("getSDLWindow", &SDLGraphicsProgram::getSDLWindow, py::return_value_policy::reference) 
 }
-
-
-
-
-
-
-
-
-
-
-
+ 
 #endif
