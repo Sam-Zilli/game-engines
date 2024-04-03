@@ -49,7 +49,7 @@ public:
     SDL_Window* getSDLWindow();
     // Draw a simple rectangle
     void DrawRectangle(int x, int y, int w, int h);
-
+    // starts the ping pong game
     void pingPong();
 
 private:
@@ -60,6 +60,13 @@ private:
     SDL_Window* gWindow ;
     // Our renderer
     SDL_Renderer* gRenderer;
+    // LEFT player travels on left y axis
+    float leftPaddle;
+    // RIGHT player travels on right y axis
+    float rightPaddle;
+    // ball location
+    float ballx;
+    float bally;
 };
 
 
