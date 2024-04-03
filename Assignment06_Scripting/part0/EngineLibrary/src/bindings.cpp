@@ -16,6 +16,7 @@
 #include <sstream>
 #include <fstream>
 #include <vector>
+#include <cstring>
 
 class SDLGraphicsProgram{
 public:
@@ -44,6 +45,14 @@ public:
 
     bool getQuit();
 
+    // right paddle commands
+    bool getRightPaddleUp();
+    bool getRightPaddleDown();
+
+    // left paddle commands
+    bool getLeftPaddleUp();
+    bool getLeftPaddleDown();
+
 private:
     // Screen dimension constants
     int screenHeight;
@@ -53,30 +62,13 @@ private:
     // Our renderer
     SDL_Renderer* gRenderer;
 
-    // LEFT player travels on left y axis
-    float leftPaddleY;
-    float leftPaddleX;
-
-
-    // RIGHT player travels on right y axis
-    float rightPaddleY;
-    float rightPaddleX;
-
-    // ball location
-    float ballx;
-    float bally;
-    // ball movement
-    float ballVX;
-    float ballVY;
-
-    // move LEFT paddle
-    void setLeftPaddleCoordinates(int x, int y);
-    // move RIGHT paddle
-    void setRightPaddleCoordinates(int x, int y);
-    // move BALL location
-    void setBallCoordinates();
-
     bool quit = false;
+    // right paddle commands
+    bool rightPaddleUp = false;
+    bool rightPaddleDown = false;
+    // left paddle commands
+    bool leftPaddleUp = false;
+    bool leftPaddleDown = false;
 };
 
 
@@ -139,6 +131,10 @@ SDLGraphicsProgram::~SDLGraphicsProgram(){
 
 // Logs keyboard presses and keeps loop 
 void SDLGraphicsProgram::poll() {
+    rightPaddleDown = false;
+    rightPaddleUp = false;
+    leftPaddleUp = false;
+    leftPaddleDown = false;
     SDL_Event event;
     while (SDL_PollEvent(&event) != 0) {
         switch (event.type) {
@@ -148,9 +144,20 @@ void SDLGraphicsProgram::poll() {
                 break;
             case SDL_KEYDOWN:
                 SDL_Log("Key pressed: %s", SDL_GetKeyName(event.key.keysym.sym));
-                break;
+                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Up") == 0) {
+                    rightPaddleUp = true;
+                }
+                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Down") == 0) {
+                    rightPaddleDown = true;
+                }
+                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Left Option") == 0) {
+                    leftPaddleUp = true;
+                }
+                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Z") == 0) {
+                    leftPaddleDown = true;
+                }
             case SDL_KEYUP:
-                SDL_Log("Key released: %s", SDL_GetKeyName(event.key.keysym.sym));
+                // SDL_Log("Key released: %s", SDL_GetKeyName(event.key.keysym.sym));
                 break;
             default:
                 // SDL_Log("Unknown event type: %d", event.type);
@@ -170,7 +177,7 @@ bool SDLGraphicsProgram::initGL(){
 
 
 // Clear
-// Clears the screen
+// Clears the screen 
 void SDLGraphicsProgram::clear(){
 	// Nothing yet!
     SDL_SetRenderDrawColor(gRenderer, 0x44,0x44,0x4,0xFF);
@@ -207,8 +214,20 @@ bool SDLGraphicsProgram::getQuit() {
     return quit;
 }
 
-void setPaddleCoordinates(int x, int y) {
+bool SDLGraphicsProgram::getRightPaddleUp() {
+    return rightPaddleUp;
+}
 
+bool SDLGraphicsProgram::getRightPaddleDown() {
+    return rightPaddleDown;
+}
+
+bool SDLGraphicsProgram::getLeftPaddleUp() {
+    return leftPaddleUp;
+}
+
+bool SDLGraphicsProgram::getLeftPaddleDown() {
+    return leftPaddleDown;
 }
 
 
@@ -223,138 +242,6 @@ void setPaddleCoordinates(int x, int y) {
 
 
 
-
-
-
-// START PONG LOGIC 
-// python3.11 macbuild.py
-// python3.11 test.py -m ./mygameengine.so OR
-// python3.11 pong.py -m ./mygameengine.so
-// Assignment 6 functions
-// void SDLGraphicsProgram::runPongGame() {
-//     // keeps inner pong game loop running
-//     bool quit = false;
-
-//     leftPaddleY = 80.0f;
-//     rightPaddleY = 80.0f;
-
-
-//     while (!quit) {
-//         // Handle events
-//         SDL_Event e;
-//         while (SDL_PollEvent(&e) != 0) {
-//             if (e.type == SDL_QUIT) {
-//                 quit = true;
-//             }
-//         }
-
-//         // Clear the screen - use outer function later
-//         clear();
-
-//         setLeftPaddleCoordinates();
-//         setRightPaddleCoordinates();
-        
-//         setBallCoordinates();
-
-//         // Draw paddles
-//         DrawRectangle(10, static_cast<int>(leftPaddleY), 20, 20);
-//         DrawRectangle(780, static_cast<int>(rightPaddleY), 20, 20);
-
-//         // Draw ball
-//         DrawRectangle(static_cast<int>(ballx), static_cast<int>(bally), 20, 20);
-
-//         flip();
-//     }
-// }
-
-// // Move LEFT paddle along y axis
-// void SDLGraphicsProgram::setLeftPaddleCoordinates() {
-//     // Example: Move paddle based on keyboard input
-//     const Uint8* currentKeyStates = SDL_GetKeyboardState(NULL);
-//     if (currentKeyStates[SDL_SCANCODE_W]) {
-//         leftPaddleY -= 0.1f;
-//     }
-//     if (currentKeyStates[SDL_SCANCODE_S]) {
-//         leftPaddleY += 0.1f;
-//     }
-// }
-
-// // Move RIGHT paddle along y axis 
-// void SDLGraphicsProgram::setRightPaddleCoordinates() {
-//     // Example: Move paddle based on keyboard input
-//     const Uint8* currentKeyStates = SDL_GetKeyboardState(NULL);
-//     if (currentKeyStates[SDL_SCANCODE_UP]) {
-//         rightPaddleY -= 0.1f;
-//     }
-//     if (currentKeyStates[SDL_SCANCODE_DOWN]) {
-//         rightPaddleY += 0.1f;
-//     }
-// }
-
-
-// // Move BALL location (x and y values)
-// void SDLGraphicsProgram::setBallCoordinates() {
-
-//     if (ballx <= 0 || ballx >= 800) {
-//         ballVX *= -1;
-//     }
-//     if (bally <= 0 || bally >= 600) {
-//         ballVY *= -1;
-//     }
-// }
-
-// // END PONG LOGIC
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Loops
-// void SDLGraphicsProgram::loop(){
-//     // Main loop flag
-//     // If this is quit = 'true' then the program terminates.
-//     bool quit = false;
-//     // Event handler that handles various events in SDL
-//     // that are related to input and output
-//     SDL_Event e;
-//     // Enable text input
-//     SDL_StartTextInput();
-
-//     // Run the Pong game inside the loop
-//     runPongGame();
-
-//     // While application is running
-//     while(!quit){
-//      	 //Handle events on queue
-// 		while(SDL_PollEvent( &e ) != 0){
-//         	// User posts an event to quit
-// 	        // An example is hitting the "x" in the corner of the window.
-//     	    if(e.type == SDL_QUIT){
-//         		quit = true;
-// 	        }
-//       	} // End SDL_PollEvent loop.
-
-//       	//Update screen of our specified window
-//       	SDL_GL_SwapWindow(getSDLWindow());
-//     }
-
-//     //Disable text input
-//     SDL_StopTextInput();
-// }
 
 
 
@@ -392,7 +279,11 @@ PYBIND11_MODULE(mygameengine, m){
             .def("DrawRectangle", &SDLGraphicsProgram::DrawRectangle)
             // .def("runPongGame", &SDLGraphicsProgram::runPongGame)
             .def("poll", &SDLGraphicsProgram::poll)
-            .def("getQuit", &SDLGraphicsProgram::getQuit) ;
+            .def("getQuit", &SDLGraphicsProgram::getQuit)
+            .def("getRightPaddleUp", &SDLGraphicsProgram::getRightPaddleUp)
+            .def("getRightPaddleDown", &SDLGraphicsProgram::getRightPaddleDown)
+            .def("getLeftPaddleUp", &SDLGraphicsProgram::getLeftPaddleUp)
+            .def("getLeftPaddleDown", &SDLGraphicsProgram::getLeftPaddleDown) ;
 // We do not need to expose everything to our users!
 //            .def("getSDLWindow", &SDLGraphicsProgram::getSDLWindow, py::return_value_policy::reference) 
 }
