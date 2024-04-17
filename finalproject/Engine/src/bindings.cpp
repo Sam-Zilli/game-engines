@@ -254,8 +254,6 @@ bool SDLGraphicsProgram::getLeftPaddleDown() {
 
 
 
-
-
 // Include the pybindings
 #include <pybind11/pybind11.h>
 
