@@ -193,7 +193,7 @@ LIBRARIES = ("-L /usr/local/opt/sdl2/lib "
              "`python3.11-config --ldflags`")
 
 # Executable output
-EXECUTABLE = "../mygameengine.so"
+EXECUTABLE = "mygameengine.so"
 
 # Build the compile command
 compile_command = (
