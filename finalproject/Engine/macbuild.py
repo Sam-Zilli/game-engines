@@ -224,8 +224,8 @@ INCLUDE_DIR = ("-I ./include/ "
 
 # # Libraries to include
 # LIBRARIES = "`python3.11-config --ldflags`"
-LIBRARIES = ("-L /path/to/SDL3/lib "  # Add path to SDL3 library directory
-             "-l SDL3 "                 # Adjust library name if necessary
+LIBRARIES = ("-l SDL3 "                 # Adjust library name if necessary
+             f"-I ~/Desktop/GameEngines/sdl3/SDL/include "
              "`python3.11-config --ldflags`")
 
 # Executable output
