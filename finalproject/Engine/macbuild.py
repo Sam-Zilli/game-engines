@@ -171,25 +171,61 @@
 # os.system(compile_command)
 
 
+# ------------------- BEFORE CHANGING TO SDL3
+# import os
+
+# # Compiler settings
+# COMPILER = "g++"
+# SOURCE = "./src/*.cpp"
+
+# # Compiler arguments
+# ARGUMENTS = "-std=c+20 -shared -undefined dynamic_lookup"
+
+# # Include directories
+# INCLUDE_DIR = ("-I ./include/ "
+#                "-I ./pybind11/include/ "
+#                "-I /usr/local/opt/sdl2/include/SDL2 "  # Adjust path if needed
+#                "-I /Library/Frameworks/Python.framework/Versions/3.11/include/python3.11")
+
+# # Libraries to include
+# LIBRARIES = ("-L /usr/local/opt/sdl2/lib "
+#              "-l SDL2 "
+#              "`python3.11-config --ldflags`")
+
+# # Executable output
+# EXECUTABLE = "mygameengine.so"
+
+# # Build the compile command
+# compile_command = (
+#     f"{COMPILER} {ARGUMENTS} -o {EXECUTABLE} {INCLUDE_DIR} {SOURCE} {LIBRARIES}"
+# )
+
+# # Print the compile command for debugging
+# print("Compile command:", compile_command)
+
+# # Execute the compile command
+# os.system(compile_command)
+
 
 import os
+import sys
 
 # Compiler settings
 COMPILER = "g++"
 SOURCE = "./src/*.cpp"
 
 # Compiler arguments
-ARGUMENTS = "-std=c++17 -shared -undefined dynamic_lookup"
+ARGUMENTS = "-std=c++20 -shared -undefined dynamic_lookup"
 
 # Include directories
 INCLUDE_DIR = ("-I ./include/ "
                "-I ./pybind11/include/ "
-               "-I /usr/local/opt/sdl2/include/SDL2 "  # Adjust path if needed
                "-I /Library/Frameworks/Python.framework/Versions/3.11/include/python3.11")
 
-# Libraries to include
-LIBRARIES = ("-L /usr/local/opt/sdl2/lib "
-             "-l SDL2 "
+# # Libraries to include
+# LIBRARIES = "`python3.11-config --ldflags`"
+LIBRARIES = ("-L /path/to/SDL3/lib "  # Add path to SDL3 library directory
+             "-l SDL3 "                 # Adjust library name if necessary
              "`python3.11-config --ldflags`")
 
 # Executable output
@@ -204,6 +240,15 @@ compile_command = (
 print("Compile command:", compile_command)
 
 # Execute the compile command
-os.system(compile_command)
+result = os.system(compile_command)
 
-
+# Check the result
+if result != 0:
+    print("Compilation failed.")
+    sys.exit(1)  # Exit with error status
+else:
+    print("Compilation successful.")
+    # Add the install_name_tool command
+    install_name_tool_command = f"install_name_tool -add_rpath /Users/sam/Desktop/GameEngines/sdl3/sdl_build ./{EXECUTABLE}"
+    os.system(install_name_tool_command)
+    print("install_name_tool command executed successfully.")

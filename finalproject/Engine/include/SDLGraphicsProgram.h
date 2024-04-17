@@ -4,7 +4,7 @@
 #if defined(LINUX) || defined(MINGW)
     #include <SDL2/SDL.h>
 #else // This works for Mac
-    #include <SDL.h>
+#include <SDL3/SDL.h>
 #endif
 
 // The glad library helps setup OpenGL extensions.

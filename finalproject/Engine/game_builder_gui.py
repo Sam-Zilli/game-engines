@@ -94,6 +94,7 @@ def create_game(values_dict):
     # Initialize SDL / window
     gameEngine = mygameengine.SDLGraphicsProgram(width, height)
     
+    
     quit = False
 
     # While running 

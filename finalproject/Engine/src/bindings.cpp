@@ -1,12 +1,7 @@
 #ifndef SDLGRAPHICSPROGRAM
 #define SDLGRAPHICSPROGRAM
 
-// dependencies.
-#if defined(LINUX) || defined(MINGW)
-    #include <SDL2/SDL.h>
-#else // This works for Mac
-    #include <SDL.h>
-#endif
+#include <SDL3/SDL.h>
 
 // The glad library helps setup OpenGL extensions.
 #include <glad/glad.h>
@@ -91,7 +86,7 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h):screenWidth(w),screenHeight
 	}
 	else{
 	    //Create window
-    	gWindow = SDL_CreateWindow( "Lab", 100, 100, screenWidth, screenHeight, SDL_WINDOW_SHOWN );
+    	gWindow = SDL_CreateWindow("Lab", 100, 100, SDL_WINDOW_OPENGL);
 
         // Check if Window did not create.
         if( gWindow == NULL ){
@@ -100,7 +95,7 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h):screenWidth(w),screenHeight
 		}
 
 		//Create a Renderer to draw on
-        gRenderer = SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
+        gRenderer = SDL_CreateRenderer(gWindow, NULL, SDL_RENDERER_ACCELERATED);
         // Check if Renderer did not create.
         if( gRenderer == NULL ){
             errorStream << "Renderer could not be created! SDL Error: " << SDL_GetError() << "\n";
@@ -138,11 +133,11 @@ void SDLGraphicsProgram::poll() {
     SDL_Event event;
     while (SDL_PollEvent(&event) != 0) {
         switch (event.type) {
-            case SDL_QUIT:
+            case SDL_EVENT_QUIT:
                 SDL_Log("Quit event detected");
                 quit = true;
                 break;
-            case SDL_KEYDOWN:
+            case SDL_EVENT_KEY_DOWN:
                 SDL_Log("Key pressed: %s", SDL_GetKeyName(event.key.keysym.sym));
                 if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Up") == 0) {
                     rightPaddleUp = true;
@@ -156,7 +151,7 @@ void SDLGraphicsProgram::poll() {
                 if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Z") == 0) {
                     leftPaddleDown = true;
                 }
-            case SDL_KEYUP:
+            case SDL_EVENT_KEY_UP:
                 // SDL_Log("Key released: %s", SDL_GetKeyName(event.key.keysym.sym));
                 break;
             default:
@@ -204,9 +199,13 @@ SDL_Window* SDLGraphicsProgram::getSDLWindow(){
 
 // Okay, render our rectangles!
 void SDLGraphicsProgram::DrawRectangle(int x, int y, int w, int h){
-    SDL_Rect fillRect = {x,y,w,h};
+    SDL_FRect fillRectF = {(float)x, (float)y, (float)w, (float)h};
+
     SDL_SetRenderDrawColor(gRenderer, 0xFF, 0x00, 0x00, 0xFF);
-    SDL_RenderDrawRect(gRenderer, &fillRect); 
+
+    // SDL2: int SDL_RenderDrawRect(SDL_Renderer * renderer, const SDL_Rect * rect);
+    // SDL3: int SDL_RenderRect    (SDL_Renderer *renderer, const SDL_FRect *rect);
+    SDL_RenderRect(gRenderer, &fillRectF); 
 }
 
 
