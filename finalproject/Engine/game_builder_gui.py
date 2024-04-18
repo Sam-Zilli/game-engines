@@ -102,6 +102,7 @@ def create_game(values_dict):
 
         gameEngine.poll()
         gameEngine.clear()
+        # gameEngine.setBackgroundColor()
 
         # Delay for a short time
         gameEngine.delay(200)

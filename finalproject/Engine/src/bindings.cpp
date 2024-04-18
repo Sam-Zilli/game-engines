@@ -40,6 +40,8 @@ public:
 
     bool getQuit();
 
+    void setBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a);
+
     // right paddle commands
     bool getRightPaddleUp();
     bool getRightPaddleDown();
@@ -52,14 +54,15 @@ private:
     // Screen dimension constants
     int screenHeight;
     int screenWidth;
+    // Name of the game in title bar
     const char* gameName;
-
     // The window we'll be rendering to
     SDL_Window* gWindow ;
     // Our renderer
     SDL_Renderer* gRenderer;
 
     bool quit = false;
+
     // right paddle commands
     bool rightPaddleUp = false;
     bool rightPaddleDown = false;
@@ -67,6 +70,9 @@ private:
     bool leftPaddleUp = false;
     bool leftPaddleDown = false;
 };
+
+
+
 
 
 // Initialization function
@@ -174,19 +180,22 @@ bool SDLGraphicsProgram::initGL(){
 	return success;
 }
 
+void SDLGraphicsProgram::setBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
+    SDL_SetRenderDrawColor(gRenderer, r, g, b, a);
+}
 
 // Clear
 // Clears the screen 
 void SDLGraphicsProgram::clear(){
 	// Nothing yet!
-    SDL_SetRenderDrawColor(gRenderer, 0x44,0x44,0x4,0xFF);
+    // SDL_SetRenderDrawColor(gRenderer, 0x44,0x44,0x4,0xFF);
     SDL_RenderClear(gRenderer);   
 }
 // Flip
 // The flip function gets called once per loop
 // It swaps out the previvous frame in a double-buffering system
 void SDLGraphicsProgram::flip(){
-	// Nothing yet! fst
+	// Nothing yet! 
     SDL_RenderPresent(gRenderer);
 }
 
@@ -211,6 +220,7 @@ void SDLGraphicsProgram::DrawRectangle(int x, int y, int w, int h){
     // SDL3: int SDL_RenderRect    (SDL_Renderer *renderer, const SDL_FRect *rect);
     SDL_RenderRect(gRenderer, &fillRectF); 
 }
+
 
 
 bool SDLGraphicsProgram::getQuit() {
@@ -254,7 +264,7 @@ bool SDLGraphicsProgram::getLeftPaddleDown() {
 
 
 
-
+// --------------------- PYBIND ------------------- //
 
 
 // Include the pybindings
@@ -284,7 +294,8 @@ PYBIND11_MODULE(mygameengine, m){
             .def("getRightPaddleUp", &SDLGraphicsProgram::getRightPaddleUp)
             .def("getRightPaddleDown", &SDLGraphicsProgram::getRightPaddleDown)
             .def("getLeftPaddleUp", &SDLGraphicsProgram::getLeftPaddleUp)
-            .def("getLeftPaddleDown", &SDLGraphicsProgram::getLeftPaddleDown);
+            .def("getLeftPaddleDown", &SDLGraphicsProgram::getLeftPaddleDown)
+            .def("setBackgroundColor", &SDLGraphicsProgram::setBackgroundColor);
 }
  
 #endif
