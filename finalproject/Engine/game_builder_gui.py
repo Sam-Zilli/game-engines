@@ -10,7 +10,7 @@ values_dict = {}
 
 # Function to create game using the values dictionary
 def create_game(values_dict):
-    print(values_dict)
+    print("Values when entering create_game function: ", values_dict)
 
     game_name = values_dict.get('Game Name', 'Default Game Name')
     game_creator = values_dict.get('Game Creator', 'Default Game Creator')
@@ -91,9 +91,9 @@ def create_game(values_dict):
 
 ## -------------------- GAME LOOP ---------------------- ##
 
+    print("Values in game loop: ", width, height)
     # Initialize SDL / window
-    gameEngine = mygameengine.SDLGraphicsProgram(width, height)
-    
+    gameEngine = mygameengine.SDLGraphicsProgram(width, height, game_name)
     
     quit = False
 

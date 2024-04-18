@@ -21,7 +21,7 @@ class SDLGraphicsProgram{
 public:
 
     // Constructor
-    SDLGraphicsProgram(int w, int h);
+    SDLGraphicsProgram(int w, int h, const char* gameName);
     // Destructor
     ~SDLGraphicsProgram();
     // Setup OpenGL
@@ -51,7 +51,7 @@ private:
 // Initialization function
 // Returns a true or false value based on successful completion of setup.
 // Takes in dimensions of window.
-SDLGraphicsProgram::SDLGraphicsProgram(int w, int h):screenWidth(w),screenHeight(h){
+SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, const char* gameName):screenWidth(w),screenHeight(h){
 	// Initialization flag
 	bool success = true;
 	// String to hold any errors that occur.
@@ -247,8 +247,8 @@ namespace py = pybind11;
 PYBIND11_MODULE(mymodule, m){
     m.doc() = "our game engine as a library"; // Optional docstring
 
-    py::class_<SDLGraphicsProgram>(m, "SDLGraphicsProgram")
-            .def(py::init<int,int>(), py::arg("w"), py::arg("h")) // constructor
+py::class_<SDLGraphicsProgram>(m, "SDLGraphicsProgram")
+            .def(py::init<int, int, const char*>(), py::arg("w"), py::arg("h"), py::arg("gameName"))   // our constructor
             .def("initGL", &SDLGraphicsProgram::initGL)    
             .def("update", &SDLGraphicsProgram::update)
             .def("render", &SDLGraphicsProgram::render) 

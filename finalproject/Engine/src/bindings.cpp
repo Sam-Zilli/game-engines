@@ -16,7 +16,7 @@
 class SDLGraphicsProgram{
 public:
     // Constructor
-    SDLGraphicsProgram(int w, int h);
+    SDLGraphicsProgram(int w, int h, const char* gameName);
     // Destructor
     ~SDLGraphicsProgram();
     // Setup OpenGL
@@ -52,6 +52,8 @@ private:
     // Screen dimension constants
     int screenHeight;
     int screenWidth;
+    const char* gameName;
+
     // The window we'll be rendering to
     SDL_Window* gWindow ;
     // Our renderer
@@ -70,7 +72,8 @@ private:
 // Initialization function
 // Returns a true or false value based on successful completion of setup.
 // Takes in dimensions of window.
-SDLGraphicsProgram::SDLGraphicsProgram(int w, int h):screenWidth(w),screenHeight(h){
+SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, const char* gameName)
+    : screenWidth(w), screenHeight(h), gameName(gameName) {
 	// Initialization flag
 	bool success = true;
 	// String to hold any errors that occur.
@@ -86,7 +89,8 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h):screenWidth(w),screenHeight
 	}
 	else{
 	    //Create window
-    	gWindow = SDL_CreateWindow("Lab", 100, 100, SDL_WINDOW_OPENGL);
+    	gWindow = SDL_CreateWindow(gameName, w, h, SDL_WINDOW_OPENGL);
+
 
         // Check if Window did not create.
         if( gWindow == NULL ){
@@ -268,7 +272,7 @@ PYBIND11_MODULE(mygameengine, m){
     m.doc() = "our game engine as a library"; // Optional docstring
 
     py::class_<SDLGraphicsProgram>(m, "SDLGraphicsProgram")
-            .def(py::init<int,int>(), py::arg("w"), py::arg("h"))   // our constructor
+            .def(py::init<int, int, const char*>(), py::arg("w"), py::arg("h"), py::arg("gameName"))   // our constructor
             .def("clear", &SDLGraphicsProgram::clear) // Expose member methods
             .def("delay", &SDLGraphicsProgram::delay) 
             .def("flip", &SDLGraphicsProgram::flip) 
@@ -280,9 +284,7 @@ PYBIND11_MODULE(mygameengine, m){
             .def("getRightPaddleUp", &SDLGraphicsProgram::getRightPaddleUp)
             .def("getRightPaddleDown", &SDLGraphicsProgram::getRightPaddleDown)
             .def("getLeftPaddleUp", &SDLGraphicsProgram::getLeftPaddleUp)
-            .def("getLeftPaddleDown", &SDLGraphicsProgram::getLeftPaddleDown) ;
-// We do not need to expose everything to our users!
-//            .def("getSDLWindow", &SDLGraphicsProgram::getSDLWindow, py::return_value_policy::reference) 
+            .def("getLeftPaddleDown", &SDLGraphicsProgram::getLeftPaddleDown);
 }
  
 #endif
