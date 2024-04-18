@@ -12,8 +12,8 @@ BALL_WIDTH = 10
 
 class Pong:
     def __init__(self, values_dict):
-        self.window_width = int(values_dict.get('Width', 200))
-        self.window_height = int(values_dict.get('Height', 200))
+        self.window_width = int(values_dict.get('Width', 800))
+        self.window_height = int(values_dict.get('Height', 800))
         self.quit = False
         self.color_map = {
             'red': (255, 0, 0, 255),

@@ -20,21 +20,30 @@ def create_game(values_dict):
     game_creator = values_dict.get('Game Creator', 'Default Game Creator')
     color = values_dict.get('Color', 'Default Color')
 
+
     # Validate and convert width
-    width_str = values_dict.get('Width', '800')  # Default width is '800'
-    if width_str.isdigit():
+    width_str = values_dict.get('Width', '')  # Default width is '800'
+    try:
         width = int(width_str)
-    else:
-        print("Invalid width value. Using default.")
+    except ValueError:
+        if not width_str:
+            print("Empty width value. Using default.")
+        else:
+            print("Invalid width value. Using default.")
         width = 800
 
+
     # Validate and convert height
-    height_str = values_dict.get('Height', '600')  # Default height is '600'
-    if height_str.isdigit():
+    height_str = values_dict.get('Height', '')  # Default height is '600'
+    try:
         height = int(height_str)
-    else:
-        print("Invalid height value. Using default.")
+    except ValueError:
+        if not height_str:
+            print("Empty height value. Using default.")
+        else:
+            print("Invalid height value. Using default.")
         height = 600
+
 
     # Validate and convert number of targets
     number_of_targets_str = values_dict.get('Number of Targets', '1')  # Default number of targets = 1
@@ -43,7 +52,6 @@ def create_game(values_dict):
     else:
         print("Invalid number of targets value. Using default.")
         number_of_targets = 10
-
 
 
     # Audio Genre validation
@@ -92,40 +100,89 @@ def create_game(values_dict):
         number_of_projectiles = 50
 
 
-# ## -------------------- default game ---------------------- ##
+# ## -------------------- Running the created game ---------------------- ##
 
-    pong_game = Pong(values_dict)
-    pong_game.run_game()
+    print(values_dict)
+    # pong_game = Pong(values_dict)
+    # pong_game.run_game()
+    print("Values in game loop: ", width, height, game_name)
+    # Initialize SDL / window
+    gameEngine = mygameengine.SDLGraphicsProgram(width, height, game_name)
     
-# ## -------------------- GAME LOOP ---------------------- ##
+    quit = False
 
-#     print("Values in game loop: ", width, height)
-#     # Initialize SDL / window
-#     gameEngine = mygameengine.SDLGraphicsProgram(width, height, game_name)
+
+    # # While running 
+    # while not quit:
+
+    #     gameEngine.poll()
+    #     gameEngine.clear()
+    #     # gameEngine.setBackgroundColor()
+
+    #     # Delay for a short time
+    #     gameEngine.delay(200)
+
+    #     # Refresh the screen
+    #     gameEngine.flip()
+
+    #     # Check if game should quit
+    #     quit = gameEngine.getQuit()
+
+    # End of program  
+
+
+
     
-#     quit = False
-
-#     # While running 
-#     while not quit:
-
-#         gameEngine.poll()
-#         gameEngine.clear()
-#         # gameEngine.setBackgroundColor()
-
-#         # Delay for a short time
-#         gameEngine.delay(200)
-
-#         # Refresh the screen
-#         gameEngine.flip()
-
-#         # Check if game should quit
-#         quit = gameEngine.getQuit()
-
-#     # End of program
 
 
 
 
+
+
+
+
+
+
+ ## -------------------- Validating Dictionary Values ---------------------- ##
+
+def retrieve_input_values(width_entry, height_entry, game_name_entry, game_creator_entry, color_entry, targets_entry,
+                          audio_genre_var, protagonist_var, target_var, physics_var, collision_var, levels_entry,
+                          projectiles_entry):
+    
+    width_value = validate_and_get_value(width_entry.get(), int, default=600)
+    height_value = validate_and_get_value(height_entry.get(), int, default=600)
+    
+    # Validate width and height range
+    if not (400 <= width_value <= 1000):
+        print("Invalid width value. Using default.")
+        width_value = 600
+    
+    if not (400 <= height_value <= 1000):
+        print("Invalid height value. Using default.")
+        height_value = 600
+    
+    values_dict['Width'] = width_value
+    values_dict['Height'] = height_value
+    values_dict['Game Name'] = game_name_entry.get()
+    values_dict['Game Creator'] = game_creator_entry.get()
+    values_dict['Color'] = color_entry.get()
+    values_dict['Number of Targets'] = str(validate_and_get_value(targets_entry.get(), int, default=10))
+    values_dict['Audio Genre'] = audio_genre_var.get()
+    values_dict['Protagonist Image'] = protagonist_var.get()
+    values_dict['Target Image'] = target_var.get()
+    values_dict['Physics Setting'] = physics_var.get()
+    values_dict['Collision Action'] = collision_var.get()
+    values_dict['Number of Levels'] = str(validate_and_get_value(levels_entry.get(), int, default=1))
+    values_dict['Number of Projectiles'] = str(validate_and_get_value(projectiles_entry.get(), int, default=1))
+
+def validate_and_get_value(value, data_type, default):
+    if isinstance(value, int):
+        return value
+    try:
+        return data_type(value)
+    except (ValueError, TypeError):
+        print(f"Invalid value: {value}. Using default: {default}")
+        return default
 
 
 
@@ -133,23 +190,6 @@ def create_game(values_dict):
 
 
  ## -------------------- Game Creation GUI ---------------------- ##
-
-def retrieve_input_values(width_entry, height_entry, game_name_entry, game_creator_entry, color_entry, targets_entry,
-                          audio_genre_var, protagonist_var, target_var, physics_var, collision_var, levels_entry,
-                          projectiles_entry):
-    values_dict['Width'] = width_entry.get()
-    values_dict['Height'] = height_entry.get()
-    values_dict['Game Name'] = game_name_entry.get()
-    values_dict['Game Creator'] = game_creator_entry.get()
-    values_dict['Color'] = color_entry.get()
-    values_dict['Number of Targets'] = targets_entry.get()
-    values_dict['Audio Genre'] = audio_genre_var.get()
-    values_dict['Protagonist Image'] = protagonist_var.get()
-    values_dict['Target Image'] = target_var.get()
-    values_dict['Physics Setting'] = physics_var.get()
-    values_dict['Collision Action'] = collision_var.get()
-    values_dict['Number of Levels'] = levels_entry.get()
-    values_dict['Number of Projectiles'] = projectiles_entry.get()
 
 def create_game_gui():
     # Create main window
@@ -265,11 +305,23 @@ def create_game_gui():
     window.mainloop()
 
 
+
+
+
+
+
+
+
 def load_preset_game(preset):
     # Logic to load a preset game
     if preset == "Pong":
         pong_game = Pong(values_dict)
         pong_game.run_game()
+
+
+
+
+
 
 
 def open_game_window():

@@ -12,6 +12,7 @@
 #include <fstream>
 #include <vector>
 #include <cstring>
+#include <stdio.h>
 
 class SDLGraphicsProgram{
 public:
@@ -105,26 +106,34 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, const char* gameName)
 	}
 	else{
 	    //Create window
-    	gWindow = SDL_CreateWindow(gameName, w, h, SDL_WINDOW_OPENGL);
-
+        SDL_Log("1");
+    	gWindow = SDL_CreateWindow("SHould be gameNAme variable!", w, h, SDL_WINDOW_OPENGL);
+        SDL_Log("2");
 
         // Check if Window did not create.
         if( gWindow == NULL ){
+            SDL_Log("ISSUE IS HERE");
 			errorStream << "Window could not be created! SDL Error: " << SDL_GetError() << "\n";
 			success = false;
 		}
+        
+        SDL_Log("3");
 
 		//Create a Renderer to draw on
         gRenderer = SDL_CreateRenderer(gWindow, NULL, SDL_RENDERER_ACCELERATED);
+        SDL_Log("4");
         // Check if Renderer did not create.
         if( gRenderer == NULL ){
             errorStream << "Renderer could not be created! SDL Error: " << SDL_GetError() << "\n";
             success = false;
         }
+        SDL_Log("5");
   	}
 
+    SDL_Log("6");
     // If initialization did not work, then print out a list of errors in the constructor.
     if(!success){
+        SDL_Log("7");
         errorStream << "SDLGraphicsProgram::SDLGraphicsProgram - Failed to initialize!\n";
         std::string errors=errorStream.str();
         SDL_Log("%s\n",errors.c_str());
@@ -295,7 +304,7 @@ PYBIND11_MODULE(mygameengine, m){
     m.doc() = "our game engine as a library"; // Optional docstring
 
     py::class_<SDLGraphicsProgram>(m, "SDLGraphicsProgram")
-            .def(py::init<int, int, const char*>(), py::arg("w"), py::arg("h"), py::arg("gameName"))   // our constructor
+            .def(py::init<int, int, const char*>(), py::arg("w"), py::arg("h"), py::arg("game_name"))   // our constructor
             .def("clear", &SDLGraphicsProgram::clear) // Expose member methods
             .def("delay", &SDLGraphicsProgram::delay) 
             .def("flip", &SDLGraphicsProgram::flip) 
