@@ -16,7 +16,7 @@ values_dict = {}
 def create_game(values_dict):
     print("Values when entering create_game function: ", values_dict)
 
-    game_name = values_dict.get('Game Name', 'Default Game Name')
+    game_name = values_dict.get('Game Name', 'GAME NAME') or 'GAME NAME'
     game_creator = values_dict.get('Game Creator', 'Default Game Creator')
     color = values_dict.get('Color', 'Default Color')
 
@@ -105,11 +105,12 @@ def create_game(values_dict):
     print(values_dict)
     # pong_game = Pong(values_dict)
     # pong_game.run_game()
+    # print(type(game_name))
     print("Values in game loop: ", width, height, game_name)
     # Initialize SDL / window
     gameEngine = mygameengine.SDLGraphicsProgram(width, height, game_name)
-    
-    quit = False
+    # quit = gameEngine.getQuit()
+    # quit = False
 
 
     # # While running 

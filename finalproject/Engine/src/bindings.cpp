@@ -18,24 +18,33 @@ class SDLGraphicsProgram{
 public:
     // Constructor
     SDLGraphicsProgram(int w, int h, const char* gameName);
+
     // Destructor
     ~SDLGraphicsProgram();
+
     // Setup OpenGL
     bool initGL();
+
     // Clears the screen
     void clear();
+
     // Flips to new buffer
     void flip();
+
     // Delay rendering
     void delay(int milliseconds);
+
     // loop that runs forever
     // void loop();
     // Get Pointer to Window
     SDL_Window* getSDLWindow();
+
     // Draw a simple 
     void DrawRectangle(int x, int y, int w, int h);
+
     // starts the ping pong game
     // void runPongGame();
+
     // loop poll
     void poll();
 
@@ -52,11 +61,8 @@ public:
     bool getLeftPaddleDown();
 
 private:
-    // Screen dimension constants
-    int screenHeight;
     int screenWidth;
-
-    // Name of the game in title bar
+    int screenHeight;
     const char* gameName;
 
     // The window we'll be rendering to
@@ -89,9 +95,9 @@ private:
 // Initialization function
 // Returns a true or false value based on successful completion of setup.
 // Takes in dimensions of window.
-SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, const char* gameName)
-    : screenWidth(w), screenHeight(h), gameName(gameName) {
-	// Initialization flag
+SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, const char* gameNameParam)
+    : screenWidth(w), screenHeight(h), gameName(gameNameParam) {
+    // Initialization code
 	bool success = true;
 	// String to hold any errors that occur.
 	std::stringstream errorStream;
@@ -107,7 +113,7 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, const char* gameName)
 	else{
 	    //Create window
         SDL_Log("1");
-    	gWindow = SDL_CreateWindow("SHould be gameNAme variable!", w, h, SDL_WINDOW_OPENGL);
+    	gWindow = SDL_CreateWindow(gameName, screenWidth, screenHeight, SDL_WINDOW_OPENGL);
         SDL_Log("2");
 
         // Check if Window did not create.
@@ -131,6 +137,7 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, const char* gameName)
   	}
 
     SDL_Log("6");
+    
     // If initialization did not work, then print out a list of errors in the constructor.
     if(!success){
         SDL_Log("7");
@@ -304,7 +311,7 @@ PYBIND11_MODULE(mygameengine, m){
     m.doc() = "our game engine as a library"; // Optional docstring
 
     py::class_<SDLGraphicsProgram>(m, "SDLGraphicsProgram")
-            .def(py::init<int, int, const char*>(), py::arg("w"), py::arg("h"), py::arg("game_name"))   // our constructor
+            .def(py::init<int, int, const char*>(), py::arg("width"), py::arg("height"), py::arg("game_name"))   // our constructor
             .def("clear", &SDLGraphicsProgram::clear) // Expose member methods
             .def("delay", &SDLGraphicsProgram::delay) 
             .def("flip", &SDLGraphicsProgram::flip) 
