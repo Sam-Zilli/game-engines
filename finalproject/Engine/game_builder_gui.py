@@ -267,7 +267,9 @@ def create_game_gui():
 
 def load_preset_game(preset):
     # Logic to load a preset game
-    messagebox.showinfo("Preset Game Loaded", f"Preset game {preset} loaded successfully!")
+    if preset == "Pong":
+        pong_game = Pong(values_dict)
+        pong_game.run_game()
 
 
 def open_game_window():
@@ -281,10 +283,10 @@ def open_game_window():
         create_game_gui()
 
     # Function to handle the "Load Preset Game" button click event
-    def load_preset_selected():
-        preset = preset_var.get()
+    def load_preset_selected(gameName):
+        # preset = preset_var.get()
         main_window.destroy()
-        load_preset_game(preset)
+        load_preset_game(gameName)
 
     # Frame for options
     options_frame = ttk.Frame(main_window, padding="20")
@@ -297,11 +299,10 @@ def open_game_window():
     # Create "Create Game" button
     create_game_button = ttk.Button(options_frame, text="Create a new game", command=create_game_selected)
     create_game_button.grid(row=1, column=0, padx=5, pady=5)
-
-    # Create "Load Preset Game" button
-    load_preset_button = ttk.Button(options_frame, text="Load preset game",
-                                    command=load_preset_selected)
-    load_preset_button.grid(row=2, column=0, padx=5, pady=5)
+    
+    # Create a button for loading the "Pong" preset game
+    load_pong_button = ttk.Button(options_frame, text="Load Pong Game", command=lambda: load_preset_selected("Pong"))
+    load_pong_button.grid(row=2, column=0, padx=5, pady=5)
 
     # Run the main window
     main_window.mainloop()
