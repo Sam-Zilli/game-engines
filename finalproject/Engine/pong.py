@@ -2,6 +2,7 @@ import mygameengine
 import random
 from background import Background  # Import the Background class
 from protagonist import Protagonist # Import the Protagonist class to use as each paddle
+from projectile import Projectile #  Ball! 
 
 PADDLE_WIDTH = 10
 PADDLE_HEIGHT = 40
@@ -9,11 +10,7 @@ BALL_WIDTH = 5
 BALL_HEIGHT = 5
 
 # the increments in which movement occurs
-MOVEMENT = 10
-
-# Ask the user for input regarding the size of the window
-# WINDOW_WIDTH = int(input("Enter the width of the window: "))
-# WINDOW_HEIGHT = int(input("Enter the height of the window: "))
+MOVEMENT = 20
 
 WINDOW_WIDTH = 200
 WINDOW_HEIGHT = 200
@@ -39,93 +36,11 @@ color_map = {
 }
 
 
-## -------------------- BALL ---------------------- ##
-
-class Ball:
-    def __init__(self, x, y, vx, vy):
-        self.x = x
-        self.y = y  
-        self.vx = vx 
-        self.vy = vy  
-        self.width = BALL_WIDTH 
-        self.height = BALL_HEIGHT 
-
-    def getWidth(self):
-        return self.width
-
-    def getHeight(self):
-        return self.height
-
-    def getX(self):
-        return self.x
-
-    def getY(self):
-        return self.y
-
-    def setX(self, x):
-        self.x = x
-
-    def setY(self, y):
-        self.y = y
-
-    def getVelocityX(self):
-        return self.vx
-
-    def getVelocityY(self):
-        return self.vy
-
-    def setVelocityX(self, vx):
-        self.vx = vx
-
-    def setVelocityY(self, vy):
-        self.vy = vy
-
-    def move(self):
-        self.x += self.vx
-        self.y += self.vy
-
-    def reverseVelocityX(self):
-        self.vx *= -1
-
-    def reverseVelocityY(self):
-        self.vy *= -1
-        
-    # checking for collisions with top or bottom "wall" of window    
-    def checkWallCollision(self):
-        if self.y <= 0 or self.y >= WINDOW_HEIGHT - BALL_HEIGHT:
-            self.reverseVelocityY()
-
-    # checking for paddle collisions
-    def checkPaddleCollision(self):
-        if (self.x <= leftPaddle.getX() + leftPaddle.getWidth() and
-                self.y >= leftPaddle.getY() and
-                self.y <= leftPaddle.getY() + leftPaddle.getHeight()):
-            self.reverseVelocityX()
-
-
-        if (self.x + BALL_WIDTH >= rightPaddle.getX() and
-                self.y >= rightPaddle.getY() and
-                self.y <= rightPaddle.getY() + rightPaddle.getHeight()):
-            self.reverseVelocityX()
-
-    # if ball moves past left or right paddle than the other player scores
-    def checkPassedPaddle(self):
-        if self.x <= 0 or self.x >= WINDOW_WIDTH:
-            self.x = int((WINDOW_WIDTH / 2) - (BALL_WIDTH / 2))
-            self.y = int((WINDOW_HEIGHT / 2) - (BALL_HEIGHT / 2))
-            return True
-            
-
-
-
-
-
-
 ## -------------------- Game ---------------------- ##
 
 leftPaddle = Protagonist(0, int((WINDOW_HEIGHT/2)-PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT, MOVEMENT)
 rightPaddle = Protagonist(WINDOW_HEIGHT-PADDLE_WIDTH, int((WINDOW_HEIGHT/2)-PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT, MOVEMENT)
-ball = Ball((int((WINDOW_HEIGHT/2)-BALL_HEIGHT)), (int((WINDOW_HEIGHT/2)-BALL_HEIGHT)), 10, 10)
+ball = Projectile((int((WINDOW_HEIGHT/2)-BALL_HEIGHT)), (int((WINDOW_HEIGHT/2)-BALL_HEIGHT)), 10, 10, BALL_WIDTH, BALL_HEIGHT)
 background = Background(0, color_map)
 
 
@@ -172,10 +87,17 @@ while not quit:
     # Move the ball
     ball.move()
 
-    # Check for collisions
-    ball.checkWallCollision()
-    ball.checkPaddleCollision()
-    if ball.checkPassedPaddle():
+    # Check for collisions with wall
+    ball.checkWallCollision(WINDOW_WIDTH, WINDOW_HEIGHT)
+
+    # check for collisions with left paddle
+    ball.checkCollision(leftPaddle)
+
+    # check for collisions with right paddle
+    ball.checkCollision(rightPaddle)
+
+    # check if passed paddle (Exited window)
+    if ball.checkExitedWindow(WINDOW_WIDTH, WINDOW_HEIGHT):
         background.colorIncrementer()
         setBackgroundColor()
 
