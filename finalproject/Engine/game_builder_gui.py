@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import ttk, filedialog
 import mygameengine 
 import random
+from pong import Pong
+
 
 # Dictionary to store values
 values_dict = {}
@@ -89,33 +91,36 @@ def create_game(values_dict):
         number_of_projectiles = 50
 
 
+# ## -------------------- GAME LOOP ---------------------- ##
 
-## -------------------- GAME LOOP ---------------------- ##
-
-    print("Values in game loop: ", width, height)
-    # Initialize SDL / window
-    gameEngine = mygameengine.SDLGraphicsProgram(width, height, game_name)
+    pong_game = Pong(values_dict)
+    pong_game.run_game()
     
-    quit = False
+# ## -------------------- GAME LOOP ---------------------- ##
 
-    # While running 
-    while not quit:
+#     print("Values in game loop: ", width, height)
+#     # Initialize SDL / window
+#     gameEngine = mygameengine.SDLGraphicsProgram(width, height, game_name)
+    
+#     quit = False
 
-        gameEngine.poll()
-        gameEngine.clear()
-        # gameEngine.setBackgroundColor()
+#     # While running 
+#     while not quit:
 
-        # Delay for a short time
-        gameEngine.delay(200)
+#         gameEngine.poll()
+#         gameEngine.clear()
+#         # gameEngine.setBackgroundColor()
 
-        # Refresh the screen
-        gameEngine.flip()
+#         # Delay for a short time
+#         gameEngine.delay(200)
 
-        # Check if game should quit
-        quit = gameEngine.getQuit()
+#         # Refresh the screen
+#         gameEngine.flip()
 
-    # End of program
+#         # Check if game should quit
+#         quit = gameEngine.getQuit()
 
+#     # End of program
 
 
 
