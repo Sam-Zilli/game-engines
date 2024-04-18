@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, filedialog
+from tkinter import messagebox
 import mygameengine 
 import random
 from pong import Pong
@@ -264,5 +265,45 @@ def create_game_gui():
     window.mainloop()
 
 
-# Call the function to create the GUI, which upon clicking "Create Game" will call create_game function
-create_game_gui()
+def load_preset_game(preset):
+    # Logic to load a preset game
+    messagebox.showinfo("Preset Game Loaded", f"Preset game {preset} loaded successfully!")
+
+
+def open_game_window():
+    # Create the main window
+    main_window = tk.Tk()
+    main_window.title("Game Selection")
+
+    # Function to handle the "Create Game" button click event
+    def create_game_selected():
+        main_window.destroy()
+        create_game_gui()
+
+    # Function to handle the "Load Preset Game" button click event
+    def load_preset_selected():
+        preset = preset_var.get()
+        main_window.destroy()
+        load_preset_game(preset)
+
+    # Frame for options
+    options_frame = ttk.Frame(main_window, padding="20")
+    options_frame.grid(row=0, column=0, padx=10, pady=10)
+
+    # Create a label for instructions
+    instructions_label = ttk.Label(options_frame, text="Choose an option:")
+    instructions_label.grid(row=0, column=0, padx=5, pady=5)
+
+    # Create "Create Game" button
+    create_game_button = ttk.Button(options_frame, text="Create a new game", command=create_game_selected)
+    create_game_button.grid(row=1, column=0, padx=5, pady=5)
+
+    # Create "Load Preset Game" button
+    load_preset_button = ttk.Button(options_frame, text="Load preset game",
+                                    command=load_preset_selected)
+    load_preset_button.grid(row=2, column=0, padx=5, pady=5)
+
+    # Run the main window
+    main_window.mainloop()
+
+open_game_window()
