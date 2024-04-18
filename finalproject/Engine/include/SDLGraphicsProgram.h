@@ -24,8 +24,8 @@
 //     SDLGraphicsProgram(int w, int h, const char* gameName);
 //     // Destructor
 //     ~SDLGraphicsProgram();
-//     // Setup OpenGL
-//     bool initGL();
+    // Setup OpenGL
+    bool initGL();
     // Per frame update
     void update();
     // Renders shapes to the screen
@@ -45,7 +45,7 @@
 //     SDL_Window* gWindow ;
     // OpenGL context
     SDL_GLContext gContext;
-// };
+// // };
 
 
 // Initialization function

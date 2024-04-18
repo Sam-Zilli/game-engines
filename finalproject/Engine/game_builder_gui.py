@@ -6,6 +6,7 @@ import random
 # Dictionary to store values
 values_dict = {}
 
+
 ## -------------------- SCRIPT ---------------------- ##
 
 # Function to create game using the values dictionary

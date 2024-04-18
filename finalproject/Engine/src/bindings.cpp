@@ -31,7 +31,7 @@ public:
     // void loop();
     // Get Pointer to Window
     SDL_Window* getSDLWindow();
-    // Draw a simple rectangle
+    // Draw a simple 
     void DrawRectangle(int x, int y, int w, int h);
     // starts the ping pong game
     // void runPongGame();
@@ -54,21 +54,31 @@ private:
     // Screen dimension constants
     int screenHeight;
     int screenWidth;
+
     // Name of the game in title bar
     const char* gameName;
+
     // The window we'll be rendering to
     SDL_Window* gWindow ;
+
     // Our renderer
     SDL_Renderer* gRenderer;
+
+    Uint8 backgroundRed;
+    Uint8 backgroundGreen;
+    Uint8 backgroundBlue;
+    Uint8 backgroundAlpha;
 
     bool quit = false;
 
     // right paddle commands
     bool rightPaddleUp = false;
     bool rightPaddleDown = false;
+
     // left paddle commands
     bool leftPaddleUp = false;
     bool leftPaddleDown = false;
+
 };
 
 
@@ -181,17 +191,20 @@ bool SDLGraphicsProgram::initGL(){
 }
 
 void SDLGraphicsProgram::setBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
-    SDL_SetRenderDrawColor(gRenderer, r, g, b, a);
+    backgroundRed = r;
+    backgroundGreen = g;
+    backgroundBlue = b;
+    backgroundAlpha = a;
+
 }
 
-// Clear
 // Clears the screen 
 void SDLGraphicsProgram::clear(){
 	// Nothing yet!
-    // SDL_SetRenderDrawColor(gRenderer, 0x44,0x44,0x4,0xFF);
+    SDL_SetRenderDrawColor(gRenderer, backgroundRed,backgroundGreen,backgroundBlue, backgroundAlpha);
     SDL_RenderClear(gRenderer);   
 }
-// Flip
+
 // The flip function gets called once per loop
 // It swaps out the previvous frame in a double-buffering system
 void SDLGraphicsProgram::flip(){
@@ -214,7 +227,7 @@ SDL_Window* SDLGraphicsProgram::getSDLWindow(){
 void SDLGraphicsProgram::DrawRectangle(int x, int y, int w, int h){
     SDL_FRect fillRectF = {(float)x, (float)y, (float)w, (float)h};
 
-    SDL_SetRenderDrawColor(gRenderer, 0xFF, 0x00, 0x00, 0xFF);
+    SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 
     // SDL2: int SDL_RenderDrawRect(SDL_Renderer * renderer, const SDL_Rect * rect);
     // SDL3: int SDL_RenderRect    (SDL_Renderer *renderer, const SDL_FRect *rect);
@@ -288,7 +301,6 @@ PYBIND11_MODULE(mygameengine, m){
             .def("flip", &SDLGraphicsProgram::flip) 
             // .def("loop", &SDLGraphicsProgram::loop) 
             .def("DrawRectangle", &SDLGraphicsProgram::DrawRectangle)
-            // .def("runPongGame", &SDLGraphicsProgram::runPongGame)
             .def("poll", &SDLGraphicsProgram::poll)
             .def("getQuit", &SDLGraphicsProgram::getQuit)
             .def("getRightPaddleUp", &SDLGraphicsProgram::getRightPaddleUp)

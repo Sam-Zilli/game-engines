@@ -1,9 +1,10 @@
-class Paddle:
-    def __init__(self, x, y):
+class Protagonist:
+    def __init__(self, x, y, width, height, movement_increment):
         self.x = x
         self.y = y
-        self.width = PADDLE_WIDTH
-        self.height = PADDLE_HEIGHT
+        self.width = width
+        self.height = height
+        self.movement_increment = movement_increment
 
     def getWidth(self):
         return self.width
@@ -24,7 +25,7 @@ class Paddle:
         self.y = y
 
     def moveDown(self):
-        self.y -= MOVEMENT
+        self.y -= self.movement_increment
 
     def moveUp(self):
-        self.y += MOVEMENT
+        self.y += self.movement_increment

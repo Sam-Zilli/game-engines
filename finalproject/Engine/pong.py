@@ -1,5 +1,7 @@
 import mygameengine
 import random
+from background import Background  # Import the Background class
+from protagonist import Protagonist # Import the Protagonist class to use as each paddle
 
 PADDLE_WIDTH = 10
 PADDLE_HEIGHT = 40
@@ -10,48 +12,34 @@ BALL_HEIGHT = 5
 MOVEMENT = 10
 
 # Ask the user for input regarding the size of the window
-WINDOW_WIDTH = int(input("Enter the width of the window: "))
-WINDOW_HEIGHT = int(input("Enter the height of the window: "))
+# WINDOW_WIDTH = int(input("Enter the width of the window: "))
+# WINDOW_HEIGHT = int(input("Enter the height of the window: "))
 
+WINDOW_WIDTH = 200
+WINDOW_HEIGHT = 200
 
 # Initialize SDL / window
-gameEngine = mygameengine.SDLGraphicsProgram(WINDOW_WIDTH, WINDOW_HEIGHT)
+gameEngine = mygameengine.SDLGraphicsProgram(WINDOW_WIDTH, WINDOW_HEIGHT, "Pong!")
+# should pass in the values the user chose - currently Black to start
+gameEngine.setBackgroundColor(0,0,0,0)
 
 # Main game loop
 quit = False
 
-class Paddle:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-        self.width = PADDLE_WIDTH
-        self.height = PADDLE_HEIGHT
 
-    def getWidth(self):
-        return self.width
-    
-    def getHeight(self):
-        return self.height
-
-    def getX(self):
-        return self.x
-    
-    def getY(self):
-        return self.y
-
-    def setX(self, x):
-        self.x = x
-
-    def setY(self, y):
-        self.y = y
-
-    def moveDown(self):
-        self.y -= MOVEMENT
-
-    def moveUp(self):
-        self.y += MOVEMENT
+color_map = {
+    'red': (255, 0, 0, 255),       # Red with alpha value 255
+    'green': (0, 255, 0, 255),     # Green with alpha value 255
+    'blue': (0, 0, 255, 255),      # Blue with alpha value 255
+    'yellow': (255, 255, 0, 255),  # Yellow with alpha value 255
+    'pink': (255, 0, 255, 255),    # Pink with alpha value 255
+    'white': (255, 255, 255, 255), # White with alpha value 255
+    'black': (0, 0, 0, 255),       # Black with alpha value 255
+    'gray': (128, 128, 128, 255),  # Gray with alpha value 255
+}
 
 
+## -------------------- BALL ---------------------- ##
 
 class Ball:
     def __init__(self, x, y, vx, vy):
@@ -125,13 +113,23 @@ class Ball:
         if self.x <= 0 or self.x >= WINDOW_WIDTH:
             self.x = int((WINDOW_WIDTH / 2) - (BALL_WIDTH / 2))
             self.y = int((WINDOW_HEIGHT / 2) - (BALL_HEIGHT / 2))
+            return True
+            
 
 
-leftPaddle = Paddle(0, int((WINDOW_HEIGHT/2)-PADDLE_HEIGHT))
-rightPaddle = Paddle(WINDOW_HEIGHT-PADDLE_WIDTH, int((WINDOW_HEIGHT/2)-PADDLE_HEIGHT))
+
+
+
+
+## -------------------- Game ---------------------- ##
+
+leftPaddle = Protagonist(0, int((WINDOW_HEIGHT/2)-PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT, MOVEMENT)
+rightPaddle = Protagonist(WINDOW_HEIGHT-PADDLE_WIDTH, int((WINDOW_HEIGHT/2)-PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT, MOVEMENT)
 ball = Ball((int((WINDOW_HEIGHT/2)-BALL_HEIGHT)), (int((WINDOW_HEIGHT/2)-BALL_HEIGHT)), 10, 10)
+background = Background(0, color_map)
 
 
+## -------------------- Interacting with C++ via Bindings ---------------------- ##
 
 def drawLeftPaddle():
     gameEngine.DrawRectangle(leftPaddle.getX(), leftPaddle.getY(), leftPaddle.getWidth(), leftPaddle.getHeight())
@@ -142,6 +140,10 @@ def drawRightPaddle():
 def drawBall():
     gameEngine.DrawRectangle(ball.getX(), ball.getY(), ball.getWidth(), ball.getHeight())
 
+def setBackgroundColor():
+    gameEngine.setBackgroundColor(background.getRed(), background.getGreen(), background.getBlue(), background.getAlpha())
+
+## -------------------- Game Loop ---------------------- ##
 
 # While running 
 while not quit:
@@ -173,7 +175,9 @@ while not quit:
     # Check for collisions
     ball.checkWallCollision()
     ball.checkPaddleCollision()
-    ball.checkPassedPaddle()
+    if ball.checkPassedPaddle():
+        background.colorIncrementer()
+        setBackgroundColor()
 
     drawBall()
 
@@ -186,9 +190,7 @@ while not quit:
     # Check if game should quit
     quit = gameEngine.getQuit()
 
-    # Run the Pong game
 
-
-# End of program
+## -------------------- END ---------------------- ##
 
 
