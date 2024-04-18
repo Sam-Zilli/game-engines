@@ -7,7 +7,7 @@ class Background:
         self.backgroundBlue = 255 
         self.backgroundAlpha = 255
         self.current_color_index = current_color_index
-        self.color_map = color_map  # Store the color map
+        self.color_map = color_map  # Store the color map (options for background color)
 
     def setBackgroundColor(self, red, green, blue, alpha):
         self.backgroundRed = red
@@ -30,6 +30,7 @@ class Background:
     def getCurrentColorIndex(self):
         return self.current_color_index
     
+    # iterates through possible background colors
     def colorIncrementer(self):
         self.current_color_index = (self.current_color_index + 1) % len(self.color_map)
         color_name = list(self.color_map.keys())[self.current_color_index]

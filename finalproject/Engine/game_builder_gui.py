@@ -92,7 +92,7 @@ def create_game(values_dict):
         number_of_projectiles = 50
 
 
-# ## -------------------- GAME LOOP ---------------------- ##
+# ## -------------------- default game ---------------------- ##
 
     pong_game = Pong(values_dict)
     pong_game.run_game()
@@ -134,7 +134,6 @@ def create_game(values_dict):
 
  ## -------------------- Game Creation GUI ---------------------- ##
 
-# Function to make sure the values_dict is up to date with the user's input at time of clicking "Create Game"
 def retrieve_input_values(width_entry, height_entry, game_name_entry, game_creator_entry, color_entry, targets_entry,
                           audio_genre_var, protagonist_var, target_var, physics_var, collision_var, levels_entry,
                           projectiles_entry):
@@ -151,7 +150,6 @@ def retrieve_input_values(width_entry, height_entry, game_name_entry, game_creat
     values_dict['Collision Action'] = collision_var.get()
     values_dict['Number of Levels'] = levels_entry.get()
     values_dict['Number of Projectiles'] = projectiles_entry.get()
-
 
 def create_game_gui():
     # Create main window
@@ -254,7 +252,9 @@ def create_game_gui():
     create_game_button = ttk.Button(window, text="Create Game", command=lambda: (
     retrieve_input_values(width_entry, height_entry, game_name_entry, game_creator_entry, color_entry, targets_entry,
                           audio_genre_var, protagonist_var, target_var, physics_var, collision_var, levels_entry,
-                          projectiles_entry), create_game(values_dict)))
+                          projectiles_entry),
+
+    create_game(values_dict)))
     create_game_button.grid(row=12, column=0, padx=10, pady=10, sticky="e")
 
     # Configure row and column weights for resizing
@@ -299,7 +299,7 @@ def open_game_window():
     # Create "Create Game" button
     create_game_button = ttk.Button(options_frame, text="Create a new game", command=create_game_selected)
     create_game_button.grid(row=1, column=0, padx=5, pady=5)
-    
+
     # Create a button for loading the "Pong" preset game
     load_pong_button = ttk.Button(options_frame, text="Load Pong Game", command=lambda: load_preset_selected("Pong"))
     load_pong_button.grid(row=2, column=0, padx=5, pady=5)

@@ -1,4 +1,4 @@
-## -------------------- BALL ---------------------- ##
+## -------------------- In PONG: ball ---------------------- ##
 
 class Projectile:
     def __init__(self, x, y, vx, vy, width, height):
@@ -54,14 +54,14 @@ class Projectile:
         if self.y <= 0 or self.y >= window_height - self.height:
             self.reverseVelocityY()
 
-    # checking for paddle collisions
+    # pass an object in to see if there's a collision (in pong, checks the paddles)
     def checkCollision(self, object):
         if (self.x <= object.getX() + object.getWidth() and
                 self.y >= object.getY() and
                 self.y <= object.getY() + object.getHeight()):
             self.reverseVelocityX()
 
-    # if ball moves "past" this object
+    # if ball moves "past" this object (in pong, checks if passed by paddle, therefore score + 1)
     def checkExitedWindow(self, window_width, window_height):
         if self.x <= 0 or self.x >= window_width:
             self.x = int((window_width / 2) - (self.width/ 2))

@@ -1,3 +1,5 @@
+import threading
+
 class Protagonist:
     def __init__(self, x, y, width, height, movement_increment):
         self.x = x
@@ -5,6 +7,8 @@ class Protagonist:
         self.width = width
         self.height = height
         self.movement_increment = movement_increment
+        self.default_movement_increment = movement_increment  # Store the default value
+
 
     def getWidth(self):
         return self.width
@@ -29,3 +33,13 @@ class Protagonist:
 
     def moveUp(self):
         self.y += self.movement_increment
+
+    def setMovementIncrement(self, new_increment):
+        self.movement_increment = new_increment
+
+    def setTemporaryMovementIncrement(self, new_increment, duration):
+        self.movement_increment = new_increment  # Set new increment
+        threading.Timer(duration, self.resetMovementIncrement).start()  # Reset increment after duration
+
+    def resetMovementIncrement(self):
+        self.movement_increment = self.default_movement_increment  # Reset to default increment
