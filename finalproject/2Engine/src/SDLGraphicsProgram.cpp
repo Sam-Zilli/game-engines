@@ -156,7 +156,7 @@ SDLGraphicsProgram::~SDLGraphicsProgram(){
 
 // Logs keyboard presses and keeps loop 
 void SDLGraphicsProgram::poll() {
-    SDL_Log("SDLGraphicsProgram in Poll);
+    SDL_Log("SDLGraphicsProgram in Poll");
     rightPaddleDown = false;
     rightPaddleUp = false;
     leftPaddleUp = false;
