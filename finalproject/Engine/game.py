@@ -21,17 +21,17 @@ class Game:
         }        
 
         self.background = Background(0, self.color_map)
-        self.left_paddle = Protagonist(0, int((self.values_dict["Height"]/2)-self.values_dict["Protagonist Height"]),self.values_dict["Protagonist Width"], self.values_dict["Protagonist Height"], self.values_dict["Protagonist Speed"])
-        self.right_paddle = Protagonist(self.values_dict["Height"]-self.values_dict["Protagonist Width"], int((self.values_dict["Height"]/2)-self.values_dict["Protagonist Height"]), self.values_dict["Protagonist Width"], self.values_dict["Protagonist Height"], self.values_dict["Protagonist Speed"])
+        self.player_one = Protagonist(0, int((self.values_dict["Height"]/2)-self.values_dict["Protagonist Height"]),self.values_dict["Protagonist Width"], self.values_dict["Protagonist Height"], self.values_dict["Protagonist Speed"])
+        self.player_two = Protagonist(self.values_dict["Height"]-self.values_dict["Protagonist Width"], int((self.values_dict["Height"]/2)-self.values_dict["Protagonist Height"]), self.values_dict["Protagonist Width"], self.values_dict["Protagonist Height"], self.values_dict["Protagonist Speed"])
         self.projectile = Projectile(int((self.values_dict["Height"]/2)-self.values_dict["Projectile Height"]), int((self.values_dict["Height"]/2)-self.values_dict["Projectile Height"]), self.values_dict["Projectile Speed"], self.values_dict["Projectile Speed"], self.values_dict["Projectile Width"], self.values_dict["Projectile Height"])
         self.game_engine = mygameengine.SDLGraphicsProgram(self.values_dict["Width"], self.values_dict["Height"], self.values_dict["Game Name"])
         self.game_engine.setBackgroundColor(0, 0, 0, 0)
 
-    def draw_left_paddle(self):
-        self.game_engine.DrawRectangle(self.left_paddle.getX(), self.left_paddle.getY(), self.left_paddle.getWidth(), self.left_paddle.getHeight())
+    def draw_player_one(self):
+        self.game_engine.DrawRectangle(self.player_one.getX(), self.player_one.getY(), self.player_one.getWidth(), self.player_one.getHeight())
 
-    def draw_right_paddle(self):
-        self.game_engine.DrawRectangle(self.right_paddle.getX(), self.right_paddle.getY(), self.right_paddle.getWidth(), self.right_paddle.getHeight())
+    def draw_player_two(self):
+        self.game_engine.DrawRectangle(self.player_two.getX(), self.player_two.getY(), self.player_two.getWidth(), self.player_two.getHeight())
 
     def draw_projectile(self):
         self.game_engine.DrawRectangle(self.projectile.getX(), self.projectile.getY(), self.projectile.getWidth(), self.projectile.getHeight())
@@ -47,21 +47,21 @@ class Game:
             self.game_engine.clear()
 
             if self.game_engine.getRightPaddleDown():
-                self.right_paddle.moveUp()
+                self.player_two.moveUp()
             if self.game_engine.getRightPaddleUp():
-                self.right_paddle.moveDown()
-            self.draw_right_paddle()
+                self.player_two.moveDown()
+            self.draw_player_two()
 
             if self.game_engine.getLeftPaddleUp():
-                self.left_paddle.moveUp()
+                self.player_one.moveUp()
             if self.game_engine.getLeftPaddleDown():
-                self.left_paddle.moveDown()
-            self.draw_left_paddle()
+                self.player_one.moveDown()
+            self.draw_player_one()
 
             self.projectile.move()
             self.projectile.checkWallCollision(self.values_dict["Height"])
-            self.projectile.checkCollision(self.left_paddle)
-            self.projectile.checkCollision(self.right_paddle)
+            self.projectile.checkCollision(self.player_one)
+            self.projectile.checkCollision(self.player_two)
 
             if self.projectile.checkExitedWindow(self.values_dict["Width"], self.values_dict["Height"]):
                 self.background.colorIncrementer()
