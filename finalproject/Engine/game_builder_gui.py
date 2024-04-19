@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, filedialog
 from tkinter import messagebox
-from pong import Pong
+# from pong import Pong
 import mygameengine
 from game import Game
 
