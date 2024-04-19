@@ -414,7 +414,7 @@ void SDLGraphicsProgram::flip(){
 
 void SDLGraphicsProgram::delay() {
     SDL_Log("In delay FOR SET TIME");
-    SDL_Delay(200); 
+    SDL_Delay(1000); 
 }
 
 // Get Pointer to Window
