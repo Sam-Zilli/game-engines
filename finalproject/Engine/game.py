@@ -10,12 +10,12 @@ MOVEMENT = 20
 BALL_HEIGHT = 3
 BALL_WIDTH = 10
 BALL_V = 10
-GAME_NAME = "PONG"
 
-class Pong:
-    def __init__(self):
-        self.window_width = 800
-        self.window_height = 800
+
+class Game:
+    def __init__(self, game_engine, values_dict):
+        self.values_dict = values_dict
+        self.game_engine = game_engine
         self.quit = False
         self.color_map = {
             'red': (255, 0, 0, 255),
@@ -26,13 +26,13 @@ class Pong:
             'white': (255, 255, 255, 255),
             'black': (0, 0, 0, 255),
             'gray': (128, 128, 128, 255),
-        }
+        }        
 
         self.background = Background(0, self.color_map)
-        self.left_paddle = Protagonist(0, int((self.window_height/2)-PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT, MOVEMENT)
-        self.right_paddle = Protagonist(self.window_height-PADDLE_WIDTH, int((self.window_height/2)-PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT, MOVEMENT)
-        self.ball = Projectile(int((self.window_height/2)-BALL_HEIGHT), int((self.window_height/2)-BALL_HEIGHT), BALL_V, BALL_V, BALL_WIDTH, BALL_HEIGHT)
-        self.game_engine = mygameengine.SDLGraphicsProgram(self.window_width, self.window_height, GAME_NAME)
+        self.left_paddle = Protagonist(0, int((self.values_dict["Height"]/2)-PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT, MOVEMENT)
+        self.right_paddle = Protagonist(self.values_dict["Height"]-PADDLE_WIDTH, int((self.values_dict["Height"]/2)-PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT, MOVEMENT)
+        self.ball = Projectile(int((self.values_dict["Height"]/2)-BALL_HEIGHT), int((self.values_dict["Height"]/2)-BALL_HEIGHT), BALL_V, BALL_V, BALL_WIDTH, BALL_HEIGHT)
+        self.game_engine = mygameengine.SDLGraphicsProgram(self.values_dict["Width"], self.values_dict["Height"], self.values_dict["Game Name"])
         self.game_engine.setBackgroundColor(0, 0, 0, 0)
 
     def draw_left_paddle(self):
@@ -47,11 +47,9 @@ class Pong:
     def set_background_color(self):
         self.game_engine.setBackgroundColor(self.background.getRed(), self.background.getGreen(), self.background.getBlue(), self.background.getAlpha())
 
-
+## -------------------- GAME LOOP START ---------------------- ##
 
     def run_game(self):
-
-        print("In run game!!")
         while not self.quit:
             self.game_engine.poll()
             self.game_engine.clear()
@@ -69,11 +67,11 @@ class Pong:
             self.draw_left_paddle()
 
             self.ball.move()
-            self.ball.checkWallCollision(self.window_height)
+            self.ball.checkWallCollision(self.values_dict["Height"])
             self.ball.checkCollision(self.left_paddle)
             self.ball.checkCollision(self.right_paddle)
 
-            if self.ball.checkExitedWindow(self.window_width, self.window_height):
+            if self.ball.checkExitedWindow(self.values_dict["Width"], self.values_dict["Height"]):
                 self.background.colorIncrementer()
                 self.set_background_color()
 
@@ -85,3 +83,4 @@ class Pong:
             self.quit = self.game_engine.getQuit()
 
 ## -------------------- GAME LOOP END ---------------------- ##
+   

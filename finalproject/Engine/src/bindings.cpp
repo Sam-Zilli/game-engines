@@ -112,35 +112,25 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, const char* gameNameParam)
 	}
 	else{
 	    //Create window
-        SDL_Log("1");
     	gWindow = SDL_CreateWindow(gameName, screenWidth, screenHeight, SDL_WINDOW_OPENGL);
-        SDL_Log("2");
-
         // Check if Window did not create.
         if( gWindow == NULL ){
-            SDL_Log("ISSUE IS HERE");
 			errorStream << "Window could not be created! SDL Error: " << SDL_GetError() << "\n";
 			success = false;
 		}
-        
-        SDL_Log("3");
 
 		//Create a Renderer to draw on
         gRenderer = SDL_CreateRenderer(gWindow, NULL, SDL_RENDERER_ACCELERATED);
-        SDL_Log("4");
         // Check if Renderer did not create.
         if( gRenderer == NULL ){
             errorStream << "Renderer could not be created! SDL Error: " << SDL_GetError() << "\n";
             success = false;
         }
-        SDL_Log("5");
   	}
-
-    SDL_Log("6");
 
     // If initialization did not work, then print out a list of errors in the constructor.
     if(!success){
-        SDL_Log("7");
+
         errorStream << "SDLGraphicsProgram::SDLGraphicsProgram - Failed to initialize!\n";
         std::string errors=errorStream.str();
         SDL_Log("%s\n",errors.c_str());
@@ -152,7 +142,6 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, const char* gameNameParam)
 
 // Proper shutdown of SDL and destroy initialized objects
 SDLGraphicsProgram::~SDLGraphicsProgram(){
-    SDL_Log("In destructor!!!!!");
     //Destroy window
 	SDL_DestroyWindow( gWindow );
 	// Point gWindow to NULL to ensure it points to nothing.
@@ -201,7 +190,6 @@ void SDLGraphicsProgram::poll() {
 // Initialize OpenGL
 // Setup any of our shaders here.
 bool SDLGraphicsProgram::initGL(){
-    SDL_Log("In initGL!!!!!");
 	//Success flag
 	bool success = true;
 
@@ -218,7 +206,6 @@ void SDLGraphicsProgram::setBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a) 
 
 // Clears the screen 
 void SDLGraphicsProgram::clear(){
-    SDL_Log("In clear!!!!");
 	// Nothing yet!
     SDL_SetRenderDrawColor(gRenderer, backgroundRed,backgroundGreen,backgroundBlue, backgroundAlpha);
     SDL_RenderClear(gRenderer);   
@@ -227,20 +214,17 @@ void SDLGraphicsProgram::clear(){
 // The flip function gets called once per loop
 // It swaps out the previvous frame in a double-buffering system
 void SDLGraphicsProgram::flip(){
-    SDL_Log("In flip!!!!");
 	// Nothing yet! 
     SDL_RenderPresent(gRenderer);
 }
 
 
 void SDLGraphicsProgram::delay(int milliseconds){
-    SDL_Log("In delay!!!");
     SDL_Delay(milliseconds); 
 }
 
 // Get Pointer to Window
 SDL_Window* SDLGraphicsProgram::getSDLWindow(){
-SDL_Log("In getSDLWindow!!!");
   return gWindow;
 }
 
