@@ -36,14 +36,12 @@ public:
 
     // loop that runs forever
     // void loop();
+
     // Get Pointer to Window
     SDL_Window* getSDLWindow();
 
     // Draw a simple 
     void DrawRectangle(int x, int y, int w, int h);
-
-    // starts the ping pong game
-    // void runPongGame();
 
     // loop poll
     void poll();
@@ -59,6 +57,10 @@ public:
     // left paddle commands
     bool getLeftPaddleUp();
     bool getLeftPaddleDown();
+
+    bool Tilemap();
+
+
 
 private:
     int screenWidth;
@@ -188,6 +190,95 @@ void SDLGraphicsProgram::poll() {
     }
 }
 
+bool SDLGraphicsProgram::Tilemap(){
+    SDL_Surface* tile_map_surface = SDL_LoadBMP("../assets/tile.bpm");
+    SDL_Texture* tile_texture = SDL_CreateTextureFromSurface(gRenderer, tile_map_surface);
+    SDL_DestroySurface(tile_map_surface); // renamed from SDL_FreeSurface
+    srand(time(NULL));
+    int tilemap[20][15];
+
+    for(int x = 0; x < 20; x++) {
+        for(int y = 0; y < 15; y++) {
+            tilemap[x][y] = rand() % 4 + 1;
+        }
+    }
+
+    SDL_FRect tile[20][15];
+    for(int x = 0; x < 20; x++) {
+        for(int y = 0; y < 15; y++) {
+            tile[x][y].x = x*32;
+            tile[x][y].y = y*32;
+            tile[x][y].w = 32;
+            tile[x][y].h = 32;
+        }
+    }
+
+    SDL_FRect select_tile_1;
+    select_tile_1.x = 0;
+    select_tile_1.y = 0;
+    select_tile_1.w = 32;
+    select_tile_1.h = 32;
+
+    SDL_FRect select_tile_2;
+    select_tile_2.x = 32;
+    select_tile_2.y = 0;
+    select_tile_2.w = 32;
+    select_tile_2.h = 32;
+
+    SDL_FRect select_tile_3;
+    select_tile_3.x = 0;
+    select_tile_3.y = 32;
+    select_tile_3.w = 32;
+    select_tile_3.h = 32;
+
+    SDL_FRect select_tile_4;
+    select_tile_4.x = 32;
+    select_tile_4.y = 32;
+    select_tile_4.w = 32;
+    select_tile_4.h = 32;
+
+    bool gameIsRunning = true;
+    while(gameIsRunning) {
+        SDL_Event event;
+
+        while(SDL_PollEvent(&event)) {
+            if(event.type == 527) {
+                gameIsRunning = false;
+            }
+        }
+
+        SDL_SetRenderDrawColor(gRenderer, 0x66, 0x66, 0xBB, 0xFF);
+        SDL_RenderClear(gRenderer);
+
+        SDL_Delay(20);
+
+        for(int x= 0; x<20; x++) {
+            for(int y= 0; y < 15; y++) {
+                switch(tilemap[x][y])
+                {
+                    case 1: // SDL_RenderCopy renamed SDL_RenderTexture
+                        SDL_RenderTexture(gRenderer, tile_texture, &select_tile_1, &tile[x][y]);
+                        break;
+                    case 2:
+                        SDL_RenderTexture(gRenderer, tile_texture, &select_tile_2, &tile[x][y]);
+                        break;
+                    case 3:
+                        SDL_RenderTexture(gRenderer, tile_texture, &select_tile_3, &tile[x][y]);
+                        break;
+                    case 4:
+                        SDL_RenderTexture(gRenderer, tile_texture, &select_tile_4, &tile[x][y]);
+                        break;
+                }
+            }
+        }
+
+        SDL_RenderPresent(gRenderer);
+    }
+
+    SDL_DestroyTexture(tile_texture);
+    return true;
+}
+
 // Initialize OpenGL
 // Setup any of our shaders here.
 bool SDLGraphicsProgram::initGL(){
@@ -242,6 +333,7 @@ void SDLGraphicsProgram::DrawRectangle(int x, int y, int w, int h){
     // SDL3: int SDL_RenderRect    (SDL_Renderer *renderer, const SDL_FRect *rect);
     SDL_RenderRect(gRenderer, &fillRectF); 
 }
+
 
 
 
