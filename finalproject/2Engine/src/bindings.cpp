@@ -21,10 +21,10 @@ PYBIND11_MODULE(mygameengine, m) {
         // .def("SetBackgroundColor", &GameApp::SetBackgroundColor, py::arg("r"), py::arg("g"), py::arg("b"), py::arg("a"))
         .def("GetQuit", &GameApp::GetQuit)
         .def("Delay", &GameApp::Delay, py::arg("milliseconds"))
-        // .def("DrawRectangle", &SDLGraphicsProgram::DrawRectangle)
-        // .def("getRightPaddleUp", &SDLGraphicsProgram::getRightPaddleUp)
-        // .def("getRightPaddleDown", &SDLGraphicsProgram::getRightPaddleDown)
-        // .def("getLeftPaddleUp", &SDLGraphicsProgram::getLeftPaddleUp)
-        // .def("getLeftPaddleDown", &SDLGraphicsProgram::getLeftPaddleDown)
+        .def("DrawRectangle", &GameApp::DrawRectangle, py::arg("x"), py::arg("y"), py::arg("w"), py::arg("h"))
+        .def("getRightPaddleUp", &GameApp::getRightPaddleUp)
+        .def("getRightPaddleDown", &GameApp::getRightPaddleDown)
+        .def("getLeftPaddleUp", &GameApp::getLeftPaddleUp)
+        .def("getLeftPaddleDown", &GameApp::getLeftPaddleDown)
         ;
 }

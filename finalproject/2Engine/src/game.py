@@ -56,8 +56,7 @@ class Game:
     def run_game(self):
         self.setGameEngine(mygameengine.GameApp(self.values_dict["Width"], self.values_dict["Height"], self.values_dict["Game Name"]))
         # self.game_engine.SetBackgroundColor(0,0,255,255)
-        print(self.values_dict)
-
+        # print(self.values_dict)
 
         while not self.quit:
             self.game_engine.Poll()

@@ -84,16 +84,36 @@ void GameApp::Delay(int milliseconds) {
     graphicsProgram.delay(milliseconds);
 }
 
-// void GameApp::SetBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
-//     graphicsProgram.setBackgroundColor(r,g,b,a);
-// }
+void GameApp::SetBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
+    graphicsProgram.setBackgroundColor(r,g,b,a);
+}
 
 
-// void GameApp::Flip() {
-//     graphicsProgram.flip();
-// }
+void GameApp::Flip() {
+    graphicsProgram.flip();
+}
 
 bool GameApp::GetQuit() {
     quit = graphicsProgram.getQuit();
     return quit;
+}
+
+void GameApp::DrawRectangle(int x, int y, int w, int h) {
+    graphicsProgram.DrawRectangle(x, y, w, h);
+}
+
+bool GameApp::getRightPaddleDown() {
+    return rightPaddleDown;
+}
+
+bool GameApp::getRightPaddleUp() {
+    return rightPaddleUp;
+}
+
+bool GameApp::getLeftPaddleDown() {
+    return leftPaddleDown;
+}
+
+bool GameApp::getLeftPaddleUp() {
+    return leftPaddleUp;
 }
