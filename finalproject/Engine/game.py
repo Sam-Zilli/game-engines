@@ -4,6 +4,27 @@ from protagonist import Protagonist
 from projectile import Projectile
 import random
 
+# For Reference (passed in from game_builder_gui.py)
+# default_values = {
+#         "Game Name": "Game",
+#         "Creator": "You!",
+#         "Width": 800,  # Default width
+#         "Height": 800,  # Default height
+#         "Number of Players": 2,  # Default number of players
+#         "BackgroundRedValue": 255,  # Default background color values
+#         "BackgroundGreenValue": 255,
+#         "BackgroundBlueValue": 255,
+#         "BackgroundAlphaValue": 255,
+#         "Protagonist Height": 20,  # Default protagonist height
+#         "Protagonist Width": 20,  # Default protagonist width
+#         "Protagonist Speed": 5,  # Default protagonist speed
+#         "Projectile Height": 10,  # Default projectile height
+#         "Projectile Width": 10,  # Default projectile width
+#         "Number of Projectiles": 5,  # Default number of projectiles
+#         "Projectile Speed": 10  # Default projectile speed
+# }
+
+
 class Game:
     def __init__(self, game_engine, values_dict):
         self.values_dict = values_dict
