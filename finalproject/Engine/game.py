@@ -19,6 +19,7 @@ class Game:
             'black': (0, 0, 0, 255),
             'gray': (128, 128, 128, 255),
         }        
+        self.two_player_game = self.values_dict["Number of Players"] == 2
 
         self.background = Background(0, self.color_map)
         self.player_one = Protagonist(0, int((self.values_dict["Height"]/2)-self.values_dict["Protagonist Height"]),self.values_dict["Protagonist Width"], self.values_dict["Protagonist Height"], self.values_dict["Protagonist Speed"])
@@ -42,6 +43,8 @@ class Game:
 ## -------------------- GAME LOOP START ---------------------- ##
 
     def run_game(self):
+        # print(self.values_dict)
+        print(self.two_player_game)
         while not self.quit:
             self.game_engine.poll()
             self.game_engine.clear()
