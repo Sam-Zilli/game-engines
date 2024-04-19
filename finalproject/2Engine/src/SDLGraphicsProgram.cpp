@@ -97,6 +97,7 @@ private:
 // Takes in dimensions of window.
 SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, const char* gameNameParam)
     : screenWidth(w), screenHeight(h), gameName(gameNameParam) {
+    SDL_Log("INSIDE GRPAHICSPROGRAM INIT FUNCTION!!!!");
     // Initialization code
 	bool success = true;
 	// String to hold any errors that occur.
@@ -151,11 +152,13 @@ SDLGraphicsProgram::~SDLGraphicsProgram(){
 
 // Logs keyboard presses and keeps loop 
 void SDLGraphicsProgram::poll() {
-    // SDL_Log("In poll");
+    SDL_Log("In poll");
     rightPaddleDown = false;
     rightPaddleUp = false;
     leftPaddleUp = false;
     leftPaddleDown = false;
+
+
 
     clear();
 

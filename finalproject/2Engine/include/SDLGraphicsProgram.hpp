@@ -5,6 +5,10 @@
 
 class SDLGraphicsProgram {
 public:
+
+    // Default constructor
+    SDLGraphicsProgram() = default;
+    
     // Constructor
     SDLGraphicsProgram(int w, int h, const char* gameName);
 

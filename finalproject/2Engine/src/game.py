@@ -52,10 +52,9 @@ class Game:
         self.game_engine.StartUp(self.values_dict["Width"], self.values_dict["Height"], self.values_dict["Game Name"])
         print(self.values_dict)
 
-        # while not self.quit:
-        #     # print("RUNNING GAME!")
-        #     self.game_engine.Delay()
-    
+        while not self.quit:
+            self.game_engine.Delay()
+            self.game_engine.Poll()
 
 #     def run_game(self):
 #         # print(self.values_dict)

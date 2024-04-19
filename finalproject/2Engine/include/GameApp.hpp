@@ -12,11 +12,9 @@
 /// Game app
 class GameApp {
 public:
-    /// Default constructor
-    GameApp();
-
-    /// Setup the game objects for our system
-    void StartUp(const std::string& gameName, const std::string& gameCreatorName);
+    GameApp(); // Default constructor
+    
+    void StartUp(int width, int height, const std::string& gameName);
 
     void ShutDown();
 
@@ -42,9 +40,8 @@ private:
     // Note: Ideally this is populated as a 'scene' and
     //       loaded from some configuration file.
     std::vector<GameObject> gameObjects;
-
-    // SDLGraphicsProgram instance for graphics handling
-    SDLGraphicsProgram graphicsProgram;
+    SDLGraphicsProgram graphicsProgram; // Declare SDLGraphicsProgram here
+    bool isInitialized;
 };
 
 #endif // GAMEAPP_HPP
