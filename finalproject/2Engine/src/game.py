@@ -47,13 +47,14 @@ class Game:
 
 # ## -------------------- GAME LOOP START ---------------------- ##
 
-        print(self.values_dict)
 
     def run_game(self):
-        while not self.quit:
-            # print("RUNNING GAME!")
-            self.game_engine.StartUp(self.values_dict["Game Name"], self.values_dict["Creator"])
-            self.game_engine.Delay()
+        self.game_engine.StartUp(self.values_dict["Width"], self.values_dict["Height"], self.values_dict["Game Name"])
+        print(self.values_dict)
+
+        # while not self.quit:
+        #     # print("RUNNING GAME!")
+        #     self.game_engine.Delay()
     
 
 #     def run_game(self):

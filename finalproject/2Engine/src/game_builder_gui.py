@@ -113,7 +113,7 @@ def create_game():
 
     # Call the function with the values_dict
     load_game(values_dict)
-    root.destroy()
+
 
 def load_preset(game_name):
     if game_name == "Pong":

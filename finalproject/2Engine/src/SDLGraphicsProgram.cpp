@@ -459,25 +459,5 @@ bool SDLGraphicsProgram::getLeftPaddleDown() {
     return leftPaddleDown;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  
 #endif

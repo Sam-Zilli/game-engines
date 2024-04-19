@@ -9,7 +9,7 @@ PYBIND11_MODULE(mygameengine, m) {
 
     py::class_<GameApp>(m, "GameApp")
         .def(py::init<>()) // Constructor
-        .def("StartUp", &GameApp::StartUp, py::arg("game_name"), py::arg("game_creator_name")) // Expose StartUp with parameters
+        .def("StartUp", &GameApp::StartUp, py::arg("width"), py::arg("height"), py::arg("gameName"))
         .def("ShutDown", &GameApp::ShutDown)
         .def("CreateGameObject", &GameApp::CreateGameObject)
         .def("Input", &GameApp::Input)

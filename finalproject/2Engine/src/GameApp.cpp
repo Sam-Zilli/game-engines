@@ -3,25 +3,17 @@
 #include <fstream>
 #include <string>
 
-GameApp::GameApp() : graphicsProgram(400, 400, "Game Name Made in GameApp.cpp!") {
+GameApp::GameApp() : isInitialized(false) {
     // Constructor implementation
 }
 
-
-/// Setup the game objects for our system
-void GameApp::StartUp(const std::string& gameName, const std::string& gameCreatorName) {
-    // graphicsProgram.SDL_Log(gameName);
-    // graphicsProgram.SDL_Log(gameCreatorName);
-    std::cout << gameName << gameCreatorName << std::endl;
-    // std::ifstream script(filename);
-    // std::string line;
-    // if(script.is_open()) {
-    //     // Read each line at a time and execute
-    //     while(std::getline(script, line)) {
-    //         py::exec(line.c_str());
-    //     } 
-    //     script.close();
-    // }
+void GameApp::StartUp(int width, int height, const std::string& gameName) {
+    if (!isInitialized) {
+        std::cout << "IN STARTUP" << std::endl;
+        graphicsProgram = SDLGraphicsProgram(width, height, gameName.c_str());
+        isInitialized = true;
+    }
+    // Remaining StartUp implementation
 }
 
 void GameApp::ShutDown() {
