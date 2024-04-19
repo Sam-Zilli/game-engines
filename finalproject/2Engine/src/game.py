@@ -55,8 +55,6 @@ class Game:
 
     def run_game(self):
         self.setGameEngine(mygameengine.GameApp(self.values_dict["Width"], self.values_dict["Height"], self.values_dict["Game Name"]))
-
-        # self.game_engine.StartUp(self.values_dict["Width"], self.values_dict["Height"], self.values_dict["Game Name"])
         # self.game_engine.SetBackgroundColor(0,0,255,255)
         print(self.values_dict)
 
@@ -91,7 +89,7 @@ class Game:
             self.game_engine.Delay(200)
             # self.game_engine.flip()
 
-            self.quit = self.game_engine.get()
+            self.quit = self.game_engine.GetQuit()
             # print("Python quit: ", self.quit)
 
 

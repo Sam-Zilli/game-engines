@@ -8,8 +8,7 @@ PYBIND11_MODULE(mygameengine, m) {
     m.doc() = "Our game engine as a library"; // Optional docstring
 
     py::class_<GameApp>(m, "GameApp")
-            .def(py::init<int, int, const char*>(), py::arg("width"), py::arg("height"), py::arg("game_name"))   // our constructor
-        // .def("StartUp", &GameApp::StartUp, py::arg("width"), py::arg("height"), py::arg("gameName"))
+        .def(py::init<int, int, const char*>(), py::arg("width"), py::arg("height"), py::arg("game_name"))   // our constructor
         // .def("ShutDown", &GameApp::ShutDown)
         // .def("CreateGameObject", &GameApp::CreateGameObject)
         // .def("Input", &GameApp::Input)
@@ -20,7 +19,7 @@ PYBIND11_MODULE(mygameengine, m) {
         // .def("Clear", &GameApp::Clear)
         // .def("Flip", &GameApp::Flip)
         // .def("SetBackgroundColor", &GameApp::SetBackgroundColor, py::arg("r"), py::arg("g"), py::arg("b"), py::arg("a"))
-        .def("getQuit", &GameApp::getQuit)
+        .def("GetQuit", &GameApp::GetQuit)
         .def("Delay", &GameApp::Delay, py::arg("milliseconds"))
         // .def("DrawRectangle", &SDLGraphicsProgram::DrawRectangle)
         // .def("getRightPaddleUp", &SDLGraphicsProgram::getRightPaddleUp)

@@ -93,7 +93,7 @@ void GameApp::Delay(int milliseconds) {
 //     graphicsProgram.flip();
 // }
 
-bool GameApp::getQuit() {
-    bool answer = graphicsProgram.getQuit();
-    return answer;
+bool GameApp::GetQuit() {
+    quit = graphicsProgram.getQuit();
+    return quit;
 }
