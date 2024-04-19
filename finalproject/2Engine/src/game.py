@@ -55,6 +55,10 @@ class Game:
         while not self.quit:
             self.game_engine.Delay()
             self.game_engine.Poll()
+            self.game_engine.Render()
+            # self.quit = self.game_engine.getQuit()
+            
+        print("Python quit: ", self.quit)
 
 #     def run_game(self):
 #         # print(self.values_dict)

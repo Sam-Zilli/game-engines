@@ -18,6 +18,7 @@ PYBIND11_MODULE(mygameengine, m) {
         .def("Loop", &GameApp::Loop)
         .def("Poll", &GameApp::Poll) 
         .def("Clear", &GameApp::Clear)
+        // .def("Flip", &GameApp::Flip)
         .def("Delay", &GameApp::Delay); 
 }
 

@@ -112,12 +112,16 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, const char* gameNameParam)
 	}
 	else{
 	    //Create window
+        SDL_Log("About to make window!!!");
     	gWindow = SDL_CreateWindow(gameName, screenWidth, screenHeight, SDL_WINDOW_OPENGL);
         // Check if Window did not create.
         if( gWindow == NULL ){
 			errorStream << "Window could not be created! SDL Error: " << SDL_GetError() << "\n";
 			success = false;
 		}
+        else {
+            SDL_Log("Window Created!");
+        }
 
 		//Create a Renderer to draw on
         gRenderer = SDL_CreateRenderer(gWindow, NULL, SDL_RENDERER_ACCELERATED);
@@ -152,7 +156,7 @@ SDLGraphicsProgram::~SDLGraphicsProgram(){
 
 // Logs keyboard presses and keeps loop 
 void SDLGraphicsProgram::poll() {
-    SDL_Log("In poll");
+    SDL_Log("SDLGraphicsProgram in Poll);
     rightPaddleDown = false;
     rightPaddleUp = false;
     leftPaddleUp = false;
@@ -406,6 +410,7 @@ void SDLGraphicsProgram::clear(){
 // It swaps out the previvous frame in a double-buffering system
 void SDLGraphicsProgram::flip(){
 	// Nothing yet! 
+    SDL_Log("SDLGraphicsProgram in Flip");
     SDL_RenderPresent(gRenderer);
 }
 
@@ -416,7 +421,7 @@ void SDLGraphicsProgram::flip(){
 // }
 
 void SDLGraphicsProgram::delay() {
-    SDL_Log("In delay FOR SET TIME");
+    SDL_Log("SDLGraphicsProgram in Delay");
     SDL_Delay(1000); 
 }
 
