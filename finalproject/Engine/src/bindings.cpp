@@ -158,7 +158,9 @@ void SDLGraphicsProgram::poll() {
 
     clear();
 
-    SDL_Surface* tile_map_surface = SDL_LoadBMP("src/assets/tile.bmp");
+
+    // SDL_Surface* tile_map_surface = SDL_LoadBMP("src/assets/tile.bmp");
+    SDL_Surface* tile_map_surface = SDL_LoadBMP("./assets/tile.bmp");
     if (tile_map_surface == nullptr) {
         SDL_Log("Failed to load BMP image: %s", SDL_GetError());
 
@@ -170,7 +172,7 @@ void SDLGraphicsProgram::poll() {
 
     srand(time(NULL));
 
-    int tilemap[20][15];
+    int tilemap[40][15];
 
     // Assign randomly what tiles go where??
     for(int x = 0; x < 20; x++) {

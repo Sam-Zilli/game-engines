@@ -264,13 +264,13 @@ import sys
 
 # Compiler settings
 COMPILER = "g++"
-SOURCE = "./src/*.cpp"
+SOURCE = "../src/*.cpp"
 
 # Compiler arguments
 ARGUMENTS = "-std=c++20 -shared -undefined dynamic_lookup -g -Wall -Werror"
 
 # Include directories
-INCLUDE_DIR = ("-I ./include/ "
+INCLUDE_DIR = ("-I ../include/ "
                "-I ./pybind11/include/ "
                "-I /Library/Frameworks/Python.framework/Versions/3.11/include/python3.11")
 
