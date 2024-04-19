@@ -17,7 +17,7 @@ PONG_PRESET = {
         "BackgroundAlphaValue": 255,
         "Protagonist Height": 20, 
         "Protagonist Width": 20,  
-        "Protagonist Speed": 5,  
+        "Protagonist Speed": 40,  
         "Projectile Height": 10,  
         "Projectile Width": 10, 
         "Number of Projectiles": 5,  
