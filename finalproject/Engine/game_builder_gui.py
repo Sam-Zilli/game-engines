@@ -24,7 +24,13 @@ PONG_PRESET = {
         "Projectile Speed": 10      
 }
 
-def load_custom_game(values_dict):
+
+def on_closing():
+    print("Closing window!")
+    if messagebox.askokcancel("Quit", "Do you want to quit?"):
+        root.destroy()
+
+def load_game(values_dict):
     print("In load custom game")
     game_engine = mygameengine.SDLGraphicsProgram(int(values_dict["Width"]), int(values_dict["Height"]), values_dict["Game Name"])    
     custom_game = Game(game_engine, values_dict)
@@ -107,13 +113,14 @@ def create_game():
     }
 
     # Call the function with the values_dict
-    load_custom_game(values_dict)
+    load_game(values_dict)
     root.destroy()
 
 def load_preset(game_name):
     if game_name == "Pong":
-        pong = Game(game_name, PONG_PRESET)
-        pong.run_game()
+        # pong = Game(game_name, PONG_PRESET)
+        # pong.run_game()
+        load_game(PONG_PRESET)
 
 root = tk.Tk()
 root.title("Game Creator!")
@@ -179,4 +186,6 @@ load_preset_button.grid(row=16, column=0, columnspan=2)
 create_button = tk.Button(root, text="Create Game!", command=create_game)
 create_button.grid(row=17, column=0, columnspan=2)
 
+root.protocol("WM_DELETE_WINDOW", on_closing)
 root.mainloop()
+
