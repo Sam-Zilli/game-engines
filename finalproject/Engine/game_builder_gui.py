@@ -102,18 +102,13 @@ def create_game(values_dict):
 
 # ## -------------------- Running the created game ---------------------- ##
 
-    print(values_dict)
-    # pong_game = Pong(values_dict)
-    # pong_game.run_game()
-    # print(type(game_name))
-    print("Values in game loop: ", width, height, game_name)
-    # Initialize SDL / window
-    gameEngine = mygameengine.SDLGraphicsProgram(width, height, game_name)
-    # quit = gameEngine.getQuit()
+    print("Before Create Game Pong: ", values_dict)
+    pong_game = Pong(values_dict)
+    pong_game.run_game()
+    
     # quit = False
 
-
-    # # While running 
+    # While running 
     # while not quit:
 
     #     gameEngine.poll()
@@ -316,6 +311,7 @@ def create_game_gui():
 def load_preset_game(preset):
     # Logic to load a preset game
     if preset == "Pong":
+        print("In load preset pong: ", values_dict)
         pong_game = Pong(values_dict)
         pong_game.run_game()
 

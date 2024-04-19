@@ -48,6 +48,8 @@ class Pong:
 ## -------------------- GAME LOOP START ---------------------- ##
 
     def run_game(self):
+
+        print("In run game!!")
         while not self.quit:
             self.game_engine.poll()
             self.game_engine.clear()
@@ -64,16 +66,16 @@ class Pong:
                 self.left_paddle.moveDown()
             self.draw_left_paddle()
 
-            self.ball.move()
-            self.ball.checkWallCollision(self.window_width, self.window_height)
-            self.ball.checkCollision(self.left_paddle)
-            self.ball.checkCollision(self.right_paddle)
+        #     self.ball.move()
+        #     self.ball.checkWallCollision(self.window_width, self.window_height)
+        #     self.ball.checkCollision(self.left_paddle)
+        #     self.ball.checkCollision(self.right_paddle)
 
-            if self.ball.checkExitedWindow(self.window_width, self.window_height):
-                self.background.colorIncrementer()
-                self.set_background_color()
+        #     if self.ball.checkExitedWindow(self.window_width, self.window_height):
+        #         self.background.colorIncrementer()
+        #         self.set_background_color()
 
-            self.draw_ball()
+        #     self.draw_ball()
 
             self.game_engine.delay(200)
             self.game_engine.flip()
