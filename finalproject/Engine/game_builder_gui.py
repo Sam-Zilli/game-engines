@@ -5,12 +5,11 @@ from pong import Pong
 import mygameengine
 from game import Game
 
-
 PONG_PRESET = {
         "Game Name": "Pong!",
         "Creator": "Pong!",
         "Width": 800, 
-        "Height": 600,  
+        "Height": 800,  
         "Number of Players": 2,  
         "BackgroundRedValue": 255,  
         "BackgroundGreenValue": 255,
@@ -28,7 +27,7 @@ PONG_PRESET = {
 def load_custom_game(values_dict):
     print("In load custom game")
     game_engine = mygameengine.SDLGraphicsProgram(int(values_dict["Width"]), int(values_dict["Height"]), values_dict["Game Name"])    
-    custom_game = Game(game_engine, PONG_PRESET)
+    custom_game = Game(game_engine, values_dict)
     custom_game.run_game()
 
 def create_game():
@@ -38,7 +37,7 @@ def create_game():
         "Game Name": "Game",
         "Creator": "You!",
         "Width": 800,  # Default width
-        "Height": 600,  # Default height
+        "Height": 800,  # Default height
         "Number of Players": 2,  # Default number of players
         "BackgroundRedValue": 255,  # Default background color values
         "BackgroundGreenValue": 255,
@@ -113,8 +112,8 @@ def create_game():
 
 def load_preset(game_name):
     if game_name == "Pong":
-        pong_game = Pong()
-        pong_game.run_game()
+        pong = Game(game_name, PONG_PRESET)
+        pong.run_game()
 
 root = tk.Tk()
 root.title("Game Creator!")
