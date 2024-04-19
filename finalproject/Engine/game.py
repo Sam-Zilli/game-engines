@@ -24,12 +24,15 @@ import random
 #         "Projectile Speed": 10  # Default projectile speed
 # }
 
-
 class Game:
     def __init__(self, game_engine, values_dict):
         self.values_dict = values_dict
         self.game_engine = game_engine
         self.quit = False
+        self.backgroundRed = values_dict["BackgroundRedValue"]
+        self.backgroundGreen = values_dict["BackgroundGreenValue"]
+        self.backgroundBlue = values_dict["BackgroundBlueValue"]
+        self.backgroundAlpha = values_dict["BackgroundAlphaValue"]
         self.color_map = {
             'red': (255, 0, 0, 255),
             'green': (0, 255, 0, 255),
@@ -47,7 +50,7 @@ class Game:
         self.player_two = Protagonist(self.values_dict["Height"]-self.values_dict["Protagonist Width"], int((self.values_dict["Height"]/2)-self.values_dict["Protagonist Height"]), self.values_dict["Protagonist Width"], self.values_dict["Protagonist Height"], self.values_dict["Protagonist Speed"])
         self.projectile = Projectile(int((self.values_dict["Height"]/2)-self.values_dict["Projectile Height"]), int((self.values_dict["Height"]/2)-self.values_dict["Projectile Height"]), self.values_dict["Projectile Speed"], self.values_dict["Projectile Speed"], self.values_dict["Projectile Width"], self.values_dict["Projectile Height"])
         self.game_engine = mygameengine.SDLGraphicsProgram(self.values_dict["Width"], self.values_dict["Height"], self.values_dict["Game Name"])
-        self.game_engine.setBackgroundColor(0, 0, 0, 0)
+        self.game_engine.setBackgroundColor(self.backgroundRed, self.backgroundGreen, self.backgroundBlue, self.backgroundAlpha)
 
     def draw_player_one(self):
         self.game_engine.DrawRectangle(self.player_one.getX(), self.player_one.getY(), self.player_one.getWidth(), self.player_one.getHeight())
