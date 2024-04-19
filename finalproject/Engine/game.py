@@ -4,14 +4,6 @@ from protagonist import Protagonist
 from projectile import Projectile
 import random
 
-PADDLE_HEIGHT = 20
-PADDLE_WIDTH = 20
-MOVEMENT = 20
-BALL_HEIGHT = 3
-BALL_WIDTH = 10
-BALL_V = 10
-
-
 class Game:
     def __init__(self, game_engine, values_dict):
         self.values_dict = values_dict
@@ -29,9 +21,9 @@ class Game:
         }        
 
         self.background = Background(0, self.color_map)
-        self.left_paddle = Protagonist(0, int((self.values_dict["Height"]/2)-PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT, MOVEMENT)
-        self.right_paddle = Protagonist(self.values_dict["Height"]-PADDLE_WIDTH, int((self.values_dict["Height"]/2)-PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT, MOVEMENT)
-        self.ball = Projectile(int((self.values_dict["Height"]/2)-BALL_HEIGHT), int((self.values_dict["Height"]/2)-BALL_HEIGHT), BALL_V, BALL_V, BALL_WIDTH, BALL_HEIGHT)
+        self.left_paddle = Protagonist(0, int((self.values_dict["Height"]/2)-self.values_dict["Protagonist Height"]),self.values_dict["Protagonist Width"], self.values_dict["Protagonist Height"], self.values_dict["Protagonist Speed"])
+        self.right_paddle = Protagonist(self.values_dict["Height"]-self.values_dict["Protagonist Width"], int((self.values_dict["Height"]/2)-self.values_dict["Protagonist Height"]), self.values_dict["Protagonist Width"], self.values_dict["Protagonist Height"], self.values_dict["Protagonist Speed"])
+        self.ball = Projectile(int((self.values_dict["Height"]/2)-self.values_dict["Projectile Height"]), int((self.values_dict["Height"]/2)-self.values_dict["Projectile Height"]), self.values_dict["Projectile Speed"], self.values_dict["Projectile Speed"], self.values_dict["Projectile Width"], self.values_dict["Projectile Height"])
         self.game_engine = mygameengine.SDLGraphicsProgram(self.values_dict["Width"], self.values_dict["Height"], self.values_dict["Game Name"])
         self.game_engine.setBackgroundColor(0, 0, 0, 0)
 
