@@ -29,9 +29,8 @@ def on_closing():
     root.destroy()
 
 def load_game(values_dict):
-    print("In load custom game")
-    custom_game = Game(values_dict)
-    custom_game.run_game()
+    game = Game(values_dict)
+    game.run_game()
     on_closing()
 
 

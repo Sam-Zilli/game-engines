@@ -8,44 +8,24 @@ PYBIND11_MODULE(mygameengine, m) {
     m.doc() = "Our game engine as a library"; // Optional docstring
 
     py::class_<GameApp>(m, "GameApp")
-        .def(py::init<>()) // Constructor
-        .def("StartUp", &GameApp::StartUp, py::arg("width"), py::arg("height"), py::arg("gameName"))
-        .def("ShutDown", &GameApp::ShutDown)
-        .def("CreateGameObject", &GameApp::CreateGameObject)
-        .def("Input", &GameApp::Input)
-        .def("Update", &GameApp::Update)
-        .def("Render", &GameApp::Render)
-        .def("Loop", &GameApp::Loop)
+            .def(py::init<int, int, const char*>(), py::arg("width"), py::arg("height"), py::arg("game_name"))   // our constructor
+        // .def("StartUp", &GameApp::StartUp, py::arg("width"), py::arg("height"), py::arg("gameName"))
+        // .def("ShutDown", &GameApp::ShutDown)
+        // .def("CreateGameObject", &GameApp::CreateGameObject)
+        // .def("Input", &GameApp::Input)
+        // .def("Update", &GameApp::Update)
+        // .def("Render", &GameApp::Render)
+        // .def("Loop", &GameApp::Loop)
         .def("Poll", &GameApp::Poll) 
-        .def("Clear", &GameApp::Clear)
+        // .def("Clear", &GameApp::Clear)
         // .def("Flip", &GameApp::Flip)
-        .def("Delay", &GameApp::Delay); 
+        // .def("SetBackgroundColor", &GameApp::SetBackgroundColor, py::arg("r"), py::arg("g"), py::arg("b"), py::arg("a"))
+        .def("getQuit", &GameApp::getQuit)
+        .def("Delay", &GameApp::Delay, py::arg("milliseconds"))
+        // .def("DrawRectangle", &SDLGraphicsProgram::DrawRectangle)
+        // .def("getRightPaddleUp", &SDLGraphicsProgram::getRightPaddleUp)
+        // .def("getRightPaddleDown", &SDLGraphicsProgram::getRightPaddleDown)
+        // .def("getLeftPaddleUp", &SDLGraphicsProgram::getLeftPaddleUp)
+        // .def("getLeftPaddleDown", &SDLGraphicsProgram::getLeftPaddleDown)
+        ;
 }
-
-
-// Add to list above, remember ot move the ; and use Title case
-// Add to GameApp.hpp
-// Add to GameApp.cpp AND implement
-// Rebuilc macbuild!
-// Run
-
-// PYBIND11_MODULE(mygameengine, m){
-//     m.doc() = "our game engine as a library"; // Optional docstring
-
-//     py::class_<SDLGraphicsProgram>(m, "SDLGraphicsProgram")
-//             .def(py::init<int, int, const char*>(), py::arg("width"), py::arg("height"), py::arg("game_name"))   // our constructor
-//             .def("clear", &SDLGraphicsProgram::clear) // Expose member methods
-//             .def("delay", &SDLGraphicsProgram::delay) 
-//             .def("flip", &SDLGraphicsProgram::flip) 
-//             // .def("loop", &SDLGraphicsProgram::loop) 
-//             .def("DrawRectangle", &SDLGraphicsProgram::DrawRectangle)
-//             .def("poll", &SDLGraphicsProgram::poll)
-//             .def("getQuit", &SDLGraphicsProgram::getQuit)
-//             .def("getRightPaddleUp", &SDLGraphicsProgram::getRightPaddleUp)
-//             .def("getRightPaddleDown", &SDLGraphicsProgram::getRightPaddleDown)
-//             .def("getLeftPaddleUp", &SDLGraphicsProgram::getLeftPaddleUp)
-//             .def("getLeftPaddleDown", &SDLGraphicsProgram::getLeftPaddleDown)
-//             .def("setBackgroundColor", &SDLGraphicsProgram::setBackgroundColor);
-// }
- 
-// #endif

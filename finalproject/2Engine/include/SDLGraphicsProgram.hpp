@@ -4,11 +4,7 @@
 #include <SDL3/SDL.h>
 
 class SDLGraphicsProgram {
-public:
-
-    // Default constructor
-    SDLGraphicsProgram() = default;
-    
+public:    
     // Constructor
     SDLGraphicsProgram(int w, int h, const char* gameName);
 
@@ -25,8 +21,7 @@ public:
     void flip();
 
     // Delay rendering
-    // void delay(int milliseconds);
-    void delay();
+    void delay(int milliseconds);
 
     // Get Pointer to Window
     SDL_Window* getSDLWindow();

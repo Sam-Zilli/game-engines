@@ -32,8 +32,7 @@ public:
     void flip();
 
     // Delay rendering
-    // void delay(int milliseconds);
-    void delay();
+    void delay(int milliseconds);
 
     // loop that runs forever
     // void loop();
@@ -97,7 +96,6 @@ private:
 // Takes in dimensions of window.
 SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, const char* gameNameParam)
     : screenWidth(w), screenHeight(h), gameName(gameNameParam) {
-    SDL_Log("INSIDE GRPAHICSPROGRAM INIT FUNCTION!!!!");
     // Initialization code
 	bool success = true;
 	// String to hold any errors that occur.
@@ -112,16 +110,12 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, const char* gameNameParam)
 	}
 	else{
 	    //Create window
-        SDL_Log("About to make window!!!");
     	gWindow = SDL_CreateWindow(gameName, screenWidth, screenHeight, SDL_WINDOW_OPENGL);
         // Check if Window did not create.
         if( gWindow == NULL ){
 			errorStream << "Window could not be created! SDL Error: " << SDL_GetError() << "\n";
 			success = false;
 		}
-        else {
-            SDL_Log("Window Created!");
-        }
 
 		//Create a Renderer to draw on
         gRenderer = SDL_CreateRenderer(gWindow, NULL, SDL_RENDERER_ACCELERATED);
@@ -156,13 +150,11 @@ SDLGraphicsProgram::~SDLGraphicsProgram(){
 
 // Logs keyboard presses and keeps loop 
 void SDLGraphicsProgram::poll() {
-    SDL_Log("SDLGraphicsProgram in Poll");
+    // SDL_Log("In poll");
     rightPaddleDown = false;
     rightPaddleUp = false;
     leftPaddleUp = false;
     leftPaddleDown = false;
-
-
 
     clear();
 
@@ -410,19 +402,12 @@ void SDLGraphicsProgram::clear(){
 // It swaps out the previvous frame in a double-buffering system
 void SDLGraphicsProgram::flip(){
 	// Nothing yet! 
-    SDL_Log("SDLGraphicsProgram in Flip");
     SDL_RenderPresent(gRenderer);
 }
 
-// THERE ARE TWO DIFFERNET VERISONS OF DELAY HERE
-// void SDLGraphicsProgram::delay(int milliseconds){
-//     SDL_Log("In delay");
-//     SDL_Delay(milliseconds); 
-// }
 
-void SDLGraphicsProgram::delay() {
-    SDL_Log("SDLGraphicsProgram in Delay");
-    SDL_Delay(1000); 
+void SDLGraphicsProgram::delay(int milliseconds){
+    SDL_Delay(milliseconds); 
 }
 
 // Get Pointer to Window
@@ -467,5 +452,20 @@ bool SDLGraphicsProgram::getLeftPaddleDown() {
     return leftPaddleDown;
 }
 
- 
+
 #endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

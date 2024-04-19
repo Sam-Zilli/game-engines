@@ -5,43 +5,33 @@
 #include <vector>
 #include <string>
 #include "SDLGraphicsProgram.hpp" // Include SDLGraphicsProgram header
-#include "GameApp.hpp" // Include GameObject header
-#include "GameObject.hpp"
+
+// Forward declaration of GameObject class
 
 
 /// Game app
 class GameApp {
 public:
-    GameApp(); // Default constructor
-    
-    void StartUp(int width, int height, const std::string& gameName);
-
-    void ShutDown();
-
-    // For demonstration purposes, assume ownership on the C++ vector collection
-    void CreateGameObject(const std::string name, const std::string scriptfilename);
-
-    void Input();
-
-    void Update();
-
+    GameApp(int width, int height, const std::string& gameName);
+    ~GameApp();
+    // void ShutDown();
+    // void CreateGameObject(const std::string name, const std::string scriptfilename);
+    // void Input();
+    // void Update();
     void Render();
-
     void Loop();
-
     void Poll();
-
     void Clear();
-
-    void Delay();
+    void Delay(int milliseconds);
+    void SetBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a);
+    bool getQuit();
+    void Flip();
 
 private:
-    /// Data
-    // Note: Ideally this is populated as a 'scene' and
-    //       loaded from some configuration file.
-    std::vector<GameObject> gameObjects;
-    SDLGraphicsProgram graphicsProgram; // Declare SDLGraphicsProgram here
+    // std::vector<GameObject> gameObjects;
+    SDLGraphicsProgram graphicsProgram;
     bool isInitialized;
+    bool quit;
 };
 
 #endif // GAMEAPP_HPP
