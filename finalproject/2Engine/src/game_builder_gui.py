@@ -1,8 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, filedialog
 from tkinter import messagebox
-# from pong import Pong
-import mygameengine
 from game import Game
 
 PONG_PRESET = {
@@ -32,8 +30,7 @@ def on_closing():
 
 def load_game(values_dict):
     print("In load custom game")
-    game_engine = mygameengine.SDLGraphicsProgram(int(values_dict["Width"]), int(values_dict["Height"]), values_dict["Game Name"])    
-    custom_game = Game(game_engine, values_dict)
+    custom_game = Game(values_dict)
     custom_game.run_game()
     on_closing()
 
