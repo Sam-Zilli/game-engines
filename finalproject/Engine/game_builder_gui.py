@@ -8,8 +8,8 @@ from game import Game
 PONG_PRESET = {
         "Game Name": "Pong!",
         "Creator": "Pong!",
-        "Width": 800, 
-        "Height": 800,  
+        "Width": 640, 
+        "Height": 480,  
         "Number of Players": 2,  
         "BackgroundRedValue": 0,  
         "BackgroundGreenValue": 0,

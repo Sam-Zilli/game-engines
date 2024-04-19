@@ -91,9 +91,6 @@ private:
 };
 
 
-
-
-
 // Initialization function
 // Returns a true or false value based on successful completion of setup.
 // Takes in dimensions of window.
@@ -105,8 +102,7 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, const char* gameNameParam)
 	std::stringstream errorStream;
 	// The window we'll be rendering to
 	gWindow = NULL;
-	// Render flag
-
+	
 	// Initialize SDL
 	if(SDL_Init(SDL_INIT_VIDEO)< 0){
 		errorStream << "SDL could not initialize! SDL Error: " << SDL_GetError() << "\n";
@@ -159,50 +155,35 @@ void SDLGraphicsProgram::poll() {
     rightPaddleUp = false;
     leftPaddleUp = false;
     leftPaddleDown = false;
-    SDL_Event event;
-    while (SDL_PollEvent(&event) != 0) {
-        switch (event.type) {
-            case 527: // For some reason SDL_EVENT_QUIT doesn't work here.
-                SDL_Log("Quit event detected");
-                quit = true;
-                break;
-            case SDL_EVENT_KEY_DOWN:
-                SDL_Log("Key pressed: %s", SDL_GetKeyName(event.key.keysym.sym));
-                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Up") == 0) {
-                    rightPaddleUp = true;
-                }
-                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Down") == 0) {
-                    rightPaddleDown = true;
-                }
-                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Left Option") == 0) {
-                    leftPaddleUp = true;
-                }
-                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Z") == 0) {
-                    leftPaddleDown = true;
-                }
-            case SDL_EVENT_KEY_UP:
-                SDL_Log("Key released: %s", SDL_GetKeyName(event.key.keysym.sym));
-                break;
-            default:
-                // SDL_Log("Unknown event type: %d", event.type);
-                break;
-        }
-    }
-}
 
-bool SDLGraphicsProgram::Tilemap(){
-    SDL_Surface* tile_map_surface = SDL_LoadBMP("../assets/tile.bpm");
+    clear();
+
+    SDL_Surface* tile_map_surface = SDL_LoadBMP("src/assets/tile.bmp");
+    if (tile_map_surface == nullptr) {
+        SDL_Log("Failed to load BMP image: %s", SDL_GetError());
+
+        return;
+    }
+
     SDL_Texture* tile_texture = SDL_CreateTextureFromSurface(gRenderer, tile_map_surface);
     SDL_DestroySurface(tile_map_surface); // renamed from SDL_FreeSurface
+
     srand(time(NULL));
+
     int tilemap[20][15];
 
+    // Assign randomly what tiles go where??
     for(int x = 0; x < 20; x++) {
         for(int y = 0; y < 15; y++) {
-            tilemap[x][y] = rand() % 4 + 1;
+            // determines what tile is chosen for each 
+            // (example: tilemap[x][y] = 4 % 4 + 1; puts tile "1" in every square)
+            // or to randomly choose numbers 1-4:
+            //  tilemap[x][y] = rand() % 4 + 1;
+            tilemap[x][y] = 4 % 4 + 1;
         }
     }
 
+    // Populating screen with tiles. Only need enough tiles to cover screen, okay to over approximate.
     SDL_FRect tile[20][15];
     for(int x = 0; x < 20; x++) {
         for(int y = 0; y < 15; y++) {
@@ -237,21 +218,41 @@ bool SDLGraphicsProgram::Tilemap(){
     select_tile_4.w = 32;
     select_tile_4.h = 32;
 
-    bool gameIsRunning = true;
-    while(gameIsRunning) {
-        SDL_Event event;
 
-        while(SDL_PollEvent(&event)) {
-            if(event.type == 527) {
-                gameIsRunning = false;
-            }
+    SDL_Event event;
+
+    while (SDL_PollEvent(&event) != 0) {
+        switch (event.type) {
+            case 527: // For some reason SDL_EVENT_QUIT doesn't work here.
+                SDL_Log("Quit event detected");
+                quit = true;
+                break;
+            case SDL_EVENT_KEY_DOWN:
+                SDL_Log("Key pressed: %s", SDL_GetKeyName(event.key.keysym.sym));
+                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Up") == 0) {
+                    rightPaddleUp = true;
+                }
+                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Down") == 0) {
+                    rightPaddleDown = true;
+                }
+                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Left Option") == 0) {
+                    leftPaddleUp = true;
+                }
+                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Z") == 0) {
+                    leftPaddleDown = true;
+                }
+            case SDL_EVENT_KEY_UP:
+                SDL_Log("Key released: %s", SDL_GetKeyName(event.key.keysym.sym));
+                break;
+            default:
+                // SDL_Log("Unknown event type: %d", event.type);
+                break;
         }
+    }
 
-        SDL_SetRenderDrawColor(gRenderer, 0x66, 0x66, 0xBB, 0xFF);
-        SDL_RenderClear(gRenderer);
-
-        SDL_Delay(20);
-
+    SDL_SetRenderDrawColor(gRenderer, 0x66, 0x66, 0xBB, 0xFF);
+    SDL_RenderClear(gRenderer);
+        // Render tiles
         for(int x= 0; x<20; x++) {
             for(int y= 0; y < 15; y++) {
                 switch(tilemap[x][y])
@@ -272,12 +273,104 @@ bool SDLGraphicsProgram::Tilemap(){
             }
         }
 
-        SDL_RenderPresent(gRenderer);
-    }
+    // Render present
+    SDL_RenderPresent(gRenderer);
 
+    // Cleanup
     SDL_DestroyTexture(tile_texture);
-    return true;
 }
+
+// bool SDLGraphicsProgram::Tilemap(){
+//     SDL_Surface* tile_map_surface = SDL_LoadBMP("../assets/tile.bpm");
+//     SDL_Texture* tile_texture = SDL_CreateTextureFromSurface(gRenderer, tile_map_surface);
+//     SDL_DestroySurface(tile_map_surface); // renamed from SDL_FreeSurface
+//     srand(time(NULL));
+//     int tilemap[20][15];
+
+//     for(int x = 0; x < 20; x++) {
+//         for(int y = 0; y < 15; y++) {
+//             tilemap[x][y] = rand() % 4 + 1;
+//         }
+//     }
+
+//     SDL_FRect tile[20][15];
+//     for(int x = 0; x < 20; x++) {
+//         for(int y = 0; y < 15; y++) {
+//             tile[x][y].x = x*32;
+//             tile[x][y].y = y*32;
+//             tile[x][y].w = 32;
+//             tile[x][y].h = 32;
+//         }
+//     }
+
+//     SDL_FRect select_tile_1;
+//     select_tile_1.x = 0;
+//     select_tile_1.y = 0;
+//     select_tile_1.w = 32;
+//     select_tile_1.h = 32;
+
+//     SDL_FRect select_tile_2;
+//     select_tile_2.x = 32;
+//     select_tile_2.y = 0;
+//     select_tile_2.w = 32;
+//     select_tile_2.h = 32;
+
+//     SDL_FRect select_tile_3;
+//     select_tile_3.x = 0;
+//     select_tile_3.y = 32;
+//     select_tile_3.w = 32;
+//     select_tile_3.h = 32;
+
+//     SDL_FRect select_tile_4;
+//     select_tile_4.x = 32;
+//     select_tile_4.y = 32;
+//     select_tile_4.w = 32;
+//     select_tile_4.h = 32;
+
+//     // infinite loop runnning application
+//     bool gameIsRunning = true;
+//     while(gameIsRunning) {
+//         SDL_Event event;
+
+//         while(SDL_PollEvent(&event)) {
+//             if(event.type == 527) {
+//                 gameIsRunning = false;
+//             }
+//         }
+
+//         SDL_SetRenderDrawColor(gRenderer, 0x66, 0x66, 0xBB, 0xFF);
+//         SDL_RenderClear(gRenderer);
+
+//         SDL_Delay(20);
+
+
+//         // actually putting the tiles down?
+//         for(int x= 0; x<20; x++) {
+//             for(int y= 0; y < 15; y++) {
+//                 switch(tilemap[x][y])
+//                 {
+//                     case 1: // SDL_RenderCopy renamed SDL_RenderTexture
+//                         // SDL_RenderTexture(gRenderer, tile_texture, &select_tile_1, &tile[x][y]);
+//                         break;
+//                     case 2:
+//                         SDL_RenderTexture(gRenderer, tile_texture, &select_tile_2, &tile[x][y]);
+//                         break;
+//                     case 3:
+//                         SDL_RenderTexture(gRenderer, tile_texture, &select_tile_3, &tile[x][y]);
+//                         break;
+//                     case 4:
+//                         SDL_RenderTexture(gRenderer, tile_texture, &select_tile_4, &tile[x][y]);
+//                         break;
+//                 }
+//             }
+//         }
+//         // displaying in the renderer
+//         SDL_RenderPresent(gRenderer);
+//     }
+//     // cleaning up each of the tectures
+//     SDL_DestroyTexture(tile_texture);
+//     return true;
+// }
 
 // Initialize OpenGL
 // Setup any of our shaders here.

@@ -50,7 +50,7 @@ class Game:
         # print(self.values_dict)
         while not self.quit:
             self.game_engine.poll()
-            self.game_engine.clear()
+            # self.game_engine.clear()
 
             if self.game_engine.getRightPaddleDown():
                 self.player_two.moveUp()
@@ -76,7 +76,7 @@ class Game:
             self.draw_projectile()
 
             self.game_engine.delay(200)
-            self.game_engine.flip()
+            # self.game_engine.flip()
 
             self.quit = self.game_engine.getQuit()
             # print("Python quit: ", self.quit)
