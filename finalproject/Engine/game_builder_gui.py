@@ -35,6 +35,8 @@ def load_game(values_dict):
     game_engine = mygameengine.SDLGraphicsProgram(int(values_dict["Width"]), int(values_dict["Height"]), values_dict["Game Name"])    
     custom_game = Game(game_engine, values_dict)
     custom_game.run_game()
+    on_closing()
+
 
 def create_game():
     global values_dict

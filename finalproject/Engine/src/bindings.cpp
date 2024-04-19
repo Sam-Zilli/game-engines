@@ -152,6 +152,7 @@ SDLGraphicsProgram::~SDLGraphicsProgram(){
 
 // Logs keyboard presses and keeps loop 
 void SDLGraphicsProgram::poll() {
+    // SDL_Log("In poll");
     rightPaddleDown = false;
     rightPaddleUp = false;
     leftPaddleUp = false;
@@ -159,7 +160,7 @@ void SDLGraphicsProgram::poll() {
     SDL_Event event;
     while (SDL_PollEvent(&event) != 0) {
         switch (event.type) {
-            case SDL_EVENT_QUIT:
+            case 527: // For some reason SDL_EVENT_QUIT doesn't work here.
                 SDL_Log("Quit event detected");
                 quit = true;
                 break;
@@ -178,7 +179,7 @@ void SDLGraphicsProgram::poll() {
                     leftPaddleDown = true;
                 }
             case SDL_EVENT_KEY_UP:
-                // SDL_Log("Key released: %s", SDL_GetKeyName(event.key.keysym.sym));
+                SDL_Log("Key released: %s", SDL_GetKeyName(event.key.keysym.sym));
                 break;
             default:
                 // SDL_Log("Unknown event type: %d", event.type);
