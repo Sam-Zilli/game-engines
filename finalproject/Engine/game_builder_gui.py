@@ -27,8 +27,8 @@ PONG_PRESET = {
 
 def on_closing():
     print("Closing window!")
-    if messagebox.askokcancel("Quit", "Do you want to quit?"):
-        root.destroy()
+    # if messagebox.askokcancel("Quit", "Do you want to quit?"):
+    root.destroy()
 
 def load_game(values_dict):
     print("In load custom game")
