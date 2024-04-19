@@ -9,17 +9,24 @@ PYBIND11_MODULE(mygameengine, m) {
 
     py::class_<GameApp>(m, "GameApp")
         .def(py::init<>()) // Constructor
-        .def("StartUp", &GameApp::StartUp) // Expose member methods
+        .def("StartUp", &GameApp::StartUp, py::arg("game_name"), py::arg("game_creator_name")) // Expose StartUp with parameters
         .def("ShutDown", &GameApp::ShutDown)
         .def("CreateGameObject", &GameApp::CreateGameObject)
         .def("Input", &GameApp::Input)
         .def("Update", &GameApp::Update)
         .def("Render", &GameApp::Render)
-        .def("Loop", &GameApp::Loop);
+        .def("Loop", &GameApp::Loop)
         .def("Poll", &GameApp::Poll) 
-        .def("Clear", &GameApp::Clear);
+        .def("Clear", &GameApp::Clear)
+        .def("Delay", &GameApp::Delay); 
 }
 
+
+// Add to list above, remember ot move the ; and use Title case
+// Add to GameApp.hpp
+// Add to GameApp.cpp AND implement
+// Rebuilc macbuild!
+// Run
 
 // PYBIND11_MODULE(mygameengine, m){
 //     m.doc() = "our game engine as a library"; // Optional docstring

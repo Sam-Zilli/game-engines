@@ -7,7 +7,7 @@ import random
 class Game:
     def __init__(self, values_dict):
         self.values_dict = values_dict
-        self.game_engine = mygameengine # game is run on this engine (bindings.cpp)
+        self.game_engine = mygameengine.GameApp() # game is run on this engine (bindings.cpp)
         self.quit = False
         self.backgroundRed = values_dict["BackgroundRedValue"]
         self.backgroundGreen = values_dict["BackgroundGreenValue"]
@@ -50,7 +50,9 @@ class Game:
 
     def run_game(self):
         while not self.quit:
-            print("RUNNING GAME!")
+            # print("RUNNING GAME!")
+            self.game_engine.StartUp("GameName!", "Sam Zilli")
+            self.game_engine.Delay()
     
 
 #     def run_game(self):

@@ -16,7 +16,7 @@ public:
     GameApp();
 
     /// Setup the game objects for our system
-    void StartUp(const std::string filename);
+    void StartUp(const std::string& gameName, const std::string& gameCreatorName);
 
     void ShutDown();
 
@@ -34,6 +34,8 @@ public:
     void Poll();
 
     void Clear();
+
+    void Delay();
 
 private:
     /// Data

@@ -32,7 +32,8 @@ public:
     void flip();
 
     // Delay rendering
-    void delay(int milliseconds);
+    // void delay(int milliseconds);
+    void delay();
 
     // loop that runs forever
     // void loop();
@@ -405,9 +406,15 @@ void SDLGraphicsProgram::flip(){
     SDL_RenderPresent(gRenderer);
 }
 
+// THERE ARE TWO DIFFERNET VERISONS OF DELAY HERE
+// void SDLGraphicsProgram::delay(int milliseconds){
+//     SDL_Log("In delay");
+//     SDL_Delay(milliseconds); 
+// }
 
-void SDLGraphicsProgram::delay(int milliseconds){
-    SDL_Delay(milliseconds); 
+void SDLGraphicsProgram::delay() {
+    SDL_Log("In delay FOR SET TIME");
+    SDL_Delay(200); 
 }
 
 // Get Pointer to Window

@@ -21,7 +21,8 @@ public:
     void flip();
 
     // Delay rendering
-    void delay(int milliseconds);
+    // void delay(int milliseconds);
+    void delay();
 
     // Get Pointer to Window
     SDL_Window* getSDLWindow();

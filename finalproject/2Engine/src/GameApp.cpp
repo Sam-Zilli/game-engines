@@ -9,16 +9,19 @@ GameApp::GameApp() : graphicsProgram(400, 400, "Game Name Made in GameApp.cpp!")
 
 
 /// Setup the game objects for our system
-void GameApp::StartUp(const std::string filename) { 
-    std::ifstream script(filename);
-    std::string line;j6tg6
-    if(script.is_open()) {
-        // Read each line at a time and execute
-        while(std::getline(script, line)) {
-            py::exec(line.c_str());
-        } 
-        script.close();
-    }
+void GameApp::StartUp(const std::string& gameName, const std::string& gameCreatorName) {
+    // graphicsProgram.SDL_Log(gameName);
+    // graphicsProgram.SDL_Log(gameCreatorName);
+    std::cout << gameName << gameCreatorName << std::endl;
+    // std::ifstream script(filename);
+    // std::string line;
+    // if(script.is_open()) {
+    //     // Read each line at a time and execute
+    //     while(std::getline(script, line)) {
+    //         py::exec(line.c_str());
+    //     } 
+    //     script.close();
+    // }
 }
 
 void GameApp::ShutDown() {
@@ -69,9 +72,15 @@ void GameApp::Loop() {
 
 
 void GameApp::Clear() {
-
+    graphicsProgram.clear();
 }
 
+
 void GameApp::Poll() {
-    
+    graphicsProgram.poll(); // Call the poll function on the graphics program
+}
+
+
+void GameApp::Delay() {
+    graphicsProgram.delay();
 }
