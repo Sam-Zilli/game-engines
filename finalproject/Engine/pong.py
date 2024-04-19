@@ -9,6 +9,7 @@ PADDLE_WIDTH = 20
 MOVEMENT = 20
 BALL_HEIGHT = 3
 BALL_WIDTH = 10
+BALL_V = 10
 
 class Pong:
     def __init__(self, values_dict):
@@ -29,7 +30,7 @@ class Pong:
         self.background = Background(0, self.color_map)
         self.left_paddle = Protagonist(0, int((self.window_height/2)-PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT, MOVEMENT)
         self.right_paddle = Protagonist(self.window_height-PADDLE_WIDTH, int((self.window_height/2)-PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT, MOVEMENT)
-        self.ball = Projectile(int((self.window_height/2)-BALL_HEIGHT), int((self.window_height/2)-BALL_HEIGHT), 10, 10, BALL_WIDTH, BALL_HEIGHT)
+        self.ball = Projectile(int((self.window_height/2)-BALL_HEIGHT), int((self.window_height/2)-BALL_HEIGHT), BALL_V, BALL_V, BALL_WIDTH, BALL_HEIGHT)
         self.game_engine = mygameengine.SDLGraphicsProgram(self.window_width, self.window_height, values_dict.get('Game Name'))
         self.game_engine.setBackgroundColor(0, 0, 0, 0)
 
@@ -66,16 +67,23 @@ class Pong:
                 self.left_paddle.moveDown()
             self.draw_left_paddle()
 
-        #     self.ball.move()
-        #     self.ball.checkWallCollision(self.window_width, self.window_height)
-        #     self.ball.checkCollision(self.left_paddle)
-        #     self.ball.checkCollision(self.right_paddle)
+            # print(self.ball.getHeight())
+            # print(self.ball.getWidth())
+            # print(int(self.window_height/2) - self.ball.getHeight())
+            # print(int((self.window_height/2) - self.ball.getHeight()))
+            # print(self.ball.getWidth())
+            # print(self.ball.getHeight())
 
-        #     if self.ball.checkExitedWindow(self.window_width, self.window_height):
-        #         self.background.colorIncrementer()
-        #         self.set_background_color()
+            self.ball.move()
+            self.ball.checkWallCollision(self.window_height)
+            self.ball.checkCollision(self.left_paddle)
+            self.ball.checkCollision(self.right_paddle)
 
-        #     self.draw_ball()
+            if self.ball.checkExitedWindow(self.window_width, self.window_height):
+                self.background.colorIncrementer()
+                self.set_background_color()
+
+            self.draw_ball()
 
             self.game_engine.delay(200)
             self.game_engine.flip()

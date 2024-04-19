@@ -1,5 +1,7 @@
 import threading
 
+# self.left_paddle = Protagonist(0, int((self.window_height/2)-PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT, MOVEMENT)
+
 class Protagonist:
     def __init__(self, x, y, width, height, movement_increment):
         self.x = x
@@ -37,9 +39,9 @@ class Protagonist:
     def setMovementIncrement(self, new_increment):
         self.movement_increment = new_increment
 
-    def setTemporaryMovementIncrement(self, new_increment, duration):
-        self.movement_increment = new_increment  # Set new increment
-        threading.Timer(duration, self.resetMovementIncrement).start()  # Reset increment after duration
+    # def setTemporaryMovementIncrement(self, new_increment, duration):
+    #     self.movement_increment = new_increment  # Set new increment
+    #     threading.Timer(duration, self.resetMovementIncrement).start()  # Reset increment after duration
 
     def resetMovementIncrement(self):
         self.movement_increment = self.default_movement_increment  # Reset to default increment

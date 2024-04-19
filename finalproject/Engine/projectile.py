@@ -1,5 +1,5 @@
 ## -------------------- In PONG: ball ---------------------- ##
-
+# ball = Projectile(int((self.window_height/2)-BALL_HEIGHT), int((self.window_height/2)-BALL_HEIGHT), 10, 10, BALL_WIDTH, BALL_HEIGHT)
 class Projectile:
     def __init__(self, x, y, vx, vy, width, height):
         self.x = x
@@ -50,7 +50,7 @@ class Projectile:
         self.vy *= -1
         
     # checking for collisions with top or bottom "wall" of window    
-    def checkWallCollision(self, window_width, window_height):
+    def checkWallCollision(self, window_height):
         if self.y <= 0 or self.y >= window_height - self.height:
             self.reverseVelocityY()
 

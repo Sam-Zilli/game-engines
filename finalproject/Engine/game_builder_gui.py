@@ -4,127 +4,128 @@ from tkinter import messagebox
 import mygameengine 
 import random
 from pong import Pong
+from gameCreator import GameCreator
 
 
 # Dictionary to store values
 values_dict = {}
 
 
-## -------------------- SCRIPT ---------------------- ##
+# ## -------------------- SCRIPT ---------------------- ##
 
-# Function to create game using the values dictionary
-def create_game(values_dict):
-    print("Values when entering create_game function: ", values_dict)
+# # Function to create game using the values dictionary
+# def create_game(values_dict):
+#     print("Values when entering create_game function: ", values_dict)
 
-    game_name = values_dict.get('Game Name', 'GAME NAME') or 'GAME NAME'
-    game_creator = values_dict.get('Game Creator', 'Default Game Creator')
-    color = values_dict.get('Color', 'Default Color')
-
-
-    # Validate and convert width
-    width_str = values_dict.get('Width', '')  # Default width is '800'
-    try:
-        width = int(width_str)
-    except ValueError:
-        if not width_str:
-            print("Empty width value. Using default.")
-        else:
-            print("Invalid width value. Using default.")
-        width = 800
+#     game_name = values_dict.get('Game Name', 'GAME NAME') or 'GAME NAME'
+#     game_creator = values_dict.get('Game Creator', 'Default Game Creator')
+#     color = values_dict.get('Color', 'Default Color')
 
 
-    # Validate and convert height
-    height_str = values_dict.get('Height', '')  # Default height is '600'
-    try:
-        height = int(height_str)
-    except ValueError:
-        if not height_str:
-            print("Empty height value. Using default.")
-        else:
-            print("Invalid height value. Using default.")
-        height = 600
+#     # Validate and convert width
+#     width_str = values_dict.get('Width', '')  # Default width is '800'
+#     try:
+#         width = int(width_str)
+#     except ValueError:
+#         if not width_str:
+#             print("Empty width value. Using default.")
+#         else:
+#             print("Invalid width value. Using default.")
+#         width = 800
 
 
-    # Validate and convert number of targets
-    number_of_targets_str = values_dict.get('Number of Targets', '1')  # Default number of targets = 1
-    if number_of_targets_str.isdigit():
-        number_of_targets = int(number_of_targets_str)
-    else:
-        print("Invalid number of targets value. Using default.")
-        number_of_targets = 10
+#     # Validate and convert height
+#     height_str = values_dict.get('Height', '')  # Default height is '600'
+#     try:
+#         height = int(height_str)
+#     except ValueError:
+#         if not height_str:
+#             print("Empty height value. Using default.")
+#         else:
+#             print("Invalid height value. Using default.")
+#         height = 600
 
 
-    # Audio Genre validation
-    audio = values_dict.get('Audio Genre', 'Action')  # Default audio genre is 'Action'
-    valid_audio_genres = ["Action", "Adventure", "Horror", "Sci-Fi", "Fantasy", "Mystery"]
-    if audio not in valid_audio_genres:
-        print("Invalid audio genre. Using default.")
-        audio = 'Action'
-
-    # Protagonist Image validation
-    protagonist = values_dict.get('Protagonist Image', 'protagonist1.png')  # Default protagonist image
+#     # Validate and convert number of targets
+#     number_of_targets_str = values_dict.get('Number of Targets', '1')  # Default number of targets = 1
+#     if number_of_targets_str.isdigit():
+#         number_of_targets = int(number_of_targets_str)
+#     else:
+#         print("Invalid number of targets value. Using default.")
+#         number_of_targets = 10
 
 
-    # Target Image validation
-    target = values_dict.get('Target Image', 'target1.png')  # Default target image
+#     # Audio Genre validation
+#     audio = values_dict.get('Audio Genre', 'Action')  # Default audio genre is 'Action'
+#     valid_audio_genres = ["Action", "Adventure", "Horror", "Sci-Fi", "Fantasy", "Mystery"]
+#     if audio not in valid_audio_genres:
+#         print("Invalid audio genre. Using default.")
+#         audio = 'Action'
+
+#     # Protagonist Image validation
+#     protagonist = values_dict.get('Protagonist Image', 'protagonist1.png')  # Default protagonist image
 
 
-    # Physics Setting validation
-    physics = values_dict.get('Physics Setting', 'Classic')  # Default physics setting is 'Classic'
-    valid_physics_settings = ["Classic", "Quantum", "Relativistic"]
-    if physics not in valid_physics_settings:
-        print("Invalid physics setting. Using default.")
-        physics = 'Classic'
-
-    # Collision Action validation
-    collision = values_dict.get('Collision Action', 'Bounce')  # Default collision action is 'Bounce'
-    valid_collision_actions = ["Bounce", "Explode", "Disappear"]
-    if collision not in valid_collision_actions:
-        print("Invalid collision action. Using default.")
-        collision = 'Bounce'
-
-    # Number of Levels validation
-    number_of_levels_str = values_dict.get('Number of Levels', '1')  # Default number of levels = '1'
-    if number_of_levels_str.isdigit():
-        number_of_levels = int(number_of_levels_str)
-    else:
-        print("Invalid number of levels value. Using default.")
-        number_of_levels = 1
-
-    # Number of Projectiles validation
-    number_of_projectiles_str = values_dict.get('Number of Projectiles', '3')  # Default number of projectiles = '3'
-    if number_of_projectiles_str.isdigit():
-        number_of_projectiles = int(number_of_projectiles_str)
-    else:
-        print("Invalid number of projectiles value. Using default.")
-        number_of_projectiles = 50
+#     # Target Image validation
+#     target = values_dict.get('Target Image', 'target1.png')  # Default target image
 
 
-# ## -------------------- Running the created game ---------------------- ##
+#     # Physics Setting validation
+#     physics = values_dict.get('Physics Setting', 'Classic')  # Default physics setting is 'Classic'
+#     valid_physics_settings = ["Classic", "Quantum", "Relativistic"]
+#     if physics not in valid_physics_settings:
+#         print("Invalid physics setting. Using default.")
+#         physics = 'Classic'
 
-    print("Before Create Game Pong: ", values_dict)
-    pong_game = Pong(values_dict)
-    pong_game.run_game()
+#     # Collision Action validation
+#     collision = values_dict.get('Collision Action', 'Bounce')  # Default collision action is 'Bounce'
+#     valid_collision_actions = ["Bounce", "Explode", "Disappear"]
+#     if collision not in valid_collision_actions:
+#         print("Invalid collision action. Using default.")
+#         collision = 'Bounce'
+
+#     # Number of Levels validation
+#     number_of_levels_str = values_dict.get('Number of Levels', '1')  # Default number of levels = '1'
+#     if number_of_levels_str.isdigit():
+#         number_of_levels = int(number_of_levels_str)
+#     else:
+#         print("Invalid number of levels value. Using default.")
+#         number_of_levels = 1
+
+#     # Number of Projectiles validation
+#     number_of_projectiles_str = values_dict.get('Number of Projectiles', '3')  # Default number of projectiles = '3'
+#     if number_of_projectiles_str.isdigit():
+#         number_of_projectiles = int(number_of_projectiles_str)
+#     else:
+#         print("Invalid number of projectiles value. Using default.")
+#         number_of_projectiles = 50
+
+
+# # ## -------------------- Running the created game ---------------------- ##
+
+#     print("Before Create Game Pong: ", values_dict)
+#     pong_game = Pong(values_dict)
+#     pong_game.run_game()
     
-    # quit = False
+#     # quit = False
 
-    # While running 
-    # while not quit:
+#     # While running 
+#     # while not quit:
 
-    #     gameEngine.poll()
-    #     gameEngine.clear()
-    #     # gameEngine.setBackgroundColor()
+#     #     gameEngine.poll()
+#     #     gameEngine.clear()
+#     #     # gameEngine.setBackgroundColor()
 
-    #     # Delay for a short time
-    #     gameEngine.delay(200)
+#     #     # Delay for a short time
+#     #     gameEngine.delay(200)
 
-    #     # Refresh the screen
-    #     gameEngine.flip()
+#     #     # Refresh the screen
+#     #     gameEngine.flip()
 
-    #     # Check if game should quit
-    #     quit = gameEngine.getQuit()
+#     #     # Check if game should quit
+#     #     quit = gameEngine.getQuit()
 
-    # End of program  
+#     # End of program  
 
 
 
@@ -284,13 +285,14 @@ def create_game_gui():
     projectiles_entry = ttk.Entry(input_frame)
     projectiles_entry.grid(row=11, column=1, padx=5, pady=5)
 
+    gameCreator = GameCreator()
     # Create Game button calls retrieve_input_values and then create_game
     create_game_button = ttk.Button(window, text="Create Game", command=lambda: (
     retrieve_input_values(width_entry, height_entry, game_name_entry, game_creator_entry, color_entry, targets_entry,
                           audio_genre_var, protagonist_var, target_var, physics_var, collision_var, levels_entry,
                           projectiles_entry),
 
-    create_game(values_dict)))
+    gameCreator.create_game(values_dict)))
     create_game_button.grid(row=12, column=0, padx=10, pady=10, sticky="e")
 
     # Configure row and column weights for resizing
