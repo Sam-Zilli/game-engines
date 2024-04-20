@@ -1,8 +1,12 @@
 #include "Application.hpp"
+#include <iostream>
+#include <string>
+#include <filesystem>
 // changed li to llu
 
 Application::Application(){
     StartUp();
+    SDL_Log("Application::Application");
 }
 Application::~Application(){
     Shutdown();
@@ -13,35 +17,50 @@ void Application::StartUp(){
     if(SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO)!=0){
         SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
     }
+    SDL_Log("In StartUp 1");
     // Create our window
     SDL_Window* mWindow = SDL_CreateWindow("An SDL3 Window",640,480,
             SDL_WINDOW_OPENGL);
+    SDL_Log("In StartUp 2");
     mRenderer = SDL_CreateRenderer(mWindow, NULL, SDL_RENDERER_ACCELERATED);
+    SDL_Log("In StartUp 3");
     if(nullptr == mRenderer){
         SDL_Log("Error creating renderer");
     }
-
+    SDL_Log("In StartUp 4");
     // Initialize all of the enemies
     int row=1;
     int column=1;
+    SDL_Log("In StartUp 5");
     for(int i=0; i<36; i++){
         std::shared_ptr<SpriteComponent> sp = std::make_shared<SpriteComponent>();
-        sp->CreateSpriteComponent(mRenderer,"./assets/enemy.bmp");
-
-
+        SDL_Log("In StartUp 6");
+        if (sp != nullptr && mRenderer != nullptr) {
+            sp->CreateSpriteComponent(mRenderer,"../assets/enemy.bmp");
+        } else {
+            if (sp == nullptr) {
+                SDL_Log("In StartUp 6.1");
+            }
+            if (mRenderer == nullptr) {
+                SDL_Log("In StartUp 6.2");
+            }
+        }
+        SDL_Log("In StartUp 6.3");
         if(i%12==0){
             ++row;
             column=0;
         }
+        SDL_Log("In StartUp 7");
         sp->Move(column*40+80,row*40);
         column++;
         std::unique_ptr<EnemyGameEntity> e = std::make_unique<EnemyGameEntity>(mRenderer);
         e->AddComponent(sp);
         enemies.push_back(std::move(e));
     }
+    SDL_Log("In StartUp 8");
     mainCharacter = std::make_unique<PlayerGameEntity>(mRenderer);
     std::shared_ptr<SpriteComponent> characterSprite = std::make_shared<SpriteComponent>();
-    characterSprite->CreateSpriteComponent(mRenderer,"./assets/hero.bmp");
+    characterSprite->CreateSpriteComponent(mRenderer,"../assets/hero.bmp");
     characterSprite->Move(640/2 - (32/2),440);
     mainCharacter->AddComponent(characterSprite);
 }

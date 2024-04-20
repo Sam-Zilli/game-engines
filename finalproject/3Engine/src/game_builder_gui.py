@@ -1,6 +1,5 @@
 import mygameengine
 
-import pdb; pdb.set_trace()
 print("Before app creation")
 # Create an instance of Application
 app = mygameengine.Application()

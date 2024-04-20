@@ -6,7 +6,14 @@ SpriteComponent::SpriteComponent(){
 }
 
 void SpriteComponent::CreateSpriteComponent(SDL_Renderer* renderer, std::string filepath){
-    mTexture = ResourceManager::Instance().LoadTexture(renderer,filepath);
+    if (renderer != nullptr) {
+        SDL_Log("SpriteComponent::CreateSpriteComponent in if statement");
+        mTexture = ResourceManager::Instance().LoadTexture(filepath, renderer);
+        SDL_Log("SpriteComponent::CreateSpriteComponent CHECK BEFORE THIS!!!---------------");
+
+    } else {
+        SDL_Log("SpriteComponent::CreateSpriteComponent: renderer is nullptr");
+    }
 }
 
 SpriteComponent::~SpriteComponent(){
