@@ -149,11 +149,7 @@ SDLGraphicsProgram::~SDLGraphicsProgram(){
 // Logs keyboard presses and keeps loop 
 void SDLGraphicsProgram::poll() {
     // SDL_Log("In poll");
-    rightArrowDown = false;
-    rightArrowUp = false;
-    leftArrowUp = false;
-    leftArrowDown = false;
-
+    
     // clear();
 
     // // SDL_Surface* tile_map_surface = SDL_LoadBMP("src/assets/tile.bmp");

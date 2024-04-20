@@ -77,12 +77,15 @@ class Game:
                 print("RIGHT ARROW DOWN: ", self.game_engine.getRightArrowDown())
                 self.player_two.moveUp()
                 print("New Location: ", self.player_two.getX(), self.player_two.getY())
+
             if self.game_engine.getRightArrowUp():
+                print("Changing player one location")
                 self.player_two.moveDown()
 
             self.draw_player_two()
 
             if self.game_engine.getLeftArrowUp():
+                print("Changing player one location")
                 self.player_one.moveUp()
             if self.game_engine.getLeftArrowDown():
                 self.player_one.moveDown()

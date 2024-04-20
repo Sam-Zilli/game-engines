@@ -36,15 +36,6 @@ private:
     SDLGraphicsProgram graphicsProgram;
     bool isInitialized;
     bool quit;
-
-
-    bool rightArrowUp = false;
-    bool rightArrowDown = false;
-
-    // left Arrow commands
-    bool leftArrowUp = false;
-    bool leftArrowDown = false;
-
 };
 
 #endif // GAMEAPP_HPP
