@@ -14,7 +14,7 @@
 #include "Scene.hpp"
 
 struct Application{
-    Application(const std::string& gameName, int windowWidth, int windowHeight);
+    Application(const std::map<std::string, std::string>& params);
     ~Application();
 
     void Log(const char* message);

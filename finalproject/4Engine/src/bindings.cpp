@@ -1,4 +1,5 @@
 #include <pybind11/pybind11.h>
+#include <pybind11/stl.h> // Add this line to include the stl.h header
 #include "Application.hpp"
 
 namespace py = pybind11;
@@ -8,9 +9,8 @@ PYBIND11_MODULE(mygameengine, m) {
     m.doc() = "Our game engine as a library"; 
 
     py::class_<Application>(m, "Application")
-        .def(py::init<const std::string&, int, int>()) // Constructor with arguments
+        .def(py::init<const std::map<std::string, std::string>&>()) // Constructor with dictionary
         .def("Loop", &Application::Loop, py::arg("duration"))
         .def("Log", &Application::Log, py::arg("message"))
-        
         ;       
 }

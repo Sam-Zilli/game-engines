@@ -1,7 +1,10 @@
 #include "Application.hpp"
 #include "InputComponent.hpp"
 
-Application::Application(const std::string& gameName, int windowWidth, int windowHeight){
+Application::Application(const std::map<std::string, std::string>& params){
+    std::string gameName = params.at("game_name");
+    int windowWidth = std::stoi(params.at("window_width"));
+    int windowHeight = std::stoi(params.at("window_height"));
     StartUp(gameName, windowWidth, windowHeight);
 }
 Application::~Application(){

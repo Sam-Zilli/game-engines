@@ -1,9 +1,20 @@
 import mygameengine
 
 print("Before app creation")
+
+values_dict = {
+    "game_name": "Game Name!!!",
+    "window_width": "640",
+    "window_height": "480"
+}
+
+loop_duration = 120.0
+
+
 # Create an instance of Application
-app = mygameengine.Application("Game Name!!!", 640, 480)
+app = mygameengine.Application(values_dict)
+
 print("Before running loop")
 # Call the Loop method
-app.Loop(120.0)
+app.Loop(loop_duration)
 # print("End of game_builder_gui.py")
