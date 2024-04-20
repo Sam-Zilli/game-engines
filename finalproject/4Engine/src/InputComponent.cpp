@@ -25,8 +25,8 @@ void InputComponent::Input(float deltaTime) {
     }else if(state[SDL_SCANCODE_RIGHT]){
         transform->SetX(transform->GetX() + mSpeed*deltaTime);
     }
-
-    if(state[SDL_SCANCODE_UP]){
+    if(state[SDL_SCANCODE_Z]){
+    // if(state[SDL_SCANCODE_UP]){
         SDL_Log("Launching!");
         std::shared_ptr<Projectile> projectile = dynamic_pointer_cast<Projectile>(ge->GetChildGameEntityAtIndex(0));
         projectile->Launch(transform->GetX(),transform->GetY(),true);
