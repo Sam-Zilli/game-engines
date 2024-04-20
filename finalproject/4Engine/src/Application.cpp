@@ -1,35 +1,32 @@
 #include "Application.hpp"
 #include "InputComponent.hpp"
 
-Application::Application(){
-    StartUp();
+Application::Application(const std::string& gameName, int windowWidth, int windowHeight){
+    StartUp(gameName, windowWidth, windowHeight);
 }
 Application::~Application(){
     Shutdown();
 }
 
-void Application::StartUp(){
-    SDL_Log("Application::StartUp 1");
+void Application::Log(const char* message){
+    SDL_Log("%s",message);
+}
+
+void Application::StartUp(const std::string& gameName, int windowWidth, int windowHeight){
+    const char* title = gameName.c_str();
     if(SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO)!=0){
         SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
     }
-    SDL_Log("Application::StartUp 2");
     // Create our window
-    SDL_Window* mWindow = SDL_CreateWindow("An SDL3 Window",640,480,
+    SDL_Window* mWindow = SDL_CreateWindow(title,windowWidth,windowHeight,
             SDL_WINDOW_OPENGL);
-    SDL_Log("Application::StartUp 3");
     mRenderer = SDL_CreateRenderer(mWindow, NULL, SDL_RENDERER_ACCELERATED);
-    SDL_Log("Application::StartUp 4");
     if(nullptr == mRenderer){
-        SDL_Log("Error creating renderer");
+        Log("Application::StartUp Error Creating Renderer");
     }
-    SDL_Log("Application::StartUp 5");
-
     // Start setting up our scene with appropriate renderer
     mScene.StartUp(mRenderer);
-    SDL_Log("Application::StartUp 6");
     mScene.SetSceneActiveStatus(true);
-    SDL_Log("Application::StartUp 7");
 }
 
 void Application::Shutdown(){

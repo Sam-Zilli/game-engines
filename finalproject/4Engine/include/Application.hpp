@@ -14,10 +14,11 @@
 #include "Scene.hpp"
 
 struct Application{
-    Application();
+    Application(const std::string& gameName, int windowWidth, int windowHeight);
     ~Application();
 
-    void StartUp();
+    void Log(const char* message);
+    void StartUp(const std::string& gameName, int windowWidth, int windowHeight);
     void Shutdown();
     void Input(float deltaTime);
     void Update(float deltaTime);
