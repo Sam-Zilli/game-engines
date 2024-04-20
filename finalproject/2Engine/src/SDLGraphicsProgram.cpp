@@ -275,7 +275,8 @@ void SDLGraphicsProgram::poll() {
         }
 
     // Render present
-    SDL_RenderPresent(gRenderer);
+    // SDL_RenderPresent(gRenderer);
+    flip();
 
     // Cleanup
     SDL_DestroyTexture(tile_texture);

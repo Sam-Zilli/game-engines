@@ -86,7 +86,7 @@ class Game:
             # self.draw_projectile()
 
             self.game_engine.Delay(200)
-            # self.game_engine.flip()
+            # self.game_engine.Flip() # causing flashing??
 
             self.quit = self.game_engine.GetQuit()
             # print("Python quit: ", self.quit)
