@@ -63,7 +63,7 @@ class Game:
 
         while not self.quit:
             self.game_engine.Poll()
-            # self.game_engine.Clear()
+            self.game_engine.Clear()
 
             # has right arrow down been clicked?
             if self.game_engine.getRightArrowDown():

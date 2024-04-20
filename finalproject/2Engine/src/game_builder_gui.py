@@ -18,7 +18,7 @@ PONG_PRESET = {
         "Protagonist Speed": 40,  
         "Projectile Height": 10,  
         "Projectile Width": 10, 
-        "Number of Projectiles": 5,  
+        "Number of Projectiles": 1,  
         "Projectile Speed": 10      
 }
 

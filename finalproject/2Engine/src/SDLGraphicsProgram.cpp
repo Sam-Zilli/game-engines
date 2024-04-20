@@ -157,66 +157,66 @@ void SDLGraphicsProgram::poll() {
     // clear();
 
 
-    // SDL_Surface* tile_map_surface = SDL_LoadBMP("src/assets/tile.bmp");
-    SDL_Surface* tile_map_surface = SDL_LoadBMP("../assets/tile.bmp");
-    if (tile_map_surface == nullptr) {
-        SDL_Log("Failed to load BMP image: %s", SDL_GetError());
+    // // SDL_Surface* tile_map_surface = SDL_LoadBMP("src/assets/tile.bmp");
+    // SDL_Surface* tile_map_surface = SDL_LoadBMP("../assets/tile.bmp");
+    // if (tile_map_surface == nullptr) {
+    //     SDL_Log("Failed to load BMP image: %s", SDL_GetError());
 
-        return;
-    }
+    //     return;
+    // }
 
-    SDL_Texture* tile_texture = SDL_CreateTextureFromSurface(gRenderer, tile_map_surface);
-    SDL_DestroySurface(tile_map_surface); // renamed from SDL_FreeSurface
+    // SDL_Texture* tile_texture = SDL_CreateTextureFromSurface(gRenderer, tile_map_surface);
+    // SDL_DestroySurface(tile_map_surface); // renamed from SDL_FreeSurface
 
-    srand(time(NULL));
+    // srand(time(NULL));
 
-    int tilemap[40][15];
+    // int tilemap[40][15];
 
-    // Assign randomly what tiles go where??
-    for(int x = 0; x < 20; x++) {
-        for(int y = 0; y < 15; y++) {
-            // determines what tile is chosen for each 
-            // (example: tilemap[x][y] = 4 % 4 + 1; puts tile "1" in every square)
-            // or to randomly choose numbers 1-4:
-            //  tilemap[x][y] = rand() % 4 + 1;
-            tilemap[x][y] = 4 % 4 + 1;
-        }
-    }
+    // // Assign randomly what tiles go where??
+    // for(int x = 0; x < 20; x++) {
+    //     for(int y = 0; y < 15; y++) {
+    //         // determines what tile is chosen for each 
+    //         // (example: tilemap[x][y] = 4 % 4 + 1; puts tile "1" in every square)
+    //         // or to randomly choose numbers 1-4:
+    //         //  tilemap[x][y] = rand() % 4 + 1;
+    //         tilemap[x][y] = 4 % 4 + 1;
+    //     }
+    // }
 
-    // Populating screen with tiles. Only need enough tiles to cover screen, okay to over approximate.
-    SDL_FRect tile[20][15];
-    for(int x = 0; x < 20; x++) {
-        for(int y = 0; y < 15; y++) {
-            tile[x][y].x = x*32;
-            tile[x][y].y = y*32;
-            tile[x][y].w = 32;
-            tile[x][y].h = 32;
-        }
-    }
+    // // Populating screen with tiles. Only need enough tiles to cover screen, okay to over approximate.
+    // SDL_FRect tile[20][15];
+    // for(int x = 0; x < 20; x++) {
+    //     for(int y = 0; y < 15; y++) {
+    //         tile[x][y].x = x*32;
+    //         tile[x][y].y = y*32;
+    //         tile[x][y].w = 32;
+    //         tile[x][y].h = 32;
+    //     }
+    // }
 
-    SDL_FRect select_tile_1;
-    select_tile_1.x = 0;
-    select_tile_1.y = 0;
-    select_tile_1.w = 32;
-    select_tile_1.h = 32;
+    // SDL_FRect select_tile_1;
+    // select_tile_1.x = 0;
+    // select_tile_1.y = 0;
+    // select_tile_1.w = 32;
+    // select_tile_1.h = 32;
 
-    SDL_FRect select_tile_2;
-    select_tile_2.x = 32;
-    select_tile_2.y = 0;
-    select_tile_2.w = 32;
-    select_tile_2.h = 32;
+    // SDL_FRect select_tile_2;
+    // select_tile_2.x = 32;
+    // select_tile_2.y = 0;
+    // select_tile_2.w = 32;
+    // select_tile_2.h = 32;
 
-    SDL_FRect select_tile_3;
-    select_tile_3.x = 0;
-    select_tile_3.y = 32;
-    select_tile_3.w = 32;
-    select_tile_3.h = 32;
+    // SDL_FRect select_tile_3;
+    // select_tile_3.x = 0;
+    // select_tile_3.y = 32;
+    // select_tile_3.w = 32;
+    // select_tile_3.h = 32;
 
-    SDL_FRect select_tile_4;
-    select_tile_4.x = 32;
-    select_tile_4.y = 32;
-    select_tile_4.w = 32;
-    select_tile_4.h = 32;
+    // SDL_FRect select_tile_4;
+    // select_tile_4.x = 32;
+    // select_tile_4.y = 32;
+    // select_tile_4.w = 32;
+    // select_tile_4.h = 32;
 
     SDL_Event event;
 
@@ -248,29 +248,30 @@ void SDLGraphicsProgram::poll() {
                 break;
         }
     }
+} // ADDED
 
-    SDL_SetRenderDrawColor(gRenderer, 0x66, 0x66, 0xBB, 0xFF);
-    SDL_RenderClear(gRenderer);
-        // Render tiles
-        for(int x= 0; x<20; x++) {
-            for(int y= 0; y < 15; y++) {
-                switch(tilemap[x][y])
-                {
-                    case 1: // SDL_RenderCopy renamed SDL_RenderTexture
-                        SDL_RenderTexture(gRenderer, tile_texture, &select_tile_1, &tile[x][y]);
-                        break;
-                    case 2:
-                        SDL_RenderTexture(gRenderer, tile_texture, &select_tile_2, &tile[x][y]);
-                        break;
-                    case 3:
-                        SDL_RenderTexture(gRenderer, tile_texture, &select_tile_3, &tile[x][y]);
-                        break;
-                    case 4:
-                        SDL_RenderTexture(gRenderer, tile_texture, &select_tile_4, &tile[x][y]);
-                        break;
-                }
-            }
-        }
+    // SDL_SetRenderDrawColor(gRenderer, 0x66, 0x66, 0xBB, 0xFF);
+    // SDL_RenderClear(gRenderer);
+    //     // Render tiles
+    //     for(int x= 0; x<20; x++) {
+    //         for(int y= 0; y < 15; y++) {
+    //             switch(tilemap[x][y])
+    //             {
+    //                 case 1: // SDL_RenderCopy renamed SDL_RenderTexture
+    //                     SDL_RenderTexture(gRenderer, tile_texture, &select_tile_1, &tile[x][y]);
+    //                     break;
+    //                 case 2:
+    //                     SDL_RenderTexture(gRenderer, tile_texture, &select_tile_2, &tile[x][y]);
+    //                     break;
+    //                 case 3:
+    //                     SDL_RenderTexture(gRenderer, tile_texture, &select_tile_3, &tile[x][y]);
+    //                     break;
+    //                 case 4:
+    //                     SDL_RenderTexture(gRenderer, tile_texture, &select_tile_4, &tile[x][y]);
+    //                     break;
+    //             }
+    //         }
+    //     }
 
     // Render present
     // SDL_RenderPresent(gRenderer);
@@ -278,7 +279,7 @@ void SDLGraphicsProgram::poll() {
 
     // Cleanup
     // SDL_DestroyTexture(tile_texture);
-}
+// }
 
 // bool SDLGraphicsProgram::Tilemap(){
 //     SDL_Surface* tile_map_surface = SDL_LoadBMP("../assets/tile.bpm");
