@@ -1,39 +1,73 @@
+import tkinter as tk
+from tkinter import ttk
 import mygameengine
 
-print("Before app creation")
+def run_game():
+    # Extract values from the GUI
+    game_name = game_name_entry.get()
+    window_width = int(window_width_entry.get())
+    window_height = int(window_height_entry.get())
+    speed_of_projectile = int(speed_of_projectile_entry.get())
+    
+    # Validate window size constraints
+    if window_width < 600 or window_width > 2000 or window_height < 600 or window_height > 2000:
+        error_label.config(text="Window size must be between 600 and 2000")
+        return
+    
+    # Validate game name length constraints
+    if len(game_name) < 3 or len(game_name) > 20:
+        error_label.config(text="Game name must be between 3 and 20 characters")
+        return
+    
+    # Validate projectile speed constraints
+    if speed_of_projectile < 20 or speed_of_projectile > 700:
+        error_label.config(text="Projectile speed must be between 20 and 700")
+        return
+    
+    values_dict = {
+        "game_name": game_name,
+        "window_width": str(window_width),
+        "window_height": str(window_height),
+        "speed_of_projectile": str(speed_of_projectile),
+    }
+    
+    # Create an instance of Application
+    app = mygameengine.Application(values_dict)
+    
+    # Call the Loop method
+    app.Loop(loop_duration)
 
-# Current working version
-values_dict = {
-    "game_name": "Game Name!!!",
-    "window_width": "1000",
-    "window_height": "1000",
-    "speed_of_projectile": "30",
-}
+# Create the main GUI window
+root = tk.Tk()
+root.title("Game Configuration")
 
+# Define GUI elements
+tk.Label(root, text="Game Name").grid(row=0, column=0)
+game_name_entry = tk.Entry(root)
+game_name_entry.grid(row=0, column=1)
 
-# More functionality version
-# values_dict_2 = {
-#     "game_name": "Game Name!!!",
-#     "diffuculty 1-4": "1",
-#     "window_width": "1000",
-#     "window_height": "1000",
-#     "backgroundRed: ": "0",
-#     "backgroundGreen: ": "0",
-#     "BackgroundBlue: ": "0",
-#     "backgroundAlpha: ": "255",
-#     "projectileSpeed: ": "10",
-#     "protagonistSpeed: ": "5",
-#     "numberOfEnemies: ": "2",
-# }
+tk.Label(root, text="Window Width").grid(row=1, column=0)
+window_width_entry = tk.Entry(root)
+window_width_entry.grid(row=1, column=1)
 
+tk.Label(root, text="Window Height").grid(row=2, column=0)
+window_height_entry = tk.Entry(root)
+window_height_entry.grid(row=2, column=1)
 
+tk.Label(root, text="Projectile Speed").grid(row=3, column=0)
+speed_of_projectile_entry = tk.Entry(root)
+speed_of_projectile_entry.grid(row=3, column=1)
+
+# Error label for displaying validation errors
+error_label = tk.Label(root, fg="red")
+error_label.grid(row=4, column=0, columnspan=2)
+
+# Add a button to start the game
+start_button = ttk.Button(root, text="Start Game", command=run_game)
+start_button.grid(row=5, column=0, columnspan=2)
+
+# Set loop duration
 loop_duration = 120.0
 
-
-# Create an instance of Application
-app = mygameengine.Application(values_dict)
-
-print("Before running loop")
-# Call the Loop method
-app.Loop(loop_duration)
-# print("End of game_builder_gui.py")
+# Run the GUI
+root.mainloop()
