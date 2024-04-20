@@ -18,7 +18,7 @@ void InputComponent::Input(float deltaTime) {
     // For now -- keep a reference to our first sprite
 	auto ge  = GetGameEntity();
     auto transform = ge->GetComponent<TransformComponent>(ComponentType::TransformComponent);
-    
+
     if(state[SDL_SCANCODE_LEFT]){
         transform->SetX(transform->GetX() - mSpeed*deltaTime);
 		// SDL_Log("Did something");
