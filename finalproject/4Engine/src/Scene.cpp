@@ -169,11 +169,11 @@ void Scene::Update(float deltaTime){
     }
 }
 
-void Scene::Render(){
-    SDL_SetRenderDrawColor(mRenderer, 32, 32, 64, SDL_ALPHA_OPAQUE);
+void Scene::Render(int r, int g, int b){
+    SDL_SetRenderDrawColor(mRenderer, r,g,b, SDL_ALPHA_OPAQUE);
     SDL_RenderClear(mRenderer);
 
-    SDL_SetRenderDrawColor(mRenderer, 255, 255, 255, SDL_ALPHA_OPAQUE);
+    SDL_SetRenderDrawColor(mRenderer, r,g,b, SDL_ALPHA_OPAQUE);
 
     // Render our enemies
     for(int i=0; i < enemies.size(); i++){

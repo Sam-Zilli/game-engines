@@ -63,11 +63,11 @@ void Application::Update(float deltaTime){
     mScene.Update(deltaTime);
 }
 
-void Application::Render(){
-    mScene.Render();
+void Application::Render(int r, int g, int b) {
+    mScene.Render(r, g, b);
 }
 
-void Application::Loop(float targetFPS){
+void Application::Loop(float targetFPS, int r, int g, int b){
     // Our infinite game/application loop
 
     Uint64 lastTime, currentTime;
@@ -81,7 +81,7 @@ void Application::Loop(float targetFPS){
         // We want, input/update/render to take 16ms
         Input(deltaTime);
         Update(deltaTime);
-        Render();
+        Render(r,g,b);
         Uint64 elapsedTime=SDL_GetTicks()-startOfFrame;
         framesElapsed++;
 

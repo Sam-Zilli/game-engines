@@ -20,7 +20,7 @@ struct Scene{
     void Shutdown();
     void Input(float deltaTime);
     void Update(float deltaTime);
-    void Render();
+    void Render(int r, int g, int b); // Modified Render function
     void SetSceneActiveStatus(bool status);
     bool IsSceneActive() const;
 

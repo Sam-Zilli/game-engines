@@ -8,6 +8,14 @@ def run_game():
     window_width = int(window_width_entry.get())
     window_height = int(window_height_entry.get())
     speed_of_projectile = int(speed_of_projectile_entry.get())
+    red = int(red_entry.get())  # Retrieve red value
+    green = int(green_entry.get())  # Retrieve green value
+    blue = int(blue_entry.get())  # Retrieve blue value
+    
+    # Validate red, green, and blue values
+    if not (0 <= red <= 255) or not (0 <= green <= 255) or not (0 <= blue <= 255):
+        error_label.config(text="Red, green, and blue values must be between 0 and 255")
+        return
     
     # Validate window size constraints
     if window_width < 600 or window_width > 2000 or window_height < 600 or window_height > 2000:
@@ -35,7 +43,7 @@ def run_game():
     app = mygameengine.Application(values_dict)
     
     # Call the Loop method
-    app.Loop(loop_duration)
+    app.Loop(loop_duration, red, green, blue)
 
 # Create the main GUI window
 root = tk.Tk()
@@ -58,13 +66,26 @@ tk.Label(root, text="Projectile Speed").grid(row=3, column=0)
 speed_of_projectile_entry = tk.Entry(root)
 speed_of_projectile_entry.grid(row=3, column=1)
 
+# Entry fields for red, green, and blue values
+tk.Label(root, text="Red").grid(row=4, column=0)
+red_entry = tk.Entry(root)
+red_entry.grid(row=4, column=1)
+
+tk.Label(root, text="Green").grid(row=5, column=0)
+green_entry = tk.Entry(root)
+green_entry.grid(row=5, column=1)
+
+tk.Label(root, text="Blue").grid(row=6, column=0)
+blue_entry = tk.Entry(root)
+blue_entry.grid(row=6, column=1)
+
 # Error label for displaying validation errors
 error_label = tk.Label(root, fg="red")
-error_label.grid(row=4, column=0, columnspan=2)
+error_label.grid(row=7, column=0, columnspan=2)
 
 # Add a button to start the game
 start_button = ttk.Button(root, text="Start Game", command=run_game)
-start_button.grid(row=5, column=0, columnspan=2)
+start_button.grid(row=8, column=0, columnspan=2)
 
 # Set loop duration
 loop_duration = 120.0

@@ -22,8 +22,8 @@ struct Application{
     void Shutdown();
     void Input(float deltaTime);
     void Update(float deltaTime);
-    void Render();
-    void Loop(float targetFPS);
+    void Render(int r, int g, int b); // Modified Render function
+    void Loop(float targetFPS, int r, int g, int b);
 
     private:
        /// NOTE: For now, let's just have 1 scene.

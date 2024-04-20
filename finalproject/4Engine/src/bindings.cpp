@@ -10,7 +10,7 @@ PYBIND11_MODULE(mygameengine, m) {
 
     py::class_<Application>(m, "Application")
         .def(py::init<const std::map<std::string, std::string>&>()) // Constructor with dictionary
-        .def("Loop", &Application::Loop, py::arg("duration"))
+        .def("Loop", &Application::Loop, py::arg("duration"), py::arg("r"), py::arg("g"), py::arg("b"))
         .def("Log", &Application::Log, py::arg("message"))
         ;       
 }
