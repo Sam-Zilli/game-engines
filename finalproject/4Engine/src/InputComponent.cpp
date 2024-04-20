@@ -29,12 +29,14 @@ void InputComponent::Input(float deltaTime) {
     } else if(state[SDL_SCANCODE_DOWN]){
         transform->SetY(transform->GetY() + mSpeed*deltaTime);
     } 
-    if(state[SDL_SCANCODE_Z]){
-    // if(state[SDL_SCANCODE_UP]){
-        SDL_Log("Launching!");
-        std::shared_ptr<Projectile> projectile = dynamic_pointer_cast<Projectile>(ge->GetChildGameEntityAtIndex(0));
-        projectile->Launch(transform->GetX(),transform->GetY(),true);
-    }
+
+    // Removing hero launching projectile capacbilities for now
+    // if(state[SDL_SCANCODE_Z]){
+    // // if(state[SDL_SCANCODE_UP]){
+    //     SDL_Log("Launching!");
+    //     std::shared_ptr<Projectile> projectile = dynamic_pointer_cast<Projectile>(ge->GetChildGameEntityAtIndex(0));
+    //     projectile->Launch(transform->GetX(),transform->GetY(),true);
+    // }
 
 }
 

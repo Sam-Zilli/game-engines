@@ -24,21 +24,42 @@ void Projectile::Input(float deltaTime) {
     }
 }
 
+// void Projectile::Update(float deltaTime) {
+//     auto transform = GetComponent<TransformComponent>(ComponentType::TransformComponent);
+
+//     if(mIsFiring){
+//         mRenderable = true;
+//         if(true == mYDirectionUp){
+//             transform->SetY(transform->GetY() - mSpeed * deltaTime);
+//         }else{
+//             transform->SetY(transform->GetY() + mSpeed * deltaTime);
+//         }
+//     }else{
+//         mRenderable=false;
+//     }
+
+//     if(transform->GetY() < 0.0f || transform->GetY() > 480.0f){
+//         mIsFiring=false;
+//     }
+
+//     for(auto& [key,value] : mComponents){
+//         mComponents[key]->Update(deltaTime);
+//     }
+// }
+
 void Projectile::Update(float deltaTime) {
     auto transform = GetComponent<TransformComponent>(ComponentType::TransformComponent);
 
     if(mIsFiring){
         mRenderable = true;
-        if(true == mYDirectionUp){
-            transform->SetY(transform->GetY() - mSpeed * deltaTime);
-        }else{
-            transform->SetY(transform->GetY() + mSpeed * deltaTime);
-        }
+        // Change the X position instead of the Y position
+        transform->SetX(transform->GetX() + mSpeed * deltaTime);
     }else{
         mRenderable=false;
     }
 
-    if(transform->GetY() < 0.0f || transform->GetY() > 480.0f){
+    // Check if the projectile is out of the screen in the X direction instead of the Y direction
+    if(transform->GetX() < 0.0f || transform->GetX() > 640.0f){ // Assuming screen width is 640
         mIsFiring=false;
     }
 
