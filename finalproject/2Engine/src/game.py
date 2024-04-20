@@ -70,38 +70,45 @@ class Game:
             self.game_engine.Clear()
             print("After Clear")
 
-            # has right arrow down been clicked?
-            if self.game_engine.getRightArrowDown(): # Returns GAMEAPPS status
-                # set new coordiantes for player two
-                print("Location WAS: ", self.player_two.getX(), self.player_two.getY())
-                print("RIGHT ARROW DOWN: ", self.game_engine.getRightArrowDown())
-                self.player_two.moveUp()
-                print("New Location: ", self.player_two.getX(), self.player_two.getY())
+            if self.game_engine.getRightArrowDown():
+                # Move player two down if within the window boundary
+                if self.player_two.getY() < self.values_dict["Height"] - self.values_dict["Protagonist Height"]:
+                    self.player_two.moveDown()
+                else:
+                    self.player_two.setY(self.values_dict["Height"] - self.values_dict["Protagonist Height"])
 
             if self.game_engine.getRightArrowUp():
-                print("Changing player one location")
-                self.player_two.moveDown()
-
-            self.draw_player_two()
+                # Move player two up if within the window boundary
+                if self.player_two.getY() > 0:
+                    self.player_two.moveUp()
+                else:
+                    self.player_two.setY(0)
 
             if self.game_engine.getLeftArrowUp():
-                print("Changing player one location")
-                self.player_one.moveUp()
+                # Move player one up if within the window boundary
+                if self.player_one.getY() > 0:
+                    self.player_one.moveUp()
+                else:
+                    self.player_one.setY(0)
+
             if self.game_engine.getLeftArrowDown():
-                self.player_one.moveDown()
+                # Move player one down if within the window boundary
+                if self.player_one.getY() < self.values_dict["Height"] - self.values_dict["Protagonist Height"]:
+                    self.player_one.moveDown()
+                else:
+                    self.player_one.setY(self.values_dict["Height"] - self.values_dict["Protagonist Height"])
+                self.projectile.move()
+                self.projectile.checkWallCollision(self.values_dict["Height"])
+                self.projectile.checkCollision(self.player_one)
+                self.projectile.checkCollision(self.player_two)
 
-            self.draw_player_one()
-
-            self.projectile.move()
-            self.projectile.checkWallCollision(self.values_dict["Height"])
-            self.projectile.checkCollision(self.player_one)
-            self.projectile.checkCollision(self.player_two)
-
-            if self.projectile.checkExitedWindow(self.values_dict["Width"], self.values_dict["Height"]):
-                self.background.colorIncrementer()
-                self.set_background_color()
+                if self.projectile.checkExitedWindow(self.values_dict["Width"], self.values_dict["Height"]):
+                    self.background.colorIncrementer()
+                    self.set_background_color()
 
             self.draw_projectile()
+            self.draw_player_one()
+            self.draw_player_two()
 
             print("before last delay")
             self.game_engine.Delay(200)
