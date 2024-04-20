@@ -18,7 +18,7 @@ struct Application{
     ~Application();
 
     void Log(const char* message);
-    void StartUp(const std::string& gameName, int windowWidth, int windowHeight);
+    void StartUp(const std::string& gameName, int windowWidth, int windowHeight, float speedOfProjectile);
     void Shutdown();
     void Input(float deltaTime);
     void Update(float deltaTime);

@@ -6,12 +6,14 @@
 
 
 Scene::Scene(){
+
 }
+
 Scene::~Scene(){
     Shutdown();
 }
 
-void Scene::StartUp(SDL_Renderer* renderer){
+void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile){
 
     if (renderer == nullptr) {
         SDL_Log("Renderer is null");
@@ -76,7 +78,7 @@ void Scene::StartUp(SDL_Renderer* renderer){
         std::shared_ptr<Collision2DComponent> projectile_col = std::make_shared<Collision2DComponent>();
 
         std::shared_ptr<Projectile> mProjectile = std::make_shared<Projectile>();
-        mProjectile->SetSpeed(800.0f);
+        mProjectile->SetSpeed(speedOfProjectile);
         mProjectile->AddDefaultTransform();
         mProjectile->GetTransform()->SetW(24.0f);
 

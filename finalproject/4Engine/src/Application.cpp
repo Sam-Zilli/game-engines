@@ -5,7 +5,8 @@ Application::Application(const std::map<std::string, std::string>& params){
     std::string gameName = params.at("game_name");
     int windowWidth = std::stoi(params.at("window_width"));
     int windowHeight = std::stoi(params.at("window_height"));
-    StartUp(gameName, windowWidth, windowHeight);
+    float speedOfProjectile = std::stof(params.at("speed_of_projectile"));
+    StartUp(gameName, windowWidth, windowHeight, speedOfProjectile);
 }
 Application::~Application(){
     Shutdown();
@@ -15,7 +16,7 @@ void Application::Log(const char* message){
     SDL_Log("%s",message);
 }
 
-void Application::StartUp(const std::string& gameName, int windowWidth, int windowHeight){
+void Application::StartUp(const std::string& gameName, int windowWidth, int windowHeight, float speedOfProjectile){
     const char* title = gameName.c_str();
     if(SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO)!=0){
         SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
@@ -28,7 +29,7 @@ void Application::StartUp(const std::string& gameName, int windowWidth, int wind
         Log("Application::StartUp Error Creating Renderer");
     }
     // Start setting up our scene with appropriate renderer
-    mScene.StartUp(mRenderer);
+    mScene.StartUp(mRenderer, speedOfProjectile);
     mScene.SetSceneActiveStatus(true);
 }
 

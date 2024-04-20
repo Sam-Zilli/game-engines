@@ -6,7 +6,8 @@ print("Before app creation")
 values_dict = {
     "game_name": "Game Name!!!",
     "window_width": "1000",
-    "window_height": "1000"
+    "window_height": "1000",
+    "speed_of_projectile": "30",
 }
 
 
