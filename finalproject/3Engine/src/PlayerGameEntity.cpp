@@ -3,7 +3,7 @@
 PlayerGameEntity::PlayerGameEntity(SDL_Renderer* renderer) {
 
     std::shared_ptr<SpriteComponent> sp = std::make_shared<SpriteComponent>();
-    sp->CreateSpriteComponent(renderer,"./assets/rocket.bmp");
+    sp->CreateSpriteComponent(renderer,"../assets/rocket.bmp");
     sp->SetW(24.0f);
 
     mProjectile = std::make_shared<Projectile>();
