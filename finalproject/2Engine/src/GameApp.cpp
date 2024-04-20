@@ -70,9 +70,9 @@ GameApp::~GameApp() {
 // }
 
 
-// void GameApp::Clear() {
-//     graphicsProgram.clear();
-// }
+void GameApp::Clear() {
+    graphicsProgram.clear();
+}
 
 
 void GameApp::Poll() {

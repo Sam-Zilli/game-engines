@@ -60,7 +60,7 @@ class Game:
 
         while not self.quit:
             self.game_engine.Poll()
-            # self.game_engine.clear()
+            self.game_engine.Clear()
 
             # if self.game_engine.getRightArrowDown():
             #     self.player_two.moveUp()

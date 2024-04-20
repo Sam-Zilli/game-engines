@@ -16,7 +16,7 @@ PYBIND11_MODULE(mygameengine, m) {
         // .def("Render", &GameApp::Render)
         // .def("Loop", &GameApp::Loop)
         .def("Poll", &GameApp::Poll) 
-        // .def("Clear", &GameApp::Clear)
+        .def("Clear", &GameApp::Clear)
         // .def("Flip", &GameApp::Flip)
         // .def("SetBackgroundColor", &GameApp::SetBackgroundColor, py::arg("r"), py::arg("g"), py::arg("b"), py::arg("a"))
         .def("GetQuit", &GameApp::GetQuit)

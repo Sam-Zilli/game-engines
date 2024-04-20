@@ -36,13 +36,13 @@ public:
 
     void setBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a);
 
-    // Right paddle commands
-    bool getRightPaddleUp();
-    bool getRightPaddleDown();
+    // Right Arrow commands
+    bool getRightArrowUp();
+    bool getRightArrowDown();
 
-    // Left paddle commands
-    bool getLeftPaddleUp();
-    bool getLeftPaddleDown();
+    // Left Arrow commands
+    bool getLeftArrowUp();
+    bool getLeftArrowDown();
 
 private:
     int screenWidth;
@@ -62,13 +62,13 @@ private:
 
     bool quit;
 
-    // Right paddle commands
-    bool rightPaddleUp;
-    bool rightPaddleDown;
+    // Right Arrow commands
+    bool rightArrowUp;
+    bool rightArrowDown;
 
-    // Left paddle commands
-    bool leftPaddleUp;
-    bool leftPaddleDown;
+    // Left Arrow commands
+    bool leftArrowUp;
+    bool leftArrowDown;
 };
 
 #endif

@@ -20,29 +20,30 @@ public:
     // void Render();
     // void Loop();
     void Poll();
-    // void Clear();
+    void Clear();
     void Delay(int milliseconds);
     void SetBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a);
     bool GetQuit();
     void Flip();
     void DrawRectangle(int x, int y, int w, int h);
-    bool getRightPaddleUp();
-    bool getRightPaddleDown();
-    bool getLeftPaddleUp();
-    bool getLeftPaddleDown();
+    bool getRightArrowUp();
+    bool getRightArrowDown();
+    bool getLeftArrowUp();
+    bool getLeftArrowDown();
 
 private:
     // std::vector<GameObject> gameObjects;
     SDLGraphicsProgram graphicsProgram;
     bool isInitialized;
     bool quit;
-    // right paddle commands
-    bool rightPaddleUp = false;
-    bool rightPaddleDown = false;
 
-    // left paddle commands
-    bool leftPaddleUp = false;
-    bool leftPaddleDown = false;
+
+    bool rightArrowUp = false;
+    bool rightArrowDown = false;
+
+    // left Arrow commands
+    bool leftArrowUp = false;
+    bool leftArrowDown = false;
 
 };
 
