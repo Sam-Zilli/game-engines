@@ -16,38 +16,38 @@ void GameEntity::Input(float deltaTime){
     }
 }
 
-// void GameEntity::Update(float deltaTime){
-//     for(auto& [key,value] : mComponents){
-//         mComponents[key]->Update(deltaTime);
-//     }
-
-//     for(auto& children: mGameEntities){
-//         children->Update(deltaTime);
-//     }
-// }
-
-
 void GameEntity::Update(float deltaTime){
     for(auto& [key,value] : mComponents){
         mComponents[key]->Update(deltaTime);
-        
-        // Check if the component is a TransformComponent
-        if (key == ComponentType::TransformComponent) {
-            auto transform = dynamic_pointer_cast<TransformComponent>(value);
-
-            // Modify the Y position of the transform
-            // Replace "speed" with the actual speed of your game entity
-            // Replace "direction" with 1 for moving down, -1 for moving up
-            // float newY = transform->GetY() + speed * direction * deltaTime;
-            float newY = transform->GetY() + 20 * 1 * deltaTime;
-            transform->SetY(newY);
-        }
     }
 
     for(auto& children: mGameEntities){
         children->Update(deltaTime);
     }
 }
+
+
+// void GameEntity::Update(float deltaTime){
+//     for(auto& [key,value] : mComponents){
+//         mComponents[key]->Update(deltaTime);
+        
+//         // Check if the component is a TransformComponent
+//         if (key == ComponentType::TransformComponent) {
+//             auto transform = dynamic_pointer_cast<TransformComponent>(value);
+
+//             // Modify the Y position of the transform
+//             // Replace "speed" with the actual speed of your game entity
+//             // Replace "direction" with 1 for moving down, -1 for moving up
+//             // float newY = transform->GetY() + speed * direction * deltaTime;
+//             float newY = transform->GetY() + 20 * 1 * deltaTime;
+//             transform->SetY(newY);
+//         }
+//     }
+
+//     for(auto& children: mGameEntities){
+//         children->Update(deltaTime);
+//     }
+// }
 
 void GameEntity::Render(SDL_Renderer* renderer){
     for(auto& [key,value] : mComponents){
