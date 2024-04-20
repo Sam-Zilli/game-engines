@@ -3,6 +3,15 @@ from tkinter import ttk
 import mygameengine
 
 def run_game():
+    """
+    Runs the game with the specified parameters.
+
+    Retrieves values from the GUI, validates them, and creates an instance of the Application class.
+    Then calls the Loop method of the Application instance.
+
+    Returns:
+        None
+    """
     # Extract values from the GUI
     game_name = game_name_entry.get()
     window_width = int(window_width_entry.get())

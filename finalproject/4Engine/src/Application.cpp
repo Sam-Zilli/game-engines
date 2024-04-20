@@ -67,6 +67,17 @@ void Application::Render(int r, int g, int b) {
     mScene.Render(r, g, b);
 }
 
+/**
+ * @brief The main game/application loop.
+ *
+ * This function runs an infinite loop that handles input, updates the game state, and renders the game.
+ * It also includes a frame cap to limit the frame rate to a specified target FPS.
+ *
+ * @param targetFPS The target frames per second for the game.
+ * @param r The red component of the background color.
+ * @param g The green component of the background color.
+ * @param b The blue component of the background color.
+ */
 void Application::Loop(float targetFPS, int r, int g, int b){
     // Our infinite game/application loop
 
