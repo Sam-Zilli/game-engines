@@ -3,8 +3,6 @@
 
 // -------------------------- GAME 1 ---------------------- //
 
-
-
 Scene::Scene(){
 
 }
@@ -19,24 +17,24 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile){
         SDL_Log("Renderer is null");
         return;
     }
-    SDL_Log("Scene::StartUp 1");
+
     mRenderer = renderer;
-    SDL_Log("Scene::StartUp 2");
+
     int row=1;
     int column=1;
-    SDL_Log("Scene::StartUp 3");
+
     for(int i=0; i<36; i++){
         std::shared_ptr<EnemyGameEntity> e = std::make_shared<EnemyGameEntity>(mRenderer);
         if (e == nullptr) {
             SDL_Log("Failed to create EnemyGameEntity");
             return;
         }
-        SDL_Log("Scene::StartUp 4");
+
         e->AddDefaultTransform();
-        SDL_Log("Scene::StartUp 5");
+
         // Add a texture component to our enemy
         std::shared_ptr<TextureComponent> tex = std::make_shared<TextureComponent>();
-        SDL_Log("Scene::StartUp 6");
+
         if (tex == nullptr) {
             SDL_Log("TextureComponent is null");
             return;
@@ -46,29 +44,29 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile){
             SDL_Log("Renderer is null");
             return;
         }
-        SDL_Log("Scene::StartUp 6.1");
+
         tex->CreateTextureComponent(mRenderer,"../assets/enemy.bmp");
-        SDL_Log("Scene::StartUp 7");
+
         e->AddComponent(tex);
-        SDL_Log("Scene::StartUp 8");
+
         std::shared_ptr<Collision2DComponent> col = std::make_shared<Collision2DComponent>();
-        SDL_Log("Scene::StartUp 9");
+
         if (col == nullptr) {
             SDL_Log("Failed to create Collision2DComponent");
             return;
         }
-        SDL_Log("Scene::StartUp 10");
+
         e->AddComponent(col); 
-        SDL_Log("Scene::StartUp 11");
+
         if(i%12==0){
             ++row;
             column=0;
         }
-        SDL_Log("Scene::StartUp 12");
+
         column++;
-        SDL_Log("Scene::StartUp 13");
+
         e->GetTransform()->SetXY(column*40+80,row*40);
-        SDL_Log("Scene::StartUp 14");
+
 
         // Add a child game object to our enemies
         // Create a texture
