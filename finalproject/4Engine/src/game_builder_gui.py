@@ -4,8 +4,8 @@ print("Before app creation")
 
 values_dict = {
     "game_name": "Game Name!!!",
-    "window_width": "640",
-    "window_height": "480"
+    "window_width": "1000",
+    "window_height": "1000"
 }
 
 loop_duration = 120.0
