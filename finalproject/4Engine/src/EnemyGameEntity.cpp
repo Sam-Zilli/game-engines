@@ -55,7 +55,7 @@ void EnemyGameEntity::Update(float deltaTime) {
 
 void EnemyGameEntity::Render(SDL_Renderer* renderer) {
     // AFTER MOVING ENEMIES SWITCH THIS BACK TO VISIBLE!
-    if (this->!IsVisible()) {
+    if (this->IsVisible() == false) {
     std::shared_ptr<Projectile> mProjectile = dynamic_pointer_cast<Projectile>(GetChildGameEntityAtIndex(0));
 
     if(mRenderable){
