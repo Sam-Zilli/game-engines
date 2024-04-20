@@ -24,7 +24,7 @@ namespace py = pybind11;
  */
 PYBIND11_MODULE(mygameengine, m) {
     // Bindings for the Application class go here
-}
+
     m.doc() = "Our game engine as a library"; 
 
     py::class_<Application>(m, "Application")
