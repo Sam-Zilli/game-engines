@@ -23,7 +23,7 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile){
     int row=1;
     int column=1;
 
-    for(int i=0; i<36; i++){
+    for(int i=0; i<8; i++){
         std::shared_ptr<EnemyGameEntity> e = std::make_shared<EnemyGameEntity>(mRenderer);
         if (e == nullptr) {
             SDL_Log("Failed to create EnemyGameEntity");
@@ -58,14 +58,16 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile){
 
         e->AddComponent(col); 
 
-        if(i%12==0){
+        if(i%1==0){
             ++row;
             column=0;
         }
 
         column++;
 
+        // original
         e->GetTransform()->SetXY(column*40+80,row*40);
+
 
 
         // Add a child game object to our enemies
