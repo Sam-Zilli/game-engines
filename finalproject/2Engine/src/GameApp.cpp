@@ -13,16 +13,6 @@ GameApp::~GameApp() {
 }
 
 
-// void GameApp::StartUp(int width, int height, const std::string& gameName) {
-//     if (!isInitialized) {
-//         std::cout << "IN STARTUP" << std::endl;
-//         graphicsProgram = SDLGraphicsProgram(width, height, gameName.c_str());
-//         std::cout << "IN STARTUP22" << std::endl;        
-//         isInitialized = true;
-//     }
-//     // Remaining StartUp implementation
-// }
-
 // void GameApp::ShutDown() {
 //     // Perform shutdown operations if needed
 // }

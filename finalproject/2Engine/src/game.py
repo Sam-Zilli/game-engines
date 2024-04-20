@@ -31,9 +31,6 @@ class Game:
         self.player_two = Protagonist(self.values_dict["Height"]-self.values_dict["Protagonist Width"], int((self.values_dict["Height"]/2)-self.values_dict["Protagonist Height"]), self.values_dict["Protagonist Width"], self.values_dict["Protagonist Height"], self.values_dict["Protagonist Speed"])
         self.projectile = Projectile(int((self.values_dict["Height"]/2)-self.values_dict["Projectile Height"]), int((self.values_dict["Height"]/2)-self.values_dict["Projectile Height"]), self.values_dict["Projectile Speed"], self.values_dict["Projectile Speed"], self.values_dict["Projectile Width"], self.values_dict["Projectile Height"])
     
-        # self.game_engine = mygameengine.SDLGraphicsProgram(self.values_dict["Width"], self.values_dict["Height"], self.values_dict["Game Name"])
-        # self.game_engine.setBackgroundColor(self.backgroundRed, self.backgroundGreen, self.backgroundBlue, self.backgroundAlpha)
-
     def draw_player_one(self):
         self.game_engine.DrawRectangle(self.player_one.getX(), self.player_one.getY(), self.player_one.getWidth(), self.player_one.getHeight())
 
@@ -44,9 +41,7 @@ class Game:
         self.game_engine.DrawRectangle(self.projectile.getX(), self.projectile.getY(), self.projectile.getWidth(), self.projectile.getHeight())
 
     def set_background_color(self):
-        self.game_engine.setBackgroundColor(self.background.getRed(), self.background.getGreen(), self.background.getBlue(), self.background.getAlpha())
-
-
+        self.game_engine.SetBackgroundColor(self.background.getRed(), self.background.getGreen(), self.background.getBlue(), self.background.getAlpha())
 
     def setGameEngine(self, engine):
         self.game_engine = engine
@@ -56,34 +51,33 @@ class Game:
     def run_game(self):
         self.setGameEngine(mygameengine.GameApp(self.values_dict["Width"], self.values_dict["Height"], self.values_dict["Game Name"]))
         self.game_engine.SetBackgroundColor(0,0,255,255)
-        # print(self.values_dict)
 
         while not self.quit:
             self.game_engine.Poll()
             self.game_engine.Clear()
 
-            # if self.game_engine.getRightArrowDown():
-            #     self.player_two.moveUp()
-            # if self.game_engine.getRightArrowUp():
-            #     self.player_two.moveDown()
-            # self.draw_player_two()
+            if self.game_engine.getRightArrowDown():
+                self.player_two.moveUp()
+            if self.game_engine.getRightArrowUp():
+                self.player_two.moveDown()
+            self.draw_player_two()
 
-            # if self.game_engine.getLeftArrowUp():
-            #     self.player_one.moveUp()
-            # if self.game_engine.getLeftArrowDown():
-            #     self.player_one.moveDown()
-            # self.draw_player_one()
+            if self.game_engine.getLeftArrowUp():
+                self.player_one.moveUp()
+            if self.game_engine.getLeftArrowDown():
+                self.player_one.moveDown()
+            self.draw_player_one()
 
-            # self.projectile.move()
-            # self.projectile.checkWallCollision(self.values_dict["Height"])
-            # self.projectile.checkCollision(self.player_one)
-            # self.projectile.checkCollision(self.player_two)
+            self.projectile.move()
+            self.projectile.checkWallCollision(self.values_dict["Height"])
+            self.projectile.checkCollision(self.player_one)
+            self.projectile.checkCollision(self.player_two)
 
-            # if self.projectile.checkExitedWindow(self.values_dict["Width"], self.values_dict["Height"]):
-            #     self.background.colorIncrementer()
-            #     self.set_background_color()
+            if self.projectile.checkExitedWindow(self.values_dict["Width"], self.values_dict["Height"]):
+                self.background.colorIncrementer()
+                self.set_background_color()
 
-            # self.draw_projectile()
+            self.draw_projectile()
 
             self.game_engine.Delay(200)
             # self.game_engine.Flip() # causing flashing??
