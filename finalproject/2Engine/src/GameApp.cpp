@@ -66,7 +66,57 @@ void GameApp::Clear() {
 
 
 void GameApp::Poll() {
-    graphicsProgram.poll(); // Call the poll function on the graphics program
+    bool rightArrowUpdated = false;
+    bool rightArrowUpUpdated = false;
+    bool leftArrowDownUpdated = false;
+    bool leftArrowUpUpdated = false;
+
+    while (!(rightArrowUpdated && rightArrowUpUpdated && leftArrowDownUpdated && leftArrowUpUpdated)) {
+        graphicsProgram.poll(); // Call the poll function on the graphics program
+        
+        // Update rightArrowDown if not already updated
+        if (!rightArrowUpdated) {
+            rightArrowDown = graphicsProgram.getRightArrowDown();
+            if (rightArrowDown) {
+                SDL_Log("Right Arrow Down");
+                std::cout << "Right Arrow Down: " << rightArrowDown << std::endl;
+                rightArrowUpdated = true;
+            }
+        }
+
+        // Update rightArrowUp if not already updated
+        if (!rightArrowUpUpdated) {
+            rightArrowUp = graphicsProgram.getRightArrowUp();
+            if (rightArrowUp) {
+                SDL_Log("Right Arrow Up");
+                std::cout << "Right Arrow Up: " << rightArrowUp << std::endl;
+                rightArrowUpUpdated = true;
+            }
+        }
+
+        // Update leftArrowDown if not already updated
+        if (!leftArrowDownUpdated) {
+            leftArrowDown = graphicsProgram.getLeftArrowDown();
+            if (leftArrowDown) {
+                SDL_Log("Left Arrow Down");
+                std::cout << "Left Arrow Down: " << leftArrowDown << std::endl;
+                leftArrowDownUpdated = true;
+            }
+        }
+
+        // Update leftArrowUp if not already updated
+        if (!leftArrowUpUpdated) {
+            leftArrowUp = graphicsProgram.getLeftArrowUp();
+            if (leftArrowUp) {
+                SDL_Log("Left Arrow Up");
+                std::cout << "Left Arrow Up: " << leftArrowUp << std::endl;
+                leftArrowUpUpdated = true;
+            }
+        }
+
+        // Add a delay to avoid excessive CPU usage
+        Delay(100); // Adjust the delay time as needed
+    }
 }
 
 

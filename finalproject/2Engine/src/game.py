@@ -25,7 +25,7 @@ class Game:
             'black': (0, 0, 0, 255),
             'gray': (128, 128, 128, 255),
         }        
-        self.two_player_game = self.values_dict["Number of Players"] == 2
+        self.two_player_game = self.values_dict["Number of Players"] == 2 # True or False value for if 2 player game
 
         self.background = Background(0, self.color_map)
         self.player_one = Protagonist(0, int((self.values_dict["Height"]/2)-self.values_dict["Protagonist Height"]),self.values_dict["Protagonist Width"], self.values_dict["Protagonist Height"], self.values_dict["Protagonist Speed"])
@@ -61,14 +61,22 @@ class Game:
         self.setGameEngine(mygameengine.GameApp(self.values_dict["Width"], self.values_dict["Height"], self.values_dict["Game Name"]))
         self.game_engine.SetBackgroundColor(0,0,255,255)
 
+        print("Finished Setup")
+
         while not self.quit:
-            self.game_engine.Poll()
+            # print("Before poll")
+            # self.game_engine.Poll() # should set all the values for if keys up/down from grpahics to Gameapps
+            # print("After Poll")
             self.game_engine.Clear()
+            print("After Clear")
 
             # has right arrow down been clicked?
-            if self.game_engine.getRightArrowDown():
+            if self.game_engine.getRightArrowDown(): # Returns GAMEAPPS status
                 # set new coordiantes for player two
+                print("Location WAS: ", self.player_two.getX(), self.player_two.getY())
+                print("RIGHT ARROW DOWN: ", self.game_engine.getRightArrowDown())
                 self.player_two.moveUp()
+                print("New Location: ", self.player_two.getX(), self.player_two.getY())
             if self.game_engine.getRightArrowUp():
                 self.player_two.moveDown()
 
@@ -92,9 +100,12 @@ class Game:
 
             self.draw_projectile()
 
+            print("before last delay")
             self.game_engine.Delay(200)
-            self.game_engine.Flip() # causing flashing?? moved into poll in sdl
-
+            print("before flip")
+            self.game_engine.Flip()
+            print("Before GetQuit")
             self.quit = self.game_engine.GetQuit()
+            print("End of this loop!")
 
 ## -------------------- GAME LOOP END ---------------------- ##

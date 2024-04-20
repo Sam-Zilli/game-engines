@@ -79,12 +79,12 @@ private:
 
     bool quit = false;
 
-    bool rightArrowUp = false;
-    bool rightArrowDown = false;
+    bool rightArrowUp;
+    bool rightArrowDown;
 
     // left Arrow commands
-    bool leftArrowUp = false;
-    bool leftArrowDown = false;
+    bool leftArrowUp;
+    bool leftArrowDown;
 
 };
 
@@ -156,7 +156,6 @@ void SDLGraphicsProgram::poll() {
 
     // clear();
 
-
     // // SDL_Surface* tile_map_surface = SDL_LoadBMP("src/assets/tile.bmp");
     // SDL_Surface* tile_map_surface = SDL_LoadBMP("../assets/tile.bmp");
     // if (tile_map_surface == nullptr) {
@@ -226,26 +225,31 @@ void SDLGraphicsProgram::poll() {
                 SDL_Log("Quit event detected");
                 quit = true;
                 break;
-            case SDL_EVENT_KEY_DOWN:
-                SDL_Log("Key pressed: %s", SDL_GetKeyName(event.key.keysym.sym));
+
+            case  SDL_EVENT_KEY_DOWN: // Handle key down events
+                // SDL_Log("Key pressed: %s", SDL_GetKeyName(event.key.keysym.sym));
                 if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Up") == 0) {
+                    // SDL_Log("Setting rightArrowUp = true");
                     rightArrowUp = true;
+                    std::cout << rightArrowUp << std::endl;
+                    break;
                 }
-                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Down") == 0) {
+                else if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Down") == 0) {
+                    // SDL_Log("Setting rightArrowDown = true");
                     rightArrowDown = true;
+                    std::cout << rightArrowDown << std::endl;
+                    break;
                 }
-                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Left Option") == 0) {
+                else if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Left Option") == 0) {
                     leftArrowUp = true;
+                    break;
                 }
-                if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Z") == 0) {
+                else if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Z") == 0) {
                     leftArrowDown = true;
+                    break;
                 }
-            case SDL_EVENT_KEY_UP:
-                SDL_Log("Key released: %s", SDL_GetKeyName(event.key.keysym.sym));
                 break;
-            default:
-                // SDL_Log("Unknown event type: %d", event.type);
-                break;
+
         }
     }
 } // ADDED
@@ -407,8 +411,6 @@ void SDLGraphicsProgram::flip() {
     // Call poll() to handle events
     poll();
 
-    
-
     // Render everything here
     // SDL_Surface* tile_map_surface = SDL_LoadBMP("src/assets/tile.bmp");
     SDL_Surface* tile_map_surface = SDL_LoadBMP("../assets/tile.bmp");
@@ -442,7 +444,7 @@ SDL_Window* SDLGraphicsProgram::getSDLWindow(){
 
 // Okay, render our rectangles!
 void SDLGraphicsProgram::DrawRectangle(int x, int y, int w, int h){
-    SDL_Log("In Draw Rectangle!");
+    // SDL_Log("In Draw Rectangle!");
 
     SDL_FRect fillRectF = {(float)x, (float)y, (float)w, (float)h};
 
@@ -465,6 +467,9 @@ bool SDLGraphicsProgram::getRightArrowUp() {
 }
 
 bool SDLGraphicsProgram::getRightArrowDown() {
+    if (rightArrowDown == true) {
+        // SDL_Log("in SDLGraphicsPgoram getRightArrowDOwn and its TRUE");
+    }
     return rightArrowDown;
 }
 
