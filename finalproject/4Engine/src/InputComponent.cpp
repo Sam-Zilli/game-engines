@@ -24,7 +24,11 @@ void InputComponent::Input(float deltaTime) {
 		// SDL_Log("Did something");
     }else if(state[SDL_SCANCODE_RIGHT]){
         transform->SetX(transform->GetX() + mSpeed*deltaTime);
-    }
+    }else if(state[SDL_SCANCODE_UP]){
+        transform->SetY(transform->GetY() - mSpeed*deltaTime);
+    } else if(state[SDL_SCANCODE_DOWN]){
+        transform->SetY(transform->GetY() + mSpeed*deltaTime);
+    } 
     if(state[SDL_SCANCODE_Z]){
     // if(state[SDL_SCANCODE_UP]){
         SDL_Log("Launching!");
