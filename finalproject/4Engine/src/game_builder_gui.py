@@ -73,6 +73,7 @@ def run_game():
 
     # Call the Loop method
     app.Loop(loop_duration, red, green, blue)
+    root.destroy()
 
 # Create the main GUI window
 root = tk.Tk()
