@@ -10,6 +10,7 @@ class Game:
         self.game_engine = None
         # self.game_engine = mygameengine.GameApp() # game is run on this engine (bindings.cpp)
         self.quit = False
+        self.gameObjects = []
         self.backgroundRed = values_dict["BackgroundRedValue"]
         self.backgroundGreen = values_dict["BackgroundGreenValue"]
         self.backgroundBlue = values_dict["BackgroundBlueValue"]
@@ -30,7 +31,15 @@ class Game:
         self.player_one = Protagonist(0, int((self.values_dict["Height"]/2)-self.values_dict["Protagonist Height"]),self.values_dict["Protagonist Width"], self.values_dict["Protagonist Height"], self.values_dict["Protagonist Speed"])
         self.player_two = Protagonist(self.values_dict["Height"]-self.values_dict["Protagonist Width"], int((self.values_dict["Height"]/2)-self.values_dict["Protagonist Height"]), self.values_dict["Protagonist Width"], self.values_dict["Protagonist Height"], self.values_dict["Protagonist Speed"])
         self.projectile = Projectile(int((self.values_dict["Height"]/2)-self.values_dict["Projectile Height"]), int((self.values_dict["Height"]/2)-self.values_dict["Projectile Height"]), self.values_dict["Projectile Speed"], self.values_dict["Projectile Speed"], self.values_dict["Projectile Width"], self.values_dict["Projectile Height"])
-    
+
+
+    def getGameObjects(self):
+        return self.gameObjects
+
+
+    def setGameObjects(self, newObject):
+        self.gameObjects = self.gameObjects.append(newObject)
+
     def draw_player_one(self):
         self.game_engine.DrawRectangle(self.player_one.getX(), self.player_one.getY(), self.player_one.getWidth(), self.player_one.getHeight())
 
@@ -54,18 +63,22 @@ class Game:
 
         while not self.quit:
             self.game_engine.Poll()
-            self.game_engine.Clear()
+            # self.game_engine.Clear()
 
+            # has right arrow down been clicked?
             if self.game_engine.getRightArrowDown():
+                # set new coordiantes for player two
                 self.player_two.moveUp()
             if self.game_engine.getRightArrowUp():
                 self.player_two.moveDown()
+
             self.draw_player_two()
 
             if self.game_engine.getLeftArrowUp():
                 self.player_one.moveUp()
             if self.game_engine.getLeftArrowDown():
                 self.player_one.moveDown()
+
             self.draw_player_one()
 
             self.projectile.move()
@@ -80,10 +93,8 @@ class Game:
             self.draw_projectile()
 
             self.game_engine.Delay(200)
-            # self.game_engine.Flip() # causing flashing??
+            self.game_engine.Flip() # causing flashing?? moved into poll in sdl
 
             self.quit = self.game_engine.GetQuit()
-            # print("Python quit: ", self.quit)
-
 
 ## -------------------- GAME LOOP END ---------------------- ##

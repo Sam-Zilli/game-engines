@@ -60,9 +60,8 @@ public:
 
     bool Tilemap();
 
-
-
 private:
+
     int screenWidth;
     int screenHeight;
     const char* gameName;
@@ -155,7 +154,7 @@ void SDLGraphicsProgram::poll() {
     leftArrowUp = false;
     leftArrowDown = false;
 
-    clear();
+    // clear();
 
 
     // SDL_Surface* tile_map_surface = SDL_LoadBMP("src/assets/tile.bmp");
@@ -219,7 +218,6 @@ void SDLGraphicsProgram::poll() {
     select_tile_4.w = 32;
     select_tile_4.h = 32;
 
-
     SDL_Event event;
 
     while (SDL_PollEvent(&event) != 0) {
@@ -276,10 +274,10 @@ void SDLGraphicsProgram::poll() {
 
     // Render present
     // SDL_RenderPresent(gRenderer);
-    flip();
+    // flip();
 
     // Cleanup
-    SDL_DestroyTexture(tile_texture);
+    // SDL_DestroyTexture(tile_texture);
 }
 
 // bool SDLGraphicsProgram::Tilemap(){
@@ -400,8 +398,33 @@ void SDLGraphicsProgram::clear(){
 
 // The flip function gets called once per loop
 // It swaps out the previvous frame in a double-buffering system
-void SDLGraphicsProgram::flip(){
-	// Nothing yet! 
+// void SDLGraphicsProgram::flip(){
+// 	// Nothing yet! 
+//     SDL_RenderPresent(gRenderer);
+// }
+void SDLGraphicsProgram::flip() {
+    // Call poll() to handle events
+    poll();
+
+    
+
+    // Render everything here
+    // SDL_Surface* tile_map_surface = SDL_LoadBMP("src/assets/tile.bmp");
+    SDL_Surface* tile_map_surface = SDL_LoadBMP("../assets/tile.bmp");
+    if (tile_map_surface == nullptr) {
+        SDL_Log("Failed to load BMP image: %s", SDL_GetError());
+        return;
+    }
+
+    SDL_Texture* tile_texture = SDL_CreateTextureFromSurface(gRenderer, tile_map_surface);
+    SDL_DestroySurface(tile_map_surface);
+
+    // Your rendering code goes here...
+
+    // Cleanup
+    SDL_DestroyTexture(tile_texture);
+
+    // Present the rendered frame
     SDL_RenderPresent(gRenderer);
 }
 
@@ -418,7 +441,7 @@ SDL_Window* SDLGraphicsProgram::getSDLWindow(){
 
 // Okay, render our rectangles!
 void SDLGraphicsProgram::DrawRectangle(int x, int y, int w, int h){
-    
+    SDL_Log("In Draw Rectangle!");
 
     SDL_FRect fillRectF = {(float)x, (float)y, (float)w, (float)h};
 
@@ -452,20 +475,4 @@ bool SDLGraphicsProgram::getLeftArrowDown() {
     return leftArrowDown;
 }
 
-
 #endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
