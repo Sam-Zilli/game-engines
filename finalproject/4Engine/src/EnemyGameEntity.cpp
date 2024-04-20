@@ -1,6 +1,6 @@
 #include "EnemyGameEntity.hpp"
 
-EnemyGameEntity::EnemyGameEntity(SDL_Renderer* renderer) {
+EnemyGameEntity::EnemyGameEntity(SDL_Renderer* renderer){
 
     // Set a random launch time for the enemies
     mMinLaunchTime += std::rand() % 10000;

@@ -109,6 +109,15 @@ bool GameEntity::IsRenderable() const{
     return mRenderable;
 }
 
+void GameEntity::SetVisible(bool visible) {
+    mVisible = visible;
+}
+
+bool GameEntity::IsVisible() const {
+    return mVisible;
+}
+
+
 bool GameEntity::Intersects(std::shared_ptr<GameEntity> e){
     auto source = e->GetComponent<Collision2DComponent>(ComponentType::Collision2DComponent)->GetRectangle();
     auto us     =    GetComponent<Collision2DComponent>(ComponentType::Collision2DComponent)->GetRectangle();
