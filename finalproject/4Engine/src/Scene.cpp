@@ -1,6 +1,10 @@
 #include "Scene.hpp"
 #include "InputComponent.hpp"
 
+// -------------------------- GAME 1 ---------------------- //
+
+
+
 Scene::Scene(){
 }
 Scene::~Scene(){
@@ -72,6 +76,7 @@ void Scene::StartUp(SDL_Renderer* renderer){
         std::shared_ptr<Collision2DComponent> projectile_col = std::make_shared<Collision2DComponent>();
 
         std::shared_ptr<Projectile> mProjectile = std::make_shared<Projectile>();
+        mProjectile->SetSpeed(800.0f);
         mProjectile->AddDefaultTransform();
         mProjectile->GetTransform()->SetW(24.0f);
 
@@ -187,3 +192,15 @@ void Scene::SetSceneActiveStatus(bool status){
 bool Scene::IsSceneActive() const{
     return mSceneIsActive;
 }
+
+
+
+
+
+
+
+
+
+
+// -------------------------- GAME 2 ---------------------- //
+

@@ -13,6 +13,7 @@ values_dict = {
 # More functionality version
 # values_dict_2 = {
 #     "game_name": "Game Name!!!",
+#     "diffuculty 1-4": "1",
 #     "window_width": "1000",
 #     "window_height": "1000",
 #     "backgroundRed: ": "0",
