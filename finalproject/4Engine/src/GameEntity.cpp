@@ -97,7 +97,6 @@ bool GameEntity::Intersects(std::shared_ptr<GameEntity> e){
     return SDL_GetRectIntersectionFloat(&source,&us,&result);
 }
 
-
 // Explicit template instantiations
 template void GameEntity::AddComponent<TextureComponent>(std::shared_ptr<TextureComponent> C);
 template void GameEntity::AddComponent<TransformComponent>(std::shared_ptr<TransformComponent> C);

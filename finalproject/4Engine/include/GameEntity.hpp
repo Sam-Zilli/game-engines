@@ -43,8 +43,6 @@ struct GameEntity : public std::enable_shared_from_this<GameEntity>{
     void AddChildGameEntity(std::shared_ptr<GameEntity> child);
 
     std::shared_ptr<GameEntity> GetChildGameEntityAtIndex(size_t index);
-    
-
 
     void SetRenderable(bool value);
 

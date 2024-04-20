@@ -43,11 +43,11 @@ void Application::Input(float deltaTime){
             mScene.SetSceneActiveStatus(false);
         }
         else if(event.type== SDL_EVENT_KEY_DOWN){
-            //                SDL_Log("Some key was pressed down");
-            //                SDL_Log("%u",event.key.keysym.sym);
-            //                if(event.key.keysym.sym == SDLK_0){
-            //                    SDL_Log("0 was pressed");
-            //                }
+                           SDL_Log("Some key was pressed down------------------");
+                           SDL_Log("%u",event.key.keysym.sym);
+                           if(event.key.keysym.sym == SDLK_0){
+                               SDL_Log("0 was pressed");
+                           }
         }
     }
 
