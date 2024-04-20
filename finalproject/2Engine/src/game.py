@@ -34,17 +34,17 @@ class Game:
         # self.game_engine = mygameengine.SDLGraphicsProgram(self.values_dict["Width"], self.values_dict["Height"], self.values_dict["Game Name"])
         # self.game_engine.setBackgroundColor(self.backgroundRed, self.backgroundGreen, self.backgroundBlue, self.backgroundAlpha)
 
-    # def draw_player_one(self):
-    #     self.game_engine.DrawRectangle(self.player_one.getX(), self.player_one.getY(), self.player_one.getWidth(), self.player_one.getHeight())
+    def draw_player_one(self):
+        self.game_engine.DrawRectangle(self.player_one.getX(), self.player_one.getY(), self.player_one.getWidth(), self.player_one.getHeight())
 
-    # def draw_player_two(self):
-    #     self.game_engine.DrawRectangle(self.player_two.getX(), self.player_two.getY(), self.player_two.getWidth(), self.player_two.getHeight())
+    def draw_player_two(self):
+        self.game_engine.DrawRectangle(self.player_two.getX(), self.player_two.getY(), self.player_two.getWidth(), self.player_two.getHeight())
 
-    # def draw_projectile(self):
-    #     self.game_engine.DrawRectangle(self.projectile.getX(), self.projectile.getY(), self.projectile.getWidth(), self.projectile.getHeight())
+    def draw_projectile(self):
+        self.game_engine.DrawRectangle(self.projectile.getX(), self.projectile.getY(), self.projectile.getWidth(), self.projectile.getHeight())
 
-    # def set_background_color(self):
-    #     self.game_engine.setBackgroundColor(self.background.getRed(), self.background.getGreen(), self.background.getBlue(), self.background.getAlpha())
+    def set_background_color(self):
+        self.game_engine.setBackgroundColor(self.background.getRed(), self.background.getGreen(), self.background.getBlue(), self.background.getAlpha())
 
 
 
@@ -55,7 +55,7 @@ class Game:
 
     def run_game(self):
         self.setGameEngine(mygameengine.GameApp(self.values_dict["Width"], self.values_dict["Height"], self.values_dict["Game Name"]))
-        # self.game_engine.SetBackgroundColor(0,0,255,255)
+        self.game_engine.SetBackgroundColor(0,0,255,255)
         # print(self.values_dict)
 
         while not self.quit:
