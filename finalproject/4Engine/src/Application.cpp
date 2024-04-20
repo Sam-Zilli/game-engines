@@ -47,11 +47,24 @@ void Application::Input(float deltaTime){
             mScene.SetSceneActiveStatus(false);
         }
         else if(event.type== SDL_EVENT_KEY_DOWN){
-                           SDL_Log("Some key was pressed down------------------");
-                           SDL_Log("%u",event.key.keysym.sym);
-                           if(event.key.keysym.sym == SDLK_0){
-                               SDL_Log("0 was pressed");
-                           }
+            // SDL_Log("Some key was pressed down------------------");
+            // SDL_Log("%u",event.key.keysym.sym);
+            // if(event.key.keysym.sym == SDLK_0){
+            //     SDL_Log("0 was pressed");
+            // }
+            // Check for arrow keys
+            if(event.key.keysym.sym == SDLK_UP){
+                SDL_Log("Up arrow key was pressed");
+            }
+            else if(event.key.keysym.sym == SDLK_DOWN){
+                SDL_Log("Down arrow key was pressed");
+            }
+            else if(event.key.keysym.sym == SDLK_LEFT){
+                SDL_Log("Left arrow key was pressed");
+            }
+            else if(event.key.keysym.sym == SDLK_RIGHT){
+                SDL_Log("Right arrow key was pressed");
+            }
         }
     }
 

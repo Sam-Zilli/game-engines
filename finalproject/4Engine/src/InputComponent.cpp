@@ -21,7 +21,7 @@ void InputComponent::Input(float deltaTime) {
     
     if(state[SDL_SCANCODE_LEFT]){
         transform->SetX(transform->GetX() - mSpeed*deltaTime);
-		SDL_Log("Did something");
+		// SDL_Log("Did something");
     }else if(state[SDL_SCANCODE_RIGHT]){
         transform->SetX(transform->GetX() + mSpeed*deltaTime);
     }
