@@ -22,9 +22,9 @@ PYBIND11_MODULE(mygameengine, m) {
         .def("GetQuit", &GameApp::GetQuit)
         .def("Delay", &GameApp::Delay, py::arg("milliseconds"))
         .def("DrawRectangle", &GameApp::DrawRectangle, py::arg("x"), py::arg("y"), py::arg("w"), py::arg("h"))
-        .def("getRightPaddleUp", &GameApp::getRightPaddleUp)
-        .def("getRightPaddleDown", &GameApp::getRightPaddleDown)
-        .def("getLeftPaddleUp", &GameApp::getLeftPaddleUp)
-        .def("getLeftPaddleDown", &GameApp::getLeftPaddleDown)
+        .def("getRightArrowUp", &GameApp::getRightArrowUp)
+        .def("getRightArrowDown", &GameApp::getRightArrowDown)
+        .def("getLeftArrowUp", &GameApp::getLeftArrowUp)
+        .def("getLeftArrowDown", &GameApp::getLeftArrowDown)
         ;
 }

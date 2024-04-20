@@ -50,13 +50,13 @@ public:
 
     void setBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a);
 
-    // right paddle commands
-    bool getRightPaddleUp();
-    bool getRightPaddleDown();
+    // right Arrow commands
+    bool getRightArrowUp();
+    bool getRightArrowDown();
 
-    // left paddle commands
-    bool getLeftPaddleUp();
-    bool getLeftPaddleDown();
+    // left Arrow commands
+    bool getLeftArrowUp();
+    bool getLeftArrowDown();
 
     bool Tilemap();
 
@@ -80,13 +80,12 @@ private:
 
     bool quit = false;
 
-    // right paddle commands
-    bool rightPaddleUp = false;
-    bool rightPaddleDown = false;
+    bool rightArrowUp = false;
+    bool rightArrowDown = false;
 
-    // left paddle commands
-    bool leftPaddleUp = false;
-    bool leftPaddleDown = false;
+    // left Arrow commands
+    bool leftArrowUp = false;
+    bool leftArrowDown = false;
 
 };
 
@@ -151,10 +150,10 @@ SDLGraphicsProgram::~SDLGraphicsProgram(){
 // Logs keyboard presses and keeps loop 
 void SDLGraphicsProgram::poll() {
     // SDL_Log("In poll");
-    rightPaddleDown = false;
-    rightPaddleUp = false;
-    leftPaddleUp = false;
-    leftPaddleDown = false;
+    rightArrowDown = false;
+    rightArrowUp = false;
+    leftArrowUp = false;
+    leftArrowDown = false;
 
     clear();
 
@@ -232,16 +231,16 @@ void SDLGraphicsProgram::poll() {
             case SDL_EVENT_KEY_DOWN:
                 SDL_Log("Key pressed: %s", SDL_GetKeyName(event.key.keysym.sym));
                 if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Up") == 0) {
-                    rightPaddleUp = true;
+                    rightArrowUp = true;
                 }
                 if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Down") == 0) {
-                    rightPaddleDown = true;
+                    rightArrowDown = true;
                 }
                 if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Left Option") == 0) {
-                    leftPaddleUp = true;
+                    leftArrowUp = true;
                 }
                 if(strcmp(SDL_GetKeyName(event.key.keysym.sym), "Z") == 0) {
-                    leftPaddleDown = true;
+                    leftArrowDown = true;
                 }
             case SDL_EVENT_KEY_UP:
                 SDL_Log("Key released: %s", SDL_GetKeyName(event.key.keysym.sym));
@@ -436,20 +435,20 @@ bool SDLGraphicsProgram::getQuit() {
     return quit;
 }
 
-bool SDLGraphicsProgram::getRightPaddleUp() {
-    return rightPaddleUp;
+bool SDLGraphicsProgram::getRightArrowUp() {
+    return rightArrowUp;
 }
 
-bool SDLGraphicsProgram::getRightPaddleDown() {
-    return rightPaddleDown;
+bool SDLGraphicsProgram::getRightArrowDown() {
+    return rightArrowDown;
 }
 
-bool SDLGraphicsProgram::getLeftPaddleUp() {
-    return leftPaddleUp;
+bool SDLGraphicsProgram::getLeftArrowUp() {
+    return leftArrowUp;
 }
 
-bool SDLGraphicsProgram::getLeftPaddleDown() {
-    return leftPaddleDown;
+bool SDLGraphicsProgram::getLeftArrowDown() {
+    return leftArrowDown;
 }
 
 

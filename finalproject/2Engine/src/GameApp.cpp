@@ -102,18 +102,18 @@ void GameApp::DrawRectangle(int x, int y, int w, int h) {
     graphicsProgram.DrawRectangle(x, y, w, h);
 }
 
-bool GameApp::getRightPaddleDown() {
-    return rightPaddleDown;
+bool GameApp::getRightArrowDown() {
+    return rightArrowDown;
 }
 
-bool GameApp::getRightPaddleUp() {
-    return rightPaddleUp;
+bool GameApp::getRightArrowUp() {
+    return rightArrowUp;
 }
 
-bool GameApp::getLeftPaddleDown() {
-    return leftPaddleDown;
+bool GameApp::getLeftArrowDown() {
+    return leftArrowDown;
 }
 
-bool GameApp::getLeftPaddleUp() {
-    return leftPaddleUp;
+bool GameApp::getLeftArrowUp() {
+    return leftArrowUp;
 }

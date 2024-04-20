@@ -62,15 +62,15 @@ class Game:
             self.game_engine.Poll()
             # self.game_engine.clear()
 
-            # if self.game_engine.getRightPaddleDown():
+            # if self.game_engine.getRightArrowDown():
             #     self.player_two.moveUp()
-            # if self.game_engine.getRightPaddleUp():
+            # if self.game_engine.getRightArrowUp():
             #     self.player_two.moveDown()
             # self.draw_player_two()
 
-            # if self.game_engine.getLeftPaddleUp():
+            # if self.game_engine.getLeftArrowUp():
             #     self.player_one.moveUp()
-            # if self.game_engine.getLeftPaddleDown():
+            # if self.game_engine.getLeftArrowDown():
             #     self.player_one.moveDown()
             # self.draw_player_one()
 

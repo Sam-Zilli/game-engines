@@ -509,10 +509,10 @@ relocations:
   - { offsetInCU: 0x4C299, offset: 0x4C299, size: 0x8, addend: 0x0, symName: __ZN7GameApp4FlipEv, symObjAddr: 0x390, symBinAddr: 0xCE0, symSize: 0x20 }
   - { offsetInCU: 0x4C2C1, offset: 0x4C2C1, size: 0x8, addend: 0x0, symName: __ZN7GameApp7GetQuitEv, symObjAddr: 0x3B0, symBinAddr: 0xD00, symSize: 0x40 }
   - { offsetInCU: 0x4C2E9, offset: 0x4C2E9, size: 0x8, addend: 0x0, symName: __ZN7GameApp13DrawRectangleEiiii, symObjAddr: 0x3F0, symBinAddr: 0xD40, symSize: 0x40 }
-  - { offsetInCU: 0x4C349, offset: 0x4C349, size: 0x8, addend: 0x0, symName: __ZN7GameApp18getRightPaddleDownEv, symObjAddr: 0x430, symBinAddr: 0xD80, symSize: 0x20 }
-  - { offsetInCU: 0x4C371, offset: 0x4C371, size: 0x8, addend: 0x0, symName: __ZN7GameApp16getRightPaddleUpEv, symObjAddr: 0x450, symBinAddr: 0xDA0, symSize: 0x20 }
-  - { offsetInCU: 0x4C399, offset: 0x4C399, size: 0x8, addend: 0x0, symName: __ZN7GameApp17getLeftPaddleDownEv, symObjAddr: 0x470, symBinAddr: 0xDC0, symSize: 0x20 }
-  - { offsetInCU: 0x4C3C1, offset: 0x4C3C1, size: 0x8, addend: 0x0, symName: __ZN7GameApp15getLeftPaddleUpEv, symObjAddr: 0x490, symBinAddr: 0xDE0, symSize: 0x20 }
+  - { offsetInCU: 0x4C349, offset: 0x4C349, size: 0x8, addend: 0x0, symName: __ZN7GameApp17getRightArrowDownEv, symObjAddr: 0x430, symBinAddr: 0xD80, symSize: 0x20 }
+  - { offsetInCU: 0x4C371, offset: 0x4C371, size: 0x8, addend: 0x0, symName: __ZN7GameApp15getRightArrowUpEv, symObjAddr: 0x450, symBinAddr: 0xDA0, symSize: 0x20 }
+  - { offsetInCU: 0x4C399, offset: 0x4C399, size: 0x8, addend: 0x0, symName: __ZN7GameApp16getLeftArrowDownEv, symObjAddr: 0x470, symBinAddr: 0xDC0, symSize: 0x20 }
+  - { offsetInCU: 0x4C3C1, offset: 0x4C3C1, size: 0x8, addend: 0x0, symName: __ZN7GameApp14getLeftArrowUpEv, symObjAddr: 0x490, symBinAddr: 0xDE0, symSize: 0x20 }
   - { offsetInCU: 0x4C3E9, offset: 0x4C3E9, size: 0x8, addend: 0x0, symName: __ZN8pybind1117error_already_setD1Ev, symObjAddr: 0x4B0, symBinAddr: 0xE00, symSize: 0x20 }
   - { offsetInCU: 0x4C416, offset: 0x4C416, size: 0x8, addend: 0x0, symName: __ZN8pybind1117error_already_setD0Ev, symObjAddr: 0x4D0, symBinAddr: 0xE20, symSize: 0x30 }
   - { offsetInCU: 0x4C443, offset: 0x4C443, size: 0x8, addend: 0x0, symName: __ZN8pybind1118gil_scoped_acquireC2Ev, symObjAddr: 0x500, symBinAddr: 0xE50, symSize: 0x110 }
@@ -2899,10 +2899,10 @@ relocations:
   - { offsetInCU: 0x8427, offset: 0x8880A, size: 0x8, addend: 0x0, symName: __ZN18SDLGraphicsProgram12getSDLWindowEv, symObjAddr: 0xDF0, symBinAddr: 0x37F40, symSize: 0x20 }
   - { offsetInCU: 0x844F, offset: 0x88832, size: 0x8, addend: 0x0, symName: __ZN18SDLGraphicsProgram13DrawRectangleEiiii, symObjAddr: 0xE10, symBinAddr: 0x37F60, symSize: 0x80 }
   - { offsetInCU: 0x84C2, offset: 0x888A5, size: 0x8, addend: 0x0, symName: __ZN18SDLGraphicsProgram7getQuitEv, symObjAddr: 0xE90, symBinAddr: 0x37FE0, symSize: 0x20 }
-  - { offsetInCU: 0x84EA, offset: 0x888CD, size: 0x8, addend: 0x0, symName: __ZN18SDLGraphicsProgram16getRightPaddleUpEv, symObjAddr: 0xEB0, symBinAddr: 0x38000, symSize: 0x20 }
-  - { offsetInCU: 0x8512, offset: 0x888F5, size: 0x8, addend: 0x0, symName: __ZN18SDLGraphicsProgram18getRightPaddleDownEv, symObjAddr: 0xED0, symBinAddr: 0x38020, symSize: 0x20 }
-  - { offsetInCU: 0x853A, offset: 0x8891D, size: 0x8, addend: 0x0, symName: __ZN18SDLGraphicsProgram15getLeftPaddleUpEv, symObjAddr: 0xEF0, symBinAddr: 0x38040, symSize: 0x20 }
-  - { offsetInCU: 0x8562, offset: 0x88945, size: 0x8, addend: 0x0, symName: __ZN18SDLGraphicsProgram17getLeftPaddleDownEv, symObjAddr: 0xF10, symBinAddr: 0x38060, symSize: 0x20 }
+  - { offsetInCU: 0x84EA, offset: 0x888CD, size: 0x8, addend: 0x0, symName: __ZN18SDLGraphicsProgram15getRightArrowUpEv, symObjAddr: 0xEB0, symBinAddr: 0x38000, symSize: 0x20 }
+  - { offsetInCU: 0x8512, offset: 0x888F5, size: 0x8, addend: 0x0, symName: __ZN18SDLGraphicsProgram17getRightArrowDownEv, symObjAddr: 0xED0, symBinAddr: 0x38020, symSize: 0x20 }
+  - { offsetInCU: 0x853A, offset: 0x8891D, size: 0x8, addend: 0x0, symName: __ZN18SDLGraphicsProgram14getLeftArrowUpEv, symObjAddr: 0xEF0, symBinAddr: 0x38040, symSize: 0x20 }
+  - { offsetInCU: 0x8562, offset: 0x88945, size: 0x8, addend: 0x0, symName: __ZN18SDLGraphicsProgram16getLeftArrowDownEv, symObjAddr: 0xF10, symBinAddr: 0x38060, symSize: 0x20 }
   - { offsetInCU: 0x8589, offset: 0x8896C, size: 0x8, addend: 0x0, symName: __ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev, symObjAddr: 0x1080, symBinAddr: 0x38080, symSize: 0x60 }
   - { offsetInCU: 0x85C4, offset: 0x889A7, size: 0x8, addend: 0x0, symName: __ZThn16_NSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev, symObjAddr: 0x10E0, symBinAddr: 0x380E0, symSize: 0x20 }
   - { offsetInCU: 0x85DB, offset: 0x889BE, size: 0x8, addend: 0x0, symName: __ZTv0_n24_NSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev, symObjAddr: 0x1100, symBinAddr: 0x38100, symSize: 0x20 }
@@ -3047,7 +3047,7 @@ relocations:
   - { offsetInCU: 0x25CC4, offset: 0xAFF7C, size: 0x8, addend: 0x0, symName: __ZNSt3__13getB7v160006ILm2EJN8pybind116detail11type_casterI7GameAppvEENS3_IivEES6_S6_S6_EEERNS_13tuple_elementIXT_ENS_5tupleIJDpT0_EEEE4typeERSB_, symObjAddr: 0x49AD0, symBinAddr: 0x4CC30, symSize: 0x20 }
   - { offsetInCU: 0x25D1B, offset: 0xAFFD3, size: 0x8, addend: 0x0, symName: __ZNSt3__13getB7v160006ILm3EJN8pybind116detail11type_casterI7GameAppvEENS3_IivEES6_S6_S6_EEERNS_13tuple_elementIXT_ENS_5tupleIJDpT0_EEEE4typeERSB_, symObjAddr: 0x49AF0, symBinAddr: 0x4CC50, symSize: 0x20 }
   - { offsetInCU: 0x25D72, offset: 0xB002A, size: 0x8, addend: 0x0, symName: __ZNSt3__13getB7v160006ILm4EJN8pybind116detail11type_casterI7GameAppvEENS3_IivEES6_S6_S6_EEERNS_13tuple_elementIXT_ENS_5tupleIJDpT0_EEEE4typeERSB_, symObjAddr: 0x49B10, symBinAddr: 0x4CC70, symSize: 0x20 }
-  - { offsetInCU: 0x282BF, offset: 0xB2577, size: 0x8, addend: 0x0, symName: __ZL32pybind11_module_def_mygameengine, symObjAddr: 0x285600, symBinAddr: 0x586C8, symSize: 0x0 }
+  - { offsetInCU: 0x282BF, offset: 0xB2577, size: 0x8, addend: 0x0, symName: __ZL32pybind11_module_def_mygameengine, symObjAddr: 0x2855F0, symBinAddr: 0x586C8, symSize: 0x0 }
   - { offsetInCU: 0x289DD, offset: 0xB2C95, size: 0x8, addend: 0x0, symName: __ZN8pybind116detail8initimpl11constructorIJiiPKcEE7executeINS_6class_I7GameAppJEEEJNS_3argESA_SA_ELi0EEEvRT_DpRKT0_, symObjAddr: 0x44420, symBinAddr: 0x47580, symSize: 0x50 }
   - { offsetInCU: 0x28AD4, offset: 0xB2D8C, size: 0x8, addend: 0x0, symName: __ZN8pybind1112cpp_function10initializeIZNS_6detail8initimpl11constructorIJiiPKcEE7executeINS_6class_I7GameAppJEEEJNS_3argESC_SC_ELi0EEEvRT_DpRKT0_EUlRNS2_16value_and_holderEiiS6_E_vJSK_iiS6_EJNS_4nameENS_9is_methodENS_7siblingENS2_24is_new_style_constructorESC_SC_SC_EEEvOSD_PFT0_DpT1_EDpRKT2_, symObjAddr: 0x44B60, symBinAddr: 0x47CC0, symSize: 0x150 }
   - { offsetInCU: 0x28AF8, offset: 0xB2DB0, size: 0x8, addend: 0x0, symName: __ZZN8pybind1112cpp_function10initializeIZNS_6detail8initimpl11constructorIJiiPKcEE7executeINS_6class_I7GameAppJEEEJNS_3argESC_SC_ELi0EEEvRT_DpRKT0_EUlRNS2_16value_and_holderEiiS6_E_vJSK_iiS6_EJNS_4nameENS_9is_methodENS_7siblingENS2_24is_new_style_constructorESC_SC_SC_EEEvOSD_PFT0_DpT1_EDpRKT2_E9signature, symObjAddr: 0x4DF8A, symBinAddr: 0x53BBA, symSize: 0x0 }
