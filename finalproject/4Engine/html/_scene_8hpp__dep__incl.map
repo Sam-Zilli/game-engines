@@ -1,0 +1,9 @@
+<map id="include/Scene.hpp" name="include/Scene.hpp">
+<area shape="rect" id="Node000001" title="This file contains the definition of the Scene struct." alt="" coords="96,5,225,31"/>
+<area shape="rect" id="Node000002" href="$_application_8hpp.html" title="This file contains the definition of the Application struct." alt="" coords="5,79,161,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,44,98,81,94,77,134,40"/>
+<area shape="rect" id="Node000004" href="$_scene_8cpp.html" title="This file contains the implementation of the Scene class." alt="" coords="185,79,290,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,40,227,77,223,81,183,44"/>
+<area shape="rect" id="Node000003" href="$bindings_8cpp.html" title="Python bindings for the Application class of our game engine." alt="" coords="25,153,141,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="86,120,86,152,80,152,80,120"/>
+</map>

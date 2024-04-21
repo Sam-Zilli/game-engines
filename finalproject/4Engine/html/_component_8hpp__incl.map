@@ -1,0 +1,9 @@
+<map id="include/Component.hpp" name="include/Component.hpp">
+<area shape="rect" id="Node000001" title="This file contains the definition of the Component struct." alt="" coords="79,5,238,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,101,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,34,85,72,82,68,139,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="124,79,193,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,31,161,63,156,63,156,31"/>
+<area shape="rect" id="Node000004" href="$_component_type_8hpp.html" title="This file contains the definition of the ComponentType enum class." alt="" coords="217,79,358,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="182,29,254,69,251,73,179,34"/>
+</map>

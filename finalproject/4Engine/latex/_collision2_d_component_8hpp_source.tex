@@ -1,45 +1,53 @@
 \doxysection{Collision2\+DComponent.\+hpp}
 \hypertarget{_collision2_d_component_8hpp_source}{}\label{_collision2_d_component_8hpp_source}\index{include/Collision2DComponent.hpp@{include/Collision2DComponent.hpp}}
-
+\mbox{\hyperlink{_collision2_d_component_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_collision2_d_component}{Collision2DComponent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_component}{Component}}\{}
-\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{struct_collision2_d_component}{Collision2DComponent}}();}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{struct_collision2_d_component}{\string~Collision2DComponent}}();}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \ \ \ \ ComponentType\ GetType()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ Input(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_collision2_d_component_a4c2e6e053b5b88f42001b68e29d6da1b}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ Render(SDL\_Renderer*\ renderer)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ SetW(\textcolor{keywordtype}{float}\ w);}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ SetH(\textcolor{keywordtype}{float}\ h);}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ SetWH(\textcolor{keywordtype}{float}\ w,\ \textcolor{keywordtype}{float}\ h);}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8hpp}{Component.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_collision2_d_component}{Collision2DComponent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_component}{Component}}\{}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{struct_collision2_d_component_ade213512e52db3894fd5fc67e376386c}{Collision2DComponent}}();}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ GetW()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ GetH()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ SetX(\textcolor{keywordtype}{float}\ x);}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ SetY(\textcolor{keywordtype}{float}\ y);}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ SetXY(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{float}\ GetX()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ GetY()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ SDL\_FRect\ GetRectangle()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ SDL\_FRect\ mRectangle\{20.0f,20.0f,32.0f,32.0f\};}
-\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{struct_collision2_d_component_a98eca6374d323f65d37747fb8c01b58c}{\string~Collision2DComponent}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{_component_type_8hpp_a179460a59015cda603e42e8a71d6e043}{ComponentType}}\ \mbox{\hyperlink{struct_collision2_d_component_a8fbd37bdb8315708272d3589d6d74a41}{GetType}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_collision2_d_component_ad4ac4768513c4d128a1bfcf8141fcd9e}{Input}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_collision2_d_component_a4c2e6e053b5b88f42001b68e29d6da1b}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_collision2_d_component_aa7ca53aecce2a0b9204a67262d0df450}{Render}}(SDL\_Renderer*\ renderer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_collision2_d_component_ade40d4db628d99780af2ada4d2ca840d}{SetW}}(\textcolor{keywordtype}{float}\ w);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_collision2_d_component_afcde179c03ed630fec68c15de1f0ded6}{SetH}}(\textcolor{keywordtype}{float}\ h);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_collision2_d_component_abd832fdc022f80dfee1e20070f42f941}{SetWH}}(\textcolor{keywordtype}{float}\ w,\ \textcolor{keywordtype}{float}\ h);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_collision2_d_component_a911582553cf06c79769781ac210222dd}{GetW}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_collision2_d_component_ad766601e18cbf146da470f16b3dd7e35}{GetH}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_collision2_d_component_adfd8f5fd9c0bba9265042981ea400c14}{SetX}}(\textcolor{keywordtype}{float}\ x);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_collision2_d_component_a3a08e1d987d66f141a3cddaa991606bf}{SetY}}(\textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_collision2_d_component_a24ce405b955155836317f1c027631b86}{SetXY}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_collision2_d_component_a1bde089d836a0a59fab2831f75423966}{GetX}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_collision2_d_component_aaee3ecf76e1b5d7f7646c6d29233411f}{GetY}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ \ \ \ \ SDL\_FRect\ \mbox{\hyperlink{struct_collision2_d_component_afb3c6baf4893239d4dbca148c03081b3}{GetRectangle}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ SDL\_FRect\ mRectangle\{20.0f,20.0f,32.0f,32.0f\};}
+\DoxyCodeLine{00127\ \};}
 
 \end{DoxyCode}

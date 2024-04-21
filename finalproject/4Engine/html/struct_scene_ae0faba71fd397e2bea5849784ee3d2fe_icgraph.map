@@ -1,0 +1,9 @@
+<map id="Scene::Input" name="Scene::Input">
+<area shape="rect" id="Node000001" title="Handles input for the scene." alt="" coords="543,5,639,31"/>
+<area shape="rect" id="Node000002" href="$struct_application.html#aef425d5f9773014e73262c05c8f8b0ea" title="Handles input for the Application." alt="" coords="373,5,495,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="528,21,496,21,496,16,528,16"/>
+<area shape="rect" id="Node000003" href="$struct_application.html#aa50c8c0de05dbe8473144db5013fa7a4" title="Runs the main loop of the Application." alt="" coords="204,5,325,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="357,21,325,21,325,16,357,16"/>
+<area shape="rect" id="Node000004" href="$bindings_8cpp.html#a7055eab01d08d97ed2dd849c3e02cda7" title="Creates Python bindings for the Application class." alt="" coords="5,5,156,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
+</map>

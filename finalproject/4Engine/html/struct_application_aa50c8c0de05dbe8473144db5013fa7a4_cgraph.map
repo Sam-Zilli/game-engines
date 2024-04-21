@@ -1,0 +1,19 @@
+<map id="Application::Loop" name="Application::Loop">
+<area shape="rect" id="Node000001" title="Runs the main loop of the Application." alt="" coords="5,104,127,130"/>
+<area shape="rect" id="Node000002" href="$struct_application.html#aef425d5f9773014e73262c05c8f8b0ea" title="Handles input for the Application." alt="" coords="189,29,312,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,101,174,64,189,58,191,63,176,69,94,106"/>
+<area shape="rect" id="Node000005" href="$struct_scene.html#a99313203ab62b1692065d9780e0cd067" title="Checks if the scene is active." alt="" coords="175,79,326,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="127,106,159,101,160,107,128,111"/>
+<area shape="rect" id="Node000006" href="$struct_application.html#ada6aa06eb0b9a2eb86917703d60d20b7" title="Renders the Application." alt="" coords="183,128,318,154"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="128,122,168,127,167,133,127,127"/>
+<area shape="rect" id="Node000008" href="$struct_application.html#acdac3e501d813a5316b5c3f620157235" title="Updates the Application." alt="" coords="183,177,318,203"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="95,128,176,164,191,169,189,174,174,169,93,133"/>
+<area shape="rect" id="Node000003" href="$struct_scene.html#ae0faba71fd397e2bea5849784ee3d2fe" title="Handles input for the scene." alt="" coords="426,5,521,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="312,33,410,22,410,28,312,38"/>
+<area shape="rect" id="Node000004" href="$struct_scene.html#afee9735168aa0a95751dbec42fa15d59" title="Sets the active status of the scene." alt="" coords="374,55,572,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="312,46,359,52,358,57,312,52"/>
+<area shape="rect" id="Node000007" href="$struct_scene.html#ad3edff89eead7cc9c6f80eea04b2ac15" title="Renders the scene." alt="" coords="419,128,527,154"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="318,138,404,138,404,144,318,144"/>
+<area shape="rect" id="Node000009" href="$struct_scene.html#a7e2bf79699b0c05bd353fade7b380ad7" title="Updates the scene." alt="" coords="419,177,527,203"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="318,188,404,188,404,193,318,193"/>
+</map>

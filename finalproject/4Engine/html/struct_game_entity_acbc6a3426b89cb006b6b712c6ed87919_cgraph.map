@@ -1,0 +1,8 @@
+<map id="GameEntity::AddComponent" name="GameEntity::AddComponent">
+<area shape="rect" id="Node000001" title="Adds a component to the GameEntity." alt="" coords="5,55,194,80"/>
+<area shape="rect" id="Node000002" href="$struct_game_entity.html#af8b08e1044a1e4edc387f0066e2f2ab8" title="Gets a component from the GameEntity." alt="" coords="242,29,428,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,55,226,51,227,56,194,60"/>
+<area shape="rect" id="Node000003" href="$struct_game_entity.html#a7946bc022c5679c01dd20f12b117651e" title="Gets a shared pointer to this GameEntity." alt="" coords="254,79,416,104"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="194,74,239,79,238,84,194,80"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="296,31,288,21,293,11,309,5,335,3,364,5,378,12,376,17,362,11,335,8,310,10,296,15,293,20,300,27"/>
+</map>

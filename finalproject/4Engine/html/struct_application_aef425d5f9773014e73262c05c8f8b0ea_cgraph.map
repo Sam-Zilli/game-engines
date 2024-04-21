@@ -1,0 +1,7 @@
+<map id="Application::Input" name="Application::Input">
+<area shape="rect" id="Node000001" title="Handles input for the Application." alt="" coords="5,31,128,56"/>
+<area shape="rect" id="Node000002" href="$struct_scene.html#ae0faba71fd397e2bea5849784ee3d2fe" title="Handles input for the scene." alt="" coords="227,5,323,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,33,211,23,212,28,128,39"/>
+<area shape="rect" id="Node000003" href="$struct_scene.html#afee9735168aa0a95751dbec42fa15d59" title="Sets the active status of the scene." alt="" coords="176,55,374,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="128,48,160,52,160,57,128,53"/>
+</map>

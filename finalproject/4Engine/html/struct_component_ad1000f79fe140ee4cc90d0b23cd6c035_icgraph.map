@@ -1,0 +1,9 @@
+<map id="Component::GetGameEntity" name="Component::GetGameEntity">
+<area shape="rect" id="Node000001" title="Gets the game entity that this Component is associated with." alt="" coords="235,55,421,80"/>
+<area shape="rect" id="Node000002" href="$struct_input_component.html#a46b6864d2e27d161a2e2954de29a0cb4" title="Handles input for the InputComponent." alt="" coords="19,5,173,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="249,53,159,34,160,29,250,48"/>
+<area shape="rect" id="Node000003" href="$struct_texture_component.html#a9d1fe2ae0010e4cb50c4f7b9a984149b" title="Renders the TextureComponent." alt="" coords="5,55,187,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="219,70,187,70,187,65,219,65"/>
+<area shape="rect" id="Node000004" href="$struct_collision2_d_component.html#a4c2e6e053b5b88f42001b68e29d6da1b" title="Updates the Collision2DComponent." alt="" coords="18,105,174,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="259,87,175,108,174,103,257,82"/>
+</map>

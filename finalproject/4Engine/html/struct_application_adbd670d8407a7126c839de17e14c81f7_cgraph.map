@@ -1,0 +1,11 @@
+<map id="Application::Application" name="Application::Application">
+<area shape="rect" id="Node000001" title="Constructor for the Application struct." alt="" coords="5,55,163,80"/>
+<area shape="rect" id="Node000002" href="$struct_application.html#a9044c5144ad2dcfc4b235c7d9610865c" title="Starts up the Application." alt="" coords="211,55,349,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,65,195,65,195,70,163,70"/>
+<area shape="rect" id="Node000003" href="$struct_application.html#ad74e54d0c1a1871ee37e97d76a993678" title="Logs a message." alt="" coords="439,5,553,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="339,51,423,32,424,37,340,57"/>
+<area shape="rect" id="Node000004" href="$struct_scene.html#afee9735168aa0a95751dbec42fa15d59" title="Sets the active status of the scene." alt="" coords="397,55,595,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="349,65,382,65,382,70,349,70"/>
+<area shape="rect" id="Node000005" href="$struct_scene.html#ae3e9eecaf0f307e6020eb8bbf61956de" title="Starts up the scene." alt="" coords="441,104,552,130"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="340,78,426,98,425,103,339,84"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="TextureComponent::Render" name="TextureComponent::Render">
+<area shape="rect" id="Node000001" title="Renders the TextureComponent." alt="" coords="5,5,187,31"/>
+<area shape="rect" id="Node000002" href="$struct_component.html#ad1000f79fe140ee4cc90d0b23cd6c035" title="Gets the game entity that this Component is associated with." alt="" coords="235,5,421,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,16,219,16,219,21,187,21"/>
+</map>

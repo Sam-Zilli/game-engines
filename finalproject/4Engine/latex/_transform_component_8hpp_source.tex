@@ -1,45 +1,52 @@
 \doxysection{Transform\+Component.\+hpp}
 \hypertarget{_transform_component_8hpp_source}{}\label{_transform_component_8hpp_source}\index{include/TransformComponent.hpp@{include/TransformComponent.hpp}}
-
+\mbox{\hyperlink{_transform_component_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_transform_component}{TransformComponent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_component}{Component}}\{}
-\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{struct_transform_component}{TransformComponent}}();}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{struct_transform_component}{\string~TransformComponent}}();}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8hpp}{Component.hpp}}"{}}}
 \DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \ \ \ \ ComponentType\ GetType()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ Input(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ Render(SDL\_Renderer*\ renderer)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ SetW(\textcolor{keywordtype}{float}\ w);}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ SetH(\textcolor{keywordtype}{float}\ h);}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ SetWH(\textcolor{keywordtype}{float}\ w,\ \textcolor{keywordtype}{float}\ h);}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ GetW()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ GetH()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ SetX(\textcolor{keywordtype}{float}\ x);}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ SetY(\textcolor{keywordtype}{float}\ y);}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ SetXY(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{float}\ GetX()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ GetY()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00018\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_transform_component}{TransformComponent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_component}{Component}}\{}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{struct_transform_component_ace1cf2d7d2a7468e9cb3eb0ce382f446}{TransformComponent}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{struct_transform_component_a37d5d34a3695eafc8b8cbf37905e756f}{\string~TransformComponent}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{_component_type_8hpp_a179460a59015cda603e42e8a71d6e043}{ComponentType}}\ \mbox{\hyperlink{struct_transform_component_a4d30c255d54af02fc53774412b488014}{GetType}}()\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ SDL\_FRect\ GetRectangle()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ SDL\_FRect\ mRectangle\{20.0f,20.0f,32.0f,32.0f\};}
-\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_transform_component_a031ba1c6f597c25d677fb33793479d53}{Input}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_transform_component_a7f61e8eea1e3d05a32653fa45bd10fe1}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_transform_component_a78eedf13d70917145f2cb613509c14c1}{Render}}(SDL\_Renderer*\ renderer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_transform_component_ad0ec4d225535f56ab1a0aa942d7f006b}{SetW}}(\textcolor{keywordtype}{float}\ w);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_transform_component_a18d77f1e7dd0eae8f011f538560a91f0}{SetH}}(\textcolor{keywordtype}{float}\ h);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_transform_component_a198f76af633557e85027771f60867432}{SetWH}}(\textcolor{keywordtype}{float}\ w,\ \textcolor{keywordtype}{float}\ h);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_transform_component_ae5501067c1a954f5ed3b0cf75aadff20}{GetW}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_transform_component_aec4ba1c40d8071ff463a2a697c2984d6}{GetH}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_transform_component_a8052d38b75f03094e781481212878589}{SetX}}(\textcolor{keywordtype}{float}\ x);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_transform_component_ab7df147cf1e48361aec3f96573278a09}{SetY}}(\textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_transform_component_a1977fcd1d8cd835aea71651f18cc9ea4}{SetXY}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_transform_component_a7260ce3bc9ef172d4a57a482c2b209ad}{GetX}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_transform_component_ae02c8d6e718fdcc01065b228bbcdb10d}{GetY}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \ \ \ \ SDL\_FRect\ \mbox{\hyperlink{struct_transform_component_a992e0cbffe237badd34641f1e82cb1b2}{GetRectangle}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ SDL\_FRect\ mRectangle\{20.0f,20.0f,32.0f,32.0f\};}
+\DoxyCodeLine{00126\ \};}
 
 \end{DoxyCode}

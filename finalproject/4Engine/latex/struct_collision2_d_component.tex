@@ -1,75 +1,207 @@
 \doxysection{Collision2\+DComponent Struct Reference}
 \hypertarget{struct_collision2_d_component}{}\label{struct_collision2_d_component}\index{Collision2DComponent@{Collision2DComponent}}
-Inheritance diagram for Collision2\+DComponent\+:\begin{figure}[H]
+
+
+A struct that represents a 2D collision component.  
+
+
+
+
+{\ttfamily \#include $<$Collision2\+DComponent.\+hpp$>$}
+
+
+
+Inheritance diagram for Collision2\+DComponent\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{struct_collision2_d_component}
+\includegraphics[width=197pt]{struct_collision2_d_component__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Collision2\+DComponent\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{struct_collision2_d_component__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-Component\+Type \mbox{\hyperlink{struct_collision2_d_component_a8fbd37bdb8315708272d3589d6d74a41}{Get\+Type}} () override
-\item 
+\mbox{\hyperlink{struct_collision2_d_component_ade213512e52db3894fd5fc67e376386c}{Collision2\+DComponent}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{struct_collision2_d_component}{Collision2\+DComponent} struct. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_collision2_d_component_a98eca6374d323f65d37747fb8c01b58c}{\texorpdfstring{$\sim$}{\string~}\+Collision2\+DComponent}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{struct_collision2_d_component}{Collision2\+DComponent} struct. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_component_type_8hpp_a179460a59015cda603e42e8a71d6e043}{Component\+Type}} \mbox{\hyperlink{struct_collision2_d_component_a8fbd37bdb8315708272d3589d6d74a41}{Get\+Type}} () override
+\begin{DoxyCompactList}\small\item\em Gets the type of the \doxylink{struct_component}{Component}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{struct_collision2_d_component_ad4ac4768513c4d128a1bfcf8141fcd9e}{Input}} (float delta\+Time) override
-\item 
+\begin{DoxyCompactList}\small\item\em Handles input for the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{struct_collision2_d_component_a4c2e6e053b5b88f42001b68e29d6da1b}{Update}} (float delta\+Time) override
-\item 
+\begin{DoxyCompactList}\small\item\em Updates the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{struct_collision2_d_component_aa7ca53aecce2a0b9204a67262d0df450}{Render}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer) override
-\item 
-\Hypertarget{struct_collision2_d_component_ade40d4db628d99780af2ada4d2ca840d}\label{struct_collision2_d_component_ade40d4db628d99780af2ada4d2ca840d} 
-void {\bfseries SetW} (float w)
-\item 
-\Hypertarget{struct_collision2_d_component_afcde179c03ed630fec68c15de1f0ded6}\label{struct_collision2_d_component_afcde179c03ed630fec68c15de1f0ded6} 
-void {\bfseries SetH} (float h)
-\item 
-\Hypertarget{struct_collision2_d_component_abd832fdc022f80dfee1e20070f42f941}\label{struct_collision2_d_component_abd832fdc022f80dfee1e20070f42f941} 
-void {\bfseries Set\+WH} (float w, float h)
-\item 
-\Hypertarget{struct_collision2_d_component_a911582553cf06c79769781ac210222dd}\label{struct_collision2_d_component_a911582553cf06c79769781ac210222dd} 
-float {\bfseries GetW} () const
-\item 
-\Hypertarget{struct_collision2_d_component_ad766601e18cbf146da470f16b3dd7e35}\label{struct_collision2_d_component_ad766601e18cbf146da470f16b3dd7e35} 
-float {\bfseries GetH} () const
-\item 
-\Hypertarget{struct_collision2_d_component_adfd8f5fd9c0bba9265042981ea400c14}\label{struct_collision2_d_component_adfd8f5fd9c0bba9265042981ea400c14} 
-void {\bfseries SetX} (float x)
-\item 
-\Hypertarget{struct_collision2_d_component_a3a08e1d987d66f141a3cddaa991606bf}\label{struct_collision2_d_component_a3a08e1d987d66f141a3cddaa991606bf} 
-void {\bfseries SetY} (float y)
-\item 
-\Hypertarget{struct_collision2_d_component_a24ce405b955155836317f1c027631b86}\label{struct_collision2_d_component_a24ce405b955155836317f1c027631b86} 
-void {\bfseries Set\+XY} (float x, float y)
-\item 
-\Hypertarget{struct_collision2_d_component_a1bde089d836a0a59fab2831f75423966}\label{struct_collision2_d_component_a1bde089d836a0a59fab2831f75423966} 
-float {\bfseries GetX} () const
-\item 
-\Hypertarget{struct_collision2_d_component_aaee3ecf76e1b5d7f7646c6d29233411f}\label{struct_collision2_d_component_aaee3ecf76e1b5d7f7646c6d29233411f} 
-float {\bfseries GetY} () const
-\item 
-\Hypertarget{struct_collision2_d_component_afb3c6baf4893239d4dbca148c03081b3}\label{struct_collision2_d_component_afb3c6baf4893239d4dbca148c03081b3} 
-SDL\+\_\+\+FRect {\bfseries Get\+Rectangle} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Renders the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_collision2_d_component_ade40d4db628d99780af2ada4d2ca840d}{SetW}} (float w)
+\begin{DoxyCompactList}\small\item\em Sets the width of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_collision2_d_component_afcde179c03ed630fec68c15de1f0ded6}{SetH}} (float h)
+\begin{DoxyCompactList}\small\item\em Sets the height of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_collision2_d_component_abd832fdc022f80dfee1e20070f42f941}{Set\+WH}} (float w, float h)
+\begin{DoxyCompactList}\small\item\em Sets the width and height of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_collision2_d_component_a911582553cf06c79769781ac210222dd}{GetW}} () const
+\begin{DoxyCompactList}\small\item\em Gets the width of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_collision2_d_component_ad766601e18cbf146da470f16b3dd7e35}{GetH}} () const
+\begin{DoxyCompactList}\small\item\em Gets the height of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_collision2_d_component_adfd8f5fd9c0bba9265042981ea400c14}{SetX}} (float x)
+\begin{DoxyCompactList}\small\item\em Sets the x-\/coordinate of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_collision2_d_component_a3a08e1d987d66f141a3cddaa991606bf}{SetY}} (float y)
+\begin{DoxyCompactList}\small\item\em Sets the y-\/coordinate of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_collision2_d_component_a24ce405b955155836317f1c027631b86}{Set\+XY}} (float x, float y)
+\begin{DoxyCompactList}\small\item\em Sets the x and y coordinates of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_collision2_d_component_a1bde089d836a0a59fab2831f75423966}{GetX}} () const
+\begin{DoxyCompactList}\small\item\em Gets the x-\/coordinate of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_collision2_d_component_aaee3ecf76e1b5d7f7646c6d29233411f}{GetY}} () const
+\begin{DoxyCompactList}\small\item\em Gets the y-\/coordinate of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \end{DoxyCompactList}\item 
+SDL\+\_\+\+FRect \mbox{\hyperlink{struct_collision2_d_component_afb3c6baf4893239d4dbca148c03081b3}{Get\+Rectangle}} () const
+\begin{DoxyCompactList}\small\item\em Gets the rectangle representing the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{struct_component}{Component}}}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries Set\+Game\+Entity} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ g)
-\item 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ {\bfseries Get\+Game\+Entity} ()
-\end{DoxyCompactItemize}
+{\bfseries Component} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{struct_component}{Component} struct. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{struct_component}{Component} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_component_a92fc19214ae6a73ee22824d85d1a1b99}{Set\+Game\+Entity}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ g)
+\begin{DoxyCompactList}\small\item\em Sets the game entity that this \doxylink{struct_component}{Component} is associated with. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ \mbox{\hyperlink{struct_component_ad1000f79fe140ee4cc90d0b23cd6c035}{Get\+Game\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Gets the game entity that this \doxylink{struct_component}{Component} is associated with. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A struct that represents a 2D collision component. 
+
+This struct inherits from the \doxylink{struct_component}{Component} struct and overrides its methods. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_collision2_d_component_ade213512e52db3894fd5fc67e376386c}\label{struct_collision2_d_component_ade213512e52db3894fd5fc67e376386c} 
+\index{Collision2DComponent@{Collision2DComponent}!Collision2DComponent@{Collision2DComponent}}
+\index{Collision2DComponent@{Collision2DComponent}!Collision2DComponent@{Collision2DComponent}}
+\doxysubsubsection{\texorpdfstring{Collision2DComponent()}{Collision2DComponent()}}
+{\footnotesize\ttfamily Collision2\+DComponent\+::\+Collision2\+DComponent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{struct_collision2_d_component}{Collision2\+DComponent} struct. 
+
+Default constructor for \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. \Hypertarget{struct_collision2_d_component_a98eca6374d323f65d37747fb8c01b58c}\label{struct_collision2_d_component_a98eca6374d323f65d37747fb8c01b58c} 
+\index{Collision2DComponent@{Collision2DComponent}!````~Collision2DComponent@{\texorpdfstring{$\sim$}{\string~}Collision2DComponent}}
+\index{````~Collision2DComponent@{\texorpdfstring{$\sim$}{\string~}Collision2DComponent}!Collision2DComponent@{Collision2DComponent}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Collision2DComponent()}{\string~Collision2DComponent()}}
+{\footnotesize\ttfamily Collision2\+DComponent\+::\texorpdfstring{$\sim$}{\string~}\+Collision2\+DComponent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the \doxylink{struct_collision2_d_component}{Collision2\+DComponent} struct. 
+
+Destructor for \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{struct_collision2_d_component_ad766601e18cbf146da470f16b3dd7e35}\label{struct_collision2_d_component_ad766601e18cbf146da470f16b3dd7e35} 
+\index{Collision2DComponent@{Collision2DComponent}!GetH@{GetH}}
+\index{GetH@{GetH}!Collision2DComponent@{Collision2DComponent}}
+\doxysubsubsection{\texorpdfstring{GetH()}{GetH()}}
+{\footnotesize\ttfamily float Collision2\+DComponent\+::\+GetH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the height of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+
+\begin{DoxyReturn}{Returns}
+The height of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+\end{DoxyReturn}
+\Hypertarget{struct_collision2_d_component_afb3c6baf4893239d4dbca148c03081b3}\label{struct_collision2_d_component_afb3c6baf4893239d4dbca148c03081b3} 
+\index{Collision2DComponent@{Collision2DComponent}!GetRectangle@{GetRectangle}}
+\index{GetRectangle@{GetRectangle}!Collision2DComponent@{Collision2DComponent}}
+\doxysubsubsection{\texorpdfstring{GetRectangle()}{GetRectangle()}}
+{\footnotesize\ttfamily SDL\+\_\+\+FRect Collision2\+DComponent\+::\+Get\+Rectangle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the rectangle representing the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+
+\begin{DoxyReturn}{Returns}
+The rectangle representing the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+\end{DoxyReturn}
 \Hypertarget{struct_collision2_d_component_a8fbd37bdb8315708272d3589d6d74a41}\label{struct_collision2_d_component_a8fbd37bdb8315708272d3589d6d74a41} 
 \index{Collision2DComponent@{Collision2DComponent}!GetType@{GetType}}
 \index{GetType@{GetType}!Collision2DComponent@{Collision2DComponent}}
 \doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
-{\footnotesize\ttfamily Component\+Type Collision2\+DComponent\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_component_type_8hpp_a179460a59015cda603e42e8a71d6e043}{Component\+Type}} Collision2\+DComponent\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{struct_component}{Component}}.
+Gets the type of the \doxylink{struct_component}{Component}. 
 
+Gets the type of the component.
+
+\begin{DoxyReturn}{Returns}
+The type of the \doxylink{struct_component}{Component}.
+
+The type of the component. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{struct_component_a2e87d60cd7150786e51bfcda7129ed90}{Component}}.
+
+\Hypertarget{struct_collision2_d_component_a911582553cf06c79769781ac210222dd}\label{struct_collision2_d_component_a911582553cf06c79769781ac210222dd} 
+\index{Collision2DComponent@{Collision2DComponent}!GetW@{GetW}}
+\index{GetW@{GetW}!Collision2DComponent@{Collision2DComponent}}
+\doxysubsubsection{\texorpdfstring{GetW()}{GetW()}}
+{\footnotesize\ttfamily float Collision2\+DComponent\+::\+GetW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the width of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+
+\begin{DoxyReturn}{Returns}
+The width of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+\end{DoxyReturn}
+\Hypertarget{struct_collision2_d_component_a1bde089d836a0a59fab2831f75423966}\label{struct_collision2_d_component_a1bde089d836a0a59fab2831f75423966} 
+\index{Collision2DComponent@{Collision2DComponent}!GetX@{GetX}}
+\index{GetX@{GetX}!Collision2DComponent@{Collision2DComponent}}
+\doxysubsubsection{\texorpdfstring{GetX()}{GetX()}}
+{\footnotesize\ttfamily float Collision2\+DComponent\+::\+GetX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the x-\/coordinate of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+
+Gets the x position of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}.
+
+\begin{DoxyReturn}{Returns}
+The x-\/coordinate of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}.
+
+The x position of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+\end{DoxyReturn}
+\Hypertarget{struct_collision2_d_component_aaee3ecf76e1b5d7f7646c6d29233411f}\label{struct_collision2_d_component_aaee3ecf76e1b5d7f7646c6d29233411f} 
+\index{Collision2DComponent@{Collision2DComponent}!GetY@{GetY}}
+\index{GetY@{GetY}!Collision2DComponent@{Collision2DComponent}}
+\doxysubsubsection{\texorpdfstring{GetY()}{GetY()}}
+{\footnotesize\ttfamily float Collision2\+DComponent\+::\+GetY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the y-\/coordinate of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+
+Gets the y position of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}.
+
+\begin{DoxyReturn}{Returns}
+The y-\/coordinate of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}.
+
+The y position of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+\end{DoxyReturn}
 \Hypertarget{struct_collision2_d_component_ad4ac4768513c4d128a1bfcf8141fcd9e}\label{struct_collision2_d_component_ad4ac4768513c4d128a1bfcf8141fcd9e} 
 \index{Collision2DComponent@{Collision2DComponent}!Input@{Input}}
 \index{Input@{Input}!Collision2DComponent@{Collision2DComponent}}
@@ -78,7 +210,18 @@ Implements \mbox{\hyperlink{struct_component}{Component}}.
 
 
 
-Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
+Handles input for the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time since the last frame.\\
+\hline
+{\em delta\+Time} & Time since the last frame. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{struct_component_a85d6bd954d08b01cfad8e8357f98d011}{Component}}.
 
 \Hypertarget{struct_collision2_d_component_aa7ca53aecce2a0b9204a67262d0df450}\label{struct_collision2_d_component_aa7ca53aecce2a0b9204a67262d0df450} 
 \index{Collision2DComponent@{Collision2DComponent}!Render@{Render}}
@@ -88,21 +231,183 @@ Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
 
 
 
-Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
+Renders the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & The SDL\+\_\+\+Renderer to use.\\
+\hline
+{\em renderer} & The SDL\+\_\+\+Renderer to use for rendering. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{struct_component_a223de42285cca9e02809120c1a44c4ac}{Component}}.
+
+\Hypertarget{struct_collision2_d_component_afcde179c03ed630fec68c15de1f0ded6}\label{struct_collision2_d_component_afcde179c03ed630fec68c15de1f0ded6} 
+\index{Collision2DComponent@{Collision2DComponent}!SetH@{SetH}}
+\index{SetH@{SetH}!Collision2DComponent@{Collision2DComponent}}
+\doxysubsubsection{\texorpdfstring{SetH()}{SetH()}}
+{\footnotesize\ttfamily void Collision2\+DComponent\+::\+SetH (\begin{DoxyParamCaption}\item[{float}]{h }\end{DoxyParamCaption})}
+
+
+
+Sets the height of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & The height to set.\\
+\hline
+{\em h} & The new height. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_collision2_d_component_ade40d4db628d99780af2ada4d2ca840d}\label{struct_collision2_d_component_ade40d4db628d99780af2ada4d2ca840d} 
+\index{Collision2DComponent@{Collision2DComponent}!SetW@{SetW}}
+\index{SetW@{SetW}!Collision2DComponent@{Collision2DComponent}}
+\doxysubsubsection{\texorpdfstring{SetW()}{SetW()}}
+{\footnotesize\ttfamily void Collision2\+DComponent\+::\+SetW (\begin{DoxyParamCaption}\item[{float}]{w }\end{DoxyParamCaption})}
+
+
+
+Sets the width of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & The width to set.\\
+\hline
+{\em w} & The new width. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_collision2_d_component_abd832fdc022f80dfee1e20070f42f941}\label{struct_collision2_d_component_abd832fdc022f80dfee1e20070f42f941} 
+\index{Collision2DComponent@{Collision2DComponent}!SetWH@{SetWH}}
+\index{SetWH@{SetWH}!Collision2DComponent@{Collision2DComponent}}
+\doxysubsubsection{\texorpdfstring{SetWH()}{SetWH()}}
+{\footnotesize\ttfamily void Collision2\+DComponent\+::\+Set\+WH (\begin{DoxyParamCaption}\item[{float}]{w,  }\item[{float}]{h }\end{DoxyParamCaption})}
+
+
+
+Sets the width and height of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & The width to set. \\
+\hline
+{\em h} & The height to set.\\
+\hline
+{\em w} & The new width. \\
+\hline
+{\em h} & The new height. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{struct_collision2_d_component_abd832fdc022f80dfee1e20070f42f941_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_collision2_d_component_adfd8f5fd9c0bba9265042981ea400c14}\label{struct_collision2_d_component_adfd8f5fd9c0bba9265042981ea400c14} 
+\index{Collision2DComponent@{Collision2DComponent}!SetX@{SetX}}
+\index{SetX@{SetX}!Collision2DComponent@{Collision2DComponent}}
+\doxysubsubsection{\texorpdfstring{SetX()}{SetX()}}
+{\footnotesize\ttfamily void Collision2\+DComponent\+::\+SetX (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})}
+
+
+
+Sets the x-\/coordinate of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+
+Sets the x position of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate to set.\\
+\hline
+{\em x} & The new x position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_collision2_d_component_a24ce405b955155836317f1c027631b86}\label{struct_collision2_d_component_a24ce405b955155836317f1c027631b86} 
+\index{Collision2DComponent@{Collision2DComponent}!SetXY@{SetXY}}
+\index{SetXY@{SetXY}!Collision2DComponent@{Collision2DComponent}}
+\doxysubsubsection{\texorpdfstring{SetXY()}{SetXY()}}
+{\footnotesize\ttfamily void Collision2\+DComponent\+::\+Set\+XY (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+Sets the x and y coordinates of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+
+Sets the x and y position of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate to set. \\
+\hline
+{\em y} & The y-\/coordinate to set.\\
+\hline
+{\em x} & The new x position. \\
+\hline
+{\em y} & The new y position. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{struct_collision2_d_component_a24ce405b955155836317f1c027631b86_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_collision2_d_component_a3a08e1d987d66f141a3cddaa991606bf}\label{struct_collision2_d_component_a3a08e1d987d66f141a3cddaa991606bf} 
+\index{Collision2DComponent@{Collision2DComponent}!SetY@{SetY}}
+\index{SetY@{SetY}!Collision2DComponent@{Collision2DComponent}}
+\doxysubsubsection{\texorpdfstring{SetY()}{SetY()}}
+{\footnotesize\ttfamily void Collision2\+DComponent\+::\+SetY (\begin{DoxyParamCaption}\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+Sets the y-\/coordinate of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+
+Sets the y position of the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & The y-\/coordinate to set.\\
+\hline
+{\em y} & The new y position. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{struct_collision2_d_component_a4c2e6e053b5b88f42001b68e29d6da1b}\label{struct_collision2_d_component_a4c2e6e053b5b88f42001b68e29d6da1b} 
 \index{Collision2DComponent@{Collision2DComponent}!Update@{Update}}
 \index{Update@{Update}!Collision2DComponent@{Collision2DComponent}}
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
 {\footnotesize\ttfamily void Collision2\+DComponent\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
-NOTE\+: Default behavior will be to just update the
 
-Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
 
+Updates the \doxylink{struct_collision2_d_component}{Collision2\+DComponent}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time since the last frame.\\
+\hline
+{\em delta\+Time} & Time since the last frame. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{struct_component_a3c50208a8c7ea021b0ae2b9dfbaec65a}{Component}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_collision2_d_component_a4c2e6e053b5b88f42001b68e29d6da1b_cgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Collision2\+DComponent.\+hpp\item 
+include/\mbox{\hyperlink{_collision2_d_component_8hpp}{Collision2\+DComponent.\+hpp}}\item 
 src/Collision2\+DComponent.\+cpp\end{DoxyCompactItemize}

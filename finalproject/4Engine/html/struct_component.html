@@ -78,43 +78,235 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>A struct that represents a component.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_component_8hpp_source.html">Component.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Component:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="struct_component.png" usemap="#Component_map" alt=""/>
-  <map id="Component_map" name="Component_map">
-<area href="struct_collision2_d_component.html" alt="Collision2DComponent" shape="rect" coords="0,56,139,80"/>
-<area href="struct_input_component.html" alt="InputComponent" shape="rect" coords="149,56,288,80"/>
-<area href="struct_texture_component.html" alt="TextureComponent" shape="rect" coords="298,56,437,80"/>
-<area href="struct_transform_component.html" alt="TransformComponent" shape="rect" coords="447,56,586,80"/>
-  </map>
-</div></div>
+<div class="center"><img src="struct_component__inherit__graph.png" border="0" usemap="#a_component_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_component_inherit__map" id="a_component_inherit__map">
+<area shape="rect" title="A struct that represents a component." alt="" coords="272,5,361,31"/>
+<area shape="rect" href="struct_collision2_d_component.html" title="A struct that represents a 2D collision component." alt="" coords="5,79,161,105"/>
+<area shape="poly" title=" " alt="" coords="263,38,124,81,122,76,262,33"/>
+<area shape="rect" href="struct_input_component.html" title="A struct that represents an input component in the game." alt="" coords="184,79,302,105"/>
+<area shape="poly" title=" " alt="" coords="295,44,257,80,254,77,291,40"/>
+<area shape="rect" href="struct_texture_component.html" title="A struct that represents a texture component." alt="" coords="325,79,457,105"/>
+<area shape="poly" title=" " alt="" coords="342,40,380,77,377,81,338,44"/>
+<area shape="rect" href="struct_transform_component.html" title="A struct that represents a transform component." alt="" coords="481,79,629,105"/>
+<area shape="poly" title=" " alt="" coords="372,33,515,76,514,81,371,38"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a85d6bd954d08b01cfad8e8357f98d011" id="r_a85d6bd954d08b01cfad8e8357f98d011"><td class="memItemLeft" align="right" valign="top"><a id="a85d6bd954d08b01cfad8e8357f98d011" name="a85d6bd954d08b01cfad8e8357f98d011"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Input</b> (float deltaTime)</td></tr>
+<tr class="memitem:a8775db6d1a2c1afc2e77cd3c8f39da6f" id="r_a8775db6d1a2c1afc2e77cd3c8f39da6f"><td class="memItemLeft" align="right" valign="top"><a id="a8775db6d1a2c1afc2e77cd3c8f39da6f" name="a8775db6d1a2c1afc2e77cd3c8f39da6f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Component</b> ()</td></tr>
+<tr class="memdesc:a8775db6d1a2c1afc2e77cd3c8f39da6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a> struct. <br /></td></tr>
+<tr class="separator:a8775db6d1a2c1afc2e77cd3c8f39da6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9aa4348314d981f05f67397ad2f872" id="r_a2e9aa4348314d981f05f67397ad2f872"><td class="memItemLeft" align="right" valign="top"><a id="a2e9aa4348314d981f05f67397ad2f872" name="a2e9aa4348314d981f05f67397ad2f872"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Component</b> ()</td></tr>
+<tr class="memdesc:a2e9aa4348314d981f05f67397ad2f872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for the <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a> struct. <br /></td></tr>
+<tr class="separator:a2e9aa4348314d981f05f67397ad2f872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d6bd954d08b01cfad8e8357f98d011" id="r_a85d6bd954d08b01cfad8e8357f98d011"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85d6bd954d08b01cfad8e8357f98d011">Input</a> (float deltaTime)</td></tr>
+<tr class="memdesc:a85d6bd954d08b01cfad8e8357f98d011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles input for the <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a>.  <br /></td></tr>
 <tr class="separator:a85d6bd954d08b01cfad8e8357f98d011"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c50208a8c7ea021b0ae2b9dfbaec65a" id="r_a3c50208a8c7ea021b0ae2b9dfbaec65a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c50208a8c7ea021b0ae2b9dfbaec65a">Update</a> (float deltaTime)</td></tr>
+<tr class="memdesc:a3c50208a8c7ea021b0ae2b9dfbaec65a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a>.  <br /></td></tr>
 <tr class="separator:a3c50208a8c7ea021b0ae2b9dfbaec65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a223de42285cca9e02809120c1a44c4ac" id="r_a223de42285cca9e02809120c1a44c4ac"><td class="memItemLeft" align="right" valign="top"><a id="a223de42285cca9e02809120c1a44c4ac" name="a223de42285cca9e02809120c1a44c4ac"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Render</b> (SDL_Renderer *renderer)</td></tr>
+<tr class="memitem:a223de42285cca9e02809120c1a44c4ac" id="r_a223de42285cca9e02809120c1a44c4ac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a223de42285cca9e02809120c1a44c4ac">Render</a> (SDL_Renderer *renderer)</td></tr>
+<tr class="memdesc:a223de42285cca9e02809120c1a44c4ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a>.  <br /></td></tr>
 <tr class="separator:a223de42285cca9e02809120c1a44c4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e87d60cd7150786e51bfcda7129ed90" id="r_a2e87d60cd7150786e51bfcda7129ed90"><td class="memItemLeft" align="right" valign="top"><a id="a2e87d60cd7150786e51bfcda7129ed90" name="a2e87d60cd7150786e51bfcda7129ed90"></a>
-virtual ComponentType&#160;</td><td class="memItemRight" valign="bottom"><b>GetType</b> ()=0</td></tr>
+<tr class="memitem:a2e87d60cd7150786e51bfcda7129ed90" id="r_a2e87d60cd7150786e51bfcda7129ed90"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_component_type_8hpp.html#a179460a59015cda603e42e8a71d6e043">ComponentType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e87d60cd7150786e51bfcda7129ed90">GetType</a> ()=0</td></tr>
+<tr class="memdesc:a2e87d60cd7150786e51bfcda7129ed90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the type of the <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a>.  <br /></td></tr>
 <tr class="separator:a2e87d60cd7150786e51bfcda7129ed90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92fc19214ae6a73ee22824d85d1a1b99" id="r_a92fc19214ae6a73ee22824d85d1a1b99"><td class="memItemLeft" align="right" valign="top"><a id="a92fc19214ae6a73ee22824d85d1a1b99" name="a92fc19214ae6a73ee22824d85d1a1b99"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetGameEntity</b> (std::shared_ptr&lt; <a class="el" href="struct_game_entity.html">GameEntity</a> &gt; g)</td></tr>
+<tr class="memitem:a92fc19214ae6a73ee22824d85d1a1b99" id="r_a92fc19214ae6a73ee22824d85d1a1b99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92fc19214ae6a73ee22824d85d1a1b99">SetGameEntity</a> (std::shared_ptr&lt; <a class="el" href="struct_game_entity.html">GameEntity</a> &gt; g)</td></tr>
+<tr class="memdesc:a92fc19214ae6a73ee22824d85d1a1b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the game entity that this <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a> is associated with.  <br /></td></tr>
 <tr class="separator:a92fc19214ae6a73ee22824d85d1a1b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1000f79fe140ee4cc90d0b23cd6c035" id="r_ad1000f79fe140ee4cc90d0b23cd6c035"><td class="memItemLeft" align="right" valign="top"><a id="ad1000f79fe140ee4cc90d0b23cd6c035" name="ad1000f79fe140ee4cc90d0b23cd6c035"></a>
-std::shared_ptr&lt; <a class="el" href="struct_game_entity.html">GameEntity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetGameEntity</b> ()</td></tr>
+<tr class="memitem:ad1000f79fe140ee4cc90d0b23cd6c035" id="r_ad1000f79fe140ee4cc90d0b23cd6c035"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="struct_game_entity.html">GameEntity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1000f79fe140ee4cc90d0b23cd6c035">GetGameEntity</a> ()</td></tr>
+<tr class="memdesc:ad1000f79fe140ee4cc90d0b23cd6c035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the game entity that this <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a> is associated with.  <br /></td></tr>
 <tr class="separator:ad1000f79fe140ee4cc90d0b23cd6c035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Components, must know about the gameEntity that they are associated with Components, must have a 'Type' </p>
+<div class="textblock"><p>A struct that represents a component. </p>
+<p>Components must know about the game entity that they are associated with and must have a 'Type'. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad1000f79fe140ee4cc90d0b23cd6c035" name="ad1000f79fe140ee4cc90d0b23cd6c035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1000f79fe140ee4cc90d0b23cd6c035">&#9670;&#160;</a></span>GetGameEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="struct_game_entity.html">GameEntity</a> &gt; Component::GetGameEntity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the game entity that this <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a> is associated with. </p>
+<dl class="section return"><dt>Returns</dt><dd>The game entity that this <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a> is associated with. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_component_ad1000f79fe140ee4cc90d0b23cd6c035_icgraph.png" border="0" usemap="#astruct_component_ad1000f79fe140ee4cc90d0b23cd6c035_icgraph" alt=""/></div>
+<map name="astruct_component_ad1000f79fe140ee4cc90d0b23cd6c035_icgraph" id="astruct_component_ad1000f79fe140ee4cc90d0b23cd6c035_icgraph">
+<area shape="rect" title="Gets the game entity that this Component is associated with." alt="" coords="235,55,421,80"/>
+<area shape="rect" href="struct_input_component.html#a46b6864d2e27d161a2e2954de29a0cb4" title="Handles input for the InputComponent." alt="" coords="19,5,173,31"/>
+<area shape="poly" title=" " alt="" coords="249,53,159,34,160,29,250,48"/>
+<area shape="rect" href="struct_texture_component.html#a9d1fe2ae0010e4cb50c4f7b9a984149b" title="Renders the TextureComponent." alt="" coords="5,55,187,80"/>
+<area shape="poly" title=" " alt="" coords="219,70,187,70,187,65,219,65"/>
+<area shape="rect" href="struct_collision2_d_component.html#a4c2e6e053b5b88f42001b68e29d6da1b" title="Updates the Collision2DComponent." alt="" coords="18,105,174,145"/>
+<area shape="poly" title=" " alt="" coords="259,87,175,108,174,103,257,82"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2e87d60cd7150786e51bfcda7129ed90" name="a2e87d60cd7150786e51bfcda7129ed90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e87d60cd7150786e51bfcda7129ed90">&#9670;&#160;</a></span>GetType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_component_type_8hpp.html#a179460a59015cda603e42e8a71d6e043">ComponentType</a> Component::GetType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the type of the <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>The type of the <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a>. </dd></dl>
+
+<p>Implemented in <a class="el" href="struct_collision2_d_component.html#a8fbd37bdb8315708272d3589d6d74a41">Collision2DComponent</a>, <a class="el" href="struct_input_component.html#a3de33e654abe7a2cee6f049c6f26a3ef">InputComponent</a>, <a class="el" href="struct_texture_component.html#a130152edf8eb87d06f4673b129d0cdd7">TextureComponent</a>, and <a class="el" href="struct_transform_component.html#a4d30c255d54af02fc53774412b488014">TransformComponent</a>.</p>
+
+</div>
+</div>
+<a id="a85d6bd954d08b01cfad8e8357f98d011" name="a85d6bd954d08b01cfad8e8357f98d011"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85d6bd954d08b01cfad8e8357f98d011">&#9670;&#160;</a></span>Input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Component::Input </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>deltaTime</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles input for the <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td>The time since the last frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="struct_collision2_d_component.html#ad4ac4768513c4d128a1bfcf8141fcd9e">Collision2DComponent</a>, <a class="el" href="struct_input_component.html#a46b6864d2e27d161a2e2954de29a0cb4">InputComponent</a>, <a class="el" href="struct_texture_component.html#a7c479b3de64f4cb205a02b8e4edd44b2">TextureComponent</a>, and <a class="el" href="struct_transform_component.html#a031ba1c6f597c25d677fb33793479d53">TransformComponent</a>.</p>
+
+</div>
+</div>
+<a id="a223de42285cca9e02809120c1a44c4ac" name="a223de42285cca9e02809120c1a44c4ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a223de42285cca9e02809120c1a44c4ac">&#9670;&#160;</a></span>Render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Component::Render </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *</td>          <td class="paramname"><span class="paramname"><em>renderer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Renders the <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>The SDL_Renderer to use. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="struct_collision2_d_component.html#aa7ca53aecce2a0b9204a67262d0df450">Collision2DComponent</a>, <a class="el" href="struct_input_component.html#a5d83db2e7b525078c6d9075bf5034fde">InputComponent</a>, <a class="el" href="struct_texture_component.html#a9d1fe2ae0010e4cb50c4f7b9a984149b">TextureComponent</a>, and <a class="el" href="struct_transform_component.html#a78eedf13d70917145f2cb613509c14c1">TransformComponent</a>.</p>
+
+</div>
+</div>
+<a id="a92fc19214ae6a73ee22824d85d1a1b99" name="a92fc19214ae6a73ee22824d85d1a1b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92fc19214ae6a73ee22824d85d1a1b99">&#9670;&#160;</a></span>SetGameEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Component::SetGameEntity </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="struct_game_entity.html">GameEntity</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the game entity that this <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a> is associated with. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>The game entity to associate with this <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a3c50208a8c7ea021b0ae2b9dfbaec65a" name="a3c50208a8c7ea021b0ae2b9dfbaec65a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c50208a8c7ea021b0ae2b9dfbaec65a">&#9670;&#160;</a></span>Update()</h2>
 
@@ -138,7 +330,15 @@ std::shared_ptr&lt; <a class="el" href="struct_game_entity.html">GameEntity</a> 
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="struct_collision2_d_component.html#a4c2e6e053b5b88f42001b68e29d6da1b">Collision2DComponent</a>.</p>
+<p>Updates the <a class="el" href="struct_component.html" title="A struct that represents a component.">Component</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td>The time since the last frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="struct_collision2_d_component.html#a4c2e6e053b5b88f42001b68e29d6da1b">Collision2DComponent</a>, <a class="el" href="struct_input_component.html#acb5de2a0a5b9304868136fbf9290661e">InputComponent</a>, <a class="el" href="struct_texture_component.html#ac97e2ad41734e84e90daaccce835c3af">TextureComponent</a>, and <a class="el" href="struct_transform_component.html#a7f61e8eea1e3d05a32653fa45bd10fe1">TransformComponent</a>.</p>
 
 </div>
 </div>

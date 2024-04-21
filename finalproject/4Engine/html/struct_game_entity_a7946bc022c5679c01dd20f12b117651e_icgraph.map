@@ -1,0 +1,5 @@
+<map id="GameEntity::GetThisPtr" name="GameEntity::GetThisPtr">
+<area shape="rect" id="Node000001" title="Gets a shared pointer to this GameEntity." alt="" coords="242,5,403,31"/>
+<area shape="rect" id="Node000002" href="$struct_game_entity.html#acbc6a3426b89cb006b6b712c6ed87919" title="Adds a component to the GameEntity." alt="" coords="5,5,194,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,21,194,21,194,16,226,16"/>
+</map>

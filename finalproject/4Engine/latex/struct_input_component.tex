@@ -1,41 +1,111 @@
 \doxysection{Input\+Component Struct Reference}
 \hypertarget{struct_input_component}{}\label{struct_input_component}\index{InputComponent@{InputComponent}}
-Inheritance diagram for Input\+Component\+:\begin{figure}[H]
+
+
+A struct that represents an input component in the game.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Component.\+hpp$>$}
+
+
+
+Inheritance diagram for Input\+Component\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{struct_input_component}
+\includegraphics[width=168pt]{struct_input_component__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Input\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{struct_input_component__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-Component\+Type \mbox{\hyperlink{struct_input_component_a3de33e654abe7a2cee6f049c6f26a3ef}{Get\+Type}} () override
-\item 
+\mbox{\hyperlink{struct_input_component_ae3af150f66c8e72ea4bef4b089c48d99}{Input\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{struct_input_component}{Input\+Component} struct. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_input_component_a50e6b9501302f0c8f055325ca652050e}{\texorpdfstring{$\sim$}{\string~}\+Input\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{struct_input_component}{Input\+Component} struct. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_component_type_8hpp_a179460a59015cda603e42e8a71d6e043}{Component\+Type}} \mbox{\hyperlink{struct_input_component_a3de33e654abe7a2cee6f049c6f26a3ef}{Get\+Type}} () override
+\begin{DoxyCompactList}\small\item\em Gets the type of the \doxylink{struct_component}{Component}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{struct_input_component_a46b6864d2e27d161a2e2954de29a0cb4}{Input}} (float delta\+Time) override
-\item 
+\begin{DoxyCompactList}\small\item\em Handles input for the \doxylink{struct_input_component}{Input\+Component}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{struct_input_component_acb5de2a0a5b9304868136fbf9290661e}{Update}} (float delta\+Time) override
-\item 
+\begin{DoxyCompactList}\small\item\em Updates the \doxylink{struct_input_component}{Input\+Component}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{struct_input_component_a5d83db2e7b525078c6d9075bf5034fde}{Render}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer) override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Renders the \doxylink{struct_input_component}{Input\+Component}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{struct_component}{Component}}}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries Set\+Game\+Entity} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ g)
-\item 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ {\bfseries Get\+Game\+Entity} ()
-\end{DoxyCompactItemize}
+{\bfseries Component} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{struct_component}{Component} struct. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{struct_component}{Component} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_component_a92fc19214ae6a73ee22824d85d1a1b99}{Set\+Game\+Entity}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ g)
+\begin{DoxyCompactList}\small\item\em Sets the game entity that this \doxylink{struct_component}{Component} is associated with. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ \mbox{\hyperlink{struct_component_ad1000f79fe140ee4cc90d0b23cd6c035}{Get\+Game\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Gets the game entity that this \doxylink{struct_component}{Component} is associated with. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A struct that represents an input component in the game. 
+
+This struct inherits from the \doxylink{struct_component}{Component} struct and overrides its methods. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_input_component_ae3af150f66c8e72ea4bef4b089c48d99}\label{struct_input_component_ae3af150f66c8e72ea4bef4b089c48d99} 
+\index{InputComponent@{InputComponent}!InputComponent@{InputComponent}}
+\index{InputComponent@{InputComponent}!InputComponent@{InputComponent}}
+\doxysubsubsection{\texorpdfstring{InputComponent()}{InputComponent()}}
+{\footnotesize\ttfamily Input\+Component\+::\+Input\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{struct_input_component}{Input\+Component} struct. 
+
+Default constructor for \doxylink{struct_input_component}{Input\+Component}. \Hypertarget{struct_input_component_a50e6b9501302f0c8f055325ca652050e}\label{struct_input_component_a50e6b9501302f0c8f055325ca652050e} 
+\index{InputComponent@{InputComponent}!````~InputComponent@{\texorpdfstring{$\sim$}{\string~}InputComponent}}
+\index{````~InputComponent@{\texorpdfstring{$\sim$}{\string~}InputComponent}!InputComponent@{InputComponent}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}InputComponent()}{\string~InputComponent()}}
+{\footnotesize\ttfamily Input\+Component\+::\texorpdfstring{$\sim$}{\string~}\+Input\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the \doxylink{struct_input_component}{Input\+Component} struct. 
+
+Destructor for \doxylink{struct_input_component}{Input\+Component}. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{struct_input_component_a3de33e654abe7a2cee6f049c6f26a3ef}\label{struct_input_component_a3de33e654abe7a2cee6f049c6f26a3ef} 
 \index{InputComponent@{InputComponent}!GetType@{GetType}}
 \index{GetType@{GetType}!InputComponent@{InputComponent}}
 \doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
-{\footnotesize\ttfamily Component\+Type Input\+Component\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_component_type_8hpp_a179460a59015cda603e42e8a71d6e043}{Component\+Type}} Input\+Component\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{struct_component}{Component}}.
+Gets the type of the \doxylink{struct_component}{Component}. 
+
+Get the Component\+Type of this \doxylink{struct_input_component}{Input\+Component}.
+
+\begin{DoxyReturn}{Returns}
+The type of the \doxylink{struct_component}{Component}.
+
+\doxylink{_component_type_8hpp_a179460a59015cda603e42e8a71d6e043ab0f1638e58c5c79718bedf05c97952df}{Component\+Type\+::\+Input\+Component} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{struct_component_a2e87d60cd7150786e51bfcda7129ed90}{Component}}.
 
 \Hypertarget{struct_input_component_a46b6864d2e27d161a2e2954de29a0cb4}\label{struct_input_component_a46b6864d2e27d161a2e2954de29a0cb4} 
 \index{InputComponent@{InputComponent}!Input@{Input}}
@@ -45,8 +115,29 @@ Implements \mbox{\hyperlink{struct_component}{Component}}.
 
 
 
-Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
+Handles input for the \doxylink{struct_input_component}{Input\+Component}. 
 
+Handle input for this \doxylink{struct_input_component}{Input\+Component}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time since the last frame.\\
+\hline
+{\em delta\+Time} & The time since the last frame \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{struct_component_a85d6bd954d08b01cfad8e8357f98d011}{Component}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_input_component_a46b6864d2e27d161a2e2954de29a0cb4_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{struct_input_component_a5d83db2e7b525078c6d9075bf5034fde}\label{struct_input_component_a5d83db2e7b525078c6d9075bf5034fde} 
 \index{InputComponent@{InputComponent}!Render@{Render}}
 \index{Render@{Render}!InputComponent@{InputComponent}}
@@ -55,7 +146,20 @@ Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
 
 
 
-Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
+Renders the \doxylink{struct_input_component}{Input\+Component}. 
+
+Render this \doxylink{struct_input_component}{Input\+Component}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & The SDL\+\_\+\+Renderer to use.\\
+\hline
+{\em renderer} & The SDL\+\_\+\+Renderer to use for rendering \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{struct_component_a223de42285cca9e02809120c1a44c4ac}{Component}}.
 
 \Hypertarget{struct_input_component_acb5de2a0a5b9304868136fbf9290661e}\label{struct_input_component_acb5de2a0a5b9304868136fbf9290661e} 
 \index{InputComponent@{InputComponent}!Update@{Update}}
@@ -65,11 +169,24 @@ Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
 
 
 
-Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
+Updates the \doxylink{struct_input_component}{Input\+Component}. 
+
+Update this \doxylink{struct_input_component}{Input\+Component}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time since the last frame.\\
+\hline
+{\em delta\+Time} & The time since the last frame \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{struct_component_a3c50208a8c7ea021b0ae2b9dfbaec65a}{Component}}.
 
 
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Input\+Component.\+hpp\item 
+include/\mbox{\hyperlink{_input_component_8hpp}{Input\+Component.\+hpp}}\item 
 src/Input\+Component.\+cpp\end{DoxyCompactItemize}

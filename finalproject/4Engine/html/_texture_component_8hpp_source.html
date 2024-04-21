@@ -83,35 +83,45 @@ $(function() { codefold.init(0); });
   <div class="headertitle"><div class="title">TextureComponent.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;SDL3/SDL.h&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Component.hpp&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="struct_texture_component.html">    8</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_texture_component.html">TextureComponent</a> : <span class="keyword">public</span> <a class="code hl_struct" href="struct_component.html">Component</a>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_struct" href="struct_texture_component.html">TextureComponent</a>();</div>
+<a href="_texture_component_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;SDL3/SDL.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">void</span> CreateTextureComponent(SDL_Renderer* renderer, std::string filepath);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_component_8hpp.html">Component.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_struct" href="struct_texture_component.html">~TextureComponent</a>();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    ComponentType GetType() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> Input(<span class="keywordtype">float</span> deltaTime) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> Update(<span class="keywordtype">float</span> deltaTime) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> Render(SDL_Renderer* renderer) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        std::shared_ptr&lt;SDL_Texture&gt; mTexture;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_texture_component.html">   18</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_texture_component.html">TextureComponent</a> : <span class="keyword">public</span> <a class="code hl_struct" href="struct_component.html">Component</a>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_function" href="struct_texture_component.html#a407011ebf63cbf960accc30f7e8e581a">TextureComponent</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_texture_component.html#a38eefed85c18acb68e6f9f4125979337">CreateTextureComponent</a>(SDL_Renderer* renderer, std::string filepath);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="struct_texture_component.html#a2c927f1d2ce791106810b277a41f040f">~TextureComponent</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_enumeration" href="_component_type_8hpp.html#a179460a59015cda603e42e8a71d6e043">ComponentType</a> <a class="code hl_function" href="struct_texture_component.html#a130152edf8eb87d06f4673b129d0cdd7">GetType</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_texture_component.html#a7c479b3de64f4cb205a02b8e4edd44b2">Input</a>(<span class="keywordtype">float</span> deltaTime) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_texture_component.html#ac97e2ad41734e84e90daaccce835c3af">Update</a>(<span class="keywordtype">float</span> deltaTime) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_texture_component.html#a9d1fe2ae0010e4cb50c4f7b9a984149b">Render</a>(SDL_Renderer* renderer) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        std::shared_ptr&lt;SDL_Texture&gt; mTexture;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
 </div>
-<div class="ttc" id="astruct_component_html"><div class="ttname"><a href="struct_component.html">Component</a></div><div class="ttdef"><b>Definition</b> Component.hpp:12</div></div>
-<div class="ttc" id="astruct_texture_component_html"><div class="ttname"><a href="struct_texture_component.html">TextureComponent</a></div><div class="ttdef"><b>Definition</b> TextureComponent.hpp:8</div></div>
+<div class="ttc" id="a_component_8hpp_html"><div class="ttname"><a href="_component_8hpp.html">Component.hpp</a></div><div class="ttdoc">This file contains the definition of the Component struct.</div></div>
+<div class="ttc" id="a_component_type_8hpp_html_a179460a59015cda603e42e8a71d6e043"><div class="ttname"><a href="_component_type_8hpp.html#a179460a59015cda603e42e8a71d6e043">ComponentType</a></div><div class="ttdeci">ComponentType</div><div class="ttdoc">An enum class that represents the type of a component.</div><div class="ttdef"><b>Definition</b> ComponentType.hpp:13</div></div>
+<div class="ttc" id="astruct_component_html"><div class="ttname"><a href="struct_component.html">Component</a></div><div class="ttdoc">A struct that represents a component.</div><div class="ttdef"><b>Definition</b> Component.hpp:21</div></div>
+<div class="ttc" id="astruct_texture_component_html"><div class="ttname"><a href="struct_texture_component.html">TextureComponent</a></div><div class="ttdoc">A struct that represents a texture component.</div><div class="ttdef"><b>Definition</b> TextureComponent.hpp:18</div></div>
+<div class="ttc" id="astruct_texture_component_html_a130152edf8eb87d06f4673b129d0cdd7"><div class="ttname"><a href="struct_texture_component.html#a130152edf8eb87d06f4673b129d0cdd7">TextureComponent::GetType</a></div><div class="ttdeci">ComponentType GetType() override</div><div class="ttdoc">Gets the type of the component.</div><div class="ttdef"><b>Definition</b> TextureComponent.cpp:39</div></div>
+<div class="ttc" id="astruct_texture_component_html_a2c927f1d2ce791106810b277a41f040f"><div class="ttname"><a href="struct_texture_component.html#a2c927f1d2ce791106810b277a41f040f">TextureComponent::~TextureComponent</a></div><div class="ttdeci">~TextureComponent()</div><div class="ttdoc">Destructor for the TextureComponent struct.</div><div class="ttdef"><b>Definition</b> TextureComponent.cpp:31</div></div>
+<div class="ttc" id="astruct_texture_component_html_a38eefed85c18acb68e6f9f4125979337"><div class="ttname"><a href="struct_texture_component.html#a38eefed85c18acb68e6f9f4125979337">TextureComponent::CreateTextureComponent</a></div><div class="ttdeci">void CreateTextureComponent(SDL_Renderer *renderer, std::string filepath)</div><div class="ttdoc">Creates a texture component.</div><div class="ttdef"><b>Definition</b> TextureComponent.cpp:24</div></div>
+<div class="ttc" id="astruct_texture_component_html_a407011ebf63cbf960accc30f7e8e581a"><div class="ttname"><a href="struct_texture_component.html#a407011ebf63cbf960accc30f7e8e581a">TextureComponent::TextureComponent</a></div><div class="ttdeci">TextureComponent()</div><div class="ttdoc">Default constructor for the TextureComponent struct.</div><div class="ttdef"><b>Definition</b> TextureComponent.cpp:14</div></div>
+<div class="ttc" id="astruct_texture_component_html_a7c479b3de64f4cb205a02b8e4edd44b2"><div class="ttname"><a href="struct_texture_component.html#a7c479b3de64f4cb205a02b8e4edd44b2">TextureComponent::Input</a></div><div class="ttdeci">void Input(float deltaTime) override</div><div class="ttdoc">Handles input for the TextureComponent.</div><div class="ttdef"><b>Definition</b> TextureComponent.cpp:48</div></div>
+<div class="ttc" id="astruct_texture_component_html_a9d1fe2ae0010e4cb50c4f7b9a984149b"><div class="ttname"><a href="struct_texture_component.html#a9d1fe2ae0010e4cb50c4f7b9a984149b">TextureComponent::Render</a></div><div class="ttdeci">void Render(SDL_Renderer *renderer) override</div><div class="ttdoc">Renders the TextureComponent.</div><div class="ttdef"><b>Definition</b> TextureComponent.cpp:62</div></div>
+<div class="ttc" id="astruct_texture_component_html_ac97e2ad41734e84e90daaccce835c3af"><div class="ttname"><a href="struct_texture_component.html#ac97e2ad41734e84e90daaccce835c3af">TextureComponent::Update</a></div><div class="ttdeci">void Update(float deltaTime) override</div><div class="ttdoc">Updates the TextureComponent.</div><div class="ttdef"><b>Definition</b> TextureComponent.cpp:55</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

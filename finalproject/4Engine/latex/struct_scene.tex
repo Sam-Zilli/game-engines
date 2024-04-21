@@ -1,40 +1,261 @@
 \doxysection{Scene Struct Reference}
 \hypertarget{struct_scene}{}\label{struct_scene}\index{Scene@{Scene}}
+
+
+A struct that represents a scene in the game.  
+
+
+
+
+{\ttfamily \#include $<$Scene.\+hpp$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{struct_scene_ad10176d75a9cc0da56626f682d083507}{Scene}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{struct_scene}{Scene} struct. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_scene_a3b8cec2e32546713915f8c6303c951f1}{\texorpdfstring{$\sim$}{\string~}\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{struct_scene}{Scene} struct. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{struct_scene_ae3e9eecaf0f307e6020eb8bbf61956de}{Start\+Up}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, float speed\+Of\+Projectile, int window\+Width, int window\+Height)
-\item 
-\Hypertarget{struct_scene_aea860520f1ae70e9af3e0fffa7357837}\label{struct_scene_aea860520f1ae70e9af3e0fffa7357837} 
-void {\bfseries Shutdown} ()
-\item 
-\Hypertarget{struct_scene_ae0faba71fd397e2bea5849784ee3d2fe}\label{struct_scene_ae0faba71fd397e2bea5849784ee3d2fe} 
-void {\bfseries Input} (float delta\+Time)
-\item 
-\Hypertarget{struct_scene_a7e2bf79699b0c05bd353fade7b380ad7}\label{struct_scene_a7e2bf79699b0c05bd353fade7b380ad7} 
-void {\bfseries Update} (float delta\+Time)
-\item 
-\Hypertarget{struct_scene_ad3edff89eead7cc9c6f80eea04b2ac15}\label{struct_scene_ad3edff89eead7cc9c6f80eea04b2ac15} 
-void {\bfseries Render} (int r, int g, int b)
-\item 
-\Hypertarget{struct_scene_afee9735168aa0a95751dbec42fa15d59}\label{struct_scene_afee9735168aa0a95751dbec42fa15d59} 
-void {\bfseries Set\+Scene\+Active\+Status} (bool status)
-\item 
-\Hypertarget{struct_scene_a99313203ab62b1692065d9780e0cd067}\label{struct_scene_a99313203ab62b1692065d9780e0cd067} 
-bool {\bfseries Is\+Scene\+Active} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Starts up the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_scene_aea860520f1ae70e9af3e0fffa7357837}{Shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shuts down the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_scene_ae0faba71fd397e2bea5849784ee3d2fe}{Input}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Handles input for the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_scene_a7e2bf79699b0c05bd353fade7b380ad7}{Update}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Updates the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_scene_ad3edff89eead7cc9c6f80eea04b2ac15}{Render}} (int r, int g, int b)
+\begin{DoxyCompactList}\small\item\em Renders the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_scene_afee9735168aa0a95751dbec42fa15d59}{Set\+Scene\+Active\+Status}} (bool status)
+\begin{DoxyCompactList}\small\item\em Sets the active status of the scene. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_scene_a99313203ab62b1692065d9780e0cd067}{Is\+Scene\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the scene is active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A struct that represents a scene in the game. 
+
+This struct contains methods for starting up, shutting down, input handling, updating, and rendering the scene. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_scene_ad10176d75a9cc0da56626f682d083507}\label{struct_scene_ad10176d75a9cc0da56626f682d083507} 
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Scene\+::\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{struct_scene}{Scene} struct. 
+
+Default constructor for the \doxylink{struct_scene}{Scene} class. \Hypertarget{struct_scene_a3b8cec2e32546713915f8c6303c951f1}\label{struct_scene_a3b8cec2e32546713915f8c6303c951f1} 
+\index{Scene@{Scene}!````~Scene@{\texorpdfstring{$\sim$}{\string~}Scene}}
+\index{````~Scene@{\texorpdfstring{$\sim$}{\string~}Scene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Scene()}{\string~Scene()}}
+{\footnotesize\ttfamily Scene\+::\texorpdfstring{$\sim$}{\string~}\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the \doxylink{struct_scene}{Scene} struct. 
+
+Destructor for the \doxylink{struct_scene}{Scene} class. Calls the Shutdown method. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{struct_scene_a3b8cec2e32546713915f8c6303c951f1_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{struct_scene_ae0faba71fd397e2bea5849784ee3d2fe}\label{struct_scene_ae0faba71fd397e2bea5849784ee3d2fe} 
+\index{Scene@{Scene}!Input@{Input}}
+\index{Input@{Input}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily void Scene\+::\+Input (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Handles input for the scene. 
+
+Handles input for the \doxylink{struct_scene}{Scene}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time since the last frame. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_scene_ae0faba71fd397e2bea5849784ee3d2fe_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_scene_a99313203ab62b1692065d9780e0cd067}\label{struct_scene_a99313203ab62b1692065d9780e0cd067} 
+\index{Scene@{Scene}!IsSceneActive@{IsSceneActive}}
+\index{IsSceneActive@{IsSceneActive}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{IsSceneActive()}{IsSceneActive()}}
+{\footnotesize\ttfamily bool Scene\+::\+Is\+Scene\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the scene is active. 
+
+Checks if the \doxylink{struct_scene}{Scene} is active.
+
+\begin{DoxyReturn}{Returns}
+True if the scene is active, false otherwise.
+
+True if the \doxylink{struct_scene}{Scene} is active, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_scene_a99313203ab62b1692065d9780e0cd067_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_scene_ad3edff89eead7cc9c6f80eea04b2ac15}\label{struct_scene_ad3edff89eead7cc9c6f80eea04b2ac15} 
+\index{Scene@{Scene}!Render@{Render}}
+\index{Render@{Render}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Scene\+::\+Render (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Renders the scene. 
+
+Renders the \doxylink{struct_scene}{Scene}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The red component of the color. \\
+\hline
+{\em g} & The green component of the color. \\
+\hline
+{\em b} & The blue component of the color.\\
+\hline
+{\em r} & The red component of the color to clear the screen with. \\
+\hline
+{\em g} & The green component of the color to clear the screen with. \\
+\hline
+{\em b} & The blue component of the color to clear the screen with. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_scene_ad3edff89eead7cc9c6f80eea04b2ac15_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_scene_afee9735168aa0a95751dbec42fa15d59}\label{struct_scene_afee9735168aa0a95751dbec42fa15d59} 
+\index{Scene@{Scene}!SetSceneActiveStatus@{SetSceneActiveStatus}}
+\index{SetSceneActiveStatus@{SetSceneActiveStatus}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{SetSceneActiveStatus()}{SetSceneActiveStatus()}}
+{\footnotesize\ttfamily void Scene\+::\+Set\+Scene\+Active\+Status (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})}
+
+
+
+Sets the active status of the scene. 
+
+Sets the active status of the \doxylink{struct_scene}{Scene}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & The new active status. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_scene_afee9735168aa0a95751dbec42fa15d59_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_scene_aea860520f1ae70e9af3e0fffa7357837}\label{struct_scene_aea860520f1ae70e9af3e0fffa7357837} 
+\index{Scene@{Scene}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void Scene\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Shuts down the scene. 
+
+Shuts down the \doxylink{struct_scene}{Scene}. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{struct_scene_aea860520f1ae70e9af3e0fffa7357837_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{struct_scene_ae3e9eecaf0f307e6020eb8bbf61956de}\label{struct_scene_ae3e9eecaf0f307e6020eb8bbf61956de} 
 \index{Scene@{Scene}!StartUp@{StartUp}}
 \index{StartUp@{StartUp}!Scene@{Scene}}
 \doxysubsubsection{\texorpdfstring{StartUp()}{StartUp()}}
 {\footnotesize\ttfamily void Scene\+::\+Start\+Up (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer,  }\item[{float}]{speed\+Of\+Projectile,  }\item[{int}]{window\+Width,  }\item[{int}]{window\+Height }\end{DoxyParamCaption})}
 
-For our main character, add one child component
+
+
+Starts up the scene. 
+
+Initializes the \doxylink{struct_scene}{Scene}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & The SDL\+\_\+\+Renderer to use. \\
+\hline
+{\em speed\+Of\+Projectile} & The speed of the projectile. \\
+\hline
+{\em window\+Width} & The width of the window. \\
+\hline
+{\em window\+Height} & The height of the window. \\
+\hline
+\end{DoxyParams}
+For our main character, add one child componentHere is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_scene_ae3e9eecaf0f307e6020eb8bbf61956de_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_scene_a7e2bf79699b0c05bd353fade7b380ad7}\label{struct_scene_a7e2bf79699b0c05bd353fade7b380ad7} 
+\index{Scene@{Scene}!Update@{Update}}
+\index{Update@{Update}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Scene\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Updates the scene. 
+
+Updates the \doxylink{struct_scene}{Scene}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time since the last frame. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_scene_a7e2bf79699b0c05bd353fade7b380ad7_icgraph}
+\end{center}
+\end{figure}
+
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Scene.\+hpp\item 
-src/Scene.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{_scene_8hpp}{Scene.\+hpp}}\item 
+src/\mbox{\hyperlink{_scene_8cpp}{Scene.\+cpp}}\end{DoxyCompactItemize}

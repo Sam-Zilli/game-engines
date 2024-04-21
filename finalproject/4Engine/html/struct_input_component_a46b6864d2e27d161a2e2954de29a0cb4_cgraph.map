@@ -1,0 +1,7 @@
+<map id="InputComponent::Input" name="InputComponent::Input">
+<area shape="rect" id="Node000001" title="Handles input for the InputComponent." alt="" coords="5,35,160,60"/>
+<area shape="rect" id="Node000002" href="$struct_component.html#ad1000f79fe140ee4cc90d0b23cd6c035" title="Gets the game entity that this Component is associated with." alt="" coords="208,5,394,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,35,192,30,193,35,160,40"/>
+<area shape="rect" id="Node000003" href="$struct_transform_component.html#a7260ce3bc9ef172d4a57a482c2b209ad" title="Gets the x&#45;coordinate of the TransformComponent." alt="" coords="227,55,375,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,55,212,61,211,67,160,60"/>
+</map>

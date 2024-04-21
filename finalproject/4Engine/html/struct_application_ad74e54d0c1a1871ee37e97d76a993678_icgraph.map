@@ -1,0 +1,9 @@
+<map id="Application::Log" name="Application::Log">
+<area shape="rect" id="Node000001" title="Logs a message." alt="" coords="409,31,523,56"/>
+<area shape="rect" id="Node000002" href="$bindings_8cpp.html#a7055eab01d08d97ed2dd849c3e02cda7" title="Creates Python bindings for the Application class." alt="" coords="211,5,361,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="393,36,361,31,362,26,394,31"/>
+<area shape="rect" id="Node000003" href="$struct_application.html#a9044c5144ad2dcfc4b235c7d9610865c" title="Starts up the Application." alt="" coords="217,55,355,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="394,56,356,61,355,56,393,50"/>
+<area shape="rect" id="Node000004" href="$struct_application.html#adbd670d8407a7126c839de17e14c81f7" title="Constructor for the Application struct." alt="" coords="5,55,163,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="201,70,163,70,163,65,201,65"/>
+</map>

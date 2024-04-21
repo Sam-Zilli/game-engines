@@ -1,0 +1,6 @@
+<map id="GameEntity::Intersects" name="GameEntity::Intersects">
+<area shape="rect" id="Node000001" title="Checks whether this GameEntity intersects with another GameEntity." alt="" coords="5,29,162,55"/>
+<area shape="rect" id="Node000002" href="$struct_game_entity.html#af8b08e1044a1e4edc387f0066e2f2ab8" title="Gets a component from the GameEntity." alt="" coords="210,29,396,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,40,194,40,194,45,162,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="266,31,259,21,263,11,278,5,303,3,330,5,343,12,341,17,328,10,303,8,280,10,267,15,264,20,271,27"/>
+</map>

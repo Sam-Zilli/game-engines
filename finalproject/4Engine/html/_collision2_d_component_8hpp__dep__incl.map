@@ -1,0 +1,25 @@
+<map id="include/Collision2DComponent.hpp" name="include/Collision2DComponent.hpp">
+<area shape="rect" id="Node000001" title="This file contains the definition of the Collision2DComponent struct." alt="" coords="141,5,366,31"/>
+<area shape="rect" id="Node000002" href="$_game_entity_8hpp.html" title="This file contains the definition of the GameEntity struct." alt="" coords="174,79,333,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,46,256,79,251,79,251,46"/>
+<area shape="rect" id="Node000003" href="$_application_8hpp.html" title="This file contains the definition of the Application struct." alt="" coords="91,374,246,399"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="188,112,142,129,94,153,50,186,32,206,16,228,9,250,12,272,24,293,43,313,92,347,140,371,138,375,89,351,40,317,20,296,7,274,3,250,11,225,27,202,47,182,92,149,140,124,187,107"/>
+<area shape="rect" id="Node000005" href="$_enemy_game_entity_8hpp.html" title="This file contains the definition of the EnemyGameEntity struct." alt="" coords="26,226,225,252"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="220,115,195,133,172,154,147,192,132,227,127,225,142,190,168,151,191,129,217,111"/>
+<area shape="rect" id="Node000006" href="$_scene_8hpp.html" title="This file contains the definition of the Scene struct." alt="" coords="300,300,428,326"/>
+<area shape="poly" id="edge13_Node000002_Node000006" title=" " alt="" coords="296,110,321,128,341,151,359,191,367,233,368,300,363,300,362,234,353,193,337,154,317,132,293,115"/>
+<area shape="rect" id="Node000008" href="$_projectile_8hpp.html" title="This file contains the definition of the Projectile struct." alt="" coords="181,153,326,178"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="256,120,256,152,251,152,251,120"/>
+<area shape="rect" id="Node000009" href="$_texture_component_8cpp.html" title="This file contains the implementation of the TextureComponent class." alt="" coords="402,153,580,178"/>
+<area shape="poly" id="edge14_Node000002_Node000009" title=" " alt="" coords="309,107,451,150,450,155,308,112"/>
+<area shape="rect" id="Node000004" href="$bindings_8cpp.html" title="Python bindings for the Application class of our game engine." alt="" coords="110,447,226,473"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="171,415,171,447,166,447,166,415"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="136,266,167,372,162,374,131,268"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="182,254,324,297,323,302,180,259"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="318,334,203,376,201,371,316,329"/>
+<area shape="rect" id="Node000007" href="$_scene_8cpp.html" title="This file contains the implementation of the Scene class." alt="" coords="312,374,417,399"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="367,341,367,373,362,373,362,341"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="253,194,240,253,208,323,178,375,174,372,204,321,235,251,248,193"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="220,189,149,228,146,223,217,184"/>
+<area shape="poly" id="edge12_Node000008_Node000006" title=" " alt="" coords="274,189,357,298,353,301,270,192"/>
+</map>

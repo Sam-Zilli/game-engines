@@ -1,76 +1,478 @@
 \doxysection{Game\+Entity Struct Reference}
 \hypertarget{struct_game_entity}{}\label{struct_game_entity}\index{GameEntity@{GameEntity}}
-Inheritance diagram for Game\+Entity\+:\begin{figure}[H]
+
+
+A struct that represents a game entity.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Entity.\+hpp$>$}
+
+
+
+Inheritance diagram for Game\+Entity\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{struct_game_entity}
+\includegraphics[width=254pt]{struct_game_entity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+Entity\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{struct_game_entity__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{struct_game_entity_a7946bc022c5679c01dd20f12b117651e}\label{struct_game_entity_a7946bc022c5679c01dd20f12b117651e} 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ {\bfseries Get\+This\+Ptr} ()
-\item 
-\Hypertarget{struct_game_entity_af14e6486ee5fa2971155adb3c9ef2d28}\label{struct_game_entity_af14e6486ee5fa2971155adb3c9ef2d28} 
-virtual void {\bfseries Input} (float delta\+Time)
-\item 
-\Hypertarget{struct_game_entity_a3b9627b94d084cc5546e0eee0189dd1d}\label{struct_game_entity_a3b9627b94d084cc5546e0eee0189dd1d} 
-virtual void {\bfseries Update} (float delta\+Time)
-\item 
-\Hypertarget{struct_game_entity_ac1d6d118078b29001410fc4c7ec33d0a}\label{struct_game_entity_ac1d6d118078b29001410fc4c7ec33d0a} 
-virtual void {\bfseries Render} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
-\item 
-\Hypertarget{struct_game_entity_acbc6a3426b89cb006b6b712c6ed87919}\label{struct_game_entity_acbc6a3426b89cb006b6b712c6ed87919} 
-{\footnotesize template$<$typename T $>$ }\\void {\bfseries Add\+Component} (std\+::shared\+\_\+ptr$<$ T $>$ c)
-\item 
-\Hypertarget{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}\label{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8} 
-{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Get\+Component} (Component\+Type type)
-\item 
-\Hypertarget{struct_game_entity_a798a630f994e8dcb2259b4e4b6ee08e2}\label{struct_game_entity_a798a630f994e8dcb2259b4e4b6ee08e2} 
-void {\bfseries Add\+Default\+Transform} ()
-\item 
+\mbox{\hyperlink{struct_game_entity_a43e4841110c2de7e207d25cd31573616}{Game\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{struct_game_entity}{Game\+Entity} struct. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{virtual}} \mbox{\hyperlink{struct_game_entity_a241238b29b5e440107a5b295edf24f9c}{\texorpdfstring{$\sim$}{\string~}\+Game\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{struct_game_entity}{Game\+Entity} struct. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ \mbox{\hyperlink{struct_game_entity_a7946bc022c5679c01dd20f12b117651e}{Get\+This\+Ptr}} ()
+\begin{DoxyCompactList}\small\item\em Gets a shared pointer to this \doxylink{struct_game_entity}{Game\+Entity}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{virtual}} \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{void}} \mbox{\hyperlink{struct_game_entity_af14e6486ee5fa2971155adb3c9ef2d28}{Input}} (\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{float}} \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{delta\+Time}})
+\begin{DoxyCompactList}\small\item\em Handles input for the \doxylink{struct_game_entity}{Game\+Entity}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{virtual}} \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{void}} \mbox{\hyperlink{struct_game_entity_a3b9627b94d084cc5546e0eee0189dd1d}{Update}} (\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{float}} \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{delta\+Time}})
+\begin{DoxyCompactList}\small\item\em Updates the \doxylink{struct_game_entity}{Game\+Entity}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{virtual}} \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{void}} \mbox{\hyperlink{struct_game_entity_ac1d6d118078b29001410fc4c7ec33d0a}{Render}} (\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{SDL\+\_\+\+Renderer}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{renderer}})
+\begin{DoxyCompactList}\small\item\em Renders the \doxylink{struct_game_entity}{Game\+Entity}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{typename}} \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{T}} $>$ }\\\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{void}} \mbox{\hyperlink{struct_game_entity_acbc6a3426b89cb006b6b712c6ed87919}{Add\+Component}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{T}} $>$ \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{c}})
+\begin{DoxyCompactList}\small\item\em Adds a component to the \doxylink{struct_game_entity}{Game\+Entity}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{Get\+Component}} (\mbox{\hyperlink{_component_type_8hpp_a179460a59015cda603e42e8a71d6e043}{Component\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Gets a component from the \doxylink{struct_game_entity}{Game\+Entity}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{void}} \mbox{\hyperlink{struct_game_entity_a798a630f994e8dcb2259b4e4b6ee08e2}{Add\+Default\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em Adds a default transform to the \doxylink{struct_game_entity}{Game\+Entity}. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_transform_component}{Transform\+Component}} $>$ \mbox{\hyperlink{struct_game_entity_a6eb050e651a68dd7fe17ad85f0066397}{Get\+Transform}} ()
-\item 
-\Hypertarget{struct_game_entity_abfedde9dab34245e679c89b895628f7a}\label{struct_game_entity_abfedde9dab34245e679c89b895628f7a} 
-void {\bfseries Add\+Child\+Game\+Entity} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ child)
-\item 
-\Hypertarget{struct_game_entity_af5bf971ef60267f53c00e4429784a424}\label{struct_game_entity_af5bf971ef60267f53c00e4429784a424} 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ {\bfseries Get\+Child\+Game\+Entity\+At\+Index} (size\+\_\+t index)
-\item 
-\Hypertarget{struct_game_entity_af70aeee767494295ab65288e7b2e85fa}\label{struct_game_entity_af70aeee767494295ab65288e7b2e85fa} 
-void {\bfseries Set\+Renderable} (bool value)
-\item 
-\Hypertarget{struct_game_entity_aaa8c950dc85696d1902a497cc00d72de}\label{struct_game_entity_aaa8c950dc85696d1902a497cc00d72de} 
-bool {\bfseries Is\+Renderable} () const
-\item 
-\Hypertarget{struct_game_entity_af38de031054957f3a8787ac2ed4b1d55}\label{struct_game_entity_af38de031054957f3a8787ac2ed4b1d55} 
-bool {\bfseries Intersects} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ e)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets the transform of the \doxylink{struct_game_entity}{Game\+Entity}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{void}} \mbox{\hyperlink{struct_game_entity_abfedde9dab34245e679c89b895628f7a}{Add\+Child\+Game\+Entity}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{child}})
+\begin{DoxyCompactList}\small\item\em Adds a child \doxylink{struct_game_entity}{Game\+Entity} to this \doxylink{struct_game_entity}{Game\+Entity}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ \mbox{\hyperlink{struct_game_entity_af5bf971ef60267f53c00e4429784a424}{Get\+Child\+Game\+Entity\+At\+Index}} (\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{size\+\_\+t}} \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{index}})
+\begin{DoxyCompactList}\small\item\em Gets a child \doxylink{struct_game_entity}{Game\+Entity} at a specific index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{void}} \mbox{\hyperlink{struct_game_entity_af70aeee767494295ab65288e7b2e85fa}{Set\+Renderable}} (\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{bool}} \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{value}})
+\begin{DoxyCompactList}\small\item\em Sets whether the \doxylink{struct_game_entity}{Game\+Entity} is renderable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{bool}} \mbox{\hyperlink{struct_game_entity_aaa8c950dc85696d1902a497cc00d72de}{Is\+Renderable}} () \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{const}}
+\begin{DoxyCompactList}\small\item\em Checks whether the \doxylink{struct_game_entity}{Game\+Entity} is renderable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{bool}} \mbox{\hyperlink{struct_game_entity_af38de031054957f3a8787ac2ed4b1d55}{Intersects}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{e}})
+\begin{DoxyCompactList}\small\item\em Checks whether this \doxylink{struct_game_entity}{Game\+Entity} intersects with another \doxylink{struct_game_entity}{Game\+Entity}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{struct_game_entity_a8103fc58cfc4f1ae2fffc8fc7159aa52}\label{struct_game_entity_a8103fc58cfc4f1ae2fffc8fc7159aa52} 
-std\+::map$<$ Component\+Type, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_component}{Component}} $>$ $>$ {\bfseries m\+Components}
-\item 
+std\+::map$<$ \mbox{\hyperlink{_component_type_8hpp_a179460a59015cda603e42e8a71d6e043}{Component\+Type}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_component}{Component}} $>$ $>$ {\bfseries m\+Components}
+\begin{DoxyCompactList}\small\item\em The components of the \doxylink{struct_game_entity}{Game\+Entity}. \end{DoxyCompactList}\item 
 \Hypertarget{struct_game_entity_a22d3bbec17b0b7ae485c40f925327ece}\label{struct_game_entity_a22d3bbec17b0b7ae485c40f925327ece} 
-bool {\bfseries m\+Renderable} \{true\}
-\item 
+\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{bool}} {\bfseries m\+Renderable} \{\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{true}}\}
+\begin{DoxyCompactList}\small\item\em Whether the \doxylink{struct_game_entity}{Game\+Entity} is renderable. \end{DoxyCompactList}\item 
 \Hypertarget{struct_game_entity_a14a54b7d50618f13809b6caca5e9625d}\label{struct_game_entity_a14a54b7d50618f13809b6caca5e9625d} 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ $>$ {\bfseries m\+Game\+Entities}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The child Game\+Entities of this \doxylink{struct_game_entity}{Game\+Entity}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A struct that represents a game entity. 
+
+This struct inherits from std\+::enable\+\_\+shared\+\_\+from\+\_\+this to allow shared pointers to itself. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_game_entity_a43e4841110c2de7e207d25cd31573616}\label{struct_game_entity_a43e4841110c2de7e207d25cd31573616} 
+\index{GameEntity@{GameEntity}!GameEntity@{GameEntity}}
+\index{GameEntity@{GameEntity}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{GameEntity()}{GameEntity()}}
+{\footnotesize\ttfamily Game\+Entity\+::\+Game\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{struct_game_entity}{Game\+Entity} struct. 
+
+Default constructor for \doxylink{struct_game_entity}{Game\+Entity}. \Hypertarget{struct_game_entity_a241238b29b5e440107a5b295edf24f9c}\label{struct_game_entity_a241238b29b5e440107a5b295edf24f9c} 
+\index{GameEntity@{GameEntity}!````~GameEntity@{\texorpdfstring{$\sim$}{\string~}GameEntity}}
+\index{````~GameEntity@{\texorpdfstring{$\sim$}{\string~}GameEntity}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GameEntity()}{\string~GameEntity()}}
+{\footnotesize\ttfamily Game\+Entity\+::\texorpdfstring{$\sim$}{\string~}\+Game\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for the \doxylink{struct_game_entity}{Game\+Entity} struct. 
+
+Destructor for \doxylink{struct_game_entity}{Game\+Entity}. 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{struct_game_entity_abfedde9dab34245e679c89b895628f7a}\label{struct_game_entity_abfedde9dab34245e679c89b895628f7a} 
+\index{GameEntity@{GameEntity}!AddChildGameEntity@{AddChildGameEntity}}
+\index{AddChildGameEntity@{AddChildGameEntity}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{AddChildGameEntity()}{AddChildGameEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{void}} Game\+Entity\+::\+Add\+Child\+Game\+Entity (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$}]{child }\end{DoxyParamCaption})}
+
+
+
+Adds a child \doxylink{struct_game_entity}{Game\+Entity} to this \doxylink{struct_game_entity}{Game\+Entity}. 
+
+Adds a child \doxylink{struct_game_entity}{Game\+Entity}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & The child \doxylink{struct_game_entity}{Game\+Entity} to add.\\
+\hline
+{\em child} & The child \doxylink{struct_game_entity}{Game\+Entity} to add \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_game_entity_abfedde9dab34245e679c89b895628f7a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_game_entity_acbc6a3426b89cb006b6b712c6ed87919}\label{struct_game_entity_acbc6a3426b89cb006b6b712c6ed87919} 
+\index{GameEntity@{GameEntity}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{typename}} \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{T}} $>$ \\
+\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{template}} \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{void}} Game\+Entity\+::\+Add\+Component$<$ \mbox{\hyperlink{struct_input_component}{Input\+Component}} $>$ (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{T}} $>$}]{c }\end{DoxyParamCaption})}
+
+
+
+Adds a component to the \doxylink{struct_game_entity}{Game\+Entity}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The component to add.\\
+\hline
+{\em c} & The component to add \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_game_entity_acbc6a3426b89cb006b6b712c6ed87919_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_game_entity_a798a630f994e8dcb2259b4e4b6ee08e2}\label{struct_game_entity_a798a630f994e8dcb2259b4e4b6ee08e2} 
+\index{GameEntity@{GameEntity}!AddDefaultTransform@{AddDefaultTransform}}
+\index{AddDefaultTransform@{AddDefaultTransform}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{AddDefaultTransform()}{AddDefaultTransform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{void}} Game\+Entity\+::\+Add\+Default\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Adds a default transform to the \doxylink{struct_game_entity}{Game\+Entity}. 
+
+Adds a default \doxylink{struct_transform_component}{Transform\+Component} to the \doxylink{struct_game_entity}{Game\+Entity}. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_game_entity_a798a630f994e8dcb2259b4e4b6ee08e2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_game_entity_af5bf971ef60267f53c00e4429784a424}\label{struct_game_entity_af5bf971ef60267f53c00e4429784a424} 
+\index{GameEntity@{GameEntity}!GetChildGameEntityAtIndex@{GetChildGameEntityAtIndex}}
+\index{GetChildGameEntityAtIndex@{GetChildGameEntityAtIndex}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{GetChildGameEntityAtIndex()}{GetChildGameEntityAtIndex()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ Game\+Entity\+::\+Get\+Child\+Game\+Entity\+At\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{size\+\_\+t}}}]{index }\end{DoxyParamCaption})}
+
+
+
+Gets a child \doxylink{struct_game_entity}{Game\+Entity} at a specific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the child \doxylink{struct_game_entity}{Game\+Entity} to get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The child \doxylink{struct_game_entity}{Game\+Entity}.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the child \doxylink{struct_game_entity}{Game\+Entity} to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The child \doxylink{struct_game_entity}{Game\+Entity} 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_game_entity_af5bf971ef60267f53c00e4429784a424_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_game_entity_af5bf971ef60267f53c00e4429784a424_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}\label{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8} 
+\index{GameEntity@{GameEntity}!GetComponent@{GetComponent}}
+\index{GetComponent@{GetComponent}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{GetComponent()}{GetComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_input_component}{Input\+Component}} $>$ Game\+Entity\+::\+Get\+Component$<$ \mbox{\hyperlink{struct_input_component}{Input\+Component}} $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_component_type_8hpp_a179460a59015cda603e42e8a71d6e043}{Component\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Gets a component from the \doxylink{struct_game_entity}{Game\+Entity}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of the component to get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The component.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of the component to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The component, or nullptr if it does not exist 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_game_entity_a7946bc022c5679c01dd20f12b117651e}\label{struct_game_entity_a7946bc022c5679c01dd20f12b117651e} 
+\index{GameEntity@{GameEntity}!GetThisPtr@{GetThisPtr}}
+\index{GetThisPtr@{GetThisPtr}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{GetThisPtr()}{GetThisPtr()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ Game\+Entity\+::\+Get\+This\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a shared pointer to this \doxylink{struct_game_entity}{Game\+Entity}. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to this \doxylink{struct_game_entity}{Game\+Entity}. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_game_entity_a7946bc022c5679c01dd20f12b117651e_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{struct_game_entity_a6eb050e651a68dd7fe17ad85f0066397}\label{struct_game_entity_a6eb050e651a68dd7fe17ad85f0066397} 
 \index{GameEntity@{GameEntity}!GetTransform@{GetTransform}}
 \index{GetTransform@{GetTransform}!GameEntity@{GameEntity}}
 \doxysubsubsection{\texorpdfstring{GetTransform()}{GetTransform()}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_transform_component}{Transform\+Component}} $>$ Game\+Entity\+::\+Get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-NOTE\+: Could make const This is a special case of \textquotesingle{}Get\+Component\textquotesingle{} because 
+
+
+Gets the transform of the \doxylink{struct_game_entity}{Game\+Entity}. 
+
+Gets the \doxylink{struct_transform_component}{Transform\+Component} of the \doxylink{struct_game_entity}{Game\+Entity}.
+
+\begin{DoxyReturn}{Returns}
+The transform.
+
+The \doxylink{struct_transform_component}{Transform\+Component} 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_game_entity_a6eb050e651a68dd7fe17ad85f0066397_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_game_entity_af14e6486ee5fa2971155adb3c9ef2d28}\label{struct_game_entity_af14e6486ee5fa2971155adb3c9ef2d28} 
+\index{GameEntity@{GameEntity}!Input@{Input}}
+\index{Input@{Input}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{void}} Game\+Entity\+::\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{float}}}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles input for the \doxylink{struct_game_entity}{Game\+Entity}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time since the last frame.\\
+\hline
+{\em delta\+Time} & The time elapsed since the last frame \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{struct_enemy_game_entity_a09b68c414ff21160bfc67d8b12206f1e}{Enemy\+Game\+Entity}}, and \mbox{\hyperlink{struct_projectile_a44a0a6b106239860dfd23488773bd882}{Projectile}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_game_entity_af14e6486ee5fa2971155adb3c9ef2d28_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_game_entity_af38de031054957f3a8787ac2ed4b1d55}\label{struct_game_entity_af38de031054957f3a8787ac2ed4b1d55} 
+\index{GameEntity@{GameEntity}!Intersects@{Intersects}}
+\index{Intersects@{Intersects}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{Intersects()}{Intersects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{bool}} Game\+Entity\+::\+Intersects (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$}]{e }\end{DoxyParamCaption})}
+
+
+
+Checks whether this \doxylink{struct_game_entity}{Game\+Entity} intersects with another \doxylink{struct_game_entity}{Game\+Entity}. 
+
+Checks whether the \doxylink{struct_game_entity}{Game\+Entity} intersects with another \doxylink{struct_game_entity}{Game\+Entity}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The other \doxylink{struct_game_entity}{Game\+Entity}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether this \doxylink{struct_game_entity}{Game\+Entity} intersects with the other \doxylink{struct_game_entity}{Game\+Entity}.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The other \doxylink{struct_game_entity}{Game\+Entity} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the Game\+Entities intersect 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_game_entity_af38de031054957f3a8787ac2ed4b1d55_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_game_entity_aaa8c950dc85696d1902a497cc00d72de}\label{struct_game_entity_aaa8c950dc85696d1902a497cc00d72de} 
+\index{GameEntity@{GameEntity}!IsRenderable@{IsRenderable}}
+\index{IsRenderable@{IsRenderable}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{IsRenderable()}{IsRenderable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{bool}} Game\+Entity\+::\+Is\+Renderable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks whether the \doxylink{struct_game_entity}{Game\+Entity} is renderable. 
+
+\begin{DoxyReturn}{Returns}
+Whether the \doxylink{struct_game_entity}{Game\+Entity} is renderable.
+
+Whether the \doxylink{struct_game_entity}{Game\+Entity} is renderable 
+\end{DoxyReturn}
+\Hypertarget{struct_game_entity_ac1d6d118078b29001410fc4c7ec33d0a}\label{struct_game_entity_ac1d6d118078b29001410fc4c7ec33d0a} 
+\index{GameEntity@{GameEntity}!Render@{Render}}
+\index{Render@{Render}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{void}} Game\+Entity\+::\+Render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{SDL\+\_\+\+Renderer}} \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders the \doxylink{struct_game_entity}{Game\+Entity}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & The SDL\+\_\+\+Renderer to use.\\
+\hline
+{\em renderer} & The SDL\+\_\+\+Renderer to use for rendering \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{struct_enemy_game_entity_aefa89537140eba213c31692c5296698e}{Enemy\+Game\+Entity}}, and \mbox{\hyperlink{struct_projectile_ae922add2c155ac4e728dbd9a02ddc5a5}{Projectile}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_game_entity_ac1d6d118078b29001410fc4c7ec33d0a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_game_entity_af70aeee767494295ab65288e7b2e85fa}\label{struct_game_entity_af70aeee767494295ab65288e7b2e85fa} 
+\index{GameEntity@{GameEntity}!SetRenderable@{SetRenderable}}
+\index{SetRenderable@{SetRenderable}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{SetRenderable()}{SetRenderable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{void}} Game\+Entity\+::\+Set\+Renderable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{bool}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets whether the \doxylink{struct_game_entity}{Game\+Entity} is renderable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Whether the \doxylink{struct_game_entity}{Game\+Entity} is renderable.\\
+\hline
+{\em value} & Whether the \doxylink{struct_game_entity}{Game\+Entity} should be renderable \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_game_entity_af70aeee767494295ab65288e7b2e85fa_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_game_entity_a3b9627b94d084cc5546e0eee0189dd1d}\label{struct_game_entity_a3b9627b94d084cc5546e0eee0189dd1d} 
+\index{GameEntity@{GameEntity}!Update@{Update}}
+\index{Update@{Update}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{void}} Game\+Entity\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{float}}}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the \doxylink{struct_game_entity}{Game\+Entity}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time since the last frame.\\
+\hline
+{\em delta\+Time} & The time elapsed since the last frame \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{struct_enemy_game_entity_a5794188569c72e1a29ce3495d915544d}{Enemy\+Game\+Entity}}, and \mbox{\hyperlink{struct_projectile_aaa25bdf74f493e641e26fbded04d712b}{Projectile}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_game_entity_a3b9627b94d084cc5546e0eee0189dd1d_cgraph}
+\end{center}
+\end{figure}
+
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Game\+Entity.\+hpp\item 
+include/\mbox{\hyperlink{_game_entity_8hpp}{Game\+Entity.\+hpp}}\item 
 src/Game\+Entity.\+cpp\end{DoxyCompactItemize}

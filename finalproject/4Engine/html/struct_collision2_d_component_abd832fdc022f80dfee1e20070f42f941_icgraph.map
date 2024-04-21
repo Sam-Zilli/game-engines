@@ -1,0 +1,5 @@
+<map id="Collision2DComponent::SetWH" name="Collision2DComponent::SetWH">
+<area shape="rect" id="Node000001" title="Sets the width and height of the Collision2DComponent." alt="" coords="209,5,364,46"/>
+<area shape="rect" id="Node000002" href="$struct_collision2_d_component.html#a4c2e6e053b5b88f42001b68e29d6da1b" title="Updates the Collision2DComponent." alt="" coords="5,5,161,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,28,161,28,161,23,193,23"/>
+</map>

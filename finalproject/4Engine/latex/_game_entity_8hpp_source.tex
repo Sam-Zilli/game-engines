@@ -1,69 +1,65 @@
 \doxysection{Game\+Entity.\+hpp}
 \hypertarget{_game_entity_8hpp_source}{}\label{_game_entity_8hpp_source}\index{include/GameEntity.hpp@{include/GameEntity.hpp}}
-
+\mbox{\hyperlink{_game_entity_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <map>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}TextureComponent.hpp"{}}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}InputComponent.hpp"{}}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}TransformComponent.hpp"{}}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Collision2DComponent.hpp"{}}}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_entity}{GameEntity}}\ :\ \textcolor{keyword}{public}\ std::enable\_shared\_from\_this<GameEntity>\{}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{struct_game_entity}{GameEntity}}();}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_game_entity}{\string~GameEntity}}();}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ std::shared\_ptr<GameEntity>\ GetThisPtr()}
-\DoxyCodeLine{00021\ \ \ \ \ \{}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ shared\_from\_this();}
-\DoxyCodeLine{00023\ \ \ \ \ \}}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Input(\textcolor{keywordtype}{float}\ deltaTime);}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{float}\ deltaTime);}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Render(SDL\_Renderer*\ renderer);}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8hpp}{Component.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_texture_component_8hpp}{TextureComponent.hpp}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_input_component_8hpp}{InputComponent.hpp}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_transform_component_8hpp}{TransformComponent.hpp}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_collision2_d_component_8hpp}{Collision2DComponent.hpp}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_entity}{GameEntity}}\ :\ \textcolor{keyword}{public}\ std::enable\_shared\_from\_this<GameEntity>\{}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{struct_game_entity_a43e4841110c2de7e207d25cd31573616}{GameEntity}}();}
 \DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ AddComponent(std::shared\_ptr<T>\ c);}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00035\ \ \ \ \ std::shared\_ptr<T>\ GetComponent(ComponentType\ type);}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ AddDefaultTransform();}
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ \ every\ GameEntity\ will\ have\ a\ 'TransformComponent'}}
-\DoxyCodeLine{00041\ \ \ \ \ std::shared\_ptr<TransformComponent>\ \mbox{\hyperlink{struct_game_entity_a6eb050e651a68dd7fe17ad85f0066397}{GetTransform}}();}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ AddChildGameEntity(std::shared\_ptr<GameEntity>\ child);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_game_entity_a241238b29b5e440107a5b295edf24f9c}{\string~GameEntity}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ std::shared\_ptr<GameEntity>\ \mbox{\hyperlink{struct_game_entity_a7946bc022c5679c01dd20f12b117651e}{GetThisPtr}}()}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ shared\_from\_this();}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
 \DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ std::shared\_ptr<GameEntity>\ GetChildGameEntityAtIndex(\textcolor{keywordtype}{size\_t}\ index);}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ SetRenderable(\textcolor{keywordtype}{bool}\ value);}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsRenderable()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_game_entity_af14e6486ee5fa2971155adb3c9ef2d28}{Input}}(\textcolor{keywordtype}{float}\ deltaTime);}
 \DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ Intersects(std::shared\_ptr<GameEntity>\ e);}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Could\ use\ unordered\_map\ or\ multi\_map,\ etc.\ if\ needed}}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ For\ now,\ assume\ one\ component\ per\ GameEntity}}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ std::map<\ ComponentType,\ std::shared\_ptr<Component>>\ mComponents;}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mRenderable\{\textcolor{keyword}{true}\};}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Game\ Entity\ Children}}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<GameEntity>>\ mGameEntities;}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_game_entity_a3b9627b94d084cc5546e0eee0189dd1d}{Update}}(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_game_entity_ac1d6d118078b29001410fc4c7ec33d0a}{Render}}(SDL\_Renderer*\ renderer);}
 \DoxyCodeLine{00062\ }
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_game_entity_acbc6a3426b89cb006b6b712c6ed87919}{AddComponent}}(std::shared\_ptr<T>\ c);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00076\ \ \ \ \ std::shared\_ptr<T>\ \mbox{\hyperlink{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}{GetComponent}}(\mbox{\hyperlink{_component_type_8hpp_a179460a59015cda603e42e8a71d6e043}{ComponentType}}\ type);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_game_entity_a798a630f994e8dcb2259b4e4b6ee08e2}{AddDefaultTransform}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ std::shared\_ptr<TransformComponent>\ \mbox{\hyperlink{struct_game_entity_a6eb050e651a68dd7fe17ad85f0066397}{GetTransform}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_game_entity_abfedde9dab34245e679c89b895628f7a}{AddChildGameEntity}}(std::shared\_ptr<GameEntity>\ child);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00100\ \ \ \ \ std::shared\_ptr<GameEntity>\ \mbox{\hyperlink{struct_game_entity_af5bf971ef60267f53c00e4429784a424}{GetChildGameEntityAtIndex}}(\textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_game_entity_af70aeee767494295ab65288e7b2e85fa}{SetRenderable}}(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_game_entity_aaa8c950dc85696d1902a497cc00d72de}{IsRenderable}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_game_entity_af38de031054957f3a8787ac2ed4b1d55}{Intersects}}(std::shared\_ptr<GameEntity>\ e);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ std::map<\ ComponentType,\ std::shared\_ptr<Component>>\ \mbox{\hyperlink{struct_game_entity_a8103fc58cfc4f1ae2fffc8fc7159aa52}{mComponents}};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_game_entity_a22d3bbec17b0b7ae485c40f925327ece}{mRenderable}}\{\textcolor{keyword}{true}\};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<GameEntity>>\ \mbox{\hyperlink{struct_game_entity_a14a54b7d50618f13809b6caca5e9625d}{mGameEntities}};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \};}
 
 \end{DoxyCode}

@@ -81,21 +81,106 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Python bindings for the <a class="el" href="struct_application.html">Application</a> class of our game engine.  
+<p>Python bindings for the <a class="el" href="struct_application.html" title="A struct that represents the application.">Application</a> class of our game engine.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;pybind11/pybind11.h&gt;</code><br />
 <code>#include &lt;pybind11/stl.h&gt;</code><br />
-<code>#include &quot;Application.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="_application_8hpp_source.html">Application.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for bindings.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="bindings_8cpp__incl.png" border="0" usemap="#asrc_2bindings_8cpp" alt=""/></div>
+<map name="asrc_2bindings_8cpp" id="asrc_2bindings_8cpp">
+<area shape="rect" title="Python bindings for the Application class of our game engine." alt="" coords="1038,5,1154,31"/>
+<area shape="rect" title=" " alt="" coords="881,79,1021,105"/>
+<area shape="poly" title=" " alt="" coords="1073,34,990,74,988,69,1070,29"/>
+<area shape="rect" title=" " alt="" coords="1045,79,1147,105"/>
+<area shape="poly" title=" " alt="" coords="1099,31,1099,63,1093,63,1093,31"/>
+<area shape="rect" href="_application_8hpp.html" title="This file contains the definition of the Application struct." alt="" coords="1172,79,1282,105"/>
+<area shape="poly" title=" " alt="" coords="1119,29,1193,69,1190,74,1117,34"/>
+<area shape="rect" title=" " alt="" coords="203,595,298,620"/>
+<area shape="poly" title=" " alt="" coords="1171,105,1159,107,1073,113,925,118,534,132,337,146,168,168,102,182,51,198,19,217,11,227,8,238,8,461,13,490,26,515,46,536,71,553,130,579,189,594,187,600,128,584,68,558,42,540,21,518,8,492,3,462,3,238,6,225,15,213,49,193,100,177,167,163,336,141,534,127,924,112,1072,108,1158,102,1171,100"/>
+<area shape="rect" title=" " alt="" coords="1316,226,1375,252"/>
+<area shape="poly" title=" " alt="" coords="1238,103,1328,213,1324,216,1234,107"/>
+<area shape="rect" title=" " alt="" coords="1266,447,1323,473"/>
+<area shape="poly" title=" " alt="" coords="1254,103,1287,121,1325,148,1362,183,1389,225,1398,255,1398,285,1391,316,1380,345,1349,398,1318,438,1314,435,1345,395,1375,343,1386,314,1392,285,1392,256,1384,227,1358,186,1322,152,1284,126,1251,107"/>
+<area shape="rect" title=" " alt="" coords="1029,595,1097,620"/>
+<area shape="poly" title=" " alt="" coords="1283,94,1354,105,1393,116,1430,130,1464,148,1491,172,1509,202,1516,238,1516,388,1513,420,1503,449,1489,474,1469,497,1446,517,1419,535,1358,563,1291,582,1225,596,1113,607,1112,602,1224,590,1290,577,1356,558,1416,530,1442,513,1465,493,1484,471,1498,447,1508,419,1511,388,1511,238,1504,204,1487,176,1461,153,1428,135,1391,121,1353,111,1282,99"/>
+<area shape="rect" href="_game_entity_8hpp.html" title="This file contains the definition of the GameEntity struct." alt="" coords="871,374,985,399"/>
+<area shape="poly" title=" " alt="" coords="1190,108,1145,127,1100,155,1048,206,1003,264,968,318,943,362,938,359,963,316,999,261,1044,203,1097,151,1142,122,1188,103"/>
+<area shape="rect" href="_component_8hpp.html" title="This file contains the definition of the Component struct." alt="" coords="911,521,1025,547"/>
+<area shape="poly" title=" " alt="" coords="1269,103,1315,122,1360,151,1393,183,1411,225,1421,265,1426,301,1427,335,1421,366,1410,395,1393,423,1369,449,1337,475,1315,487,1284,498,1206,514,1120,525,1040,531,1040,526,1119,519,1206,509,1283,493,1313,482,1335,471,1365,445,1388,420,1405,393,1416,364,1421,334,1421,302,1416,266,1405,227,1388,186,1357,155,1313,126,1267,108"/>
+<area shape="rect" href="_component_type_8hpp.html" title="This file contains the definition of the ComponentType enum class." alt="" coords="1392,595,1533,620"/>
+<area shape="poly" title=" " alt="" coords="1283,90,1367,97,1414,105,1460,119,1502,137,1535,163,1558,196,1565,216,1567,238,1567,462,1559,500,1541,534,1517,564,1492,587,1489,583,1513,560,1536,531,1554,498,1561,461,1561,238,1559,217,1553,198,1532,166,1499,142,1458,124,1413,111,1366,102,1282,96"/>
+<area shape="rect" href="_enemy_game_entity_8hpp.html" title="This file contains the definition of the EnemyGameEntity struct." alt="" coords="834,226,988,252"/>
+<area shape="poly" title=" " alt="" coords="1172,108,1079,130,1008,155,966,185,932,217,929,213,962,181,1005,150,1078,125,1170,103"/>
+<area shape="rect" href="_projectile_8hpp.html" title="This file contains the definition of the Projectile struct." alt="" coords="695,300,796,326"/>
+<area shape="poly" title=" " alt="" coords="1172,106,1075,126,960,155,855,190,815,209,787,228,767,256,755,286,750,284,762,253,783,224,812,204,854,185,959,150,1074,121,1171,101"/>
+<area shape="rect" href="_scene_8hpp.html" title="This file contains the definition of the Scene struct." alt="" coords="1110,153,1194,178"/>
+<area shape="poly" title=" " alt="" coords="1216,107,1177,144,1173,140,1212,103"/>
+<area shape="poly" title=" " alt="" coords="871,391,710,395,509,404,412,411,329,421,267,434,247,441,235,449,226,463,220,479,219,514,228,550,240,580,235,582,223,551,214,515,215,478,221,461,231,445,245,437,266,429,328,416,412,406,508,399,710,389,871,386"/>
+<area shape="poly" title=" " alt="" coords="986,396,1251,448,1250,453,985,402"/>
+<area shape="poly" title=" " alt="" coords="986,393,1034,411,1056,426,1074,446,1088,480,1090,516,1084,551,1076,581,1071,579,1079,550,1084,516,1082,481,1070,449,1053,430,1032,416,984,398"/>
+<area shape="rect" title=" " alt="" coords="426,447,473,473"/>
+<area shape="poly" title=" " alt="" coords="871,399,852,402,751,414,671,421,590,430,488,450,487,444,589,425,670,415,750,409,852,397,870,394"/>
+<area shape="poly" title=" " alt="" coords="983,398,1022,416,1039,429,1053,446,1058,467,1049,485,1031,502,1010,516,1008,511,1028,498,1044,482,1052,466,1048,449,1035,433,1019,420,981,402"/>
+<area shape="rect" href="_texture_component_8hpp.html" title="This file contains the definition of the TextureComponent struct." alt="" coords="246,447,402,473"/>
+<area shape="poly" title=" " alt="" coords="871,399,852,402,637,427,418,450,417,444,636,421,852,397,870,394"/>
+<area shape="rect" href="_input_component_8hpp.html" title="This file contains the definition of the InputComponent struct." alt="" coords="897,447,1039,473"/>
+<area shape="poly" title=" " alt="" coords="937,398,956,433,952,435,932,401"/>
+<area shape="rect" href="_transform_component_8hpp.html" title="This file contains the definition of the TransformComponent struct." alt="" coords="701,447,873,473"/>
+<area shape="poly" title=" " alt="" coords="905,402,826,442,823,438,903,397"/>
+<area shape="rect" href="_collision2_d_component_8hpp.html" title="This file contains the definition of the Collision2DComponent struct." alt="" coords="497,447,677,473"/>
+<area shape="poly" title=" " alt="" coords="871,402,660,446,659,441,870,397"/>
+<area shape="poly" title=" " alt="" coords="911,543,314,603,314,597,911,538"/>
+<area shape="poly" title=" " alt="" coords="986,545,1036,583,1033,587,982,549"/>
+<area shape="poly" title=" " alt="" coords="1026,541,1377,591,1376,596,1025,546"/>
+<area shape="poly" title=" " alt="" coords="320,475,266,582,261,579,316,472"/>
+<area shape="poly" title=" " alt="" coords="357,471,461,507,594,544,711,566,828,582,1013,600,1013,605,827,587,710,571,593,549,460,512,355,476"/>
+<area shape="poly" title=" " alt="" coords="403,469,415,470,896,523,896,528,414,476,402,474"/>
+<area shape="rect" title=" " alt="" coords="628,521,681,547"/>
+<area shape="poly" title=" " alt="" coords="381,471,613,521,612,526,380,476"/>
+<area shape="poly" title=" " alt="" coords="942,476,850,513,792,533,733,549,618,572,503,588,314,606,314,600,502,583,617,567,731,544,791,528,848,508,940,471"/>
+<area shape="poly" title=" " alt="" coords="988,471,1014,492,1038,520,1052,549,1061,579,1056,580,1047,551,1034,522,1010,496,985,476"/>
+<area shape="poly" title=" " alt="" coords="971,473,971,505,965,505,965,473"/>
+<area shape="poly" title=" " alt="" coords="915,476,697,526,696,520,914,471"/>
+<area shape="poly" title=" " alt="" coords="780,475,746,513,722,533,694,549,663,560,622,570,519,586,314,605,314,600,518,581,621,565,662,555,692,544,718,528,742,509,776,471"/>
+<area shape="poly" title=" " alt="" coords="801,471,844,507,900,544,958,571,1014,590,1013,595,956,576,897,549,840,511,798,475"/>
+<area shape="poly" title=" " alt="" coords="818,471,924,512,922,517,816,476"/>
+<area shape="poly" title=" " alt="" coords="766,476,691,516,689,511,763,471"/>
+<area shape="poly" title=" " alt="" coords="560,476,294,591,292,586,558,471"/>
+<area shape="poly" title=" " alt="" coords="590,473,596,510,605,529,618,545,647,561,689,574,799,591,916,600,1013,603,1013,609,916,606,798,597,688,579,645,566,614,549,600,532,591,511,584,474"/>
+<area shape="poly" title=" " alt="" coords="652,471,897,517,896,522,651,476"/>
+<area shape="poly" title=" " alt="" coords="600,471,635,508,631,512,596,475"/>
+<area shape="poly" title=" " alt="" coords="833,248,623,265,366,294,247,313,148,335,111,347,82,360,64,373,59,386,59,461,62,485,71,506,85,525,103,541,146,568,191,587,189,592,144,573,100,545,81,528,67,509,57,486,53,462,53,385,60,369,79,355,109,342,147,330,246,308,365,289,622,260,833,243"/>
+<area shape="poly" title=" " alt="" coords="929,250,966,280,1013,325,1062,381,1083,413,1100,446,1110,473,1115,496,1114,519,1107,548,1098,567,1086,584,1082,581,1093,564,1101,546,1108,519,1110,497,1105,475,1095,448,1078,416,1057,385,1010,329,962,284,925,254"/>
+<area shape="poly" title=" " alt="" coords="915,252,927,358,922,359,909,253"/>
+<area shape="poly" title=" " alt="" coords="902,254,863,290,809,328,709,373,604,407,504,432,418,448,417,443,503,426,602,402,707,368,807,323,860,286,898,250"/>
+<area shape="poly" title=" " alt="" coords="884,255,788,296,786,291,882,250"/>
+<area shape="poly" title=" " alt="" coords="695,322,578,337,432,362,362,380,299,400,249,423,217,449,204,472,202,494,216,546,234,581,229,584,211,548,196,494,199,471,213,446,246,418,297,395,360,374,431,357,577,331,694,317"/>
+<area shape="poly" title=" " alt="" coords="777,324,884,365,882,370,775,329"/>
+<area shape="poly" title=" " alt="" coords="711,329,374,444,373,439,709,324"/>
+<area shape="poly" title=" " alt="" coords="1110,171,892,184,591,211,446,231,324,254,276,267,241,281,218,296,211,312,211,461,214,494,221,526,241,580,236,581,216,527,208,495,205,462,205,311,214,293,238,277,275,262,323,249,445,225,590,206,892,179,1110,166"/>
+<area shape="poly" title=" " alt="" coords="1186,176,1302,219,1300,224,1184,181"/>
+<area shape="poly" title=" " alt="" coords="1160,177,1285,432,1280,435,1155,180"/>
+<area shape="poly" title=" " alt="" coords="1171,177,1232,224,1269,258,1303,297,1332,340,1351,384,1355,407,1354,430,1349,452,1338,474,1317,502,1291,526,1262,546,1231,563,1168,587,1113,601,1111,596,1167,582,1229,558,1259,541,1288,522,1313,499,1334,472,1344,451,1349,429,1349,408,1346,386,1328,342,1299,301,1265,262,1229,228,1168,181"/>
+<area shape="poly" title=" " alt="" coords="1145,181,1110,228,1093,256,1082,280,1068,303,1046,328,1013,352,978,370,975,365,1010,347,1042,324,1064,300,1077,278,1089,254,1106,225,1141,177"/>
+<area shape="poly" title=" " alt="" coords="1151,179,1138,236,1132,273,1129,312,1129,388,1126,411,1118,432,1090,468,1052,496,1015,516,1012,512,1050,491,1086,464,1113,429,1121,409,1124,388,1124,311,1126,273,1132,235,1146,178"/>
+<area shape="poly" title=" " alt="" coords="1178,177,1261,224,1381,294,1413,316,1440,339,1458,362,1465,385,1465,462,1465,579,1460,579,1460,462,1460,386,1454,364,1436,343,1410,320,1378,298,1259,229,1175,181"/>
+<area shape="poly" title=" " alt="" coords="1112,181,967,224,965,219,1110,176"/>
+<area shape="poly" title=" " alt="" coords="1110,169,1050,171,976,179,897,197,859,211,823,229,788,257,762,289,758,285,784,253,820,224,857,206,896,192,976,174,1050,165,1110,163"/>
+</map>
+</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a7055eab01d08d97ed2dd849c3e02cda7" id="r_a7055eab01d08d97ed2dd849c3e02cda7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7055eab01d08d97ed2dd849c3e02cda7">PYBIND11_MODULE</a> (mygameengine, m)</td></tr>
-<tr class="memdesc:a7055eab01d08d97ed2dd849c3e02cda7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates Python bindings for the <a class="el" href="struct_application.html">Application</a> class.  <br /></td></tr>
+<tr class="memdesc:a7055eab01d08d97ed2dd849c3e02cda7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates Python bindings for the <a class="el" href="struct_application.html" title="A struct that represents the application.">Application</a> class.  <br /></td></tr>
 <tr class="separator:a7055eab01d08d97ed2dd849c3e02cda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Python bindings for the <a class="el" href="struct_application.html">Application</a> class of our game engine. </p>
-<p>This file contains the implementation of Python bindings for the <a class="el" href="struct_application.html">Application</a> class of our game engine. It uses the pybind11 library to expose the <a class="el" href="struct_application.html">Application</a> class and its member functions to Python. </p>
+<div class="textblock"><p>Python bindings for the <a class="el" href="struct_application.html" title="A struct that represents the application.">Application</a> class of our game engine. </p>
+<p>This file contains the implementation of Python bindings for the <a class="el" href="struct_application.html" title="A struct that represents the application.">Application</a> class of our game engine. It uses the pybind11 library to expose the <a class="el" href="struct_application.html" title="A struct that represents the application.">Application</a> class and its member functions to Python. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a7055eab01d08d97ed2dd849c3e02cda7" name="a7055eab01d08d97ed2dd849c3e02cda7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7055eab01d08d97ed2dd849c3e02cda7">&#9670;&#160;</a></span>PYBIND11_MODULE()</h2>
@@ -116,14 +201,42 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates Python bindings for the <a class="el" href="struct_application.html">Application</a> class. </p>
-<p>This function is responsible for creating Python bindings for the <a class="el" href="struct_application.html">Application</a> class using the pybind11 library. It defines the module name as "mygameengine" and exposes the <a class="el" href="struct_application.html">Application</a> class and its member functions to Python.</p>
+<p>Creates Python bindings for the <a class="el" href="struct_application.html" title="A struct that represents the application.">Application</a> class. </p>
+<p>This function is responsible for creating Python bindings for the <a class="el" href="struct_application.html" title="A struct that represents the application.">Application</a> class using the pybind11 library. It defines the module name as "mygameengine" and exposes the <a class="el" href="struct_application.html" title="A struct that represents the application.">Application</a> class and its member functions to Python.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">m</td><td>The pybind11 module object. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bindings_8cpp_a7055eab01d08d97ed2dd849c3e02cda7_cgraph.png" border="0" usemap="#abindings_8cpp_a7055eab01d08d97ed2dd849c3e02cda7_cgraph" alt=""/></div>
+<map name="abindings_8cpp_a7055eab01d08d97ed2dd849c3e02cda7_cgraph" id="abindings_8cpp_a7055eab01d08d97ed2dd849c3e02cda7_cgraph">
+<area shape="rect" title="Creates Python bindings for the Application class." alt="" coords="5,80,156,106"/>
+<area shape="rect" href="struct_application.html#ad74e54d0c1a1871ee37e97d76a993678" title="Logs a message." alt="" coords="207,55,322,80"/>
+<area shape="poly" title=" " alt="" coords="156,80,191,75,192,80,156,85"/>
+<area shape="rect" href="struct_application.html#aa50c8c0de05dbe8473144db5013fa7a4" title="Runs the main loop of the Application." alt="" coords="204,104,325,130"/>
+<area shape="poly" title=" " alt="" coords="156,100,188,104,188,110,156,105"/>
+<area shape="rect" href="struct_application.html#aef425d5f9773014e73262c05c8f8b0ea" title="Handles input for the Application." alt="" coords="388,29,510,55"/>
+<area shape="poly" title=" " alt="" coords="299,101,324,90,372,64,386,58,388,63,374,69,326,95,302,106"/>
+<area shape="rect" href="struct_scene.html#a99313203ab62b1692065d9780e0cd067" title="Checks if the scene is active." alt="" coords="373,79,524,104"/>
+<area shape="poly" title=" " alt="" coords="325,106,358,101,358,107,326,111"/>
+<area shape="rect" href="struct_application.html#ada6aa06eb0b9a2eb86917703d60d20b7" title="Renders the Application." alt="" coords="381,128,516,154"/>
+<area shape="poly" title=" " alt="" coords="326,122,366,127,365,133,325,127"/>
+<area shape="rect" href="struct_application.html#acdac3e501d813a5316b5c3f620157235" title="Updates the Application." alt="" coords="381,177,516,203"/>
+<area shape="poly" title=" " alt="" coords="294,128,374,164,389,169,387,174,372,169,292,133"/>
+<area shape="rect" href="struct_scene.html#ae0faba71fd397e2bea5849784ee3d2fe" title="Handles input for the scene." alt="" coords="624,5,719,31"/>
+<area shape="poly" title=" " alt="" coords="510,33,608,22,609,28,510,38"/>
+<area shape="rect" href="struct_scene.html#afee9735168aa0a95751dbec42fa15d59" title="Sets the active status of the scene." alt="" coords="572,55,771,80"/>
+<area shape="poly" title=" " alt="" coords="510,46,557,52,557,57,510,52"/>
+<area shape="rect" href="struct_scene.html#ad3edff89eead7cc9c6f80eea04b2ac15" title="Renders the scene." alt="" coords="617,128,726,154"/>
+<area shape="poly" title=" " alt="" coords="517,138,602,138,602,144,517,144"/>
+<area shape="rect" href="struct_scene.html#a7e2bf79699b0c05bd353fade7b380ad7" title="Updates the scene." alt="" coords="617,177,726,203"/>
+<area shape="poly" title=" " alt="" coords="517,188,602,188,602,193,517,193"/>
+</map>
+</div>
 
 </div>
 </div>

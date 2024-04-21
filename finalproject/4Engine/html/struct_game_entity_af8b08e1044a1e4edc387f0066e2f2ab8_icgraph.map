@@ -1,0 +1,40 @@
+<map id="GameEntity::GetComponent" name="GameEntity::GetComponent">
+<area shape="rect" id="Node000001" title="Gets a component from the GameEntity." alt="" coords="505,434,691,460"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="643,422,628,415,598,413,571,415,557,420,554,425,561,432,557,436,548,426,553,416,570,410,598,408,630,410,645,417"/>
+<area shape="rect" id="Node000002" href="$struct_game_entity.html#abfedde9dab34245e679c89b895628f7a" title="Adds a child GameEntity to this GameEntity." alt="" coords="253,5,439,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="592,419,584,346,561,250,544,198,521,148,491,101,455,60,438,47,441,43,459,56,496,98,525,145,549,196,567,248,589,346,598,418"/>
+<area shape="rect" id="Node000003" href="$struct_game_entity.html#acbc6a3426b89cb006b6b712c6ed87919" title="Adds a component to the GameEntity." alt="" coords="252,70,440,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="591,419,580,354,557,270,539,226,517,183,489,143,455,109,439,98,442,94,459,105,493,140,521,180,544,223,562,268,585,353,597,418"/>
+<area shape="rect" id="Node000004" href="$struct_game_entity.html#a798a630f994e8dcb2259b4e4b6ee08e2" title="Adds a default transform to the GameEntity." alt="" coords="235,120,457,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="588,420,573,366,547,298,509,227,484,195,455,166,423,148,425,143,459,162,488,191,513,224,552,295,579,364,594,418"/>
+<area shape="rect" id="Node000005" href="$struct_game_entity.html#af5bf971ef60267f53c00e4429784a424" title="Gets a child GameEntity at a specific index." alt="" coords="254,220,438,261"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="579,422,529,352,495,314,456,281,422,264,425,259,458,277,499,310,534,349,584,419"/>
+<area shape="rect" id="Node000006" href="$struct_enemy_game_entity.html#aefa89537140eba213c31692c5296698e" title="Renders the EnemyGameEntity." alt="" coords="5,201,187,227"/>
+<area shape="poly" id="edge15_Node000001_Node000006" title=" " alt="" coords="588,420,572,372,546,313,529,283,508,255,484,231,456,211,416,193,374,182,330,178,287,178,205,187,140,203,138,198,204,182,286,172,331,172,375,177,418,188,458,206,487,226,512,252,533,280,551,310,577,370,593,418"/>
+<area shape="rect" id="Node000007" href="$struct_enemy_game_entity.html#a5794188569c72e1a29ce3495d915544d" title="Updates the EnemyGameEntity." alt="" coords="5,254,187,280"/>
+<area shape="poly" id="edge19_Node000001_Node000007" title=" " alt="" coords="575,424,525,373,492,347,456,325,407,310,338,297,187,278,188,273,339,292,409,305,458,321,495,342,528,369,579,420"/>
+<area shape="rect" id="Node000008" href="$struct_game_entity.html#a6eb050e651a68dd7fe17ad85f0066397" title="Gets the transform of the GameEntity." alt="" coords="257,336,435,361"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="562,428,513,400,456,375,421,364,423,359,458,370,515,396,565,424"/>
+<area shape="rect" id="Node000009" href="$struct_game_entity.html#af14e6486ee5fa2971155adb3c9ef2d28" title="Handles input for the GameEntity." alt="" coords="282,385,410,411"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="513,433,409,413,410,407,514,428"/>
+<area shape="rect" id="Node000010" href="$struct_projectile.html#a44a0a6b106239860dfd23488773bd882" title="Handles input for the Projectile." alt="" coords="290,434,402,460"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="490,450,402,450,402,444,490,444"/>
+<area shape="rect" id="Node000011" href="$struct_game_entity.html#af38de031054957f3a8787ac2ed4b1d55" title="Checks whether this GameEntity intersects with another GameEntity." alt="" coords="268,484,424,509"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="514,466,416,485,415,480,513,461"/>
+<area shape="rect" id="Node000012" href="$struct_projectile.html#ab3e3553fdc8ec005cc4bd09d536e24ce" title="Launches the projectile." alt="" coords="283,533,409,559"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="565,470,515,498,458,524,410,538,408,533,456,519,513,494,562,466"/>
+<area shape="rect" id="Node000013" href="$struct_projectile.html#ac536ed2aad56af866a2078b9a85aa16d" title="Default constructor for the Projectile struct." alt="" coords="277,582,415,608"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="578,474,527,525,494,551,458,573,416,588,414,583,456,569,491,547,524,521,574,470"/>
+<area shape="rect" id="Node000014" href="$struct_game_entity.html#ac1d6d118078b29001410fc4c7ec33d0a" title="Renders the GameEntity." alt="" coords="276,632,416,657"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="585,475,565,509,536,549,501,589,458,623,417,639,415,634,456,618,497,585,532,546,561,506,581,472"/>
+<area shape="rect" id="Node000015" href="$struct_projectile.html#ae922add2c155ac4e728dbd9a02ddc5a5" title="Renders the Projectile." alt="" coords="283,681,409,707"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="590,475,572,519,545,572,507,626,484,651,458,672,435,684,410,692,408,686,433,679,456,667,480,647,503,623,540,570,568,517,585,473"/>
+<area shape="rect" id="Node000016" href="$struct_game_entity.html#af70aeee767494295ab65288e7b2e85fa" title="Sets whether the GameEntity is renderable." alt="" coords="254,730,438,756"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="593,476,578,529,552,595,513,664,488,694,459,721,440,732,437,728,455,717,484,691,508,661,547,593,573,527,588,474"/>
+<area shape="rect" id="Node000017" href="$struct_game_entity.html#a3b9627b94d084cc5546e0eee0189dd1d" title="Updates the GameEntity." alt="" coords="276,780,416,805"/>
+<area shape="poly" id="edge18_Node000001_Node000017" title=" " alt="" coords="596,476,584,537,559,617,541,659,519,700,491,738,459,770,439,783,417,790,415,785,437,778,455,766,487,734,514,697,536,657,554,615,578,536,591,475"/>
+<area shape="rect" id="Node000018" href="$struct_projectile.html#aaa25bdf74f493e641e26fbded04d712b" title="Updates the Projectile." alt="" coords="283,829,409,855"/>
+<area shape="poly" id="edge20_Node000001_Node000018" title=" " alt="" coords="598,476,588,546,566,639,548,689,525,737,495,781,459,820,436,834,410,842,408,836,433,829,455,816,491,778,520,734,543,687,561,638,583,545,592,475"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="238,232,187,226,187,221,239,226"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="239,254,187,260,187,255,238,249"/>
+</map>

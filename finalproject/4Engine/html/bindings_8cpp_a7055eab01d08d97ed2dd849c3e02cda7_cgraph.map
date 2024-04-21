@@ -1,0 +1,23 @@
+<map id="PYBIND11_MODULE" name="PYBIND11_MODULE">
+<area shape="rect" id="Node000001" title="Creates Python bindings for the Application class." alt="" coords="5,80,156,106"/>
+<area shape="rect" id="Node000002" href="$struct_application.html#ad74e54d0c1a1871ee37e97d76a993678" title="Logs a message." alt="" coords="207,55,322,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,80,191,75,192,80,156,85"/>
+<area shape="rect" id="Node000003" href="$struct_application.html#aa50c8c0de05dbe8473144db5013fa7a4" title="Runs the main loop of the Application." alt="" coords="204,104,325,130"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,100,188,104,188,110,156,105"/>
+<area shape="rect" id="Node000004" href="$struct_application.html#aef425d5f9773014e73262c05c8f8b0ea" title="Handles input for the Application." alt="" coords="388,29,510,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="299,101,324,90,372,64,386,58,388,63,374,69,326,95,302,106"/>
+<area shape="rect" id="Node000007" href="$struct_scene.html#a99313203ab62b1692065d9780e0cd067" title="Checks if the scene is active." alt="" coords="373,79,524,104"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="325,106,358,101,358,107,326,111"/>
+<area shape="rect" id="Node000008" href="$struct_application.html#ada6aa06eb0b9a2eb86917703d60d20b7" title="Renders the Application." alt="" coords="381,128,516,154"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="326,122,366,127,365,133,325,127"/>
+<area shape="rect" id="Node000010" href="$struct_application.html#acdac3e501d813a5316b5c3f620157235" title="Updates the Application." alt="" coords="381,177,516,203"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="294,128,374,164,389,169,387,174,372,169,292,133"/>
+<area shape="rect" id="Node000005" href="$struct_scene.html#ae0faba71fd397e2bea5849784ee3d2fe" title="Handles input for the scene." alt="" coords="624,5,719,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="510,33,608,22,609,28,510,38"/>
+<area shape="rect" id="Node000006" href="$struct_scene.html#afee9735168aa0a95751dbec42fa15d59" title="Sets the active status of the scene." alt="" coords="572,55,771,80"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="510,46,557,52,557,57,510,52"/>
+<area shape="rect" id="Node000009" href="$struct_scene.html#ad3edff89eead7cc9c6f80eea04b2ac15" title="Renders the scene." alt="" coords="617,128,726,154"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="517,138,602,138,602,144,517,144"/>
+<area shape="rect" id="Node000011" href="$struct_scene.html#a7e2bf79699b0c05bd353fade7b380ad7" title="Updates the scene." alt="" coords="617,177,726,203"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="517,188,602,188,602,193,517,193"/>
+</map>

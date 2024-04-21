@@ -1,0 +1,5 @@
+<map id="Application::Render" name="Application::Render">
+<area shape="rect" id="Node000001" title="Renders the Application." alt="" coords="5,5,141,31"/>
+<area shape="rect" id="Node000002" href="$struct_scene.html#ad3edff89eead7cc9c6f80eea04b2ac15" title="Renders the scene." alt="" coords="189,5,297,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,16,173,16,173,21,141,21"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Application::StartUp" name="Application::StartUp">
+<area shape="rect" id="Node000001" title="Starts up the Application." alt="" coords="5,55,144,80"/>
+<area shape="rect" id="Node000002" href="$struct_application.html#ad74e54d0c1a1871ee37e97d76a993678" title="Logs a message." alt="" coords="234,5,348,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,51,218,32,219,37,135,57"/>
+<area shape="rect" id="Node000003" href="$struct_scene.html#afee9735168aa0a95751dbec42fa15d59" title="Sets the active status of the scene." alt="" coords="192,55,390,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,65,176,65,176,70,144,70"/>
+<area shape="rect" id="Node000004" href="$struct_scene.html#ae3e9eecaf0f307e6020eb8bbf61956de" title="Starts up the scene." alt="" coords="235,104,347,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="135,78,221,98,219,103,134,84"/>
+</map>

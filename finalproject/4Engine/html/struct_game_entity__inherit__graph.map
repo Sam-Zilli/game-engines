@@ -1,0 +1,9 @@
+<map id="GameEntity" name="GameEntity">
+<area shape="rect" id="Node000001" title="A struct that represents a game entity." alt="" coords="90,94,180,120"/>
+<area shape="rect" id="Node000003" href="$struct_enemy_game_entity.html" title="A struct that represents an enemy game entity." alt="" coords="5,168,137,193"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,133,84,169,80,165,112,129"/>
+<area shape="rect" id="Node000004" href="$struct_projectile.html" title="A struct that represents a projectile in the game." alt="" coords="161,168,237,193"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="158,129,190,165,186,169,154,133"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="47,5,223,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,62,138,93,132,93,132,62"/>
+</map>

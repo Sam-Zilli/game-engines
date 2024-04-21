@@ -1,0 +1,5 @@
+<map id="TransformComponent::GetX" name="TransformComponent::GetX">
+<area shape="rect" id="Node000001" title="Gets the x&#45;coordinate of the TransformComponent." alt="" coords="208,5,355,46"/>
+<area shape="rect" id="Node000002" href="$struct_input_component.html#a46b6864d2e27d161a2e2954de29a0cb4" title="Handles input for the InputComponent." alt="" coords="5,13,160,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,28,160,28,160,23,192,23"/>
+</map>

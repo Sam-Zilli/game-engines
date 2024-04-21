@@ -1,0 +1,9 @@
+<map id="Collision2DComponent::Update" name="Collision2DComponent::Update">
+<area shape="rect" id="Node000001" title="Updates the Collision2DComponent." alt="" coords="5,55,161,96"/>
+<area shape="rect" id="Node000002" href="$struct_component.html#ad1000f79fe140ee4cc90d0b23cd6c035" title="Gets the game entity that this Component is associated with." alt="" coords="209,5,395,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,53,234,33,236,38,162,58"/>
+<area shape="rect" id="Node000003" href="$struct_collision2_d_component.html#abd832fdc022f80dfee1e20070f42f941" title="Sets the width and height of the Collision2DComponent." alt="" coords="224,55,380,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,73,209,73,209,78,161,78"/>
+<area shape="rect" id="Node000004" href="$struct_collision2_d_component.html#a24ce405b955155836317f1c027631b86" title="Sets the x and y coordinates of the Collision2DComponent." alt="" coords="224,121,380,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="154,94,218,113,216,118,153,99"/>
+</map>

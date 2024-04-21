@@ -1,29 +1,41 @@
 \doxysection{Application Struct Reference}
 \hypertarget{struct_application}{}\label{struct_application}\index{Application@{Application}}
+
+
+A struct that represents the application.  
+
+
+
+
+{\ttfamily \#include $<$Application.\+hpp$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_application_adbd670d8407a7126c839de17e14c81f7}{Application}} (const std\+::map$<$ std\+::string, std\+::string $>$ \&params)
-\begin{DoxyCompactList}\small\item\em Constructs the \doxylink{struct_application}{Application} object. \end{DoxyCompactList}\item 
-\Hypertarget{struct_application_a748bca84fefb9c12661cfaa2f623748d}\label{struct_application_a748bca84fefb9c12661cfaa2f623748d} 
-{\bfseries \texorpdfstring{$\sim$}{\string~}\+Application} ()
-\begin{DoxyCompactList}\small\item\em Destructs the \doxylink{struct_application}{Application} object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{struct_application}{Application} struct. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_application_a748bca84fefb9c12661cfaa2f623748d}{\texorpdfstring{$\sim$}{\string~}\+Application}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{struct_application}{Application} struct. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{struct_application_ad74e54d0c1a1871ee37e97d76a993678}{Log}} (const char \texorpdfstring{$\ast$}{*}message)
-\begin{DoxyCompactList}\small\item\em Logs a message to the SDL log. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Logs a message. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{struct_application_a9044c5144ad2dcfc4b235c7d9610865c}{Start\+Up}} (const std\+::string \&game\+Name, int window\+Width, int window\+Height, float speed\+Of\+Projectile)
-\begin{DoxyCompactList}\small\item\em Starts up the application. \end{DoxyCompactList}\item 
-\Hypertarget{struct_application_a817892cf56c1c333d53be31e73e8c2f8}\label{struct_application_a817892cf56c1c333d53be31e73e8c2f8} 
-void {\bfseries Shutdown} ()
-\begin{DoxyCompactList}\small\item\em Shuts down the application. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Starts up the \doxylink{struct_application}{Application}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_application_a817892cf56c1c333d53be31e73e8c2f8}{Shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shuts down the \doxylink{struct_application}{Application}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{struct_application_aef425d5f9773014e73262c05c8f8b0ea}{Input}} (float delta\+Time)
-\begin{DoxyCompactList}\small\item\em Handles input for the application. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Handles input for the \doxylink{struct_application}{Application}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{struct_application_acdac3e501d813a5316b5c3f620157235}{Update}} (float delta\+Time)
-\begin{DoxyCompactList}\small\item\em Updates the application state. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Updates the \doxylink{struct_application}{Application}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{struct_application_ada6aa06eb0b9a2eb86917703d60d20b7}{Render}} (int r, int g, int b)
-\begin{DoxyCompactList}\small\item\em Renders the application. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Renders the \doxylink{struct_application}{Application}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{struct_application_aa50c8c0de05dbe8473144db5013fa7a4}{Loop}} (float target\+FPS, int r, int g, int b)
-\begin{DoxyCompactList}\small\item\em The main game/application loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Runs the main loop of the \doxylink{struct_application}{Application}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A struct that represents the application. 
+
+This struct contains methods for logging, startup, shutdown, input, update, render, and loop. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{struct_application_adbd670d8407a7126c839de17e14c81f7}\label{struct_application_adbd670d8407a7126c839de17e14c81f7} 
@@ -34,13 +46,43 @@ void \mbox{\hyperlink{struct_application_aa50c8c0de05dbe8473144db5013fa7a4}{Loop
 
 
 
-Constructs the \doxylink{struct_application}{Application} object. 
+Constructor for the \doxylink{struct_application}{Application} struct. 
+
+Constructs the \doxylink{struct_application}{Application} object.
 
 
 \begin{DoxyParams}{Parameters}
+{\em params} & The parameters for the \doxylink{struct_application}{Application}.\\
+\hline
 {\em params} & A map of string key-\/value pairs for game parameters. \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_application_adbd670d8407a7126c839de17e14c81f7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_application_a748bca84fefb9c12661cfaa2f623748d}\label{struct_application_a748bca84fefb9c12661cfaa2f623748d} 
+\index{Application@{Application}!````~Application@{\texorpdfstring{$\sim$}{\string~}Application}}
+\index{````~Application@{\texorpdfstring{$\sim$}{\string~}Application}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Application()}{\string~Application()}}
+{\footnotesize\ttfamily Application\+::\texorpdfstring{$\sim$}{\string~}\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the \doxylink{struct_application}{Application} struct. 
+
+Destructs the \doxylink{struct_application}{Application} object. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_application_a748bca84fefb9c12661cfaa2f623748d_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Function Documentation}
@@ -52,13 +94,31 @@ Constructs the \doxylink{struct_application}{Application} object.
 
 
 
-Handles input for the application. 
+Handles input for the \doxylink{struct_application}{Application}. 
+
+Handles input for the application.
 
 
 \begin{DoxyParams}{Parameters}
 {\em delta\+Time} & The time since the last frame. \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_application_aef425d5f9773014e73262c05c8f8b0ea_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_application_aef425d5f9773014e73262c05c8f8b0ea_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{struct_application_ad74e54d0c1a1871ee37e97d76a993678}\label{struct_application_ad74e54d0c1a1871ee37e97d76a993678} 
 \index{Application@{Application}!Log@{Log}}
 \index{Log@{Log}!Application@{Application}}
@@ -67,13 +127,23 @@ Handles input for the application.
 
 
 
-Logs a message to the SDL log. 
+Logs a message. 
+
+Logs a message to the SDL log.
 
 
 \begin{DoxyParams}{Parameters}
 {\em message} & The message to log. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_application_ad74e54d0c1a1871ee37e97d76a993678_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{struct_application_aa50c8c0de05dbe8473144db5013fa7a4}\label{struct_application_aa50c8c0de05dbe8473144db5013fa7a4} 
 \index{Application@{Application}!Loop@{Loop}}
 \index{Loop@{Loop}!Application@{Application}}
@@ -82,10 +152,20 @@ Logs a message to the SDL log.
 
 
 
-The main game/application loop. 
+Runs the main loop of the \doxylink{struct_application}{Application}. 
+
+The main game/application loop.
 
 
 \begin{DoxyParams}{Parameters}
+{\em target\+FPS} & The target frames per second. \\
+\hline
+{\em r} & The red component of the color. \\
+\hline
+{\em g} & The green component of the color. \\
+\hline
+{\em b} & The blue component of the color.\\
+\hline
 {\em target\+FPS} & The target frames per second for the game. \\
 \hline
 {\em r} & The red component of the background color. \\
@@ -95,6 +175,22 @@ The main game/application loop.
 {\em b} & The blue component of the background color. \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_application_aa50c8c0de05dbe8473144db5013fa7a4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{struct_application_aa50c8c0de05dbe8473144db5013fa7a4_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{struct_application_ada6aa06eb0b9a2eb86917703d60d20b7}\label{struct_application_ada6aa06eb0b9a2eb86917703d60d20b7} 
 \index{Application@{Application}!Render@{Render}}
 \index{Render@{Render}!Application@{Application}}
@@ -103,10 +199,18 @@ The main game/application loop.
 
 
 
-Renders the application. 
+Renders the \doxylink{struct_application}{Application}. 
+
+Renders the application.
 
 
 \begin{DoxyParams}{Parameters}
+{\em r} & The red component of the color. \\
+\hline
+{\em g} & The green component of the color. \\
+\hline
+{\em b} & The blue component of the color.\\
+\hline
 {\em r} & The red component of the background color. \\
 \hline
 {\em g} & The green component of the background color. \\
@@ -114,6 +218,40 @@ Renders the application.
 {\em b} & The blue component of the background color. \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{struct_application_ada6aa06eb0b9a2eb86917703d60d20b7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_application_ada6aa06eb0b9a2eb86917703d60d20b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_application_a817892cf56c1c333d53be31e73e8c2f8}\label{struct_application_a817892cf56c1c333d53be31e73e8c2f8} 
+\index{Application@{Application}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void Application\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Shuts down the \doxylink{struct_application}{Application}. 
+
+Shuts down the application. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_application_a817892cf56c1c333d53be31e73e8c2f8_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{struct_application_a9044c5144ad2dcfc4b235c7d9610865c}\label{struct_application_a9044c5144ad2dcfc4b235c7d9610865c} 
 \index{Application@{Application}!StartUp@{StartUp}}
 \index{StartUp@{StartUp}!Application@{Application}}
@@ -122,7 +260,9 @@ Renders the application.
 
 
 
-Starts up the application. 
+Starts up the \doxylink{struct_application}{Application}. 
+
+Starts up the application.
 
 
 \begin{DoxyParams}{Parameters}
@@ -135,6 +275,22 @@ Starts up the application.
 {\em speed\+Of\+Projectile} & The speed of the projectile. \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_application_a9044c5144ad2dcfc4b235c7d9610865c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{struct_application_a9044c5144ad2dcfc4b235c7d9610865c_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{struct_application_acdac3e501d813a5316b5c3f620157235}\label{struct_application_acdac3e501d813a5316b5c3f620157235} 
 \index{Application@{Application}!Update@{Update}}
 \index{Update@{Update}!Application@{Application}}
@@ -143,16 +299,34 @@ Starts up the application.
 
 
 
-Updates the application state. 
+Updates the \doxylink{struct_application}{Application}. 
+
+Updates the application state.
 
 
 \begin{DoxyParams}{Parameters}
 {\em delta\+Time} & The time since the last frame. \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{struct_application_acdac3e501d813a5316b5c3f620157235_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_application_acdac3e501d813a5316b5c3f620157235_icgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Application.\+hpp\item 
+include/\mbox{\hyperlink{_application_8hpp}{Application.\+hpp}}\item 
 src/Application.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="GameEntity::AddDefaultTransform" name="GameEntity::AddDefaultTransform">
+<area shape="rect" id="Node000001" title="Adds a default transform to the GameEntity." alt="" coords="5,29,228,55"/>
+<area shape="rect" id="Node000002" href="$struct_game_entity.html#af8b08e1044a1e4edc387f0066e2f2ab8" title="Gets a component from the GameEntity." alt="" coords="276,29,462,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,40,260,40,260,45,228,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="327,31,319,21,324,11,341,5,369,3,400,5,416,13,413,17,399,11,369,8,342,10,327,15,324,20,331,27"/>
+</map>

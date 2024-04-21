@@ -1,0 +1,5 @@
+<map id="Scene::Shutdown" name="Scene::Shutdown">
+<area shape="rect" id="Node000001" title="Shuts down the scene." alt="" coords="165,5,289,31"/>
+<area shape="rect" id="Node000002" href="$struct_scene.html#a3b8cec2e32546713915f8c6303c951f1" title="Destructor for the Scene struct." alt="" coords="5,5,117,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,21,117,21,117,16,149,16"/>
+</map>

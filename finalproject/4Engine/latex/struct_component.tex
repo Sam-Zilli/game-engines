@@ -2,40 +2,143 @@
 \hypertarget{struct_component}{}\label{struct_component}\index{Component@{Component}}
 
 
+A struct that represents a component.  
+
+
+
+
 {\ttfamily \#include $<$Component.\+hpp$>$}
 
-Inheritance diagram for Component\+:\begin{figure}[H]
+
+
+Inheritance diagram for Component\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=1.904762cm]{struct_component}
+\includegraphics[width=350pt]{struct_component__inherit__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{struct_component_a85d6bd954d08b01cfad8e8357f98d011}\label{struct_component_a85d6bd954d08b01cfad8e8357f98d011} 
-virtual void {\bfseries Input} (float delta\+Time)
-\item 
+\Hypertarget{struct_component_a8775db6d1a2c1afc2e77cd3c8f39da6f}\label{struct_component_a8775db6d1a2c1afc2e77cd3c8f39da6f} 
+{\bfseries Component} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{struct_component}{Component} struct. \end{DoxyCompactList}\item 
+\Hypertarget{struct_component_a2e9aa4348314d981f05f67397ad2f872}\label{struct_component_a2e9aa4348314d981f05f67397ad2f872} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{struct_component}{Component} struct. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{struct_component_a85d6bd954d08b01cfad8e8357f98d011}{Input}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Handles input for the \doxylink{struct_component}{Component}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{struct_component_a3c50208a8c7ea021b0ae2b9dfbaec65a}{Update}} (float delta\+Time)
-\item 
-\Hypertarget{struct_component_a223de42285cca9e02809120c1a44c4ac}\label{struct_component_a223de42285cca9e02809120c1a44c4ac} 
-virtual void {\bfseries Render} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
-\item 
-\Hypertarget{struct_component_a2e87d60cd7150786e51bfcda7129ed90}\label{struct_component_a2e87d60cd7150786e51bfcda7129ed90} 
-virtual Component\+Type {\bfseries Get\+Type} ()=0
-\item 
-\Hypertarget{struct_component_a92fc19214ae6a73ee22824d85d1a1b99}\label{struct_component_a92fc19214ae6a73ee22824d85d1a1b99} 
-void {\bfseries Set\+Game\+Entity} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ g)
-\item 
-\Hypertarget{struct_component_ad1000f79fe140ee4cc90d0b23cd6c035}\label{struct_component_ad1000f79fe140ee4cc90d0b23cd6c035} 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ {\bfseries Get\+Game\+Entity} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Updates the \doxylink{struct_component}{Component}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{struct_component_a223de42285cca9e02809120c1a44c4ac}{Render}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\begin{DoxyCompactList}\small\item\em Renders the \doxylink{struct_component}{Component}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_component_type_8hpp_a179460a59015cda603e42e8a71d6e043}{Component\+Type}} \mbox{\hyperlink{struct_component_a2e87d60cd7150786e51bfcda7129ed90}{Get\+Type}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the type of the \doxylink{struct_component}{Component}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_component_a92fc19214ae6a73ee22824d85d1a1b99}{Set\+Game\+Entity}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ g)
+\begin{DoxyCompactList}\small\item\em Sets the game entity that this \doxylink{struct_component}{Component} is associated with. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ \mbox{\hyperlink{struct_component_ad1000f79fe140ee4cc90d0b23cd6c035}{Get\+Game\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Gets the game entity that this \doxylink{struct_component}{Component} is associated with. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Components, must know about the game\+Entity that they are associated with Components, must have a \textquotesingle{}Type\textquotesingle{} 
+A struct that represents a component. 
+
+Components must know about the game entity that they are associated with and must have a \textquotesingle{}Type\textquotesingle{}. 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{struct_component_ad1000f79fe140ee4cc90d0b23cd6c035}\label{struct_component_ad1000f79fe140ee4cc90d0b23cd6c035} 
+\index{Component@{Component}!GetGameEntity@{GetGameEntity}}
+\index{GetGameEntity@{GetGameEntity}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{GetGameEntity()}{GetGameEntity()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ Component\+::\+Get\+Game\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the game entity that this \doxylink{struct_component}{Component} is associated with. 
+
+\begin{DoxyReturn}{Returns}
+The game entity that this \doxylink{struct_component}{Component} is associated with. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_component_ad1000f79fe140ee4cc90d0b23cd6c035_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_component_a2e87d60cd7150786e51bfcda7129ed90}\label{struct_component_a2e87d60cd7150786e51bfcda7129ed90} 
+\index{Component@{Component}!GetType@{GetType}}
+\index{GetType@{GetType}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_component_type_8hpp_a179460a59015cda603e42e8a71d6e043}{Component\+Type}} Component\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the type of the \doxylink{struct_component}{Component}. 
+
+\begin{DoxyReturn}{Returns}
+The type of the \doxylink{struct_component}{Component}. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{struct_collision2_d_component_a8fbd37bdb8315708272d3589d6d74a41}{Collision2\+DComponent}}, \mbox{\hyperlink{struct_input_component_a3de33e654abe7a2cee6f049c6f26a3ef}{Input\+Component}}, \mbox{\hyperlink{struct_texture_component_a130152edf8eb87d06f4673b129d0cdd7}{Texture\+Component}}, and \mbox{\hyperlink{struct_transform_component_a4d30c255d54af02fc53774412b488014}{Transform\+Component}}.
+
+\Hypertarget{struct_component_a85d6bd954d08b01cfad8e8357f98d011}\label{struct_component_a85d6bd954d08b01cfad8e8357f98d011} 
+\index{Component@{Component}!Input@{Input}}
+\index{Input@{Input}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Input (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Handles input for the \doxylink{struct_component}{Component}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time since the last frame. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{struct_collision2_d_component_ad4ac4768513c4d128a1bfcf8141fcd9e}{Collision2\+DComponent}}, \mbox{\hyperlink{struct_input_component_a46b6864d2e27d161a2e2954de29a0cb4}{Input\+Component}}, \mbox{\hyperlink{struct_texture_component_a7c479b3de64f4cb205a02b8e4edd44b2}{Texture\+Component}}, and \mbox{\hyperlink{struct_transform_component_a031ba1c6f597c25d677fb33793479d53}{Transform\+Component}}.
+
+\Hypertarget{struct_component_a223de42285cca9e02809120c1a44c4ac}\label{struct_component_a223de42285cca9e02809120c1a44c4ac} 
+\index{Component@{Component}!Render@{Render}}
+\index{Render@{Render}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Renders the \doxylink{struct_component}{Component}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & The SDL\+\_\+\+Renderer to use. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{struct_collision2_d_component_aa7ca53aecce2a0b9204a67262d0df450}{Collision2\+DComponent}}, \mbox{\hyperlink{struct_input_component_a5d83db2e7b525078c6d9075bf5034fde}{Input\+Component}}, \mbox{\hyperlink{struct_texture_component_a9d1fe2ae0010e4cb50c4f7b9a984149b}{Texture\+Component}}, and \mbox{\hyperlink{struct_transform_component_a78eedf13d70917145f2cb613509c14c1}{Transform\+Component}}.
+
+\Hypertarget{struct_component_a92fc19214ae6a73ee22824d85d1a1b99}\label{struct_component_a92fc19214ae6a73ee22824d85d1a1b99} 
+\index{Component@{Component}!SetGameEntity@{SetGameEntity}}
+\index{SetGameEntity@{SetGameEntity}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{SetGameEntity()}{SetGameEntity()}}
+{\footnotesize\ttfamily void Component\+::\+Set\+Game\+Entity (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the game entity that this \doxylink{struct_component}{Component} is associated with. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & The game entity to associate with this \doxylink{struct_component}{Component}. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{struct_component_a3c50208a8c7ea021b0ae2b9dfbaec65a}\label{struct_component_a3c50208a8c7ea021b0ae2b9dfbaec65a} 
 \index{Component@{Component}!Update@{Update}}
 \index{Update@{Update}!Component@{Component}}
@@ -44,10 +147,19 @@ Components, must know about the game\+Entity that they are associated with Compo
 
 
 
-Reimplemented in \mbox{\hyperlink{struct_collision2_d_component_a4c2e6e053b5b88f42001b68e29d6da1b}{Collision2\+DComponent}}.
+Updates the \doxylink{struct_component}{Component}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time since the last frame. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{struct_collision2_d_component_a4c2e6e053b5b88f42001b68e29d6da1b}{Collision2\+DComponent}}, \mbox{\hyperlink{struct_input_component_acb5de2a0a5b9304868136fbf9290661e}{Input\+Component}}, \mbox{\hyperlink{struct_texture_component_ac97e2ad41734e84e90daaccce835c3af}{Texture\+Component}}, and \mbox{\hyperlink{struct_transform_component_a7f61e8eea1e3d05a32653fa45bd10fe1}{Transform\+Component}}.
 
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/Component.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{_component_8hpp}{Component.\+hpp}}\end{DoxyCompactItemize}
