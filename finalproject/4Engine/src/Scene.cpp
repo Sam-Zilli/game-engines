@@ -163,11 +163,14 @@ void Scene::Update(float deltaTime){
                                                     enemyProjectile->IsRenderable());
             mSceneIsActive = false;
         }
-
-        if(mPoints >= enemies.size()*10.0f){
-            SDL_Log("You win!");
+        if (mainCharacter->GetTransform()->GetY() <= 0) {
+            SDL_Log("You reached the top! You win!");
             mSceneIsActive = false;
         }
+        // if(mPoints >= enemies.size()*10.0f){
+        //     SDL_Log("You win!");
+        //     mSceneIsActive = false;
+        // }
     }
 }
 
