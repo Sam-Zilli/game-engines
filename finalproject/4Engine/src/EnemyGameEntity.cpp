@@ -22,6 +22,12 @@ void EnemyGameEntity::Update(float deltaTime) {
     // NOTE: 'zero' we happen to know is our projectile
     std::shared_ptr<Projectile> mProjectile = dynamic_pointer_cast<Projectile>(GetChildGameEntityAtIndex(0));
 
+    // Get the TransformComponent and set the X position to 0
+    auto transform = GetComponent<TransformComponent>(ComponentType::TransformComponent);
+    if (transform) {
+        transform->SetX(0);
+    }
+
     if(offset>80){
         // xPositiveDirection=false;
 
@@ -30,9 +36,6 @@ void EnemyGameEntity::Update(float deltaTime) {
         // xPositiveDirection=true;
 
     }
-
-    // Keeping track of our projectile game logic
-    auto transform = GetComponent<TransformComponent>(ComponentType::TransformComponent);
 
     if(xPositiveDirection){
         // transform->SetX(transform->GetX() + mSpeed*deltaTime);
