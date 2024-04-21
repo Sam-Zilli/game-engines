@@ -1,0 +1,76 @@
+\doxysection{Game\+Entity Struct Reference}
+\hypertarget{struct_game_entity}{}\label{struct_game_entity}\index{GameEntity@{GameEntity}}
+Inheritance diagram for Game\+Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{struct_game_entity}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_game_entity_a7946bc022c5679c01dd20f12b117651e}\label{struct_game_entity_a7946bc022c5679c01dd20f12b117651e} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ {\bfseries Get\+This\+Ptr} ()
+\item 
+\Hypertarget{struct_game_entity_af14e6486ee5fa2971155adb3c9ef2d28}\label{struct_game_entity_af14e6486ee5fa2971155adb3c9ef2d28} 
+virtual void {\bfseries Input} (float delta\+Time)
+\item 
+\Hypertarget{struct_game_entity_a3b9627b94d084cc5546e0eee0189dd1d}\label{struct_game_entity_a3b9627b94d084cc5546e0eee0189dd1d} 
+virtual void {\bfseries Update} (float delta\+Time)
+\item 
+\Hypertarget{struct_game_entity_ac1d6d118078b29001410fc4c7ec33d0a}\label{struct_game_entity_ac1d6d118078b29001410fc4c7ec33d0a} 
+virtual void {\bfseries Render} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\item 
+\Hypertarget{struct_game_entity_acbc6a3426b89cb006b6b712c6ed87919}\label{struct_game_entity_acbc6a3426b89cb006b6b712c6ed87919} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries Add\+Component} (std\+::shared\+\_\+ptr$<$ T $>$ c)
+\item 
+\Hypertarget{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8}\label{struct_game_entity_af8b08e1044a1e4edc387f0066e2f2ab8} 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Get\+Component} (Component\+Type type)
+\item 
+\Hypertarget{struct_game_entity_a798a630f994e8dcb2259b4e4b6ee08e2}\label{struct_game_entity_a798a630f994e8dcb2259b4e4b6ee08e2} 
+void {\bfseries Add\+Default\+Transform} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_transform_component}{Transform\+Component}} $>$ \mbox{\hyperlink{struct_game_entity_a6eb050e651a68dd7fe17ad85f0066397}{Get\+Transform}} ()
+\item 
+\Hypertarget{struct_game_entity_abfedde9dab34245e679c89b895628f7a}\label{struct_game_entity_abfedde9dab34245e679c89b895628f7a} 
+void {\bfseries Add\+Child\+Game\+Entity} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ child)
+\item 
+\Hypertarget{struct_game_entity_af5bf971ef60267f53c00e4429784a424}\label{struct_game_entity_af5bf971ef60267f53c00e4429784a424} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ {\bfseries Get\+Child\+Game\+Entity\+At\+Index} (size\+\_\+t index)
+\item 
+\Hypertarget{struct_game_entity_af70aeee767494295ab65288e7b2e85fa}\label{struct_game_entity_af70aeee767494295ab65288e7b2e85fa} 
+void {\bfseries Set\+Renderable} (bool value)
+\item 
+\Hypertarget{struct_game_entity_aaa8c950dc85696d1902a497cc00d72de}\label{struct_game_entity_aaa8c950dc85696d1902a497cc00d72de} 
+bool {\bfseries Is\+Renderable} () const
+\item 
+\Hypertarget{struct_game_entity_af38de031054957f3a8787ac2ed4b1d55}\label{struct_game_entity_af38de031054957f3a8787ac2ed4b1d55} 
+bool {\bfseries Intersects} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ e)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_game_entity_a8103fc58cfc4f1ae2fffc8fc7159aa52}\label{struct_game_entity_a8103fc58cfc4f1ae2fffc8fc7159aa52} 
+std\+::map$<$ Component\+Type, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_component}{Component}} $>$ $>$ {\bfseries m\+Components}
+\item 
+\Hypertarget{struct_game_entity_a22d3bbec17b0b7ae485c40f925327ece}\label{struct_game_entity_a22d3bbec17b0b7ae485c40f925327ece} 
+bool {\bfseries m\+Renderable} \{true\}
+\item 
+\Hypertarget{struct_game_entity_a14a54b7d50618f13809b6caca5e9625d}\label{struct_game_entity_a14a54b7d50618f13809b6caca5e9625d} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ $>$ {\bfseries m\+Game\+Entities}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_game_entity_a6eb050e651a68dd7fe17ad85f0066397}\label{struct_game_entity_a6eb050e651a68dd7fe17ad85f0066397} 
+\index{GameEntity@{GameEntity}!GetTransform@{GetTransform}}
+\index{GetTransform@{GetTransform}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{GetTransform()}{GetTransform()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_transform_component}{Transform\+Component}} $>$ Game\+Entity\+::\+Get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+NOTE\+: Could make const This is a special case of \textquotesingle{}Get\+Component\textquotesingle{} because 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Game\+Entity.\+hpp\item 
+src/Game\+Entity.\+cpp\end{DoxyCompactItemize}

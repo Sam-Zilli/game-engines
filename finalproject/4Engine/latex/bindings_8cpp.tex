@@ -1,0 +1,40 @@
+\doxysection{src/bindings.cpp File Reference}
+\hypertarget{bindings_8cpp}{}\label{bindings_8cpp}\index{src/bindings.cpp@{src/bindings.cpp}}
+
+
+Python bindings for the \doxylink{struct_application}{Application} class of our game engine.  
+
+
+{\ttfamily \#include $<$pybind11/pybind11.\+h$>$}\newline
+{\ttfamily \#include $<$pybind11/stl.\+h$>$}\newline
+{\ttfamily \#include "{}Application.\+hpp"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bindings_8cpp_a7055eab01d08d97ed2dd849c3e02cda7}{PYBIND11\+\_\+\+MODULE}} (mygameengine, m)
+\begin{DoxyCompactList}\small\item\em Creates Python bindings for the \doxylink{struct_application}{Application} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Python bindings for the \doxylink{struct_application}{Application} class of our game engine. 
+
+This file contains the implementation of Python bindings for the \doxylink{struct_application}{Application} class of our game engine. It uses the pybind11 library to expose the \doxylink{struct_application}{Application} class and its member functions to Python. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bindings_8cpp_a7055eab01d08d97ed2dd849c3e02cda7}\label{bindings_8cpp_a7055eab01d08d97ed2dd849c3e02cda7} 
+\index{bindings.cpp@{bindings.cpp}!PYBIND11\_MODULE@{PYBIND11\_MODULE}}
+\index{PYBIND11\_MODULE@{PYBIND11\_MODULE}!bindings.cpp@{bindings.cpp}}
+\doxysubsubsection{\texorpdfstring{PYBIND11\_MODULE()}{PYBIND11\_MODULE()}}
+{\footnotesize\ttfamily PYBIND11\+\_\+\+MODULE (\begin{DoxyParamCaption}\item[{mygameengine}]{,  }\item[{m}]{ }\end{DoxyParamCaption})}
+
+
+
+Creates Python bindings for the \doxylink{struct_application}{Application} class. 
+
+This function is responsible for creating Python bindings for the \doxylink{struct_application}{Application} class using the pybind11 library. It defines the module name as "{}mygameengine"{} and exposes the \doxylink{struct_application}{Application} class and its member functions to Python.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & The pybind11 module object. \\
+\hline
+\end{DoxyParams}

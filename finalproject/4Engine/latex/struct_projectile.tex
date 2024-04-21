@@ -1,0 +1,95 @@
+\doxysection{Projectile Struct Reference}
+\hypertarget{struct_projectile}{}\label{struct_projectile}\index{Projectile@{Projectile}}
+Inheritance diagram for Projectile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{struct_projectile}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_projectile_ab3e3553fdc8ec005cc4bd09d536e24ce}\label{struct_projectile_ab3e3553fdc8ec005cc4bd09d536e24ce} 
+void {\bfseries Launch} (float x, float y, bool y\+Direction\+Is\+Up, int minlaunchtime=3000)
+\item 
+void \mbox{\hyperlink{struct_projectile_a44a0a6b106239860dfd23488773bd882}{Input}} (float delta\+Time) override
+\item 
+void \mbox{\hyperlink{struct_projectile_aaa25bdf74f493e641e26fbded04d712b}{Update}} (float delta\+Time) override
+\item 
+void \mbox{\hyperlink{struct_projectile_ae922add2c155ac4e728dbd9a02ddc5a5}{Render}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer) override
+\item 
+\Hypertarget{struct_projectile_a6c61cfc2f9558cfb0143aec7867be062}\label{struct_projectile_a6c61cfc2f9558cfb0143aec7867be062} 
+void {\bfseries Set\+Speed} (float speed)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{struct_game_entity}{Game\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ {\bfseries Get\+This\+Ptr} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries Add\+Component} (std\+::shared\+\_\+ptr$<$ T $>$ c)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Get\+Component} (Component\+Type type)
+\item 
+void {\bfseries Add\+Default\+Transform} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_transform_component}{Transform\+Component}} $>$ \mbox{\hyperlink{struct_game_entity_a6eb050e651a68dd7fe17ad85f0066397}{Get\+Transform}} ()
+\item 
+void {\bfseries Add\+Child\+Game\+Entity} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ child)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ {\bfseries Get\+Child\+Game\+Entity\+At\+Index} (size\+\_\+t index)
+\item 
+void {\bfseries Set\+Renderable} (bool value)
+\item 
+bool {\bfseries Is\+Renderable} () const
+\item 
+bool {\bfseries Intersects} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ e)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{struct_game_entity}{Game\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ Component\+Type, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_component}{Component}} $>$ $>$ {\bfseries m\+Components}
+\item 
+bool {\bfseries m\+Renderable} \{true\}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ $>$ {\bfseries m\+Game\+Entities}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_projectile_a44a0a6b106239860dfd23488773bd882}\label{struct_projectile_a44a0a6b106239860dfd23488773bd882} 
+\index{Projectile@{Projectile}!Input@{Input}}
+\index{Input@{Input}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily void Projectile\+::\+Input (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{struct_game_entity}{Game\+Entity}}.
+
+\Hypertarget{struct_projectile_ae922add2c155ac4e728dbd9a02ddc5a5}\label{struct_projectile_ae922add2c155ac4e728dbd9a02ddc5a5} 
+\index{Projectile@{Projectile}!Render@{Render}}
+\index{Render@{Render}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Projectile\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{struct_game_entity}{Game\+Entity}}.
+
+\Hypertarget{struct_projectile_aaa25bdf74f493e641e26fbded04d712b}\label{struct_projectile_aaa25bdf74f493e641e26fbded04d712b} 
+\index{Projectile@{Projectile}!Update@{Update}}
+\index{Update@{Update}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Projectile\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{struct_game_entity}{Game\+Entity}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Projectile.\+hpp\item 
+src/Projectile.\+cpp\end{DoxyCompactItemize}

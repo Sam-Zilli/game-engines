@@ -1,0 +1,42 @@
+\doxysection{Application.\+hpp}
+\hypertarget{_application_8hpp_source}{}\label{_application_8hpp_source}\index{include/Application.hpp@{include/Application.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Application.hpp}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}GameEntity.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}EnemyGameEntity.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Projectile.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}ComponentType.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}Scene.hpp"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_application}{Application}}\{}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{struct_application_adbd670d8407a7126c839de17e14c81f7}{Application}}(\textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ params);}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{struct_application_a748bca84fefb9c12661cfaa2f623748d}{\string~Application}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_application_ad74e54d0c1a1871ee37e97d76a993678}{Log}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ message);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_application_a9044c5144ad2dcfc4b235c7d9610865c}{StartUp}}(\textcolor{keyword}{const}\ std::string\&\ gameName,\ \textcolor{keywordtype}{int}\ windowWidth,\ \textcolor{keywordtype}{int}\ windowHeight,\ \textcolor{keywordtype}{float}\ speedOfProjectile);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_application_a817892cf56c1c333d53be31e73e8c2f8}{Shutdown}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_application_aef425d5f9773014e73262c05c8f8b0ea}{Input}}(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_application_acdac3e501d813a5316b5c3f620157235}{Update}}(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_application_ada6aa06eb0b9a2eb86917703d60d20b7}{Render}}(\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ g,\ \textcolor{keywordtype}{int}\ b);\ \textcolor{comment}{//\ Modified\ Render\ function}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_application_aa50c8c0de05dbe8473144db5013fa7a4}{Loop}}(\textcolor{keywordtype}{float}\ targetFPS,\ \textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ g,\ \textcolor{keywordtype}{int}\ b);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ Also\ consider,\ if\ this\ should\ be\ a\ pointer.}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ Consider\ -\/-\/\ if\ this\ should\ be\ a\ vector}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ or\ a\ linked\ list\ type\ container.}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_scene}{Scene}}\ mScene;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ SDL\_Window*\ mWindow;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ SDL\_Renderer*\ mRenderer;}
+\DoxyCodeLine{00037\ \};}
+
+\end{DoxyCode}

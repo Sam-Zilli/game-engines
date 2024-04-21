@@ -1,0 +1,158 @@
+\doxysection{Application Struct Reference}
+\hypertarget{struct_application}{}\label{struct_application}\index{Application@{Application}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_application_adbd670d8407a7126c839de17e14c81f7}{Application}} (const std\+::map$<$ std\+::string, std\+::string $>$ \&params)
+\begin{DoxyCompactList}\small\item\em Constructs the \doxylink{struct_application}{Application} object. \end{DoxyCompactList}\item 
+\Hypertarget{struct_application_a748bca84fefb9c12661cfaa2f623748d}\label{struct_application_a748bca84fefb9c12661cfaa2f623748d} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Application} ()
+\begin{DoxyCompactList}\small\item\em Destructs the \doxylink{struct_application}{Application} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_application_ad74e54d0c1a1871ee37e97d76a993678}{Log}} (const char \texorpdfstring{$\ast$}{*}message)
+\begin{DoxyCompactList}\small\item\em Logs a message to the SDL log. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_application_a9044c5144ad2dcfc4b235c7d9610865c}{Start\+Up}} (const std\+::string \&game\+Name, int window\+Width, int window\+Height, float speed\+Of\+Projectile)
+\begin{DoxyCompactList}\small\item\em Starts up the application. \end{DoxyCompactList}\item 
+\Hypertarget{struct_application_a817892cf56c1c333d53be31e73e8c2f8}\label{struct_application_a817892cf56c1c333d53be31e73e8c2f8} 
+void {\bfseries Shutdown} ()
+\begin{DoxyCompactList}\small\item\em Shuts down the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_application_aef425d5f9773014e73262c05c8f8b0ea}{Input}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Handles input for the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_application_acdac3e501d813a5316b5c3f620157235}{Update}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Updates the application state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_application_ada6aa06eb0b9a2eb86917703d60d20b7}{Render}} (int r, int g, int b)
+\begin{DoxyCompactList}\small\item\em Renders the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_application_aa50c8c0de05dbe8473144db5013fa7a4}{Loop}} (float target\+FPS, int r, int g, int b)
+\begin{DoxyCompactList}\small\item\em The main game/application loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_application_adbd670d8407a7126c839de17e14c81f7}\label{struct_application_adbd670d8407a7126c839de17e14c81f7} 
+\index{Application@{Application}!Application@{Application}}
+\index{Application@{Application}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Application()}{Application()}}
+{\footnotesize\ttfamily Application\+::\+Application (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{params }\end{DoxyParamCaption})}
+
+
+
+Constructs the \doxylink{struct_application}{Application} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & A map of string key-\/value pairs for game parameters. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_application_aef425d5f9773014e73262c05c8f8b0ea}\label{struct_application_aef425d5f9773014e73262c05c8f8b0ea} 
+\index{Application@{Application}!Input@{Input}}
+\index{Input@{Input}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily void Application\+::\+Input (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Handles input for the application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time since the last frame. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_application_ad74e54d0c1a1871ee37e97d76a993678}\label{struct_application_ad74e54d0c1a1871ee37e97d76a993678} 
+\index{Application@{Application}!Log@{Log}}
+\index{Log@{Log}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Log()}{Log()}}
+{\footnotesize\ttfamily void Application\+::\+Log (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message }\end{DoxyParamCaption})}
+
+
+
+Logs a message to the SDL log. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to log. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_application_aa50c8c0de05dbe8473144db5013fa7a4}\label{struct_application_aa50c8c0de05dbe8473144db5013fa7a4} 
+\index{Application@{Application}!Loop@{Loop}}
+\index{Loop@{Loop}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Loop()}{Loop()}}
+{\footnotesize\ttfamily void Application\+::\+Loop (\begin{DoxyParamCaption}\item[{float}]{target\+FPS,  }\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+The main game/application loop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+FPS} & The target frames per second for the game. \\
+\hline
+{\em r} & The red component of the background color. \\
+\hline
+{\em g} & The green component of the background color. \\
+\hline
+{\em b} & The blue component of the background color. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_application_ada6aa06eb0b9a2eb86917703d60d20b7}\label{struct_application_ada6aa06eb0b9a2eb86917703d60d20b7} 
+\index{Application@{Application}!Render@{Render}}
+\index{Render@{Render}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Application\+::\+Render (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Renders the application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The red component of the background color. \\
+\hline
+{\em g} & The green component of the background color. \\
+\hline
+{\em b} & The blue component of the background color. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_application_a9044c5144ad2dcfc4b235c7d9610865c}\label{struct_application_a9044c5144ad2dcfc4b235c7d9610865c} 
+\index{Application@{Application}!StartUp@{StartUp}}
+\index{StartUp@{StartUp}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{StartUp()}{StartUp()}}
+{\footnotesize\ttfamily void Application\+::\+Start\+Up (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{game\+Name,  }\item[{int}]{window\+Width,  }\item[{int}]{window\+Height,  }\item[{float}]{speed\+Of\+Projectile }\end{DoxyParamCaption})}
+
+
+
+Starts up the application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Name} & The name of the game. \\
+\hline
+{\em window\+Width} & The width of the window. \\
+\hline
+{\em window\+Height} & The height of the window. \\
+\hline
+{\em speed\+Of\+Projectile} & The speed of the projectile. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_application_acdac3e501d813a5316b5c3f620157235}\label{struct_application_acdac3e501d813a5316b5c3f620157235} 
+\index{Application@{Application}!Update@{Update}}
+\index{Update@{Update}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Application\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Updates the application state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time since the last frame. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Application.\+hpp\item 
+src/Application.\+cpp\end{DoxyCompactItemize}

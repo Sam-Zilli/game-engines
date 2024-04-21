@@ -1,0 +1,53 @@
+\doxysection{Component Struct Reference}
+\hypertarget{struct_component}{}\label{struct_component}\index{Component@{Component}}
+
+
+{\ttfamily \#include $<$Component.\+hpp$>$}
+
+Inheritance diagram for Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.904762cm]{struct_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_component_a85d6bd954d08b01cfad8e8357f98d011}\label{struct_component_a85d6bd954d08b01cfad8e8357f98d011} 
+virtual void {\bfseries Input} (float delta\+Time)
+\item 
+virtual void \mbox{\hyperlink{struct_component_a3c50208a8c7ea021b0ae2b9dfbaec65a}{Update}} (float delta\+Time)
+\item 
+\Hypertarget{struct_component_a223de42285cca9e02809120c1a44c4ac}\label{struct_component_a223de42285cca9e02809120c1a44c4ac} 
+virtual void {\bfseries Render} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\item 
+\Hypertarget{struct_component_a2e87d60cd7150786e51bfcda7129ed90}\label{struct_component_a2e87d60cd7150786e51bfcda7129ed90} 
+virtual Component\+Type {\bfseries Get\+Type} ()=0
+\item 
+\Hypertarget{struct_component_a92fc19214ae6a73ee22824d85d1a1b99}\label{struct_component_a92fc19214ae6a73ee22824d85d1a1b99} 
+void {\bfseries Set\+Game\+Entity} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ g)
+\item 
+\Hypertarget{struct_component_ad1000f79fe140ee4cc90d0b23cd6c035}\label{struct_component_ad1000f79fe140ee4cc90d0b23cd6c035} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ {\bfseries Get\+Game\+Entity} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Components, must know about the game\+Entity that they are associated with Components, must have a \textquotesingle{}Type\textquotesingle{} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_component_a3c50208a8c7ea021b0ae2b9dfbaec65a}\label{struct_component_a3c50208a8c7ea021b0ae2b9dfbaec65a} 
+\index{Component@{Component}!Update@{Update}}
+\index{Update@{Update}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{struct_collision2_d_component_a4c2e6e053b5b88f42001b68e29d6da1b}{Collision2\+DComponent}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Component.\+hpp\end{DoxyCompactItemize}

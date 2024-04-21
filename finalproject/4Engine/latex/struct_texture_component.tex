@@ -1,0 +1,78 @@
+\doxysection{Texture\+Component Struct Reference}
+\hypertarget{struct_texture_component}{}\label{struct_texture_component}\index{TextureComponent@{TextureComponent}}
+Inheritance diagram for Texture\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_texture_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_texture_component_a38eefed85c18acb68e6f9f4125979337}\label{struct_texture_component_a38eefed85c18acb68e6f9f4125979337} 
+void {\bfseries Create\+Texture\+Component} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, std\+::string filepath)
+\item 
+Component\+Type \mbox{\hyperlink{struct_texture_component_a130152edf8eb87d06f4673b129d0cdd7}{Get\+Type}} () override
+\item 
+void \mbox{\hyperlink{struct_texture_component_a7c479b3de64f4cb205a02b8e4edd44b2}{Input}} (float delta\+Time) override
+\item 
+void \mbox{\hyperlink{struct_texture_component_ac97e2ad41734e84e90daaccce835c3af}{Update}} (float delta\+Time) override
+\item 
+void \mbox{\hyperlink{struct_texture_component_a9d1fe2ae0010e4cb50c4f7b9a984149b}{Render}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{struct_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Set\+Game\+Entity} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ g)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ {\bfseries Get\+Game\+Entity} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_texture_component_a130152edf8eb87d06f4673b129d0cdd7}\label{struct_texture_component_a130152edf8eb87d06f4673b129d0cdd7} 
+\index{TextureComponent@{TextureComponent}!GetType@{GetType}}
+\index{GetType@{GetType}!TextureComponent@{TextureComponent}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily Component\+Type Texture\+Component\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{struct_component}{Component}}.
+
+\Hypertarget{struct_texture_component_a7c479b3de64f4cb205a02b8e4edd44b2}\label{struct_texture_component_a7c479b3de64f4cb205a02b8e4edd44b2} 
+\index{TextureComponent@{TextureComponent}!Input@{Input}}
+\index{Input@{Input}!TextureComponent@{TextureComponent}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily void Texture\+Component\+::\+Input (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
+
+\Hypertarget{struct_texture_component_a9d1fe2ae0010e4cb50c4f7b9a984149b}\label{struct_texture_component_a9d1fe2ae0010e4cb50c4f7b9a984149b} 
+\index{TextureComponent@{TextureComponent}!Render@{Render}}
+\index{Render@{Render}!TextureComponent@{TextureComponent}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Texture\+Component\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
+
+\Hypertarget{struct_texture_component_ac97e2ad41734e84e90daaccce835c3af}\label{struct_texture_component_ac97e2ad41734e84e90daaccce835c3af} 
+\index{TextureComponent@{TextureComponent}!Update@{Update}}
+\index{Update@{Update}!TextureComponent@{TextureComponent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Texture\+Component\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Texture\+Component.\+hpp\item 
+src/Texture\+Component.\+cpp\end{DoxyCompactItemize}

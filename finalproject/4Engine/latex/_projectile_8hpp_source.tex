@@ -1,0 +1,31 @@
+\doxysection{Projectile.\+hpp}
+\hypertarget{_projectile_8hpp_source}{}\label{_projectile_8hpp_source}\index{include/Projectile.hpp@{include/Projectile.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameEntity.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TextureComponent.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_projectile}{Projectile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_game_entity}{GameEntity}}\{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{struct_projectile}{Projectile}}();}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ Launch(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{bool}\ yDirectionIsUp,\ \textcolor{keywordtype}{int}\ minlaunchtime=3000);}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ Input(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ Render(SDL\_Renderer*\ renderer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Setter\ function\ for\ mSpeed}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSpeed(\textcolor{keywordtype}{float}\ speed)\ \{\ mSpeed\ =\ speed;\ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ mSpeed\{100.0f\};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mIsFiring\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mYDirectionUp\{\textcolor{keyword}{true}\};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ Uint64\ timeSinceLastLaunch;}
+\DoxyCodeLine{00025\ \};}
+
+\end{DoxyCode}

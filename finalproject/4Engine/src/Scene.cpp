@@ -1,16 +1,31 @@
+/**
+ * @file Scene.cpp
+ * @brief This file contains the implementation of the Scene class.
+ */
+
 #include "Scene.hpp"
 #include "InputComponent.hpp"
-
-// -------------------------- GAME 1 ---------------------- //
-
+/**
+ * @brief Default constructor for the Scene class.
+ */
 Scene::Scene(){
 
 }
 
+/**
+ * @brief Destructor for the Scene class. Calls the Shutdown method.
+ */
 Scene::~Scene(){
     Shutdown();
 }
 
+/**
+ * @brief Initializes the Scene.
+ * @param renderer The SDL_Renderer to use.
+ * @param speedOfProjectile The speed of the projectile.
+ * @param windowWidth The width of the window.
+ * @param windowHeight The height of the window.
+ */
 void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile, int windowWidth, int windowHeight){
     int numEnemies = windowHeight / 32;
     if (renderer == nullptr) {
@@ -125,15 +140,23 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile, int windowW
 
     mainCharacter->AddChildGameEntity(mainCharacterProjectile);
 }
-
+/**
+ * @brief Shuts down the Scene.
+ */
 void Scene::Shutdown(){
 }
-
+/**
+ * @brief Handles input for the Scene.
+ * @param deltaTime The time since the last frame.
+ */
 void Scene::Input(float deltaTime){
     // Handle SDL_GetKeyboardState after -- your SDL_PollEvent
     mainCharacter->Input(deltaTime);
 }
-
+/**
+ * @brief Updates the Scene.
+ * @param deltaTime The time since the last frame.
+ */
 void Scene::Update(float deltaTime){
     // Update our main character
     mainCharacter->Update(deltaTime);
@@ -176,7 +199,12 @@ void Scene::Update(float deltaTime){
         // }
     }
 }
-
+/**
+ * @brief Renders the Scene.
+ * @param r The red component of the color to clear the screen with.
+ * @param g The green component of the color to clear the screen with.
+ * @param b The blue component of the color to clear the screen with.
+ */
 void Scene::Render(int r, int g, int b){
     SDL_SetRenderDrawColor(mRenderer, r,g,b, SDL_ALPHA_OPAQUE);
     SDL_RenderClear(mRenderer);
@@ -193,22 +221,22 @@ void Scene::Render(int r, int g, int b){
     SDL_RenderPresent(mRenderer);
 }
 
+/**
+ * @brief Sets the active status of the Scene.
+ * @param status The new active status.
+ */
 void Scene::SetSceneActiveStatus(bool status){
     mSceneIsActive = status;
 }
 
+/**
+ * @brief Checks if the Scene is active.
+ * @return True if the Scene is active, false otherwise.
+ */
 bool Scene::IsSceneActive() const{
     return mSceneIsActive;
 }
 
 
 
-
-
-
-
-
-
-
-// -------------------------- GAME 2 ---------------------- //
 

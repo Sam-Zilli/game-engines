@@ -1,6 +1,12 @@
 #include "Application.hpp"
 #include "InputComponent.hpp"
 
+
+
+/**
+ * @brief Constructs the Application object.
+ * @param params A map of string key-value pairs for game parameters.
+ */
 Application::Application(const std::map<std::string, std::string>& params){
     std::string gameName = params.at("game_name");
     int windowWidth = std::stoi(params.at("window_width"));
@@ -8,14 +14,33 @@ Application::Application(const std::map<std::string, std::string>& params){
     float speedOfProjectile = std::stof(params.at("speed_of_projectile"));
     StartUp(gameName, windowWidth, windowHeight, speedOfProjectile);
 }
+
+
+
+/**
+ * @brief Destructs the Application object.
+ */
 Application::~Application(){
     Shutdown();
 }
 
+
+/**
+ * @brief Logs a message to the SDL log.
+ * @param message The message to log.
+ */
 void Application::Log(const char* message){
     SDL_Log("%s",message);
 }
 
+
+/**
+ * @brief Starts up the application.
+ * @param gameName The name of the game.
+ * @param windowWidth The width of the window.
+ * @param windowHeight The height of the window.
+ * @param speedOfProjectile The speed of the projectile.
+ */
 void Application::StartUp(const std::string& gameName, int windowWidth, int windowHeight, float speedOfProjectile){
     const char* title = gameName.c_str();
     if(SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO)!=0){
@@ -33,11 +58,20 @@ void Application::StartUp(const std::string& gameName, int windowWidth, int wind
     mScene.SetSceneActiveStatus(true);
 }
 
+
+/**
+ * @brief Shuts down the application.
+ */
 void Application::Shutdown(){
     SDL_DestroyWindow(mWindow);
     SDL_Quit();
 }
 
+
+/**
+ * @brief Handles input for the application.
+ * @param deltaTime The time since the last frame.
+ */
 void Application::Input(float deltaTime){
     SDL_Event event;
     // Processing input
@@ -72,20 +106,28 @@ void Application::Input(float deltaTime){
     mScene.Input(deltaTime);
 }
 
+
+/**
+ * @brief Updates the application state.
+ * @param deltaTime The time since the last frame.
+ */
 void Application::Update(float deltaTime){
     mScene.Update(deltaTime); 
 }
 
+/**
+ * @brief Renders the application.
+ * @param r The red component of the background color.
+ * @param g The green component of the background color.
+ * @param b The blue component of the background color.
+ */
 void Application::Render(int r, int g, int b) {
     mScene.Render(r, g, b);
 }
 
+
 /**
  * @brief The main game/application loop.
- *
- * This function runs an infinite loop that handles input, updates the game state, and renders the game.
- * It also includes a frame cap to limit the frame rate to a specified target FPS.
- *
  * @param targetFPS The target frames per second for the game.
  * @param r The red component of the background color.
  * @param g The green component of the background color.

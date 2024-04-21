@@ -1,0 +1,108 @@
+\doxysection{Transform\+Component Struct Reference}
+\hypertarget{struct_transform_component}{}\label{struct_transform_component}\index{TransformComponent@{TransformComponent}}
+Inheritance diagram for Transform\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_transform_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Component\+Type \mbox{\hyperlink{struct_transform_component_a4d30c255d54af02fc53774412b488014}{Get\+Type}} () override
+\item 
+void \mbox{\hyperlink{struct_transform_component_a031ba1c6f597c25d677fb33793479d53}{Input}} (float delta\+Time) override
+\item 
+void \mbox{\hyperlink{struct_transform_component_a7f61e8eea1e3d05a32653fa45bd10fe1}{Update}} (float delta\+Time) override
+\item 
+void \mbox{\hyperlink{struct_transform_component_a78eedf13d70917145f2cb613509c14c1}{Render}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer) override
+\item 
+\Hypertarget{struct_transform_component_ad0ec4d225535f56ab1a0aa942d7f006b}\label{struct_transform_component_ad0ec4d225535f56ab1a0aa942d7f006b} 
+void {\bfseries SetW} (float w)
+\item 
+\Hypertarget{struct_transform_component_a18d77f1e7dd0eae8f011f538560a91f0}\label{struct_transform_component_a18d77f1e7dd0eae8f011f538560a91f0} 
+void {\bfseries SetH} (float h)
+\item 
+\Hypertarget{struct_transform_component_a198f76af633557e85027771f60867432}\label{struct_transform_component_a198f76af633557e85027771f60867432} 
+void {\bfseries Set\+WH} (float w, float h)
+\item 
+\Hypertarget{struct_transform_component_ae5501067c1a954f5ed3b0cf75aadff20}\label{struct_transform_component_ae5501067c1a954f5ed3b0cf75aadff20} 
+float {\bfseries GetW} () const
+\item 
+\Hypertarget{struct_transform_component_aec4ba1c40d8071ff463a2a697c2984d6}\label{struct_transform_component_aec4ba1c40d8071ff463a2a697c2984d6} 
+float {\bfseries GetH} () const
+\item 
+\Hypertarget{struct_transform_component_a8052d38b75f03094e781481212878589}\label{struct_transform_component_a8052d38b75f03094e781481212878589} 
+void {\bfseries SetX} (float x)
+\item 
+\Hypertarget{struct_transform_component_ab7df147cf1e48361aec3f96573278a09}\label{struct_transform_component_ab7df147cf1e48361aec3f96573278a09} 
+void {\bfseries SetY} (float y)
+\item 
+\Hypertarget{struct_transform_component_a1977fcd1d8cd835aea71651f18cc9ea4}\label{struct_transform_component_a1977fcd1d8cd835aea71651f18cc9ea4} 
+void {\bfseries Set\+XY} (float x, float y)
+\item 
+\Hypertarget{struct_transform_component_a7260ce3bc9ef172d4a57a482c2b209ad}\label{struct_transform_component_a7260ce3bc9ef172d4a57a482c2b209ad} 
+float {\bfseries GetX} () const
+\item 
+\Hypertarget{struct_transform_component_ae02c8d6e718fdcc01065b228bbcdb10d}\label{struct_transform_component_ae02c8d6e718fdcc01065b228bbcdb10d} 
+float {\bfseries GetY} () const
+\item 
+\Hypertarget{struct_transform_component_a992e0cbffe237badd34641f1e82cb1b2}\label{struct_transform_component_a992e0cbffe237badd34641f1e82cb1b2} 
+SDL\+\_\+\+FRect {\bfseries Get\+Rectangle} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{struct_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Set\+Game\+Entity} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ g)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ {\bfseries Get\+Game\+Entity} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_transform_component_a4d30c255d54af02fc53774412b488014}\label{struct_transform_component_a4d30c255d54af02fc53774412b488014} 
+\index{TransformComponent@{TransformComponent}!GetType@{GetType}}
+\index{GetType@{GetType}!TransformComponent@{TransformComponent}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily Component\+Type Transform\+Component\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{struct_component}{Component}}.
+
+\Hypertarget{struct_transform_component_a031ba1c6f597c25d677fb33793479d53}\label{struct_transform_component_a031ba1c6f597c25d677fb33793479d53} 
+\index{TransformComponent@{TransformComponent}!Input@{Input}}
+\index{Input@{Input}!TransformComponent@{TransformComponent}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily void Transform\+Component\+::\+Input (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
+
+\Hypertarget{struct_transform_component_a78eedf13d70917145f2cb613509c14c1}\label{struct_transform_component_a78eedf13d70917145f2cb613509c14c1} 
+\index{TransformComponent@{TransformComponent}!Render@{Render}}
+\index{Render@{Render}!TransformComponent@{TransformComponent}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Transform\+Component\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
+
+\Hypertarget{struct_transform_component_a7f61e8eea1e3d05a32653fa45bd10fe1}\label{struct_transform_component_a7f61e8eea1e3d05a32653fa45bd10fe1} 
+\index{TransformComponent@{TransformComponent}!Update@{Update}}
+\index{Update@{Update}!TransformComponent@{TransformComponent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Transform\+Component\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{struct_component}{Component}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Transform\+Component.\+hpp\item 
+src/Transform\+Component.\+cpp\end{DoxyCompactItemize}

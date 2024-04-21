@@ -165,7 +165,7 @@ relocations:
   - { offsetInCU: 0x6EE4, offset: 0x18519, size: 0x8, addend: 0x0, symName: __ZN15EnemyGameEntityD2Ev, symObjAddr: 0xC0, symBinAddr: 0x2810, symSize: 0x20 }
   - { offsetInCU: 0x6F0E, offset: 0x18543, size: 0x8, addend: 0x0, symName: __ZN15EnemyGameEntityD1Ev, symObjAddr: 0xE0, symBinAddr: 0x2830, symSize: 0x20 }
   - { offsetInCU: 0x6F38, offset: 0x1856D, size: 0x8, addend: 0x0, symName: __ZN15EnemyGameEntityD0Ev, symObjAddr: 0x100, symBinAddr: 0x2850, symSize: 0x30 }
-  - { offsetInCU: 0x6F62, offset: 0x18597, size: 0x8, addend: 0x0, symName: __ZN15EnemyGameEntity5InputEf, symObjAddr: 0x130, symBinAddr: 0x2880, symSize: 0x130 }
+  - { offsetInCU: 0x6F63, offset: 0x18598, size: 0x8, addend: 0x0, symName: __ZN15EnemyGameEntity5InputEf, symObjAddr: 0x130, symBinAddr: 0x2880, symSize: 0x130 }
   - { offsetInCU: 0x7054, offset: 0x18689, size: 0x8, addend: 0x0, symName: __ZNSt3__13mapI13ComponentTypeNS_10shared_ptrI9ComponentEENS_4lessIS1_EENS_9allocatorINS_4pairIKS1_S4_EEEEE5beginB7v160006Ev, symObjAddr: 0x260, symBinAddr: 0x29B0, symSize: 0x30 }
   - { offsetInCU: 0x7078, offset: 0x186AD, size: 0x8, addend: 0x0, symName: __ZNSt3__13mapI13ComponentTypeNS_10shared_ptrI9ComponentEENS_4lessIS1_EENS_9allocatorINS_4pairIKS1_S4_EEEEE3endB7v160006Ev, symObjAddr: 0x290, symBinAddr: 0x29E0, symSize: 0x30 }
   - { offsetInCU: 0x709C, offset: 0x186D1, size: 0x8, addend: 0x0, symName: __ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeI13ComponentTypeNS_10shared_ptrI9ComponentEEEEPNS_11__tree_nodeIS7_PvEElEEEdeB7v160006Ev, symObjAddr: 0x2F0, symBinAddr: 0x2A40, symSize: 0x30 }
@@ -176,11 +176,11 @@ relocations:
   - { offsetInCU: 0x7163, offset: 0x18798, size: 0x8, addend: 0x0, symName: __ZNSt3__16vectorINS_10shared_ptrI10GameEntityEENS_9allocatorIS3_EEE3endB7v160006Ev, symObjAddr: 0x450, symBinAddr: 0x2BA0, symSize: 0x30 }
   - { offsetInCU: 0x7189, offset: 0x187BE, size: 0x8, addend: 0x0, symName: __ZNKSt3__111__wrap_iterIPNS_10shared_ptrI10GameEntityEEEdeB7v160006Ev, symObjAddr: 0x4B0, symBinAddr: 0x2C00, symSize: 0x20 }
   - { offsetInCU: 0x71AD, offset: 0x187E2, size: 0x8, addend: 0x0, symName: __ZNSt3__111__wrap_iterIPNS_10shared_ptrI10GameEntityEEEppB7v160006Ev, symObjAddr: 0x4F0, symBinAddr: 0x2C20, symSize: 0x20 }
-  - { offsetInCU: 0x71D0, offset: 0x18805, size: 0x8, addend: 0x0, symName: __ZN15EnemyGameEntity6UpdateEf, symObjAddr: 0x510, symBinAddr: 0x2C40, symSize: 0x370 }
+  - { offsetInCU: 0x71D1, offset: 0x18806, size: 0x8, addend: 0x0, symName: __ZN15EnemyGameEntity6UpdateEf, symObjAddr: 0x510, symBinAddr: 0x2C40, symSize: 0x370 }
   - { offsetInCU: 0x72E4, offset: 0x18919, size: 0x8, addend: 0x0, symName: __ZNKSt3__110shared_ptrI18TransformComponentEcvbB7v160006Ev, symObjAddr: 0x940, symBinAddr: 0x3050, symSize: 0x30 }
   - { offsetInCU: 0x7308, offset: 0x1893D, size: 0x8, addend: 0x0, symName: __ZNKSt3__110shared_ptrI10ProjectileEptB7v160006Ev, symObjAddr: 0x990, symBinAddr: 0x3080, symSize: 0x20 }
   - { offsetInCU: 0x732C, offset: 0x18961, size: 0x8, addend: 0x0, symName: __ZNSt3__110shared_ptrI10ProjectileED1B7v160006Ev, symObjAddr: 0x9D0, symBinAddr: 0x30A0, symSize: 0x20 }
-  - { offsetInCU: 0x7353, offset: 0x18988, size: 0x8, addend: 0x0, symName: __ZN15EnemyGameEntity6RenderEP12SDL_Renderer, symObjAddr: 0x9F0, symBinAddr: 0x30C0, symSize: 0x250 }
+  - { offsetInCU: 0x7354, offset: 0x18989, size: 0x8, addend: 0x0, symName: __ZN15EnemyGameEntity6RenderEP12SDL_Renderer, symObjAddr: 0x9F0, symBinAddr: 0x30C0, symSize: 0x250 }
   - { offsetInCU: 0x7459, offset: 0x18A8E, size: 0x8, addend: 0x0, symName: __ZNSt3__110__get_pairILm0EE3getB7v160006IK13ComponentTypeNS_10shared_ptrI9ComponentEEEERT_RNS_4pairIS8_T0_EE, symObjAddr: 0xC40, symBinAddr: 0x3310, symSize: 0x10 }
   - { offsetInCU: 0x748E, offset: 0x18AC3, size: 0x8, addend: 0x0, symName: __ZNSt3__110__get_pairILm1EE3getB7v160006IK13ComponentTypeNS_10shared_ptrI9ComponentEEEERT0_RNS_4pairIT_S8_EE, symObjAddr: 0xC50, symBinAddr: 0x3320, symSize: 0x20 }
   - { offsetInCU: 0x74C3, offset: 0x18AF8, size: 0x8, addend: 0x0, symName: __ZNSt3__16vectorINS_10shared_ptrI10GameEntityEENS_9allocatorIS3_EEE11__make_iterB7v160006EPS3_, symObjAddr: 0xC70, symBinAddr: 0x3340, symSize: 0x30 }

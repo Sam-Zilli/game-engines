@@ -1,14 +1,28 @@
+/**
+ * @file EnemyGameEntity.hpp
+ * @brief Contains the definition of the EnemyGameEntity class.
+ */
+
 #include "EnemyGameEntity.hpp"
 
+/**
+ * @brief Constructor for EnemyGameEntity.
+ * @param renderer The SDL_Renderer to use for rendering.
+ */
 EnemyGameEntity::EnemyGameEntity(SDL_Renderer* renderer) {
-    // Set a random launch time for the enemies
-    // EDIT THIS LATER FOR LEVIL DIFFIULCLTY
     mMinLaunchTime += std::rand() % 5000;
 }
 
+/**
+ * @brief Destructor for EnemyGameEntity.
+ */
 EnemyGameEntity::~EnemyGameEntity(){
 }
 
+/**
+ * @brief Handles input for the EnemyGameEntity.
+ * @param deltaTime Time since the last frame.
+ */
 void EnemyGameEntity::Input(float deltaTime) {
     for(auto& [key,value] : mComponents){
         mComponents[key]->Input(deltaTime);
@@ -19,11 +33,13 @@ void EnemyGameEntity::Input(float deltaTime) {
     }
 }
 
+/**
+ * @brief Updates the EnemyGameEntity.
+ * @param deltaTime Time since the last frame.
+ */
 void EnemyGameEntity::Update(float deltaTime) {
-    // NOTE: 'zero' we happen to know is our projectile
     std::shared_ptr<Projectile> mProjectile = dynamic_pointer_cast<Projectile>(GetChildGameEntityAtIndex(0));
 
-    // Get the TransformComponent and set the X position to 0
     auto transform = GetComponent<TransformComponent>(ComponentType::TransformComponent);
     if (transform) {
         transform->SetX(0);
@@ -31,21 +47,17 @@ void EnemyGameEntity::Update(float deltaTime) {
 
     if(offset>80){
         // xPositiveDirection=false;
-
     }
     if(offset<-80){
         // xPositiveDirection=true;
-
     }
 
     if(xPositiveDirection){
         // transform->SetX(transform->GetX() + mSpeed*deltaTime);
         // offset += mSpeed * deltaTime;
-
     }else{
         // transform->SetX(transform->GetX() - mSpeed*deltaTime);
         // offset -= mSpeed * deltaTime;
-
     }
 
     if(mRenderable){
@@ -61,13 +73,16 @@ void EnemyGameEntity::Update(float deltaTime) {
     }
 }
 
+/**
+ * @brief Renders the EnemyGameEntity.
+ * @param renderer The SDL_Renderer to use for rendering.
+ */
 void EnemyGameEntity::Render(SDL_Renderer* renderer) {
     std::shared_ptr<Projectile> mProjectile = dynamic_pointer_cast<Projectile>(GetChildGameEntityAtIndex(0));
 
     if(mRenderable){
         mProjectile->Render(renderer);
     }else{
-        // Do nothing;
         mProjectile->SetRenderable(false);
         return;
     }
@@ -78,5 +93,4 @@ void EnemyGameEntity::Render(SDL_Renderer* renderer) {
     for(auto& children: mGameEntities){
         children->Render(renderer);
     }
-
 }

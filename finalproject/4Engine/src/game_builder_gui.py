@@ -2,15 +2,39 @@ import tkinter as tk
 from tkinter import ttk
 import mygameengine
 
-# Define default values for empty inputs
+## @var DEFAULT_GAME_NAME
+#  @brief Default name for the game
 DEFAULT_GAME_NAME = "GAME NAME!"
+
+## @var DEFAULT_WINDOW_WIDTH
+#  @brief Default width for the game window
 DEFAULT_WINDOW_WIDTH =  "600"
+
+## @var DEFAULT_WINDOW_HEIGHT
+#  @brief Default height for the game window
 DEFAULT_WINDOW_HEIGHT = "1000"
+
+## @var DEFAULT_PROJECTILE_SPEED
+#  @brief Default speed for the game projectiles
 DEFAULT_PROJECTILE_SPEED = "200"
+
+## @var DEFAULT_RED
+#  @brief Default red color value
 DEFAULT_RED = "0"
+
+## @var DEFAULT_GREEN
+#  @brief Default green color value
 DEFAULT_GREEN = "0"
+
+## @var DEFAULT_BLUE
+#  @brief Default blue color value
 DEFAULT_BLUE = "0"
 
+## @fn run_game()
+#  @brief Runs the game with the specified parameters.
+#  @details Retrieves values from the GUI, validates them, and creates an instance of the Application class.
+#  Then calls the Loop method of the Application instance.
+#  @return None
 def run_game():
     """
     Runs the game with the specified parameters.

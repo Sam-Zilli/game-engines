@@ -1,0 +1,44 @@
+\doxysection{Scene.\+hpp}
+\hypertarget{_scene_8hpp_source}{}\label{_scene_8hpp_source}\index{include/Scene.hpp@{include/Scene.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Scene.hpp}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}GameEntity.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}EnemyGameEntity.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Projectile.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}ComponentType.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_scene}{Scene}}\{}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{struct_scene}{Scene}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{struct_scene}{\string~Scene}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_scene_ae3e9eecaf0f307e6020eb8bbf61956de}{StartUp}}(SDL\_Renderer*\ renderer,\ \textcolor{keywordtype}{float}\ speedOfProjectile,\textcolor{keywordtype}{int}\ windowWidth,\ \textcolor{keywordtype}{int}\ windowHeight);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ Shutdown();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ Input(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ Render(\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ g,\ \textcolor{keywordtype}{int}\ b);\ \textcolor{comment}{//\ Modified\ Render\ function}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSceneActiveStatus(\textcolor{keywordtype}{bool}\ status);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsSceneActive()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enemy\ sprites}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<EnemyGameEntity>>\ enemies;\ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Main\ Character}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ std::shared\_ptr<GameEntity>\ mainCharacter;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ mPoints\{0.0f\};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mSceneIsActive\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ SDL\_Renderer*\ mRenderer;}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+
+\end{DoxyCode}
