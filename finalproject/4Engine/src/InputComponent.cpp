@@ -32,11 +32,17 @@ void InputComponent::Input(float deltaTime) {
         newY += mSpeed*deltaTime;
     } 
 
+    // // Check if the new position is outside the window
+    // if (newX < 0) newX = 0;
+    // if (newY < 0) newY = 0;
+    // if (newX > 600 - 32) newX = 600 - 32;
+    // if (newY > 480 - 32) newY = 480 - 32;
+
     // Check if the new position is outside the window
     if (newX < 0) newX = 0;
     if (newY < 0) newY = 0;
-    if (newX > 600 - 32) newX = 600 - 32;
-    if (newY > 480 - 32) newY = 480 - 32;
+    if (newX > windowWidth - objectSize) newX = windowWidth - objectSize;
+    if (newY > windowHeight - objectSize) newY = windowHeight - objectSize;
 
     // Set the new position
     transform->SetX(newX);

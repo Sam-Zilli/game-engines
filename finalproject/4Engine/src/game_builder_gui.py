@@ -4,12 +4,12 @@ import mygameengine
 
 # Define default values for empty inputs
 DEFAULT_GAME_NAME = "GAME NAME!"
-DEFAULT_WINDOW_WIDTH = 600
-DEFAULT_WINDOW_HEIGHT = 480
-DEFAULT_PROJECTILE_SPEED = 200
-DEFAULT_RED = 0
-DEFAULT_GREEN = 0
-DEFAULT_BLUE = 0
+DEFAULT_WINDOW_WIDTH =  "600"
+DEFAULT_WINDOW_HEIGHT = "1000"
+DEFAULT_PROJECTILE_SPEED = "200"
+DEFAULT_RED = "0"
+DEFAULT_GREEN = "0"
+DEFAULT_BLUE = "0"
 
 def run_game():
     """
@@ -23,16 +23,12 @@ def run_game():
     """
     # Extract values from the GUI and handle empty inputs
     game_name = game_name_entry.get()
-    window_width_str = window_width_entry.get()
-    window_height_str = window_height_entry.get()
     speed_of_projectile_str = speed_of_projectile_entry.get()
     red_str = red_entry.get()
     green_str = green_entry.get()
     blue_str = blue_entry.get()
 
     # Validate and convert values
-    window_width = int(window_width_str) if window_width_str else DEFAULT_WINDOW_WIDTH
-    window_height = int(window_height_str) if window_height_str else DEFAULT_WINDOW_HEIGHT
     speed_of_projectile = int(speed_of_projectile_str) if speed_of_projectile_str else DEFAULT_PROJECTILE_SPEED
     red = int(red_str) if red_str else DEFAULT_RED
     green = int(green_str) if green_str else DEFAULT_GREEN
@@ -44,10 +40,6 @@ def run_game():
         error_label.config(text="Red, green, and blue values must be between 0 and 255")
         return
 
-    # Validate window size constraints
-    if not (480 <= window_width <= 2000) or not (480 <= window_height <= 2000):
-        error_label.config(text="Window size must be between 600 and 2000")
-        return
 
     # Validate game name length constraints
     if len(game_name) < 3 or len(game_name) > 20:
@@ -62,8 +54,8 @@ def run_game():
 
     values_dict = {
         "game_name": game_name,
-        "window_width": str(window_width),
-        "window_height": str(window_height),
+        "window_width": DEFAULT_WINDOW_WIDTH,
+        "window_height": DEFAULT_WINDOW_HEIGHT,
         "speed_of_projectile": str(speed_of_projectile),
     }
 
@@ -83,16 +75,6 @@ tk.Label(root, text="Game Name").grid(row=0, column=0)
 game_name_entry = tk.Entry(root)
 game_name_entry.grid(row=0, column=1)
 game_name_entry.insert(0, str(DEFAULT_GAME_NAME))  # Insert default value
-
-tk.Label(root, text="Window Width").grid(row=1, column=0)
-window_width_entry = tk.Entry(root)
-window_width_entry.grid(row=1, column=1)
-window_width_entry.insert(0, str(DEFAULT_WINDOW_WIDTH))  # Insert default value
-
-tk.Label(root, text="Window Height").grid(row=2, column=0)
-window_height_entry = tk.Entry(root)
-window_height_entry.grid(row=2, column=1)
-window_height_entry.insert(0, str(DEFAULT_WINDOW_HEIGHT))  # Insert default value
 
 tk.Label(root, text="Projectile Speed").grid(row=3, column=0)
 speed_of_projectile_entry = tk.Entry(root)

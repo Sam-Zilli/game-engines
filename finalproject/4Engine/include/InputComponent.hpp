@@ -21,4 +21,8 @@ struct InputComponent : public Component{
 
 	private:
         float mSpeed{150.0f};
+        int windowWidth = 600;
+        int windowHeight = 1000;
+        int objectSize = 32;
+
 };

@@ -100,7 +100,7 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile, int windowW
     mainCharacter->AddComponent(characterTexture);
 
     // mainCharacter->GetTransform()->SetXY(0,440);
-    mainCharacter->GetTransform()->SetXY(windowWidth/2-(32/2),windowHeight-32);
+    mainCharacter->GetTransform()->SetXY(windowWidth/2-(32/2),windowHeight+32);
 
 
 	std::shared_ptr<InputComponent> inputController = std::make_shared<InputComponent>();
