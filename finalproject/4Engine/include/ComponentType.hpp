@@ -1,9 +1,18 @@
+/**
+ * @file ComponentType.hpp
+ * @brief This file contains the definition of the ComponentType enum class.
+ */
+
 #pragma once
-// Our 'key' when adding to a game object is based off
-// of this enum.
-//
-// Declaration of our new type
-enum class ComponentType : short {TextureComponent,
-                                  TransformComponent,
-                                  Collision2DComponent,
-                                  InputComponent};
+
+/**
+ * @enum ComponentType
+ * @brief An enum class that represents the type of a component.
+ * @details This enum class is used as a key when adding a component to a game object.
+ */
+enum class ComponentType : short {
+    TextureComponent,      ///< Represents a texture component.
+    TransformComponent,    ///< Represents a transform component.
+    Collision2DComponent,  ///< Represents a 2D collision component.
+    InputComponent         ///< Represents an input component.
+};

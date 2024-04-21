@@ -60,4 +60,3 @@ struct ResourceManager{
         // Store our texture resources
         std::unordered_map<std::string, std::shared_ptr<SDL_Texture>> mTextureResouces;
 };
-
