@@ -22,6 +22,6 @@ struct EnemyGameEntity : public GameEntity {
     private:
 		bool xPositiveDirection{true};
         float offset{0.0f};
-        float mSpeed{100.0f};
+        // float mSpeed{100.0f};
         float mMinLaunchTime{5000.0f};
 };

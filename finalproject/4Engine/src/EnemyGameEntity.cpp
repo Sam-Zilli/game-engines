@@ -23,21 +23,25 @@ void EnemyGameEntity::Update(float deltaTime) {
     std::shared_ptr<Projectile> mProjectile = dynamic_pointer_cast<Projectile>(GetChildGameEntityAtIndex(0));
 
     if(offset>80){
-        xPositiveDirection=false;
+        // xPositiveDirection=false;
+
     }
     if(offset<-80){
-        xPositiveDirection=true;
+        // xPositiveDirection=true;
+
     }
 
     // Keeping track of our projectile game logic
     auto transform = GetComponent<TransformComponent>(ComponentType::TransformComponent);
 
     if(xPositiveDirection){
-        transform->SetX(transform->GetX() + mSpeed*deltaTime);
-        offset += mSpeed * deltaTime;
+        // transform->SetX(transform->GetX() + mSpeed*deltaTime);
+        // offset += mSpeed * deltaTime;
+
     }else{
-        transform->SetX(transform->GetX() - mSpeed*deltaTime);
-        offset -= mSpeed * deltaTime;
+        // transform->SetX(transform->GetX() - mSpeed*deltaTime);
+        // offset -= mSpeed * deltaTime;
+
     }
 
     if(mRenderable){
