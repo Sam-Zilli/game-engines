@@ -10,7 +10,6 @@ DEFAULT_PROJECTILE_SPEED = 200
 DEFAULT_RED = 0
 DEFAULT_GREEN = 0
 DEFAULT_BLUE = 0
-DEFAULT_DIFFICULTY = 5  # Default difficulty level
 
 def run_game():
     """
@@ -30,7 +29,6 @@ def run_game():
     red_str = red_entry.get()
     green_str = green_entry.get()
     blue_str = blue_entry.get()
-    difficulty_str = difficulty_entry.get()
 
     # Validate and convert values
     window_width = int(window_width_str) if window_width_str else DEFAULT_WINDOW_WIDTH
@@ -39,7 +37,7 @@ def run_game():
     red = int(red_str) if red_str else DEFAULT_RED
     green = int(green_str) if green_str else DEFAULT_GREEN
     blue = int(blue_str) if blue_str else DEFAULT_BLUE
-    difficulty = int(difficulty_str) if difficulty_str else DEFAULT_DIFFICULTY
+
 
     # Validate red, green, and blue values
     if not (0 <= red <= 255) or not (0 <= green <= 255) or not (0 <= blue <= 255):
@@ -61,17 +59,13 @@ def run_game():
         error_label.config(text="Projectile speed must be between 20 and 700")
         return
 
-    # Validate difficulty level constraints
-    if not (1 <= difficulty <= 10):
-        error_label.config(text="Difficulty level must be between 1 and 10")
-        return
 
     values_dict = {
         "game_name": game_name,
         "window_width": str(window_width),
         "window_height": str(window_height),
         "speed_of_projectile": str(speed_of_projectile),
-        "difficulty": str(difficulty),
+
     }
 
     # Create an instance of Application
@@ -121,12 +115,6 @@ tk.Label(root, text="Blue").grid(row=6, column=0)
 blue_entry = tk.Entry(root)
 blue_entry.grid(row=6, column=1)
 blue_entry.insert(0, str(DEFAULT_BLUE))  # Insert default value
-
-# Entry field for difficulty level
-tk.Label(root, text="Difficulty Level (1-10)").grid(row=7, column=0)
-difficulty_entry = tk.Entry(root)
-difficulty_entry.grid(row=7, column=1)
-difficulty_entry.insert(0, str(DEFAULT_DIFFICULTY))  # Insert default value
 
 # Error label for displaying validation errors
 error_label = tk.Label(root, fg="red")
