@@ -12,7 +12,7 @@ Scene::~Scene(){
 }
 
 void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile, int windowWidth, int windowHeight){
-    int numEnemies = windowHeight / 100;  // One enemy for every 100 pixels of height
+    int numEnemies = windowHeight / 32;
     if (renderer == nullptr) {
         SDL_Log("Renderer is null");
         return;
@@ -20,8 +20,8 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile, int windowW
 
     mRenderer = renderer;
 
-    int row=1;
-    int column=1;
+    int row=0;
+    int column=0;
 
     for(int i=0; i<numEnemies; i++){
         SDL_Log("Creating enemy %i",i);
