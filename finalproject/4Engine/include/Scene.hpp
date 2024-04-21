@@ -16,7 +16,7 @@ struct Scene{
     Scene();
     ~Scene();
 
-    void StartUp(SDL_Renderer* renderer, float speedOfProjectile);
+    void StartUp(SDL_Renderer* renderer, float speedOfProjectile,int windowWidth, int windowHeight);
     void Shutdown();
     void Input(float deltaTime);
     void Update(float deltaTime);

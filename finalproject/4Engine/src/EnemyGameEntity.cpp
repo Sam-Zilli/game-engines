@@ -2,7 +2,8 @@
 
 EnemyGameEntity::EnemyGameEntity(SDL_Renderer* renderer) {
     // Set a random launch time for the enemies
-    mMinLaunchTime += std::rand() % 10000;
+    // EDIT THIS LATER FOR LEVIL DIFFIULCLTY
+    mMinLaunchTime += std::rand() % 5000;
 }
 
 EnemyGameEntity::~EnemyGameEntity(){

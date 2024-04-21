@@ -29,7 +29,7 @@ void Application::StartUp(const std::string& gameName, int windowWidth, int wind
         Log("Application::StartUp Error Creating Renderer");
     }
     // Start setting up our scene with appropriate renderer
-    mScene.StartUp(mRenderer, speedOfProjectile);
+    mScene.StartUp(mRenderer, speedOfProjectile, windowWidth, windowHeight);
     mScene.SetSceneActiveStatus(true);
 }
 

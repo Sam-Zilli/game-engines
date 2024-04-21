@@ -11,7 +11,7 @@ Scene::~Scene(){
     Shutdown();
 }
 
-void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile){
+void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile, int windowWidth, int windowHeight){
 
     if (renderer == nullptr) {
         SDL_Log("Renderer is null");
@@ -58,6 +58,7 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile){
 
         e->AddComponent(col); 
 
+        // straight row down
         if(i%1==0){
             ++row;
             column=0;

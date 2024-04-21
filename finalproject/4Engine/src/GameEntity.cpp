@@ -1,6 +1,7 @@
 #include "GameEntity.hpp"
 
 GameEntity::GameEntity(){
+
 }
 
 GameEntity::~GameEntity(){

@@ -55,7 +55,6 @@ struct GameEntity : public std::enable_shared_from_this<GameEntity>{
         // For now, assume one component per GameEntity
         std::map< ComponentType, std::shared_ptr<Component>> mComponents;
         bool mRenderable{true};
-
         // Game Entity Children
         std::vector<std::shared_ptr<GameEntity>> mGameEntities;
 
