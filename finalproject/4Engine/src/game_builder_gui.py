@@ -65,7 +65,6 @@ def run_game():
         "window_width": str(window_width),
         "window_height": str(window_height),
         "speed_of_projectile": str(speed_of_projectile),
-
     }
 
     # Create an instance of Application

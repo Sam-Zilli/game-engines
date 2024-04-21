@@ -18,7 +18,7 @@ struct Projectile : public GameEntity{
     void SetSpeed(float speed) { mSpeed = speed; }
 
     private:
-        float mSpeed{200.0f};
+        float mSpeed{100.0f};
         bool mIsFiring{false};
         bool mYDirectionUp{true};
         Uint64 timeSinceLastLaunch;
