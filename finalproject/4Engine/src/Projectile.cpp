@@ -7,6 +7,7 @@ Projectile::Projectile(){
 
 void Projectile::Launch(float x, float y, bool yDirectionIsUp, int minlaunchtime){
     if(SDL_GetTicks() - timeSinceLastLaunch > minlaunchtime){
+        SDL_Log("Lainching projectile INSIDE");
         auto transform = GetComponent<TransformComponent>(ComponentType::TransformComponent);
         auto col       = GetComponent<Collision2DComponent>(ComponentType::Collision2DComponent);
         transform->SetXY(x,y);
