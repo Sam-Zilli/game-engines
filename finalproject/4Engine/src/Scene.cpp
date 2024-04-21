@@ -12,7 +12,7 @@ Scene::~Scene(){
 }
 
 void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile, int windowWidth, int windowHeight){
-
+    int numEnemies = windowHeight / 100;  // One enemy for every 100 pixels of height
     if (renderer == nullptr) {
         SDL_Log("Renderer is null");
         return;
@@ -23,7 +23,8 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile, int windowW
     int row=1;
     int column=1;
 
-    for(int i=0; i<8; i++){
+    for(int i=0; i<numEnemies; i++){
+        SDL_Log("Creating enemy %i",i);
         std::shared_ptr<EnemyGameEntity> e = std::make_shared<EnemyGameEntity>(mRenderer);
         if (e == nullptr) {
             SDL_Log("Failed to create EnemyGameEntity");
@@ -58,16 +59,16 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile, int windowW
 
         e->AddComponent(col); 
 
-        // straight row down
-        if(i%1==0){
-            ++row;
-            column=0;
-        }
+    if(i%1==0 && i != 0){ // Skip incrementing row for the first enemy
+        ++row;
+        column=0;
+    }
 
         column++;
 
         // original
-        e->GetTransform()->SetXY(column*40+80,row*40);
+        // e->GetTransform()->SetXY(column*40+80,row*40);
+        e->GetTransform()->SetXY(column*32, row*32); 
 
 
 
@@ -141,16 +142,16 @@ void Scene::Update(float deltaTime){
     
         std::shared_ptr<Projectile> enemyProjectile = dynamic_pointer_cast<Projectile>(enemies[i]->GetChildGameEntityAtIndex(0));
 
-        bool enemyIsHit= enemies[i]->Intersects(mainCharacter->GetChildGameEntityAtIndex(0));
+        // bool enemyIsHit= enemies[i]->Intersects(mainCharacter->GetChildGameEntityAtIndex(0));
 
         bool GameOver = false;
 
-        if(true==enemyIsHit && enemies[i]->IsRenderable()==true){
-            enemies[i]->SetRenderable(false);
-            mPoints += 10.0f;
-            SDL_Log("Your score is %f",mPoints);
-            SDL_Log("Enemy was %i was removed",i);
-        }
+        // if(true==enemyIsHit && enemies[i]->IsRenderable()==true){
+        //     enemies[i]->SetRenderable(false);
+        //     mPoints += 10.0f;
+        //     SDL_Log("Your score is %f",mPoints);
+        //     SDL_Log("Enemy %i was removed",i);
+        // }
         if(enemies[i]->IsRenderable()){
             GameOver = mainCharacter->Intersects(enemyProjectile);
         }
