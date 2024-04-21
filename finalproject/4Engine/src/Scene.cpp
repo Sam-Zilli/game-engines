@@ -27,7 +27,7 @@ Scene::~Scene(){
  * @param windowHeight The height of the window.
  */
 void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile, int windowWidth, int windowHeight){
-    int numEnemies = windowHeight / 32;
+    int numEnemies = 25;
     if (renderer == nullptr) {
         SDL_Log("Renderer is null");
         return;

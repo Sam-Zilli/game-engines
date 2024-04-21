@@ -10,7 +10,15 @@
  * @param renderer The SDL_Renderer to use for rendering.
  */
 EnemyGameEntity::EnemyGameEntity(SDL_Renderer* renderer) {
-    mMinLaunchTime += std::rand() % 5000;
+    // First launch has shorter delay
+    static bool isFirstLaunch = true;
+    if (isFirstLaunch) {
+        mMinLaunchTime = 1000.0f;
+        isFirstLaunch = false;
+    } else {
+        mMinLaunchTime = 2000.0f;
+        mMinLaunchTime += std::rand() % 5000;
+    }
 }
 
 /**

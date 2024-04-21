@@ -62,5 +62,5 @@ struct EnemyGameEntity : public GameEntity {
         /**
          * @brief The minimum time between launches.
          */
-        float mMinLaunchTime{2000.0f};
+        float mMinLaunchTime{3000.0f};
 };
