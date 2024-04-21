@@ -73,7 +73,7 @@ void Application::Input(float deltaTime){
 }
 
 void Application::Update(float deltaTime){
-    mScene.Update(deltaTime);
+    mScene.Update(deltaTime); 
 }
 
 void Application::Render(int r, int g, int b) {
