@@ -7,7 +7,7 @@
 #include "Projectile.hpp"
 #include "TextureComponent.hpp"
 
-struct EnemyGameEntity : public GameEntity{
+struct EnemyGameEntity : public GameEntity {
 
     EnemyGameEntity(SDL_Renderer* renderer);
 

@@ -1,6 +1,6 @@
 #include "EnemyGameEntity.hpp"
 
-EnemyGameEntity::EnemyGameEntity(SDL_Renderer* renderer) : isVisible(false) {
+EnemyGameEntity::EnemyGameEntity(SDL_Renderer* renderer) {
     // Set a random launch time for the enemies
     mMinLaunchTime += std::rand() % 10000;
 }
@@ -54,8 +54,6 @@ void EnemyGameEntity::Update(float deltaTime) {
 }
 
 void EnemyGameEntity::Render(SDL_Renderer* renderer) {
-    // AFTER MOVING ENEMIES SWITCH THIS BACK TO VISIBLE!
-    if (this->IsVisible() == false) {
     std::shared_ptr<Projectile> mProjectile = dynamic_pointer_cast<Projectile>(GetChildGameEntityAtIndex(0));
 
     if(mRenderable){
@@ -71,7 +69,6 @@ void EnemyGameEntity::Render(SDL_Renderer* renderer) {
     }
     for(auto& children: mGameEntities){
         children->Render(renderer);
-    }
     }
 
 }
