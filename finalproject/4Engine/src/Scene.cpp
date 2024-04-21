@@ -45,7 +45,7 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile){
             return;
         }
 
-        tex->CreateTextureComponent(mRenderer,"../assets/enemy.bmp");
+        tex->CreateTextureComponent(mRenderer,"../assets/street.bmp");
 
         e->AddComponent(tex);
 
@@ -73,7 +73,7 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile){
         // Add a child game object to our enemies
         // Create a texture
         std::shared_ptr<TextureComponent> projectile_texture=std::make_shared<TextureComponent>();
-        projectile_texture->CreateTextureComponent(renderer,"../assets/rocket.bmp");
+        projectile_texture->CreateTextureComponent(renderer,"../assets/car.bmp");
         // Create a collider for our projectile
         std::shared_ptr<Collision2DComponent> projectile_col = std::make_shared<Collision2DComponent>();
 
@@ -87,7 +87,6 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile){
         e->AddChildGameEntity(mProjectile);
 
         // Add to our collection of GameEntities
-        // NOTE: Yes, I know these comments are obvious..but I can scan them very quickly in my code editor.
         enemies.push_back(std::move(e));
     }
 
@@ -95,7 +94,7 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile){
     mainCharacter->AddDefaultTransform();
 
     std::shared_ptr<TextureComponent> characterTexture = std::make_shared<TextureComponent>();
-    characterTexture->CreateTextureComponent(mRenderer,"../assets/hero.bmp");
+    characterTexture->CreateTextureComponent(mRenderer,"../assets/frog.bmp");
     mainCharacter->AddComponent(characterTexture);
 
     mainCharacter->GetTransform()->SetXY(640/2 - (32/2),440);
@@ -109,7 +108,7 @@ void Scene::StartUp(SDL_Renderer* renderer, float speedOfProjectile){
     /// For our main character, add one child component
     // Create a texture
     std::shared_ptr<TextureComponent> mainCharacterProjectileTexture=std::make_shared<TextureComponent>();
-    mainCharacterProjectileTexture->CreateTextureComponent(renderer,"../assets/rocket.bmp");
+    mainCharacterProjectileTexture->CreateTextureComponent(renderer,"../assets/car.bmp");
     // Create a collider for our projectile
     std::shared_ptr<Collision2DComponent> mainCharacterProjectileCollider = std::make_shared<Collision2DComponent>();
 
