@@ -1,0 +1,11 @@
+# Ignore VSCode workspace files
+.vscode/
+
+# Ignore VSCode settings files
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# Ignore VSCode environment files
+.vscodeenv
